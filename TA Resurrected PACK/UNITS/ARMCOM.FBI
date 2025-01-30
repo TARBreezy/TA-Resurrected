@@ -52,7 +52,7 @@
 	TurnRate=1044;
 	SteeringMode=2;
 	ShootMe=1;
-	Builddistance=60;
+	Builddistance=95;	//60
 	CanReclamate=1;
 	EnergyMake=25;
 	MetalMake=1;

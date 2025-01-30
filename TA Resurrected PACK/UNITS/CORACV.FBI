@@ -36,14 +36,14 @@
 	GermanName=Verb. Konstr.-Fahrzeug;
 	GermanDescription=Tech Level 2;
 	UnitNumber=81;
-	FrenchName=Véhicule de constr. évolué;
+	FrenchName=Vï¿½hicule de constr. ï¿½voluï¿½;
 	Frenchdescription=Niveau Tech 2;
 	mobilestandorders=1;
 	StandingMoveOrder=1;
 	canmove=1;
 	canpatrol=1;
 	canstop=1;
-	SpanishName=Vehículo Av. Construcción;
+	SpanishName=Vehï¿½culo Av. Construcciï¿½n;
 	SpanishDescription=Nivel Tecn. 2;
 	ItalianName=Veicolo Costruttore Spec.;
 	ItalianDescription=Tecnologia Livello 2;
@@ -54,7 +54,7 @@
 	TurnRate=210;
 	SteeringMode=1;
 	ShootMe=1;
-	Builddistance=60;
+	Builddistance=95;	//60
 	CanReclamate=1;
 	EnergyMake=21;
 	MetalMake=0.5;

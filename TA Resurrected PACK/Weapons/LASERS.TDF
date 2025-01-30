@@ -199,7 +199,7 @@
 
 	[DAMAGE]
 		{
-		default=44;
+		default=60;	//44
 		}
 	}
 
@@ -354,7 +354,7 @@
 
 	[DAMAGE]
 		{
-		default=30;
+		default=51.9;	//30
 		}
 	}
 

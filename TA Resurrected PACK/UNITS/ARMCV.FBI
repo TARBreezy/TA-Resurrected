@@ -36,14 +36,14 @@
 	GermanName=Konstr.-Fahrzeug;
 	GermanDescription=Tech Level 1;
 	UnitNumber=25;
-	FrenchName=Véhicule de construction ;
+	FrenchName=Vï¿½hicule de construction ;
 	Frenchdescription=Niveau Tech 1;
 	mobilestandorders=1;
 	StandingMoveOrder=1;
 	canmove=1;
 	canpatrol=1;
 	canstop=1;
-	SpanishName=Vehículo de Constr.;
+	SpanishName=Vehï¿½culo de Constr.;
 	SpanishDescription=Nivel Tecn. 1;
 	ItalianName=Veicolo Costruttore;
 	ItalianDescription=Tecnologia Livello 1;
@@ -54,7 +54,7 @@
 	TurnRate=250;
 	SteeringMode=1;
 	ShootMe=1;
-	Builddistance=40;
+	Builddistance=95;	//40
 	CanReclamate=1;
 	EnergyMake=9;
 	MetalMake=0.25;

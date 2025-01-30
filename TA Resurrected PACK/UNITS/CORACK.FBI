@@ -36,14 +36,14 @@
 	GermanName=Verb. Konstr.-Kbot;
 	GermanDescription=Tech Level 2;
 	UnitNumber=80;
-	FrenchName=Kbot de constr. évolué;
+	FrenchName=Kbot de constr. ï¿½voluï¿½;
 	Frenchdescription=Niveau Tech 2;
 	mobilestandorders=1;
 	StandingMoveOrder=1;
 	canmove=1;
 	canpatrol=1;
 	canstop=1;
-	SpanishName=Kbot Av. Construcción;
+	SpanishName=Kbot Av. Construcciï¿½n;
 	SpanishDescription=Nivel Tecn. 2;
 	ItalianName=Kbot Costruttore Spec.;
 	ItalianDescription=Tecnologia Livello 2;
@@ -54,7 +54,7 @@
 	TurnRate=1005;
 	SteeringMode=1;
 	ShootMe=1;
-	Builddistance=60;
+	Builddistance=95;	//60
 	CanReclamate=1;
 	EnergyMake=19;
 	MetalMake=0.5;

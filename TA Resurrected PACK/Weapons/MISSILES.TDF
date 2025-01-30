@@ -13,7 +13,7 @@
 
 	model=missile;
 
-	range=604;
+	range=590;		//604
 	reloadtime=2.4;
 	weapontimer=5;
 	weaponvelocity=650;

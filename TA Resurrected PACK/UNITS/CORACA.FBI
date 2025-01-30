@@ -35,14 +35,14 @@
 	GermanName=Verb. Konstr.-Flugzeug;
 	GermanDescription=Tech Level 2;
 	UnitNumber=79;
-	FrenchName=Avion de constr. évolué;
+	FrenchName=Avion de constr. ï¿½voluï¿½;
 	Frenchdescription=Niveau Tech 2;
 	mobilestandorders=1;
 	StandingMoveOrder=1;
 	canmove=1;
 	canpatrol=1;
 	canstop=1;
-	SpanishName=Aeronave Av. Construcción;
+	SpanishName=Aeronave Av. Construcciï¿½n;
 	SpanishDescription=Nivel Tecn. 2;
 	ItalianName=Aereo Costruttore Spec.;
 	ItalianDescription=Tecnologia Livello 2;
@@ -57,7 +57,7 @@
 	cruisealt=70;
 	Scale=0.8;
 	BankScale=1.5;
-	Builddistance=60;
+	Builddistance=95;	//60
 	CanReclamate=1;
 	EnergyMake=22;
 	MetalMake=0.5;

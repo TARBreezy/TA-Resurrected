@@ -1,0 +1,29 @@
+Unit Balance
+    
+    All construction units & commanders build distance increased to 95
+    
+    A.K.
+        Decreased buildtime 1523->1447
+        Increased health 265->295
+        Increased damage 30->51.9 (Match Peewee DPS)
+        Torso heading speed increased to 150.032967 (Match Peewee)
+        Left & right arm pitch speed incrased to 200.043956 (Match Peewee)
+
+    Peewee
+        Decreased buildtime 1452->1379
+        Increased health 250->280
+
+    Instigator
+        Increased damage 44->60 (Match Peewee DPS)
+
+    Jethro
+       Decreased range 604->590 
+
+    Crasher
+
+    Weasel
+
+Unit Models
+
+    Big Bertha
+        Switched from OTA to Evolva 2004 model

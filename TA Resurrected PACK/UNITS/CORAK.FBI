@@ -11,11 +11,11 @@
 	FootprintZ=2;
 	BuildCostEnergy=696;
 	BuildCostMetal=56;
-	MaxDamage=265;
+	MaxDamage=295;		//265
 	MaxWaterDepth=25;
 	MaxSlope=17;
 	EnergyUse=0.3;
-	BuildTime=1523;
+	BuildTime=1447;		//1523
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;
@@ -46,7 +46,7 @@
 	canpatrol=1;
 	canstop=1;
 	SpanishName=A.K.;
-	SpanishDescription=Kbot de infantería;
+	SpanishDescription=Kbot de infanterï¿½a;
 	ItalianName=A.K.;
 	ItalianDescription=Kbot da Fanteria;
 	canguard=1;
