@@ -83,7 +83,7 @@
 		}
 	}
 
-[ARM_LASER]
+[SCOUT_LASER]
 	{
 	ID=82;
 	name=Laser;
@@ -173,7 +173,7 @@
 	turret=1;
 
 	range=180;
-	reloadtime=1;
+	reloadtime=.75;	//1
 	weaponvelocity=400;
 	areaofeffect=8;
 	burstrate=.2;
@@ -199,7 +199,7 @@
 
 	[DAMAGE]
 		{
-		default=60;	//44
+		default=45;	//44
 		}
 	}
 
@@ -319,7 +319,7 @@
 		}
 	}
 
-[CORE_LASER]
+[AK_LASER]
 	{
 	ID=88;
 	name=Laser;
@@ -328,7 +328,7 @@
 	turret=1;
 
 	range=180;
-	reloadtime=.865;
+	reloadtime=.75;	   //0.865
 	weaponvelocity=400;
 	areaofeffect=8;
 	burstrate=.2;
@@ -354,7 +354,7 @@
 
 	[DAMAGE]
 		{
-		default=51.9;	//30
+		default=45;	//30
 		}
 	}
 

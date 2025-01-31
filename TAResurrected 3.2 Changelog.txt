@@ -3,25 +3,49 @@ Unit Balance
     All construction units & commanders build distance increased to 95
     
     A.K.
-        Decreased buildtime 1523->1447
+        Reduced buildtime 1523->1447
         Increased health 265->295
-        Increased damage 30->51.9 (Match Peewee DPS)
+        Increased damage 30->45 (Match Peewee DPS)
+	Reduced reload time 0.865->0.75 (Lower is faster reload)
         Torso heading speed increased to 150.032967 (Match Peewee)
         Left & right arm pitch speed incrased to 200.043956 (Match Peewee)
+	Change Weapon Name from CORE_LASER to AK_LASER
 
     Peewee
-        Decreased buildtime 1452->1379
+        Reduced buildtime 1452->1379
         Increased health 250->280
 
     Instigator
-        Increased damage 44->60 (Match Peewee DPS)
+        Increased damage 44->45 (Match Peewee DPS)
+	Reduced reload time 1->0.75 (Lower is faster reload)
 
     Jethro
-       Decreased range 604->590 
+        Reduced range 604->590 
+	Reduced metal cost 128->107
+	Reduced energy cost 1219->924
+	Reduced build time 2631->1747
 
     Crasher
+	Reduced energy cost 1224->852
+	Reduced metal cost 129->104
+	Reduced build time 2636->1729
 
     Weasel
+	Changed weapon from CORE_LASER to SCOUT_LASER
+
+    Jeffy
+        Changed weapon from ARM_LASER to SCOUT_LASER
+    
+    Warrior
+	Reduced build time 5709->3268
+	Increased Warrior's EMG weapon burst 2->3
+	Increased Warrior's EMG weapon damage 12->16
+
+    Stumpy
+	Increased damage 50->100
+    
+    Raider
+	Increased damage 50->100	
 
 Unit Models
 

@@ -31,7 +31,7 @@
 
 	[DAMAGE]
 		{
-		default=50;
+		default=100;	//50
 		}
 	}
 
@@ -63,7 +63,7 @@
 
 	[DAMAGE]
 		{
-		default=50;
+		default=100;	//50
 		}
 	}
 

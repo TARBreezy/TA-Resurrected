@@ -12,8 +12,8 @@
 	weaponvelocity=300;
 	sprayangle=1024;
 	areaofeffect=8;
-	burst=2;
-	burstrate=.2;
+	burst=3;	//2
+	burstrate=.1;	//.2
 	soundstart=armsml2;
 	soundhit=lasrhit1;
 	soundtrigger=1;
@@ -32,7 +32,7 @@
 
 	[DAMAGE]
 		{
-		default=12;
+		default=16;	//12
 		}
 	}
 
