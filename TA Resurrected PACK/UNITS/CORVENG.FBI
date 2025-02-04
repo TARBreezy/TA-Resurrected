@@ -50,9 +50,9 @@
 	ItalianDescription=Caccia;
 	canguard=1;
 	MaxVelocity=11;
-	BrakeRate=2;
-	Acceleration=0.21;
-	TurnRate=405;
+	BrakeRate=4.8;	//2
+	Acceleration=0.28;	//0.21
+	TurnRate=410;	//405
 	SteeringMode=1;
 	ShootMe=1;
 	Canfly=1;

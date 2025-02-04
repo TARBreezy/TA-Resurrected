@@ -363,7 +363,7 @@
 		colorf=15;
 		colorb=0;
 		texturenumber=0;
-		fontnumber=0;
+		fontnumber=52;	//0
 		active=1;
 		commonattribs=4;
 	}

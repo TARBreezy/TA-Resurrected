@@ -1,0 +1,47 @@
+TAResurrected 3.2 Checklist
+    
+    Unpack the 6 downloadable units into the correct folders for unit balancing.
+    
+    Discuss which units to keep from test version?
+    
+    Work on unit balance one lab at a time.
+        Units in Progress
+            ARM Kbot = Warrior & Flea
+            ARM Vehicle = Stumpy & Minelayer
+            CORE Kbot = Done
+            CORE Vehicle = Leveler, Raider, Minelayer
+    
+    Add units in when complete and balance.
+    
+    Balance all the construction units & commanders.
+    
+    Update unit scripts for balance/fixes & apply bugfix scripts.
+    
+    Update models with scaling & texturing. Maybe apply some more updated models.
+   
+    Update sounds & unit fx?
+    
+    Update gamedata files.
+    
+    Figure out how to switch build hotkey pics without game crashes.
+    
+    Color changes?
+        Keep grey or put black back?
+        Swap blue for dark blue?
+        Swap prota green for OTA green?
+    
+    Check to see if campaign works?
+    
+    Fix recorder so it actually records games.
+
+    
+    Potential units ideas
+        T2 AA kbot (dual missile, AA only)
+        close range t1 & t2 ship
+        long range t2.5 or t3 ship (further than hydras)
+        T3 bomber
+        T3 Tank?
+        Possibly use AbsoluteAnnihilation units or get ideas from supcom/BAR?
+        new hovercrafts?
+        new seaplanes?
+        

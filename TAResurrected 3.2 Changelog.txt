@@ -2,51 +2,73 @@ Unit Balance
     
     All construction units & commanders build distance increased to 95
     
-    A.K.
-        Reduced buildtime 1523->1447
-        Increased health 265->295
-        Increased damage 30->45 (Match Peewee DPS)
-	Reduced reload time 0.865->0.75 (Lower is faster reload)
-        Torso heading speed increased to 150.032967 (Match Peewee)
-        Left & right arm pitch speed incrased to 200.043956 (Match Peewee)
-	Change Weapon Name from CORE_LASER to AK_LASER
+    Kbots
+         
+        A.K.
+            Reduced buildtime 1523->1447
+            Increased health 265->295
+            Increased damage 30->45 (Match Peewee DPS)
+	        Reduced reload time 0.865->0.75 (Lower is faster reload)
+            Torso heading speed increased to 150.032967 (Match Peewee)
+            Left & right arm pitch speed incrased to 200.043956 (Match Peewee)
+	        Change Weapon Name from CORE_LASER to AK_LASER
 
-    Peewee
-        Reduced buildtime 1452->1379
-        Increased health 250->280
+        Peewee
+            Reduced buildtime 1452->1379
+            Increased health 250->280
 
-    Instigator
-        Increased damage 44->45 (Match Peewee DPS)
-	Reduced reload time 1->0.75 (Lower is faster reload)
+ 
+        Jethro
+            Reduced range 604->590 
+	        Reduced metal cost 128->107
+	        Reduced energy cost 1219->924
+	        Reduced build time 2631->1747
 
-    Jethro
-        Reduced range 604->590 
-	Reduced metal cost 128->107
-	Reduced energy cost 1219->924
-	Reduced build time 2631->1747
+        Crasher
+	        Reduced energy cost 1224->852
+	        Reduced metal cost 129->104
+	        Reduced build time 2636->1729
+        
+        Warrior
+	        Reduced build time 5709->3268
+	        Increased Warrior's EMG weapon burst 2->3
+	        Increased Warrior's EMG weapon damage 12->16
+        
+    Vehicles
+        
+        Instigator
+            Increased damage 44->45 (Match Peewee DPS)
+	        Reduced reload time 1->0.75 (Lower is faster reload)
 
-    Crasher
-	Reduced energy cost 1224->852
-	Reduced metal cost 129->104
-	Reduced build time 2636->1729
+        Weasel
+	        Changed weapon from CORE_LASER to SCOUT_LASER
 
-    Weasel
-	Changed weapon from CORE_LASER to SCOUT_LASER
-
-    Jeffy
-        Changed weapon from ARM_LASER to SCOUT_LASER
+        Jeffy
+            Changed weapon from ARM_LASER to SCOUT_LASER
     
-    Warrior
-	Reduced build time 5709->3268
-	Increased Warrior's EMG weapon burst 2->3
-	Increased Warrior's EMG weapon damage 12->16
-
-    Stumpy
-	Increased damage 50->100
+        Stumpy
+	        Increased damage 50->100
     
-    Raider
-	Increased damage 50->100	
+        Raider
+	        Increased damage 50->100
+    
+        Leveler
+            Increased energy cost 1887->2348
+            Reduced metal cost 292->209
+            Reduced build time 4209->3300
+            Increased max velocity 0.8->1.1
+            Increased turn rate 220->240
+            Changed weapon from ballistic to line of sight
+            Reduced range 260->220
+            Increased damage 180->220
 
+    Air
+        
+        Avenger
+            Increased brake rate 2->4.8
+            Increased acceleration 0.21->0.28
+            Increased turn rate 405->410
+    
 Unit Models
 
     Big Bertha

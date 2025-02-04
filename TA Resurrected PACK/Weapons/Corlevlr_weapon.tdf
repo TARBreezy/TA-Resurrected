@@ -3,10 +3,11 @@
 	ID=172;
 	name=Light Cannon;
 	rendertype=4;
-	ballistic=1;
+	//ballistic=1;
+	lineofsight=1;
 	turret=1;
 
-	range=260;
+	range=220;	//260
 	reloadtime=1.83;
 	weaponvelocity=280;
 	areaofeffect=84;
@@ -29,6 +30,6 @@
 
 	[DAMAGE]
 		{
-		default=180;
+		default=220;	//180
 		}
 	}
