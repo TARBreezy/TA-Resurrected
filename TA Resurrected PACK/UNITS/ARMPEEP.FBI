@@ -57,6 +57,8 @@
 	cruisealt=180;
 	BankScale=1;
 	EnergyMake=0.2;
+	canattack=1;
+	weapon1=NULL_WEAPON;
 	DefaultMissionType=VTOL_standby;
 	maneuverleashlength=1280;
 	Ovradjust=1;

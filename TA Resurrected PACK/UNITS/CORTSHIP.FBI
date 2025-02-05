@@ -9,11 +9,11 @@
 	Description=Transport Ship;
 	FootprintX=6;
 	FootprintZ=6;
-	BuildCostEnergy=4786;
-	BuildCostMetal=887;
+	BuildCostEnergy=2393;	//4786
+	BuildCostMetal=444;	//887
 	MaxDamage=2120;
 	EnergyUse=0.3;
-	BuildTime=13663;
+	BuildTime=7515;	//13663
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;

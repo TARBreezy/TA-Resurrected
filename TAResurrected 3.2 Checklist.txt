@@ -1,15 +1,14 @@
 TAResurrected 3.2 Checklist
     
-    Unpack the 6 downloadable units into the correct folders for unit balancing.
+    ***Unpack the 6 downloadable units into the correct folders for unit balancing.
+	
+    Add hovercraft/seaplane lab's & units to the correct folders for unit balancing.
     
     Discuss which units to keep from test version?
     
     Work on unit balance one lab at a time.
         Units in Progress
-            ARM Kbot = Warrior & Flea
-            ARM Vehicle = Stumpy & Minelayer
-            CORE Kbot = Done
-            CORE Vehicle = Leveler, Raider, Minelayer
+		T1 Labs Done
     
     Add units in when complete and balance.
     
@@ -21,7 +20,7 @@ TAResurrected 3.2 Checklist
    
     Update sounds & unit fx?
     
-    Update gamedata files.
+    ***Update gamedata files.
     
     Figure out how to switch build hotkey pics without game crashes.
     

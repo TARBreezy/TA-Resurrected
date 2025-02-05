@@ -173,7 +173,7 @@
 	turret=1;
 	minbarrelangle=-35;
 
-	range=230;
+	range=320;	//230
 	reloadtime=1.9;
 	weaponvelocity=210;
 	areaofeffect=48;

@@ -1389,3 +1389,29 @@
 	name=Guided Missiles;
 	}
 */
+
+[NULL_WEAPON]
+	{
+	ID=220;						  
+	name=Missiles;
+	rendertype=1;
+	lineofsight=1;
+	turret=1;
+
+	range=800;
+	reloadtime=0.5;
+	weapontimer=5;
+	weaponvelocity=650;
+	startvelocity=450;
+	weaponacceleration=101;
+	turnrate=33000;
+	areaofeffect=48;
+	metalpershot=0;
+
+	tolerance=9000;
+
+	[DAMAGE]
+		{
+		default=0;
+		}
+	}
