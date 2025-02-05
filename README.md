@@ -1,2 +1,2 @@
 # TA Resurrected
- All my TA goodies as I work on modifying THE classic RTS game Total Annihilation
+ A new mod for Total Annihilation that will keep the original spirit of the game alive but rebalance units that weren't used in online play & add new units to provide more strategical value to all tiers.
