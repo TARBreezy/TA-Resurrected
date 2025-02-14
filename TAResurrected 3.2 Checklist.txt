@@ -2,7 +2,7 @@ TAResurrected 3.2 Checklist
     
     ***Unpack the 6 downloadable units into the correct folders for unit balancing.
 	
-    Add hovercraft/seaplane lab's & units to the correct folders for unit balancing.
+    ***Add hovercraft/seaplane lab's & units to the correct folders for unit balancing.
     
     Discuss which units to keep from test version?
     
