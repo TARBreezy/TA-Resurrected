@@ -64,7 +64,7 @@
 	canattack=1;
 	Weapon1=ARMAAS_WEAPON1;
 	Weapon2=ARMAAS_WEAPON2;
-	Weapon3=ARMAAS_WEAPON3;
+	Weapon3=ARMFLAK_GUN;
 	downloadable=1;
 	wpri_badTargetCategory=NOTAIR;
 	BadTargetCategory=NOTAIR;

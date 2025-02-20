@@ -104,8 +104,8 @@
 
 	firestarter=50;
 	beamweapon=1;
-	color=208;	/* Yellow */
-	color2=0;
+	color=206;	/* Brown */
+	color2=207;
 
 	explosiongaf=fx;
 	explosionart=explode5;
@@ -174,7 +174,7 @@
 
 	range=180;
 	reloadtime=.75;	//1
-	weaponvelocity=400;
+	weaponvelocity=300;	//400
 	areaofeffect=8;
 	burstrate=.2;
 	duration=.02;
@@ -185,8 +185,8 @@
 
 	firestarter=50;
 	beamweapon=1;
-	color=232;	/* GREEN */
-	color2=234;
+	color=32;	/* Red */
+	color2=52;
 
 	explosiongaf=fx;
 	explosionart=explode5;
@@ -329,7 +329,7 @@
 
 	range=180;
 	reloadtime=.75;	   //0.865
-	weaponvelocity=400;
+	weaponvelocity=300;	//400
 	areaofeffect=8;
 	burstrate=.2;
 	duration=.02;
@@ -340,8 +340,8 @@
 
 	firestarter=50;
 	beamweapon=1;
-	color=208;	/* Yellow */
-	color2=0;
+	color=32;	/* Red */
+	color2=52;
 
 	explosiongaf=fx;
 	explosionart=explode5;
@@ -561,16 +561,16 @@
 	lineofsight=1;
 	turret=1;
 
-	range=200;
+	range=220;	//200
 	reloadtime=.95;
 	energypershot=75;
-	weaponvelocity=700;
+	weaponvelocity=500;	//700
 	areaofeffect=8;
 	soundstart=lasrhvy3;
 	soundhit=lasrhit1;
 	firestarter=90;
 	beamweapon=1;
-	color=96;	/* blue */
+	color=96;	/* green */
 	color2=98;
 
 	explosiongaf=fx;
@@ -584,6 +584,6 @@
 
 	[DAMAGE]
 		{
-		default=220;
+		default=180;	//220
 		}
 	}

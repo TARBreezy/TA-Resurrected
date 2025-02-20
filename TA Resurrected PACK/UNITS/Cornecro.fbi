@@ -16,7 +16,7 @@
 	MaxSlope=14;
 	EnergyUse=0.4;
 	BuildTime=11416;
-	WorkerTime=160;
+	WorkerTime=180;		//160
 	BMcode=1;
 	Builder=1;
 	ThreeD=1;
@@ -55,6 +55,7 @@
 	Acceleration=0.1;
 	TurnRate=1016;
 	SteeringMode=2;
+	Builddistance=95;
 	ShootMe=1;
 	EnergyMake=0.4;
 	DefaultMissionType=Standby;

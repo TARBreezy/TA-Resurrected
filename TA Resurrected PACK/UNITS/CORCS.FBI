@@ -14,7 +14,7 @@
 	MaxDamage=1150;
 	EnergyUse=0.1;
 	BuildTime=5537;
-	WorkerTime=125;
+	WorkerTime=120;		//125
 	BMcode=1;
 	Builder=1;
 	ThreeD=1;

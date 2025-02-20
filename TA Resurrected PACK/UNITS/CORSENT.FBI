@@ -63,7 +63,7 @@
 	Upright=0;
 	OVRadjust=1;
 	canattack=1;
-	Weapon1=CORSENT_GUN;
+	Weapon1=CORFLAK_GUN;
 	downloadable=1;
 	wpri_badTargetCategory=NOTAIR;
 	BadTargetCategory=NOTAIR;

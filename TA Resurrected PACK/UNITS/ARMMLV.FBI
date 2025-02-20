@@ -16,7 +16,7 @@
 	MaxSlope=16;
 	EnergyUse=1;
 	BuildTime=1519;
-	WorkerTime=100;
+	WorkerTime=90;		//100
 	BMcode=1;
 	Builder=1;
 	ThreeD=1;
@@ -48,13 +48,13 @@
 	ItalianName=Podger;
 	ItalianDescription=Posamine di terra;
 	canguard=0;
-	MaxVelocity=.9;
+	MaxVelocity=1.8;		//0.9
 	BrakeRate=0.08;
 	Acceleration=0.015;
 	TurnRate=250;
 	SteeringMode=1;
 	ShootMe=1;
-	Builddistance=70;
+	Builddistance=95;	//70
 	CanReclamate=0;
 	EnergyMake=1;
 	MetalMake=0;

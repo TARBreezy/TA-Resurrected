@@ -11,7 +11,7 @@
 	FootprintZ=2;
 	BuildCostEnergy=3500;
 	BuildCostMetal=420;
-	MaxDamage=2800;
+	MaxDamage=1800;		//2800
 	MaxWaterDepth=21;
 	MaxSlope=14;
 	EnergyUse=0.8;
@@ -22,7 +22,7 @@
 	ThreeD=1;
 	ZBuffer=1;
 	NoAutoFire=0;
-	SightDistance=200;
+	SightDistance=255;	//200
 	RadarDistance=0;
 	SoundCategory=COR_KBOT;
 	EnergyStorage=0;
@@ -50,7 +50,7 @@
 	ItalianName=The Can;
 	ItalianDescription=Kbot armato d'assalto;
 	canguard=1;
-	MaxVelocity=0.5;
+	MaxVelocity=0.85;	//0.5
 	BrakeRate=0.15;
 	Acceleration=0.1;
 	TurnRate=940;

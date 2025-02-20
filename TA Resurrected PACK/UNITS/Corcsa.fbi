@@ -16,7 +16,7 @@
 	MaxSlope=10;
 	EnergyUse=0.1;
 	BuildTime=11520;
-	WorkerTime=50;
+	WorkerTime=30;		//50
 	BMcode=1;
 	Builder=1;
 	ThreeD=1;
@@ -57,7 +57,7 @@
 	cruisealt=75;
 	Scale=0.8;
 	BankScale=1.5;
-	Builddistance=40;
+	Builddistance=95;	//40
 	CanReclamate=1;
 	EnergyMake=11;
 	MetalMake=0.3;

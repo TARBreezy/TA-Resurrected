@@ -103,31 +103,31 @@
 	ID=1;
 	name=Flame Thrower;
 	rendertype=5;
-	ballistic=1;
+	//ballistic=1;
+	lineofsight=1;
 	turret=1;
 
-	range=160;
-	reloadtime=1.2;
-	weapontimer=1;
-	weaponvelocity=188;
+	range=200;	//160
+	reloadtime=0.96;	//1.2
+	weapontimer=0.8;	//1
+	weaponvelocity=277;	//188
 	areaofeffect=32;
-	burst=17;
+	burst=18;
 	burstrate=.04;
 	sprayangle=1024;
 	randomdecay=.3;
 	soundstart=Flamhvy1;
 	soundhit=burn02;
 	firestarter=100;
-	groundbounce=1;
+	//groundbounce=1;
 	smokedelay=1;
 	startsmoke=0;
-	endsmoke=1;
-	tolerance=200;
+	//endsmoke=1;
+	tolerance=2000;		//200
 
 	[DAMAGE]
 		{
 		default=10;
-		corpyro=2;
 		}
 	}
 
@@ -1042,9 +1042,9 @@
 	lineofsight=1;
 	turret=1;
 
-	range=180;
+	range=220;	//180
 	reloadtime=1.45;
-	weaponvelocity=400;
+	weaponvelocity=500;	//400
 	areaofeffect=8;
 	duration=10;
 	soundtrigger=1;
@@ -1055,8 +1055,8 @@
 	firestarter=50;
 
 	beamweapon=1;
-	color=208;	/* Yellow */
-	color2=196;
+	color=128;	/* Light Blue */
+	color2=130;
 
 	explosiongaf=fx;
 	explosionart=explode5;
@@ -1068,7 +1068,7 @@
 
 	[DAMAGE]
 		{
-		default=180;
+		default=280;	//180
 		}
 	}
 

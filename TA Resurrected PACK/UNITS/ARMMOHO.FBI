@@ -9,13 +9,13 @@
 	Description=Advanced Metal Extractor;
 	FootprintX=5;
 	FootprintZ=5;
-	BuildCostEnergy=8700;
-	BuildCostMetal=1508;
+	BuildCostEnergy=6960;	//8700
+	BuildCostMetal=1206;	//1508
 	MaxDamage=1573;
 	MaxWaterDepth=0;
 	MaxSlope=10;
 	EnergyUse=15;
-	BuildTime=35750;
+	BuildTime=28600;	//35750
 	WorkerTime=0;
 	BMcode=0;
 	Builder=0;

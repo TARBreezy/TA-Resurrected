@@ -366,7 +366,7 @@
 		active=1;
 		commonattribs=0;
 	}
-	quickkey=44;
+	quickkey=44;	//,
 	status=0;
 	text=;
 }
@@ -389,7 +389,7 @@
 		active=1;
 		commonattribs=0;
 	}
-	quickkey=46;
+	quickkey=46;	//.
 	status=0;
 	text=;
 }
@@ -412,7 +412,7 @@
 		active=1;
 		commonattribs=0;
 	}
-	quickkey=102;
+	quickkey=102;	//f
 }
 [GADGET19]
 {
@@ -433,7 +433,7 @@
 		active=1;
 		commonattribs=0;
 	}
-	quickkey=118;
+	quickkey=118;	//v
 }
 [GADGET20]
 {
@@ -454,7 +454,7 @@
 		active=1;
 		commonattribs=0;
 	}
-	quickkey=101;
+	quickkey=101;	//e
 }
 [GADGET21]
 {
@@ -475,7 +475,7 @@
 		active=1;
 		commonattribs=0;
 	}
-	quickkey=117;
+	quickkey=117;	//u
 	grayedout=1;
 }
 [GADGET22]
@@ -497,7 +497,7 @@
 		active=1;
 		commonattribs=0;
 	}
-	quickkey=114;
+	quickkey=114;	//r
 }
 [GADGET23]
 {
@@ -518,7 +518,7 @@
 		active=1;
 		commonattribs=0;
 	}
-	quickkey=99;
+	quickkey=99;	//c
 }
 [GADGET24]
 {
@@ -541,7 +541,7 @@
 	}
 	status=0;
 	text=;
-	quickkey=77;
+	quickkey=77;	//w
 	grayedout=0;
 }
 [GADGET25]
@@ -565,7 +565,7 @@
 	}
 	status=0;
 	text=;
-	quickkey=83;
+	quickkey=83;	//s
 	grayedout=0;
 }
 [GADGET26]
@@ -589,7 +589,7 @@
 	}
 	status=0;
 	text=;
-	quickkey=80;
+	quickkey=80;	//p
 	grayedout=0;
 }
 [GADGET27]
@@ -613,7 +613,7 @@
 	}
 	status=0;
 	text=;
-	quickkey=103;
+	quickkey=103;	//g
 }
 [GADGET28]
 {
@@ -636,7 +636,7 @@
 	}
 	status=0;
 	text=;
-	quickkey=65;
+	quickkey=65;	//a
 }
 [GADGET29]
 {
@@ -657,7 +657,7 @@
 		active=1;
 		commonattribs=0;
 	}
-	quickkey=100;
+	quickkey=100;	//d
 }
 [GADGET30]
 {
@@ -678,5 +678,5 @@
 		active=1;
 		commonattribs=0;
 	}
-	quickkey=107;
+	quickkey=107;	//k
 }

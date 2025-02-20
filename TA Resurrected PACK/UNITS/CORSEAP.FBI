@@ -65,11 +65,12 @@
 	canattack=1;
 	Weapon1=CORSEAP_WEAPON1;
 	Weapon2=CORSEAP_WEAPON2;
-	Weapon3=CORSEAP_WEAPON3;
+	//Weapon3=CORSEAP_WEAPON3;
 	wsec_badTargetCategory=VTOL;	
 	wpri_badTargetCategory=VTOL;
 	MoveRate1=8;
 	maxwaterdepth=255;
 	attackrunlength=100;
 	amphibious=1;
+	HoverAttack=1;		//test
 	}

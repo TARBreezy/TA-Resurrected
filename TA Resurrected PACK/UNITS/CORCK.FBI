@@ -16,7 +16,7 @@
 	MaxSlope=20;
 	EnergyUse=0.2;
 	BuildTime=5818;
-	WorkerTime=80;
+	WorkerTime=60;		//80
 	BMcode=1;
 	Builder=1;
 	ThreeD=1;

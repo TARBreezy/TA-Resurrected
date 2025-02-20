@@ -3,7 +3,8 @@
 	ID=42;
 	name=Flak Cannon;
 	rendertype=4;
-	ballistic=1;
+	//ballistic=1;
+	lineofsight=1;
 	turret=1;
 	toairweapon=1;
 
@@ -16,14 +17,20 @@
 	soundstart=canlite2;
 	soundhit=xplomed2;
 
-	minbarrelangle=-24;
+	//minbarrelangle=-24;
 
-	accuracy=1000;
-	tolerance=767;	
+	//accuracy=1000;
+	tolerance=4000;		//767
+	pitchtolerance=6000;	
 	burnblow=1;
+	selfprop=1;
+	unitsonly=1;
+
+	guidance=1;
+	turnrate=1500;	
 
 	explosiongaf=fx;
-	explosionart=explode3;
+	explosionart=explode2;		//explode3
 
 	waterexplosiongaf=fx;
 	waterexplosionart=h2o;
@@ -31,7 +38,7 @@
 	lavaexplosiongaf=fx;
 	lavaexplosionart=lavasplash;
 
-	color=1;
+	color=0;	//1
 	startsmoke=1;
 
 	[DAMAGE]

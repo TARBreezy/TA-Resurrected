@@ -15,7 +15,7 @@
 	MaxWaterDepth=0;
 	EnergyUse=0;
 	BuildTime=19248;
-	WorkerTime=200;
+	WorkerTime=150;		//200
 	BMcode=0;
 	Builder=1;
 	ThreeD=1;

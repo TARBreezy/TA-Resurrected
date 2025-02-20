@@ -6,7 +6,7 @@
 	lineofsight=1;
 	turret=0;
 
-	model=torpedo;
+	model=Advtorpedo;
 	propeller=1;
 
 	range=500;

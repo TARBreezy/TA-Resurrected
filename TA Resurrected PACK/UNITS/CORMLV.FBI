@@ -16,7 +16,7 @@
 	MaxSlope=16;
 	EnergyUse=1;
 	BuildTime=1740;
-	WorkerTime=100;
+	WorkerTime=90;		//100
 	BMcode=1;
 	Builder=1;
 	ThreeD=1;
@@ -48,13 +48,13 @@
 	ItalianName=Spoiler;
 	ItalianDescription=Posamine di terra;
 	canguard=0;
-	MaxVelocity=.8;
+	MaxVelocity=1.6;		//0.8
 	BrakeRate=0.2;
 	Acceleration=0.011;
 	TurnRate=230;
 	SteeringMode=1;
 	ShootMe=1;
-	Builddistance=70;
+	Builddistance=95;	//70
 	CanReclamate=0;
 	EnergyMake=1;
 	MetalMake=0;

@@ -14,7 +14,7 @@
 	MaxDamage=360;
 	EnergyUse=0.1;
 	BuildTime=16565;
-	WorkerTime=225;
+	WorkerTime=240;		//225
 	BMcode=1;
 	Builder=1;
 	ThreeD=1;
@@ -51,7 +51,7 @@
 	Acceleration=0.032;
 	TurnRate=256;
 	SteeringMode=1;
-	Builddistance=100;
+	Builddistance=95;	//100
 	ShootMe=1;
 	CanReclamate=1;
 	EnergyMake=17;

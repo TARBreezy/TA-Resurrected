@@ -5,7 +5,7 @@
 	Side=CORE;
 	Objectname=CORDECOM;
 	Designation=COR-DWM;
-	Name=Decoy Commander;
+	Name=Commander;
 	Description=Decoy Commander;
 	FootprintX=2;
 	FootprintZ=2;
@@ -16,7 +16,7 @@
 	MaxSlope=20;
 	EnergyUse=0;
 	BuildTime=26941;
-	WorkerTime=30;
+	WorkerTime=60;		//30
 	BMcode=1;
 	Builder=1;
 	ThreeD=1;
@@ -67,5 +67,5 @@
 	HideDamage=1;
 	ShowPlayerName=1;
 	CanReclamate=1;
-	Builddistance=60;
+	Builddistance=95;	//60
 	}

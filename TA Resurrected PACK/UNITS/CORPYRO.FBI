@@ -9,9 +9,9 @@
 	Description=Assault Kbot;
 	FootprintX=2;
 	FootprintZ=2;
-	BuildCostEnergy=2200;
+	BuildCostEnergy=2420;	//2200
 	BuildCostMetal=260;
-	MaxDamage=700;
+	MaxDamage=980;		//700
 	MaxWaterDepth=25;
 	MaxSlope=17;
 	EnergyUse=1.1;

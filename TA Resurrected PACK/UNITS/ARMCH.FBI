@@ -16,7 +16,7 @@
 	MaxSlope=16;
 	EnergyUse=1;
 	BuildTime=10494;
-	WorkerTime=80;
+	WorkerTime=90;		//80
 	BMcode=1;
 	Builder=1;
 	ThreeD=1;
@@ -53,7 +53,7 @@
 	TurnRate=120;
 	SteeringMode=1;
 	ShootMe=1;
-	Builddistance=70;
+	Builddistance=95;	//70
 	CanReclamate=1;
 	EnergyMake=16;
 	MetalMake=0.3;

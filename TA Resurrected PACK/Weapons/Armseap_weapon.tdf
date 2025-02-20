@@ -88,7 +88,7 @@
 		}
 	}
 
-[ARMSEAP_WEAPON3]
+/*[ARMSEAP_WEAPON3]
 	{
 	ID=95;
 	name=Guided Missiles;
@@ -154,4 +154,4 @@
 		CORVALK=130;
 		}
 	}
-
+*/

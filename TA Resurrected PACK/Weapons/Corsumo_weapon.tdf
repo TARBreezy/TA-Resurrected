@@ -29,7 +29,7 @@
 
 	[DAMAGE]
 		{
-		default=290;
+		default=230;	//290
 		}
 	}
 

@@ -9,12 +9,12 @@
 	Description=Amphibious Kbot;
 	FootprintX=2;
 	FootprintZ=2;
-	BuildCostEnergy=2935;
-	BuildCostMetal=324;
-	MaxDamage=1150;
+	BuildCostEnergy=2542;		//2935
+	BuildCostMetal=263;		//324
+	MaxDamage=832;			//1150
 	MaxSlope=14;
 	EnergyUse=0.4;
-	BuildTime=6820;
+	BuildTime=6161;			//6820
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;
@@ -49,10 +49,10 @@
 	ItalianName=Gimp;
 	ItalianDescription=Kbot anfibio;
 	canguard=1;
-	MaxVelocity=.8;
+	MaxVelocity=1.325;		//.8
 	BrakeRate=0.15;
-	Acceleration=0.04;
-	TurnRate=500;
+	Acceleration=0.07;	//0.04
+	TurnRate=420;		//500
 	SteeringMode=2;
 	ShootMe=1;
 	EnergyMake=0.4;
@@ -70,5 +70,8 @@
 	ai_limit=limit CORAMPH 20;
 	NoChaseCategory=VTOL;
 	noshadow=1;
-	maxwaterdepth=100;
+	//maxwaterdepth=100;
+	waterline=4;
+	canhover=1;
+	floater=0;
 	}

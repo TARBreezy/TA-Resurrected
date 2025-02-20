@@ -9,7 +9,7 @@
 
 	range=220;	//260
 	reloadtime=1.83;
-	weaponvelocity=280;
+	weaponvelocity=300;	//280
 	areaofeffect=84;
 	soundstart=canlite3;
 	soundhit=xplosml3;

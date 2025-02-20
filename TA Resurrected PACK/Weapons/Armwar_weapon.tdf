@@ -6,7 +6,7 @@
 	color=1;
 	lineofsight=1;
 	turret=1;
-	range=180;
+	range=200;	//180
 	reloadtime=.4;
 	weapontimer=1;
 	weaponvelocity=300;

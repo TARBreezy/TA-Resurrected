@@ -61,7 +61,7 @@
 	maneuverleashlength=10;
 	MovementClass=TANKSH3;
 	canattack=1;
-	Weapon1=ARMyork_GUN;
+	Weapon1=ARMFLAK_GUN;
 	wpri_badTargetCategory=NOTAIR;
 	BadTargetCategory=NOTAIR;
 	Ovradjust=1;
