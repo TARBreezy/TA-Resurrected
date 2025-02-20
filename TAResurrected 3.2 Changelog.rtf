@@ -1,0 +1,365 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Consolas;}{\f1\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\ul\b\f0\fs28\lang1033 General Balance/Bugfixes\fs24\par
+\ulnone\b0     \par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 All construction units & commanders build distance increased to 95. \line (Build farther out so cons do not jam up labs, especially t3. These will be adjusted individually for each unit later.)\par
+
+\pard\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ul Adjusted all the workertime (buildpower) for labs.\ulnone\line - T1 factories = 90\line - T2 factories = 180 (Hover/Seaplane included)\line - T3 factories = 270 \par
+
+\pard\tab (Smoother scaling of buildpower)\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ul Adjusted all workertime (buildpower) for construction units & coms.\ulnone\par
+
+\pard\tab - Air, Seaplane = 30\par
+\tab - Kbot, Decoy Commander = 60\par
+\tab - Vehicle, Minelayer, Hover, Adv. Air = 90\par
+\tab - Ship = 120\par
+\tab - Adv. Kbot = 150\par
+\tab - Adv. Vehicle, FARK, Necro = 180\par
+\tab - Adv. Con Sub = 210\par
+\tab - Commander = 300\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Added Underwater Moho Mines/Makers for better sea economy scaling\par
+
+\pard\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 All Flaks now use the ARM & CORE stationary flak weapon (condense weapon ID's and easier to balance)\par
+
+\pard\par
+\par
+\ul\b\fs28 Unit Balance\ulnone\b0\fs24\par
+\par
+\tab\ul\b ARM Moho Mine\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced energy cost 8700->6960\par
+{\pntext\f1\'B7\tab}Reduced metal cost 1508->1206\par
+{\pntext\f1\'B7\tab}Reduced build time 35750->28600\par
+
+\pard\tab\par
+\tab\ul\b CORE Moho Mine\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Reduced energy cost 9121->7297\ul\b\par
+{\pntext\f1\'B7\tab}\ulnone\b0 Reduced metal cost 1450->1160\ul\b\par
+{\pntext\f1\'B7\tab}\ulnone\b0 Reduced build time 32500->26000\ul\b\par
+
+\pard\par
+\ulnone\b0\tab\ul\b Flakker (ARM Stationary Flak Gun)\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Changed weapon from ballistic to lineofsight\line (no arc, straight to target)\par
+{\pntext\f1\'B7\tab}removed barrel angle & accuracy\line (these are for ballistic weapons)\par
+{\pntext\f1\'B7\tab}Increased tolerance 767->4000\line (weapon is willing to fire without directly aiming at target)\par
+{\pntext\f1\'B7\tab}Added pitch tolerance 6000\line (same as tolerance but vertically)\par
+{\pntext\f1\'B7\tab}Added guidance, tracks at 1500\par
+{\pntext\f1\'B7\tab}Changed explosion animation\par
+{\pntext\f1\'B7\tab}Changed color\par
+{\pntext\f1\'B7\tab}All ARM flaks use this weapon now\par
+
+\pard\par
+\tab\ul\b Cobra (CORE Stationary Flak Gun)\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Changed weapon from ballistic to lineofsight \line (no arc, straight to target)\par
+{\pntext\f1\'B7\tab}removed barrel angle & accuracy \line (these are for ballistic weapons)\par
+{\pntext\f1\'B7\tab}Increased tolerance 767->4000 \line (weapon is willing to fire without directly aiming at target)\par
+{\pntext\f1\'B7\tab}Added pitch tolerance 6000 \line (same as tolerance but vertically)\par
+{\pntext\f1\'B7\tab}Added guidance, tracks at 1500\par
+{\pntext\f1\'B7\tab}Reduced range 750->700 \line (even with ARM flak now)\par
+{\pntext\f1\'B7\tab}Changed explosion animation\par
+{\pntext\f1\'B7\tab}Changed color\par
+{\pntext\f1\'B7\tab}All CORE flaks use this weapon now\par
+
+\pard\tab\par
+\tab   \par
+\ul\b\fs28 ARM Kbots\par
+\ulnone\b0\fs24\par
+\tab\ul\b Peewee\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced buildtime 1452->1379\par
+{\pntext\f1\'B7\tab}Increased health 250->280\par
+{\pntext\f1\'B7\tab}(Similar stats to the A.K.)\par
+
+\pard\par
+\tab\ul\b Jethro\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced range 604->590 \par
+{\pntext\f1\'B7\tab}Reduced metal cost 128->107\par
+{\pntext\f1\'B7\tab}Reduced energy cost 1219->924\par
+{\pntext\f1\'B7\tab}Reduced build time 2631->1747\par
+{\pntext\f1\'B7\tab}(Lowering costs to be slightly below its vehicle counterpart)\par
+
+\pard\par
+     \tab\ul\b Warrior\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced build time 5709->3268\par
+{\pntext\f1\'B7\tab}Increased Warrior's EMG weapon burst 2->3\par
+{\pntext\f1\'B7\tab}Increased Warrior's EMG weapon damage 12->16\par
+{\pntext\f1\'B7\tab}(Keeping the original feel of the unit but rebalanced to make it viable)\par
+{\pntext\f1\'B7\tab}Increased Warrior's EMG weapon range 180->200\par
+
+\pard\ul\b\fs28\par
+\par
+CORE Kbots\ulnone\b0\fs24\par
+         \par
+\tab\ul\b A.K.\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced buildtime 1523->1447\par
+{\pntext\f1\'B7\tab}Increased health 265->295\par
+{\pntext\f1\'B7\tab}Increased damage 30->45 \line (Match Peewee DPS)\par
+{\pntext\f1\'B7\tab}Reduced reload time 0.865->0.75 \line (Lower is faster reload)\par
+{\pntext\f1\'B7\tab}Torso heading speed increased to 150.032967 \line (Match Peewee)\par
+{\pntext\f1\'B7\tab}Left & right arm pitch speed incrased to 200.043956 (Match Peewee)\par
+{\pntext\f1\'B7\tab}Change Weapon Name from CORE_LASER to AK_LASER\par
+{\pntext\f1\'B7\tab}Changed color of laser weapon to red\par
+
+\pard\par
+    \tab\ul\b Crasher\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced energy cost 1224->852\par
+{\pntext\f1\'B7\tab}Reduced metal cost 129->104\par
+{\pntext\f1\'B7\tab}Reduced build time 2636->1729\par
+{\pntext\f1\'B7\tab}(Lowering costs to be slightly below its vehicle counterpart)\par
+
+\pard          \par
+    \tab\ul\b Thud\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Increased range 230->320 \line (Match Hammer range)\par
+
+\pard\par
+\ul\b\fs28\par
+ARM Vehicles\par
+\par
+\ulnone\b0\fs24     \tab\ul\b Jeffy\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Changed weapon from ARM_LASER to SCOUT_LASER\par
+{\pntext\f1\'B7\tab}Changed color of laser weapon to brown\par
+
+\pard\fs28\tab\fs24\par
+\tab\ul\b Stumpy\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased damage 50->100 \line (DPS was too low to be effective)\par
+
+\pard\par
+\ul\b\fs28\par
+CORE Vehicles\fs24\par
+\ulnone\b0         \par
+     \ul\b Instigator\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Increased damage 44->45 \line (Match Flash DPS)\par
+{\pntext\f1\'B7\tab}Reduced reload time 1->0.75 \line (Lower is faster reload)\par
+{\pntext\f1\'B7\tab}Changed color of laser weapon to red\par
+
+\pard\par
+  \tab\ul\b Weasel\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Changed weapon from CORE_LASER to SCOUT_LASER\par
+{\pntext\f1\'B7\tab}Changed color of laser weapon to brown\par
+
+\pard\par
+   \tab\ul\b Raider\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased damage 50->100 \line (DPS was too low to be effective)\par
+
+\pard     \par
+    \tab\ul\b Leveler\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased energy cost 1887->2348\par
+{\pntext\f1\'B7\tab}Reduced metal cost 292->209\par
+{\pntext\f1\'B7\tab}Reduced build time 4209->3300\par
+{\pntext\f1\'B7\tab}Increased movement speed 0.8->1.1\par
+{\pntext\f1\'B7\tab}Increased turn rate 220->240\par
+{\pntext\f1\'B7\tab}Changed weapon from ballistic to line of sight\par
+{\pntext\f1\'B7\tab}Reduced range 260->220\par
+{\pntext\f1\'B7\tab}Increased damage 180->220\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 280->300\par
+{\pntext\f1\'B7\tab}(Keeping the original feel of the unit but rebalanced to make it viable)\par
+
+\pard\par
+\ul\b\fs28\par
+ARM Air\par
+\par
+\ulnone\b0\fs24\tab\ul\b Peeper\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Added attack command & null_weapon for offscreening\par
+
+\pard\par
+\par
+\ul\b\fs28 CORE Air\ulnone\b0\fs24\par
+    \par
+\tab\ul\b Avenger\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased brake rate 2->5\par
+{\pntext\f1\'B7\tab}Increased acceleration 0.21->0.25\par
+{\pntext\f1\'B7\tab}Increased turn rate 405->435\par
+{\pntext\f1\'B7\tab}(Bringing the unit more in line with freedom fighter but has different feel)\par
+
+\pard\par
+    \tab\ul\b Fink\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Added attack command & null_weapon for offscreening\par
+
+\pard   \par
+    \tab\ul\b Valkyrie\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced energy cost 2695->2560\par
+{\pntext\f1\'B7\tab}Reduced metal cost 115->109\par
+{\pntext\f1\'B7\tab}Reduced health 160->153\par
+{\pntext\f1\'B7\tab}Reduced build time 5889->5595\par
+{\pntext\f1\'B7\tab}(Bringing the unit more in line with atlas but has different feel)\par
+
+\pard\par
+\par
+\ul\b\fs28 ARM Ships\ulnone\b0\fs24\par
+\par
+\tab\ul\b Hulk\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced energy cost 4639->2204\par
+{\pntext\f1\'B7\tab}Reduced metal cost 919->437\par
+{\pntext\f1\'B7\tab}Inceased health 2000->2050\par
+{\pntext\f1\'B7\tab}Reduced buildtime 14538->7451\par
+{\pntext\f1\'B7\tab}(To make transporting cons/coms/units more viable early on in the game)\par
+
+\pard\par
+\par
+\ul\b\fs28 CORE Ships\ulnone\b0\fs24\par
+     \par
+\tab\ul\b Envoy\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced energy cost 4786->2393\par
+{\pntext\f1\'B7\tab}Reduced metal cost 887->444\par
+{\pntext\f1\'B7\tab}Reduced build time 13663->7515\par
+{\pntext\f1\'B7\tab}(To make transporting cons/coms/units more viable early on in the game)\par
+
+\pard\par
+\par
+\ul\b\fs28 ARM AdvKbots\par
+\par
+\ulnone\b0\fs24\tab\ul\b Zeus\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Increased the speed of drawgun animation\par
+{\pntext\f1\'B7\tab}Increased torso turn rate 90->150\par
+{\pntext\f1\'B7\tab}Increased gun pitch rate 90->150\par
+{\pntext\f1\'B7\tab}Increased energy cost 2228->2800\par
+{\pntext\f1\'B7\tab}Increased metal cost 267->336\par
+{\pntext\f1\'B7\tab}Increased health 875->1440\par
+{\pntext\f1\'B7\tab}Increased build time 5478->5813\par
+{\pntext\f1\'B7\tab}Increased range 180->220\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 00->500\par
+{\pntext\f1\'B7\tab}Increased damage 180->280\par
+{\pntext\f1\'B7\tab}Changed color of weapon to a light blue\par
+
+\pard\par
+\tab\ul\b Shooter\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Reduced reload time 20->12 \line (number = seconds, lower is better)\par
+
+\pard\par
+\ul\b\fs28\par
+CORE AdvKbots\ulnone\b0\fs24\par
+\par
+\tab\ul\b Pyro\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Increased energy cost 2200->2420\par
+{\pntext\f1\'B7\tab}Increased health 700->980\par
+{\pntext\f1\'B7\tab}Changed from ballistic to lineofsight weapon\par
+{\pntext\f1\'B7\tab}Increased range 160->200\par
+{\pntext\f1\'B7\tab}Reduced reload time 1.2->0.96\par
+{\pntext\f1\'B7\tab}Reduced weapontimer 1->0.8\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 188->277\par
+{\pntext\f1\'B7\tab}Increased burst 17->18\par
+{\pntext\f1\'B7\tab}Increased tolerance 200->2000\par
+{\pntext\f1\'B7\tab}Increased torso turn speed 90->150\par
+{\pntext\f1\'B7\tab}Increased left & right arm speed 45->200\par
+
+\pard\par
+\tab\ul\b The Can\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Reduced health 2800->1800\par
+{\pntext\f1\'B7\tab}Increased sight distance 200->255\par
+{\pntext\f1\'B7\tab}Increased movement speed 0.5->0.85\par
+{\pntext\f1\'B7\tab}Increased range 200->220\par
+{\pntext\f1\'B7\tab}Reduced weapon velocity 700->500\par
+{\pntext\f1\'B7\tab}Reduced damage 220->180\par
+{\pntext\f1\'B7\tab}Increased head & gun turn rate to 45/90->150\par
+
+\pard\tab (Match zeus turn rate)\par
+\par
+\tab\ul\b Sumo\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Increased energy cost 5987->11974\par
+{\pntext\f1\'B7\tab}Reduced health 4950->3960\par
+{\pntext\f1\'B7\tab}Increased build time 10975->15375\par
+{\pntext\f1\'B7\tab}Increased movement speed 0.34->0.7\par
+{\pntext\f1\'B7\tab}Increased turn rate 90->120\par
+{\pntext\f1\'B7\tab}Can now be transported in a transport\par
+{\pntext\f1\'B7\tab}Reduced damage 290->230\par
+
+\pard\par
+\par
+\tab\ul\b Gimp\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Reduced energy cost 2935->2542\par
+{\pntext\f1\'B7\tab}Reduced metal cost 324->263\par
+{\pntext\f1\'B7\tab}Reduced health 1150->832\par
+{\pntext\f1\'B7\tab}Reduced build time 6820->6161\par
+{\pntext\f1\'B7\tab}Increased movement speed 0.8->1.325\par
+{\pntext\f1\'B7\tab}Increased acceleration 0.04->0.07\par
+{\pntext\f1\'B7\tab}Reduced turn rate 500->420\par
+{\pntext\f1\'B7\tab}Now a hover unit like the ARM counter part Pelican\par
+{\pntext\f1\'B7\tab}Reduced Laser range 300->260\par
+{\pntext\f1\'B7\tab}Reduced Laser weapon velocity 700->500\par
+{\pntext\f1\'B7\tab}Increased Laser tolerance 300->1000\par
+{\pntext\f1\'B7\tab}Removed Plasma weapon, added Storm rocket weapon (temporary, will be adding AA)\par
+{\pntext\f1\'B7\tab}Gimp can now fire both weapons simutaneously \line (before they were linked so only one weapon would fire at a time)\par
+
+\pard\par
+\par
+\ul\b\fs28 ARM Seaplanes\par
+\ulnone\b0\fs24\par
+\tab\ul\b Albatross\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Removed guided missile weapon \line (redundancy with the seaplane fighter)\par
+{\pntext\f1\'B7\tab}Now has hoverattack \line (Attacks moving side to side like a gunship)\par
+
+\pard\par
+\tab\par
+\ul\b\fs28 CORE Seaplanes\ulnone\b0\fs24\par
+\par
+\tab\ul\b Typhoon\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Removed guided missile weapon \line (redundancy with the seaplane fighter)\par
+{\pntext\f1\'B7\tab}Now has hoverattack \line (Attacks moving side to side like a gunship)\par
+
+\pard\par
+\tab\ul\b\par
+\fs28 Unit Models\ulnone\b0\par
+\fs24\par
+    \tab\ul\b Big Bertha\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Switched from OTA to Evolva 2004 model\par
+
+\pard\par
+\tab\ul\b Leviathan\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Changed weapon model from torpedo to advtorpedo\par
+
+\pard\par
+\tab\ul\b Krogoth\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Increased unit size by 50%\par
+
+\pard\par
+\tab\ul\b Sumo\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Increased unit size by 25%\par
+
+\pard\par
+\tab\ul\b ARM & CORE Underwater Metal Extractor\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Increased CORE UW Mex size vertically \line (Air harass balance)\par
+{\pntext\f1\'B7\tab}Reduced ARM UW Mex size vertically  \line (Air harass balance)\par
+}
+ 
