@@ -56,7 +56,7 @@
 	SteeringMode=1;
 	ShootMe=1;
 	Canfly=1;
-	cruisealt=50;
+	cruisealt=60;	//50
 	Scale=1;
 	BankScale=1;
 	EnergyMake=0.6;

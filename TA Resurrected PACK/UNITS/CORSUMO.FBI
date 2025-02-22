@@ -50,7 +50,7 @@
 	ItalianName=Sumo;
 	ItalianDescription=Assalto pesante KBot;
 	canguard=1;
-	MaxVelocity=0.7;	//0.34
+	MaxVelocity=0.75;	//0.34
 	BrakeRate=0.1;
 	Acceleration=0.04;
 	TurnRate=120;	//90

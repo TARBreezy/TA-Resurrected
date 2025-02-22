@@ -15,7 +15,7 @@
 	MaxWaterDepth=22;
 	MaxSlope=17;
 	EnergyUse=0.3;
-	BuildTime=8541;
+	BuildTime=3416;		//8541
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;

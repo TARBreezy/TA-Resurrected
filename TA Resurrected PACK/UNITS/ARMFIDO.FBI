@@ -50,7 +50,7 @@
 	ItalianName=Fido;
 	ItalianDescription=Kbot da assalto;
 	canguard=1;
-	MaxVelocity=1.75;
+	MaxVelocity=1.55;	//1.75
 	BrakeRate=0.3;
 	Acceleration=0.1;
 	TurnRate=900;
@@ -59,8 +59,8 @@
 	EnergyMake=0.8;
 	DefaultMissionType=Standby;
 	maneuverleashlength=640;
-	MovementClass=TANKSH2;
-	Upright=0;
+	MovementClass=KBOTSS2;		//TANKSH2
+	Upright=1;
 	canattack=1;
 	Weapon1=GAUSS;
 	wpri_badTargetCategory=VTOL;

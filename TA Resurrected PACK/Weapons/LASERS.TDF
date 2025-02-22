@@ -132,9 +132,9 @@
 	lineofsight=1;
 	turret=1;
 
-	range=210;
+	range=200;	//210
 	reloadtime=.8;
-	weaponvelocity=400;
+	weaponvelocity=450;	//400
 	areaofeffect=8;
 	burstrate=.2;
 	duration=.02;
@@ -145,6 +145,7 @@
 
 	firestarter=50;
 	beamweapon=1;
+	tolerance=1500;
 	color=232;	/* GREEN */
 	color2=234;
 
@@ -159,7 +160,7 @@
 
 	[DAMAGE]
 		{
-		default=40;
+		default=60;	//40
 		}
 	}
 
@@ -561,7 +562,7 @@
 	lineofsight=1;
 	turret=1;
 
-	range=220;	//200
+	range=240;	//200
 	reloadtime=.95;
 	energypershot=75;
 	weaponvelocity=500;	//700
@@ -584,6 +585,6 @@
 
 	[DAMAGE]
 		{
-		default=180;	//220
+		default=145;	//220
 		}
 	}

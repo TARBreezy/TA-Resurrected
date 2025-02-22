@@ -722,12 +722,12 @@
 	range=370;
 	reloadtime=.6;
 	weapontimer=1;
-	weaponvelocity=450;
+	weaponvelocity=300;	//450
 	//startvelocity=150;
 	//weaponacceleration=200;
 	sprayangle=1024;
 	areaofeffect=8;
-	burst=4;
+	burst=3;	//4
 	burstrate=.1;
 	soundstart=armsml3;
 	soundhit=lasrhit1;
@@ -736,6 +736,9 @@
 	pitchtolerance=12000;
 
 	startsmoke=1;
+	guidance=1;
+	tracks=1;
+	turnrate=20000;
 
 	explosiongaf=fx;
 	explosionart=explode5;
@@ -748,7 +751,7 @@
 
 	[DAMAGE]
 		{
-		default=11;
+		default=12;	//11
 		}
 	}
 
@@ -1042,8 +1045,9 @@
 	lineofsight=1;
 	turret=1;
 
-	range=220;	//180
+	range=240;	//180
 	reloadtime=1.45;
+	energypershot=105;
 	weaponvelocity=500;	//400
 	areaofeffect=8;
 	duration=10;
@@ -1068,7 +1072,7 @@
 
 	[DAMAGE]
 		{
-		default=280;	//180
+		default=220;	//180
 		}
 	}
 

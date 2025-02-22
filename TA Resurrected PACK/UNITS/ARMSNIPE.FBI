@@ -50,7 +50,7 @@
 	ItalianName=Shooter;
 	ItalianDescription=Kbot cecchino;
 	canguard=1;
-	MaxVelocity=1.1;
+	MaxVelocity=0.9;		//1.1
 	BrakeRate=0.15;
 	Acceleration=0.1;
 	TurnRate=1216;

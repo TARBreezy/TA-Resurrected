@@ -6,7 +6,7 @@
 	Objectname=CORSEAL;
 	Designation=TBA-PS9;
 	Name=Crock;
-	Description=Amphibious Tank;
+	Description=Stealth Amphibious Tank;
 	FootprintX=3;
 	FootprintZ=3;
 	BuildCostEnergy=2310;
@@ -66,4 +66,8 @@
 	BadTargetCategory=VTOL;
 	NoChaseCategory=VTOL;
 	Ovradjust=1;
+	Floater=1;
+	Digger=1;
+	Upright=1;
+	Stealth=1;
 	}

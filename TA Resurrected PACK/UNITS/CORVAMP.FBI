@@ -46,10 +46,10 @@
 	ItalianName=Vamp;
 	ItalianDescription=Caccia Stealth;
 	canguard=1;
-	MaxVelocity=12;
+	MaxVelocity=12.5;		//12
 	BrakeRate=7;
 	Acceleration=0.35;
-	TurnRate=620;
+	TurnRate=738;	//620
 	SteeringMode=1;
 	ShootMe=1;
 	Canfly=1;
@@ -65,6 +65,6 @@
 	Weapon2=CORVTOL_ADVMISSILE2;
 	wsec_badTargetCategory=NOTAIR;
 	MoveRate1=8;
-	Stealth=1;
+	//Stealth=1;
 	Ovradjust=1;
 	}

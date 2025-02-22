@@ -8,7 +8,7 @@
 
 	range=210;
 	reloadtime=1.55;
-	weaponvelocity=400;
+	weaponvelocity=500;	//400
 	areaofeffect=8;
 	duration=10;
 	soundtrigger=1;
@@ -19,8 +19,8 @@
 	firestarter=50;
 
 	beamweapon=1;
-	color=208;	/* Yellow */
-	color2=196;
+	color=128;	/* Light Blue */
+	color2=12;	//130
 
 	explosiongaf=fx;
 	explosionart=explode5;
@@ -32,6 +32,6 @@
 
 	[DAMAGE]
 		{
-		default=120;
+		default=200;	//120
 		}
 	}

@@ -63,6 +63,6 @@
 	Weapon2=ARMVTOL_ADVMISSILE2;
 	wsec_badTargetCategory=NOTAIR;
 	MoveRate1=8;
-	Stealth=1;
+	//Stealth=1;
 	Ovradjust=1;
 	}

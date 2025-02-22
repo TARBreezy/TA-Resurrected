@@ -11,7 +11,8 @@
 	FootprintZ=3;
 	BuildCostEnergy=116664;
 	BuildCostMetal=29489;
-	MaxDamage=29918;
+	MaxDamage=14959;		//Duplication bug @ 29918
+	damagemodifier=0.5;		//For Duplication bug
 	MaxWaterDepth=12;
 	MaxSlope=17;
 	EnergyUse=1.1;
@@ -29,7 +30,7 @@
 	MetalStorage=0;
 	ExplodeAs=NUCLEAR_MISSILE;
 	SelfDestructAs=NUCLEAR_MISSILE;
-	Category=CORE KBOT LEVEL2 WEAPON NOTAIR NOTSUB CTRL_W;
+	Category=CORE KBOT LEVEL3 WEAPON NOTAIR NOTSUB CTRL_W;
 	TEDClass=KBOT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=corkrog_dead;
