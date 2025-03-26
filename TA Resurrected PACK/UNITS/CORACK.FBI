@@ -9,13 +9,13 @@
 	Description=Tech Level 2;
 	FootprintX=2;
 	FootprintZ=2;
-	BuildCostEnergy=6096;
-	BuildCostMetal=325;
+	BuildCostEnergy=3620;	//6096
+	BuildCostMetal=301;	//325
 	MaxDamage=1070;
 	MaxWaterDepth=25;
 	MaxSlope=20;
 	EnergyUse=0.2;
-	BuildTime=13963;
+	BuildTime=8685;		//13963
 	WorkerTime=150;		//160
 	BMcode=1;
 	Builder=1;
@@ -48,7 +48,7 @@
 	ItalianName=Kbot Costruttore Spec.;
 	ItalianDescription=Tecnologia Livello 2;
 	canguard=1;
-	MaxVelocity=0.6;
+	MaxVelocity=1.1;	//0.6
 	BrakeRate=0.5;
 	Acceleration=0.16;
 	TurnRate=1005;
@@ -60,7 +60,7 @@
 	MetalMake=0.5;
 	DefaultMissionType=Standby;
 	maneuverleashlength=640;
-	MovementClass=TANKSH2;
+	MovementClass=KBOTCONS;		//TANKSH2
 	Upright=1;
 	MobileStandOrders=1;
 	Ovradjust=1;

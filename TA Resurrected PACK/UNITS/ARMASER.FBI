@@ -6,7 +6,7 @@
 	Objectname=ARMASER;
 	Designation=ARM-CB;
 	Name=Eraser;
-	Description=Radar Jammer;
+	Description=Radar Jammer Kbot;
 	FootprintX=1;
 	FootprintZ=1;
 	BuildCostEnergy=1326;

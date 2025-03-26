@@ -6,10 +6,10 @@
 	lineofsight=1;
 	turret=1;
 
-	range=480;
-	reloadtime=1.1;
+	range=430;	//480
+	reloadtime=1;		//1.1
 	energypershot=75;
-	weaponvelocity=800;
+	weaponvelocity=700;	//800
 	areaofeffect=8;
 	
 	soundstart=Lasrmas2;
@@ -33,7 +33,7 @@
 
 	[DAMAGE]
 		{
-		default=200;
+		default=195;	//200
 		}
 	}
 

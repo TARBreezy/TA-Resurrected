@@ -9,13 +9,13 @@
 	Description=Produces Metal;
 	FootprintX=4;
 	FootprintZ=4;
-	BuildCostEnergy=10928;
+	BuildCostEnergy=9835;		//10928
 	BuildCostMetal=51;
 	MaxDamage=500;
 	MaxWaterDepth=0;
 	MaxSlope=10;
-	EnergyUse=625;
-	BuildTime=41253;
+	EnergyUse=800;		//625
+	BuildTime=37128;	//41253
 	WorkerTime=0;
 	BMcode=0;
 	Builder=0;
@@ -47,6 +47,6 @@
 	downloadable=1;
 	ActivateWhenBuilt=1;
 	onoffable=1;
-	MakesMetal=12;
-	DamageModifier=0.7;
+	MakesMetal=16;		//12
+	//DamageModifier=0.7;
 	}

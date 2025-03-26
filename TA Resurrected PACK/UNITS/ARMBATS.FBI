@@ -9,11 +9,11 @@
 	Description=Battleship;
 	FootprintX=6;
 	FootprintZ=6;
-	BuildCostEnergy=20731;
-	BuildCostMetal=4404;
+	BuildCostEnergy=17621;		//20731
+	BuildCostMetal=3303;		//4404
 	MaxDamage=5720;
 	EnergyUse=48;
-	BuildTime=42730;
+	BuildTime=34184;	//42730
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;

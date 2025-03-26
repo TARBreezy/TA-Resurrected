@@ -10,11 +10,11 @@
 	FootprintX=4;
 	FootprintZ=4;
 	BuildCostEnergy=10928;
-	BuildCostMetal=51;
+	BuildCostMetal=57;	//51
 	MaxDamage=500;
 	MaxWaterDepth=0;
 	MaxSlope=10;
-	EnergyUse=625;
+	EnergyUse=800;		//625
 	BuildTime=41253;
 	WorkerTime=0;
 	BMcode=0;
@@ -47,7 +47,7 @@
 	downloadable=1;
 	ActivateWhenBuilt=1;
 	onoffable=1;
-	MakesMetal=12;
+	MakesMetal=16;		//12
 	//DamageModifier=0.7;
 	Waterline=6;
 	MinWaterDepth=11;

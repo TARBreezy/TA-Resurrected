@@ -46,9 +46,9 @@
 	ItalianName=Seahawk;
 	ItalianDescription=Sonar aerotrasportato;
 	canguard=1;
-	MaxVelocity=9.5;
+	MaxVelocity=10.5;	//9.5
 	BrakeRate=4;
-	Acceleration=0.06;
+	Acceleration=0.26;	//0.06
 	TurnRate=365;
 	SteeringMode=1;
 	ShootMe=1;

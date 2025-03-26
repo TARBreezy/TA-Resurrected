@@ -13,7 +13,7 @@
 	BuildCostMetal=1358;
 	MaxDamage=2360;
 	EnergyUse=7;
-	BuildTime=38628;
+	BuildTime=28971;		//38628
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;

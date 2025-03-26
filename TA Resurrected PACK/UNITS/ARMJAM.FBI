@@ -6,7 +6,7 @@
 	Objectname=ARMJAM;
 	Designation=ARM-MRJ;
 	Name=Jammer;
-	Description=Mobile Radar Jammer;
+	Description=Radar Jammer Vehicle;
 	FootprintX=2;
 	FootprintZ=2;
 	BuildCostEnergy=1621;
@@ -47,7 +47,7 @@
 	ItalianName=Disturbatore;
 	ItalianDescription=Crea interferenze radar - mobile;
 	canguard=1;
-	MaxVelocity=1;
+	MaxVelocity=1.2;		//1
 	BrakeRate=0.012;
 	Acceleration=0.035;
 	TurnRate=505;

@@ -9,13 +9,13 @@
 	Description=Resurrection Kbot;
 	FootprintX=2;
 	FootprintZ=2;
-	BuildCostEnergy=10164;
-	BuildCostMetal=376;
+	BuildCostEnergy=4887;		//10164	
+	BuildCostMetal=436;		//376
 	MaxDamage=470;
 	MaxWaterDepth=22;
 	MaxSlope=14;
 	EnergyUse=0.4;
-	BuildTime=11416;
+	BuildTime=9119;		//11416
 	WorkerTime=180;		//160
 	BMcode=1;
 	Builder=1;
@@ -72,4 +72,6 @@
 	canresurrect=1;
 	resurrect=1;
 	stealth=1;
+	EnergyMake=17;
+	MetalMake=0.5;
 	}

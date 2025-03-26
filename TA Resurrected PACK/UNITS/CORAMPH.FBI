@@ -31,7 +31,7 @@
 	Category=CORE KBOT LEVEL2 WEAPON NOTAIR CTRL_W;
 	TEDClass=KBOT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	Corpse=coramph_dead;
+	Corpse=coramph_seadead;
 	GermanName=Gimp;
 	GermanDescription=Amphibien-Kbot;
 	UnitNumber=249;

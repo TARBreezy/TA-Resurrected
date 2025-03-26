@@ -9,13 +9,13 @@
 	Description=Hovercraft Rocket Launcher;
 	FootprintX=3;
 	FootprintZ=3;
-	BuildCostEnergy=3352;
-	BuildCostMetal=318;
+	BuildCostEnergy=3017;		//3352
+	BuildCostMetal=286;		//318
 	MaxDamage=460;
 	MaxWaterDepth=0;
 	MaxSlope=16;
 	EnergyUse=2.6;
-	BuildTime=19124;
+	BuildTime=5738;		//19124
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;
@@ -32,7 +32,7 @@
 	Category=CORE HOVER WEAPON LEVEL2 NOTAIR NOTSUB CTRL_W;
 	TEDClass=TANK;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	Corpse=cormh_dead;
+	Corpse=cormh_seadead;
 	GermanName=Räuber;
 	GermanDescription=Hovercraft-Raketenwerfer;
 	UnitNumber=288;

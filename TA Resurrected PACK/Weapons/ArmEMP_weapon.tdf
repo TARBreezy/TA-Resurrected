@@ -10,7 +10,7 @@
 	model=empmisl;
 
 	range=32000;
-	reloadtime=130;
+	reloadtime=150;		//130
 
 	noautorange=1;
 	weapontimer=5;

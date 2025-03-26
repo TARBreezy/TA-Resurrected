@@ -1,0 +1,381 @@
+#define TA			// This is a TA script
+
+#include "sfxtype.h"
+#include "exptype.h"
+
+piece  nanospray, turret, rfoot, lfoot, pelvis, lflap, rflap, guncover,
+       nozzle, arms, nanobody2, ground;
+
+static-var  Turret_1, Moving_2, ReqState_3, On_4, Busy_5, Waiting_6;
+
+
+SmokeUnit(healthpercent, sleeptime, smoketype)
+{
+	while( TRUE )
+	{
+		healthpercent = ( get HEALTH );
+		if( healthpercent < 66 )
+		{
+			smoketype = ( 256 | 2 );
+			if( Rand(1,66) < healthpercent )
+			{
+				smoketype = ( 256 | 1 );
+			}
+			emit-sfx smoketype from turret;
+		}
+		sleeptime = ( healthpercent * 50 );
+		if( sleeptime < 200 )
+		{
+			sleeptime = 200;
+		}
+		sleep sleeptime;
+
+		if( !Busy_5 )
+		{
+			Waiting_6 = 0;
+		}
+		if( Busy_5 )
+		{
+			Waiting_6 = Waiting_6 + sleeptime ;
+			if( Waiting_6 > 11000 )
+			{
+				Busy_5 = 0;
+				Waiting_6 = 0;
+			}
+		}
+
+	}
+	return (0);
+}
+
+MotionControl()
+{
+	while( TRUE )
+	{
+		if( Moving_2 )
+		{
+		move rfoot to y-axis [0] now;
+		move rfoot to z-axis [-1.75] now;
+		move lfoot to y-axis [0] now;
+		move lfoot to z-axis [1.40] now;
+		turn pelvis to x-axis <2.10> now;
+		turn rfoot to x-axis <-2.10> now;
+		turn lfoot to x-axis <-2.10> now;
+		sleep 60;
+		turn pelvis to x-axis <0> now;
+		turn rfoot to x-axis <0> now;
+		turn lfoot to x-axis <0> now;
+		sleep 30;
+		move pelvis to y-axis [0.20] now;
+		move rfoot to y-axis [0.19] now;
+		move rfoot to z-axis [-1.50] now;
+		move lfoot to y-axis [-0.20] now;
+		move lfoot to z-axis [1] now;
+		turn pelvis to x-axis <-1.04> now;
+		turn rfoot to x-axis <0> now;
+		turn lfoot to x-axis <1.40> now;
+		sleep 90;
+		move pelvis to y-axis [0.40] now;
+		move rfoot to y-axis [0.44] now;
+		move rfoot to z-axis [-1] now;
+		move lfoot to y-axis [-0.40] now;
+		move lfoot to z-axis [0.70] now;
+		turn pelvis to x-axis <-2.10> now;
+		turn lfoot to x-axis <2.10> now;
+		sleep 80;
+		move pelvis to y-axis [0.70] now;
+		move rfoot to z-axis [-0.50] now;
+		move lfoot to y-axis [-0.70] now;
+		move lfoot to z-axis [0.40] now;
+		turn pelvis to x-axis <-3.16> now;
+		turn rfoot to x-axis <-4.55> now;
+		turn lfoot to x-axis <3.51> now;
+		sleep 70;
+		move pelvis to y-axis [1.14] now;
+		move rfoot to y-axis [0.59] now;
+		move rfoot to z-axis [0] now;
+		move lfoot to y-axis [-1.14] now;
+		move lfoot to z-axis [0] now;
+		turn pelvis to x-axis <-4.57> now;
+		turn rfoot to x-axis <-5.62> now;
+		turn lfoot to x-axis <4.57> now;
+		sleep 70;
+		move pelvis to y-axis [0.79] now;
+		move rfoot to z-axis [0.50] now;
+		move lfoot to y-axis [-0.80] now;
+		move lfoot to z-axis [-0.40] now;
+		turn pelvis to x-axis <-4.21> now;
+		turn rfoot to x-axis <-19.32> now;
+		turn lfoot to x-axis <4.21> now;
+		sleep 70;
+		move pelvis to y-axis [0.40] now;
+		move rfoot to y-axis [1.04] now;
+		move rfoot to z-axis [1.30] now;
+		move lfoot to y-axis [-0.40] now;
+		move lfoot to z-axis [-1.75] now;
+		turn pelvis to x-axis <-2.10> now;
+		turn lfoot to x-axis <2.10> now;
+		sleep 70;
+		move pelvis to y-axis [0] now;
+		move rfoot to y-axis [0] now;
+		move rfoot to z-axis [1.60] now;
+		move lfoot to y-axis [0] now;
+		turn pelvis to x-axis <2.10> now;
+		turn rfoot to x-axis <-1.75> now;
+		turn lfoot to x-axis <-2.10> now;
+		sleep 60;
+		turn pelvis to x-axis <0> now;
+		turn rfoot to x-axis <0> now;
+		turn lfoot to x-axis <0> now;
+		sleep 30;
+		move pelvis to y-axis [0.20] now;
+		move rfoot to y-axis [-0.20] now;
+		move rfoot to z-axis [1] now;
+		move lfoot to y-axis [0.19] now;
+		move lfoot to z-axis [-1.55] now;
+		turn pelvis to x-axis <-1.05> now;
+		turn rfoot to x-axis <1.05> now;
+		sleep 90;
+		move pelvis to y-axis [0.40] now;
+		move rfoot to y-axis [-0.40] now;
+		move rfoot to z-axis [0.70] now;
+		move lfoot to y-axis [0.44] now;
+		move lfoot to z-axis [-1] now;
+		turn pelvis to x-axis <-2.10> now;
+		turn rfoot to x-axis <2.46> now;
+		sleep 80;
+		move pelvis to y-axis [0.69] now;
+		move rfoot to y-axis [-0.70] now;
+		move rfoot to z-axis [0.40] now;
+		move lfoot to y-axis [0.59] now;
+		move lfoot to z-axis [-0.49] now;
+		turn pelvis to x-axis <-3.16> now;
+		turn rfoot to x-axis <3.16> now;
+		turn lfoot to x-axis <-4.55> now;
+		sleep 70;
+		move pelvis to y-axis [1.14] now;
+		move rfoot to y-axis [-1.10] now;
+		move rfoot to z-axis [0] now;
+		move lfoot to y-axis [0.59] now;
+		move lfoot to z-axis [0] now;
+		turn pelvis to x-axis <-4.92> now;
+		turn rfoot to x-axis <4.92> now;
+		turn lfoot to x-axis <-5.62> now;
+		sleep 70;
+		move pelvis to y-axis [0.80] now;
+		move rfoot to y-axis [-0.80] now;
+		move rfoot to z-axis [-0.40] now;
+		move lfoot to z-axis [0.50] now;
+		turn pelvis to x-axis <-4.21> now;
+		turn rfoot to x-axis <4.21> now;
+		turn lfoot to x-axis <-19.32> now;
+		sleep 70;
+		move pelvis to y-axis [0.40] now;
+		move rfoot to y-axis [-0.40] now;
+		move rfoot to z-axis [-1.75] now;
+		move lfoot to y-axis [1.04] now;
+		move lfoot to z-axis [1.30] now;
+		turn pelvis to x-axis <2.10> now;
+		turn rfoot to x-axis <-2.10> now;
+		turn lfoot to x-axis <-19.32> now;
+		sleep 70;
+		}
+		if( !Moving_2 )
+		{
+			move rfoot to y-axis [0] now;
+			move lfoot to y-axis [0] now;
+			sleep 50;
+		}
+	}
+	return (0);
+}
+
+
+RequestState()
+{
+	while( !Busy_5 AND ReqState_3 != On_4 )
+	{
+		Busy_5 = 1;
+		if( ReqState_3 and !On_4 )
+		{
+			move rfoot to y-axis [0] now;
+			move lfoot to y-axis [0] now;
+			turn lflap to z-axis <97> speed <190>;
+			turn rflap to z-axis <-97> speed <190>;
+			sleep 514;
+			turn guncover to x-axis <126.03> speed <245>;
+			turn arms to x-axis <90> speed <169>;
+			turn nanobody2 to x-axis <-90> speed <169>;
+			sleep 531;
+			move nozzle to z-axis [4.40] speed [8];
+			turn arms to x-axis <90> speed <0>;
+			turn nanobody2 to x-axis <-90> speed <0>;
+			sleep 600;
+			set INBUILDSTANCE to 1;
+			On_4 = 1;
+		}
+		if( !ReqState_3 and On_4 )
+		{
+			On_4 = 0;
+			set INBUILDSTANCE to 0;
+			turn turret to y-axis <0> speed <160>;
+			move rfoot to y-axis [0] now;
+			move lfoot to y-axis [0] now;
+			move nozzle to z-axis [4.40] now;
+			move nozzle to z-axis [-0.20] speed [4];
+			turn guncover to x-axis <126.93> now;
+			turn lflap to z-axis <97.92> now;
+			turn rflap to z-axis <-97.92> now;
+			turn arms to x-axis <90> now;
+			turn arms to x-axis <90> speed <0>;
+			turn nanobody2 to x-axis <-90> now;
+			sleep 997;
+			turn arms to x-axis <0> speed <89>;
+			turn nanobody2 to x-axis <-40.01> speed <49>;
+			sleep 1008;
+			turn guncover to x-axis <126.03> speed <0>;
+			turn nanobody2 to x-axis <0> speed <39>;
+			sleep 1008;
+			turn guncover to x-axis <0> speed <125>;
+			turn lflap to z-axis <0> speed <97>;
+			turn rflap to z-axis <0> speed <97>;
+		}
+		Busy_5 = 0;
+	}
+	return (0);
+}
+
+Create()
+{
+	Turret_1 = 0;
+	Moving_2 = 0;
+	ReqState_3 = 0;
+	On_4 = 0;
+	Busy_5 = 0;
+	Waiting_6 = 0;
+	while( get BUILD_PERCENT_LEFT )
+	{
+		sleep 400;
+	}
+	start-script MotionControl();
+	start-script SmokeUnit();
+	return (0);
+}
+
+StartBuilding(Func_Var_1)
+{
+	ReqState_3 = 1;
+	Turret_1 = Func_Var_1;
+	turn turret to y-axis Turret_1 speed <160>;
+	start-script RequestState();
+	return (0);
+}
+
+StopBuilding()
+{
+	ReqState_3 = 0;
+	sleep 1500;
+	if( !ReqState_3 )
+	{
+		start-script RequestState();
+	}
+	return (0);
+}
+
+StartMoving()
+{
+	Moving_2 = 1;
+	return (0);
+}
+
+StopMoving()
+{
+	Moving_2 = 0;
+	return (0);
+}
+
+QueryNanoPiece(piecenum)
+{
+	piecenum = nanospray;
+	return (0);
+}
+
+TargetHeading(Func_Var_1)
+{
+	Turret_1 = ( 0 - Func_Var_1 );
+	return (0);
+}
+
+SweetSpot(piecenum)
+{
+	piecenum = turret;
+	return (0);
+}
+
+Killed(severity, corpsetype)
+{
+	if( severity <= 25 )
+	{
+		corpsetype = 1;
+		explode arms type BITMAPONLY | BITMAP1;
+		explode ground type BITMAPONLY | BITMAP2;
+		explode guncover type BITMAPONLY | BITMAP3;
+		explode lflap type BITMAPONLY | BITMAP4;
+		explode lfoot type BITMAPONLY | BITMAP5;
+		explode nanobody2 type BITMAPONLY | BITMAP1;
+		explode nanospray type BITMAPONLY | BITMAP2;
+		explode nozzle type BITMAPONLY | BITMAP3;
+		explode pelvis type BITMAPONLY | BITMAP4;
+		explode rflap type BITMAPONLY | BITMAP5;
+		explode rfoot type BITMAPONLY | BITMAP1;
+		explode turret type BITMAPONLY | BITMAP2;
+		return (0);
+	}
+	if( severity <= 50 )
+	{
+		corpsetype = 2;
+		explode arms type FALL | BITMAP1;
+		explode ground type BITMAPONLY | BITMAP2;
+		explode guncover type FALL | BITMAP3;
+		explode lflap type BITMAPONLY | BITMAP4;
+		explode lfoot type SHATTER | BITMAP5;
+		explode nanobody2 type BITMAPONLY | BITMAP1;
+		explode nanospray type FALL | BITMAP2;
+		explode nozzle type FALL | BITMAP3;
+		explode pelvis type BITMAPONLY | BITMAP4;
+		explode rflap type BITMAPONLY | BITMAP5;
+		explode rfoot type SHATTER | BITMAP1;
+		explode turret type BITMAPONLY | BITMAP2;
+		return (0);
+	}
+	if( severity <= 99 )
+	{
+		corpsetype = 3;
+		explode arms type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+		explode ground type BITMAPONLY | BITMAP2;
+		explode guncover type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+		explode lflap type BITMAPONLY | BITMAP4;
+		explode lfoot type SHATTER | BITMAP5;
+		explode nanobody2 type BITMAPONLY | BITMAP1;
+		explode nanospray type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+		explode nozzle type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+		explode pelvis type BITMAPONLY | BITMAP4;
+		explode rflap type BITMAPONLY | BITMAP5;
+		explode rfoot type SHATTER | BITMAP1;
+		explode turret type BITMAPONLY | BITMAP2;
+		return (0);
+	}
+	corpsetype = 3;
+	explode arms type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+	explode ground type BITMAPONLY | BITMAP2;
+	explode guncover type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+	explode lflap type BITMAPONLY | BITMAP4;
+	explode lfoot type SHATTER | EXPLODE_ON_HIT | BITMAP5;
+	explode nanobody2 type BITMAPONLY | BITMAP1;
+	explode nanospray type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+	explode nozzle type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+	explode pelvis type BITMAPONLY | BITMAP4;
+	explode rflap type BITMAPONLY | BITMAP5;
+	explode rfoot type SHATTER | EXPLODE_ON_HIT | BITMAP1;
+	explode turret type BITMAPONLY | BITMAP2;
+}

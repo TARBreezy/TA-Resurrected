@@ -1,26 +1,28 @@
 [CORVIPE_LASER]
 	{
 	ID=47;
-	name=Laser;
-	rendertype=0;
+	name=Lightning Gun;
+	rendertype=7;
 	lineofsight=1;
 	turret=1;
 
-	range=380;
-	reloadtime=1;
-	energypershot=25;
-	weaponvelocity=800;
+	range=450;	//180
+	reloadtime=1.45;
+	energypershot=105;
+	weaponvelocity=700;	//400
+	tolerance=200;
 	areaofeffect=8;
-	
-	soundstart=Lasrmas2;
-	soundhit=lasrhit1;
+	duration=10;
+	soundtrigger=1;
 
-	firestarter=80;
+	soundstart=lghthvy1;
+	soundhit=lashit;
+
+	firestarter=50;
+
 	beamweapon=1;
-	color=96;	/* blue */
-	color2=98;
-
-	tolerance=2000;
+	color=11;	/* Light Blue */		//128
+	color2=130;					//130
 
 	explosiongaf=fx;
 	explosionart=explode5;
@@ -28,11 +30,10 @@
 	waterexplosiongaf=fx;
 	waterexplosionart=h2oboom1;
 
-	lavaexplosiongaf=fx;
-	lavaexplosionart=lavasplashsm;
+	startsmoke=1;
 
 	[DAMAGE]
 		{
-		default=140;
+		default=320;	//180
 		}
 	}

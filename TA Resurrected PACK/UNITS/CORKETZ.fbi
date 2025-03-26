@@ -1,0 +1,72 @@
+//Core "Ketzer" Heavy Battle Mech by M. Hüdepohl
+
+[UNITINFO]
+	{
+	UnitName=CORKETZ;
+	Version=1.2;
+	Side=CORE;
+	Objectname=CORKETZ;
+	Designation=COR-HBM;
+	Name=Ketzer;
+	Description=Heavy Battlemech;
+	FootprintX=3;
+	FootprintZ=3;
+	BuildCostEnergy=29166;
+	BuildCostMetal=7372;
+	MaxDamage=8228;
+	MaxWaterDepth=32;
+	MaxSlope=20;
+	EnergyUse=5;
+	BuildTime=95548;
+	WorkerTime=0;
+	BMcode=1;
+	Builder=0;
+	ThreeD=1;
+	ZBuffer=1;
+	NoAutoFire=0;
+	SightDistance=355;
+	RadarDistance=0;
+	SoundCategory=MAVERICK;
+	EnergyStorage=0;
+	MetalStorage=0;
+	ExplodeAs=DECOY_COMMANDER_BLAST;
+	SelfDestructAs=DECOY_COMMANDER_BLAST;
+	Category=ARM KBOT LEVEL2 WEAPON NOTAIR NOTSUB CTRL_W;
+	TEDClass=KBOT;
+	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
+	Corpse=corketz_dead;
+	GermanName=Ketzer;
+	GermanDescription=Hochleistungs-Kampfläufer;
+	UnitNumber=1201;
+	FrenchName=Ketzer;
+	Frenchdescription=Adv. Battle Mech;
+	firestandorders=1;
+	StandingFireOrder=2;
+	mobilestandorders=1;
+	StandingMoveOrder=1;
+	canmove=1;
+	canpatrol=1;
+	canstop=1;
+	canguard=1;
+	MaxVelocity=1.25;
+	BrakeRate=0.21;
+	Acceleration=0.13;
+	TurnRate=330;
+	SteeringMode=2;
+	ShootMe=1;
+	EnergyMake=4.5;
+	DefaultMissionType=Standby;
+	maneuverleashlength=640;		//440
+	MovementClass=TANKBH3;
+	Upright=1;
+	Weapon1=KETZER-GAUß;
+	Weapon3=KETZER-RAKETE;
+	wpri_badTargetCategory=VTOL;
+	wter_badTargetCategory=NOTAIR;
+	NoChaseCategory=VTOL;
+	BadTargetCategory=NOTSTRUCTURE;
+	canattack=1;
+	candgun=1;
+	}
+
+// Contact: martin.huedepohl@epost.de

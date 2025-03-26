@@ -6,16 +6,16 @@
 	ballistic=1;
 	turret=1;
 
-	range=3080;
-	reloadtime=0.25;
+	range=4096;	//3080
+	reloadtime=0.75;		//0.25
 	weaponvelocity=800;
 	energypershot=2000;
-	areaofeffect=100;
+	areaofeffect=120;	//100
 
 	soundstart=xplonuk4;
 	soundhit=xplonuk1;
 
-	accuracy=800;
+	accuracy=1600;	//800
 	aimrate=2500;
 	tolerance=300;
 //	holdtime=1;
@@ -33,6 +33,6 @@
 
 	[DAMAGE]
 		{
-		default=1000;
+		default=1150;	//1000	
 		}
 	}

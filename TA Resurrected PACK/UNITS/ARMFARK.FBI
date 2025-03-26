@@ -9,13 +9,13 @@
 	Description=Fast Assist-Repair Kbot;
 	FootprintX=2;
 	FootprintZ=2;
-	BuildCostEnergy=3219;
-	BuildCostMetal=480;
+	BuildCostEnergy=4626;		//3219
+	BuildCostMetal=423;		//480
 	MaxDamage=830;
 	MaxWaterDepth=22;
 	MaxSlope=14;
 	EnergyUse=0.4;
-	BuildTime=7931;
+	BuildTime=8981;			//7931		
 	WorkerTime=180;
 	BMcode=1;
 	Builder=1;

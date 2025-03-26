@@ -8,15 +8,16 @@
 
 	model=armmhmsl;
 
-	range=670;
+	range=750;	//670
 	reloadtime=9;
 
 	noautorange=1;
-	weapontimer=5;
+	weapontimer=4;		//5
 	flighttime=10;
 
-	weaponvelocity=400;
-	weaponacceleration=40;
+	weaponvelocity=750;	//400
+	startingvelocity=250;
+	weaponacceleration=50;		//40
 	turnrate=24384;
 	areaofeffect=80;
 	metalpershot=0;
@@ -28,10 +29,11 @@
 	smokedelay=.1;
 	selfprop=1;
 	smoketrail=1;
+	cruise=1;
 
 	twophase=1;
 	guidance=1;
-	tolerance=4000;
+	tolerance=10000;		//4000
 
 	explosiongaf=fx;
 	explosionart=explode3;
@@ -46,6 +48,6 @@
 
 	[DAMAGE]
 		{
-		default=300;
+		default=320;	//300
 		}
 	}

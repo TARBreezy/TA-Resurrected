@@ -9,13 +9,13 @@
 	Description=Hovercraft Rocket Launcher;
 	FootprintX=3;
 	FootprintZ=3;
-	BuildCostEnergy=3131;
-	BuildCostMetal=325;
+	BuildCostEnergy=2818;		//3131
+	BuildCostMetal=293;		//325
 	MaxDamage=450;
 	MaxWaterDepth=0;
 	MaxSlope=16;
 	EnergyUse=2.6;
-	BuildTime=17933;
+	BuildTime=5679;		//17933		
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;
@@ -32,7 +32,7 @@
 	Category=ARM HOVER WEAPON LEVEL2 NOTAIR NOTSUB CTRL_W;
 	TEDClass=TANK;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	Corpse=armmh_dead;
+	Corpse=armmh_seadead;
 	GermanName=Wombat;
 	GermanDescription=Hovercraft-Raketenwerfer;
 	UnitNumber=285;
@@ -53,7 +53,7 @@
 	MaxVelocity=2.1;
 	BrakeRate=0.09;
 	Acceleration=0.03;
-	TurnRate=240;
+	TurnRate=300;		//240
 	SteeringMode=1;
 	ShootMe=1;
 	EnergyMake=2.6;

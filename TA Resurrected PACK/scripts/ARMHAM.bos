@@ -379,41 +379,41 @@ open()
 		move rcannon to z-axis [0.000000] now;
 		move locase to y-axis [-0.000006] now;
 		move locase to z-axis [0.000000] now;
-		move locase to z-axis [-0.749994] speed [0.952979];
+		move locase to z-axis [-0.749994] speed [6.952979];		//0.952979	
 		move rfirept to y-axis [-0.039996] now;
 		move rfirept to z-axis [0.219995] now;
 		move lfirept to y-axis [-0.039996] now;
 		move lfirept to z-axis [0.219995] now;
 		turn upcase2 to x-axis <0.000000> now;
-		turn upcase2 to x-axis <-43.950549> speed <55.851648>;
+		turn upcase2 to x-axis <-43.950549> speed <115.851648>;		//55.851648
 		turn locase to x-axis <0.000000> now;
-		turn locase to x-axis <61.538462> speed <78.192308>;
+		turn locase to x-axis <61.538462> speed <138.192308>;		//78.192308
 		sleep 787;
 	}
 	if( TRUE )
 	{
-		move upcase2 to z-axis [-4.399994] speed [44.444434];
-		turn upcase2 to x-axis <-47.120879> speed <31.967033>;
+		move upcase2 to z-axis [-4.399994] speed [104.444434];		//44.444434
+		turn upcase2 to x-axis <-47.120879> speed <91.967033>;		//31.967033
 		sleep 99;
 	}
 	if( TRUE )
 	{
-		turn upcase2 to x-axis <-122.021978> speed <687.164835>;
+		turn upcase2 to x-axis <-122.021978> speed <1007.164835>;	//687.164835
 		sleep 109;
 	}
 	if( TRUE )
 	{
-		turn upcase2 to x-axis <-45.714286> speed <451.521978>;
+		turn upcase2 to x-axis <-45.714286> speed <851.521978>;		//451.521978
 		sleep 169;
 	}
 	if( TRUE )
 	{
-		turn upcase2 to x-axis <-19.692308> speed <377.126374>;
+		turn upcase2 to x-axis <-19.692308> speed <777.126374>;		//377.126374
 		sleep 69;
 	}
 	if( TRUE )
 	{
-		turn upcase2 to x-axis <-47.120879> speed <1443.604396>;
+		turn upcase2 to x-axis <-47.120879> speed <1843.604396>;		//1443.604396
 		sleep 19;
 	}
 	sleep 19;
@@ -538,7 +538,7 @@ Create()
 	dont-shade lcannon;
 	dont-shade rcannon;
 	gun_1 = pelvis;
-	restore_delay = 3000;
+	restore_delay = 8000;	//3000
 	start-script MotionControl();
 	start-script SmokeUnit();
 }
@@ -637,20 +637,20 @@ FirePrimary()
 	{
 		gun_1 = rfirept;
 		show rfirept;
-		move rcannon to z-axis [-2.000000] speed [25.000000];
+		move rcannon to z-axis [-2.000000] speed [60.000000];	//25.000000
 		sleep 100;
 		hide rfirept;
-		move rcannon to z-axis [0.000000] speed [0.750000];
+		move rcannon to z-axis [0.000000] speed [4.000000];		//0.750000
 		return (0);
 	}
 	if( gun_1 == 1 )
 	{
 		gun_1 = pelvis;
 		show lfirept;
-		move lcannon to z-axis [-2.000000] speed [25.000000];
+		move lcannon to z-axis [-2.000000] speed [60.000000];		//25.000000
 		sleep 100;
 		hide lfirept;
-		move lcannon to z-axis [0.000000] speed [0.750000];
+		move lcannon to z-axis [0.000000] speed [4.000000];		//0.750000
 	}
 }
 

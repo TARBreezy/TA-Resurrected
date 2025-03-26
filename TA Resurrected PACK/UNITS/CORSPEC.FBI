@@ -6,7 +6,7 @@
 	Objectname=CORSPEC;
 	Designation=UV-2-AB;
 	Name=Spectre;
-	Description=Radar Jammer;
+	Description=Radar Jammer Kbot;		//Radar Jammer
 	FootprintX=1;
 	FootprintZ=1;
 	BuildCostEnergy=1453;
@@ -48,7 +48,7 @@
 	ItalianName=Spectre;
 	ItalianDescription=Crea interferenze radar;
 	canguard=1;
-	MaxVelocity=1;
+	MaxVelocity=1.1;	//1
 	BrakeRate=0.12;
 	Acceleration=0.1;
 	TurnRate=945;

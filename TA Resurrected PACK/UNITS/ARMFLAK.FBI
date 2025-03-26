@@ -9,13 +9,13 @@
 	Description=Anti-Air Flak Gun;
 	FootprintX=2;
 	FootprintZ=2;
-	BuildCostEnergy=17425;
-	BuildCostMetal=1069;
+	BuildCostEnergy=13940;		//17425
+	BuildCostMetal=855;		//1069
 	MaxDamage=1524;
 	MaxWaterDepth=0;
 	MaxSlope=10;
 	EnergyUse=0;
-	BuildTime=38010;
+	BuildTime=24625;		//38010
 	WorkerTime=0;
 	BMcode=0;
 	Builder=0;

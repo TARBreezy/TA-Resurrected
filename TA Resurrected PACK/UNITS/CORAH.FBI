@@ -9,13 +9,13 @@
 	Description=Anti-Air Hovercraft;
 	FootprintX=3;
 	FootprintZ=3;
-	BuildCostEnergy=1542;
-	BuildCostMetal=115;
-	MaxDamage=395;
+	BuildCostEnergy=2987;		//1542
+	BuildCostMetal=235;		//115
+	MaxDamage=770;			//395
 	MaxWaterDepth=0;
 	MaxSlope=16;
 	EnergyUse=2.6;
-	BuildTime=3747;
+	BuildTime=3372;			//3747
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;
@@ -32,7 +32,7 @@
 	Category=CORE HOVER WEAPON LEVEL2 NOTAIR NOTSUB CTRL_W;
 	TEDClass=TANK;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	Corpse=corah_dead;
+	Corpse=corah_seadead;
 	GermanName=Slinger;
 	GermanDescription=Flugabwehr-Hovercraft;
 	UnitNumber=287;
@@ -50,7 +50,7 @@
 	ItalianName=Slinger;
 	Italiandescription=Hovercraft antiaereo;
 	canguard=1;
-	MaxVelocity=2.9;
+	MaxVelocity=2;		//2.9
 	BrakeRate=0.09;
 	Acceleration=0.06;
 	TurnRate=280;

@@ -49,10 +49,10 @@
 	ItalianName=Avenger;
 	ItalianDescription=Caccia;
 	canguard=1;
-	MaxVelocity=11;
-	BrakeRate=5;	//2
+	MaxVelocity=10.5;		//11
+	BrakeRate=5;		//2
 	Acceleration=0.25;	//0.21
-	TurnRate=435;	//405
+	TurnRate=435;		//405
 	SteeringMode=1;
 	ShootMe=1;
 	Canfly=1;

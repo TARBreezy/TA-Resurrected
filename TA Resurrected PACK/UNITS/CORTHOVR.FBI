@@ -9,11 +9,11 @@
 	Description=Transport Hovercraft;
 	FootprintX=4;
 	FootprintZ=4;
-	BuildCostEnergy=7541;
-	BuildCostMetal=650;
+	BuildCostEnergy=5279;		//7541
+	BuildCostMetal=455;		//650
 	MaxDamage=1080;
 	EnergyUse=2.3;
-	BuildTime=19587;
+	BuildTime=9794;		//19587
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;
@@ -30,7 +30,7 @@
 	Category=CORE SHIP TPORT LEVEL1 NOWEAPON NOTAIR NOTSUB ;
 	TEDClass=TANK;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	Corpse=corthovr_dead;
+	Corpse=corthovr_seadead;
 	GermanName=Schildkröte;
 	GermanDescription=Hovercraft-Transporter;
 	UnitNumber=195;

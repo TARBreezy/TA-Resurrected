@@ -46,7 +46,7 @@
 	ItalianName=Phantom;
 	ItalianDescription=Nave - Crea disturbi Radar;
 	canguard=1;
-	MaxVelocity=2.5;
+	MaxVelocity=2.6;
 	BrakeRate=0.018;
 	Acceleration=0.08;
 	TurnRate=375;

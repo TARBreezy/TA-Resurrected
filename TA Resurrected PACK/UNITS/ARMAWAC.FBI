@@ -47,10 +47,10 @@
 	ItalianName=Eagle;
 	ItalianDescription=Radar aereo;
 	canguard=1;
-	MaxVelocity=9.2;
+	MaxVelocity=11.2;	//9.2
 	BrakeRate=4;
-	Acceleration=0.095;
-	TurnRate=356;
+	Acceleration=0.295;	//0.095
+	TurnRate=534;		//356
 	SteeringMode=1;
 	ShootMe=1;
 	Canfly=1;

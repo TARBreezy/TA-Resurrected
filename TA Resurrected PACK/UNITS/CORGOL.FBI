@@ -9,13 +9,13 @@
 	Description=Very Heavy Assault Tank;
 	FootprintX=3;
 	FootprintZ=3;
-	BuildCostEnergy=3906;
+	BuildCostEnergy=12890;		//3906
 	BuildCostMetal=697;
-	MaxDamage=2845;
+	MaxDamage=3414;			//2845
 	MaxWaterDepth=12;
 	MaxSlope=16;
 	EnergyUse=0.5;
-	BuildTime=7058;
+	BuildTime=12970;		//7058
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;
@@ -50,7 +50,7 @@
 	ItalianName=Goliath;
 	ItalianDescription=Carro armato super-pesante da attacco;
 	canguard=1;
-	MaxVelocity=0.8;
+	MaxVelocity=0.9;	//0.8
 	BrakeRate=0.03;
 	Acceleration=0.015;
 	TurnRate=206;

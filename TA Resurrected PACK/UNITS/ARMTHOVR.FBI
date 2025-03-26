@@ -9,11 +9,11 @@
 	Description=Transport Hovercraft;
 	FootprintX=4;
 	FootprintZ=4;
-	BuildCostEnergy=7938;
-	BuildCostMetal=665;
+	BuildCostEnergy=5557;		//7938
+	BuildCostMetal=466;		//665
 	MaxDamage=1150;
 	EnergyUse=2.4;
-	BuildTime=20341;
+	BuildTime=10171;		//20341		
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;
@@ -30,7 +30,7 @@
 	Category=ARM HOVER TPORT LEVEL2 NOWEAPON NOTAIR NOTSUB ;
 	TEDClass=TANK;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	Corpse=armthovr_dead;
+	Corpse=armthovr_seadead;
 	GermanName=Bär;
 	GermanDescription=Hovercraft-Transporter;
 	UnitNumber=183;

@@ -52,8 +52,8 @@
 	canguard=1;
 	MaxVelocity=1.1;	//0.8
 	BrakeRate=0.19;
-	Acceleration=0.02;
-	TurnRate=240;	//220
+	Acceleration=0.03;	//0.02
+	TurnRate=260;	//220
 	SteeringMode=2;
 	ShootMe=1;
 	EnergyMake=0.3;

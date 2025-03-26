@@ -31,7 +31,7 @@
 	Category=ARM KBOT LEVEL2 WEAPON NOTAIR CTRL_W;
 	TEDClass=KBOT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	Corpse=armamph_dead;
+	Corpse=armamph_seadead;
 	GermanName=Pelikan;
 	GermanDescription=Amphibien-Kbot;
 	UnitNumber=238;

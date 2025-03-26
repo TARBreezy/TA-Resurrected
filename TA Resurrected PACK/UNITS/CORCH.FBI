@@ -9,13 +9,13 @@
 	Description=Tech Level 1;
 	FootprintX=3;
 	FootprintZ=3;
-	BuildCostEnergy=4455;
-	BuildCostMetal=390;
+	BuildCostEnergy=2896;		//4455
+	BuildCostMetal=254;		//390
 	MaxDamage=740;
 	MaxWaterDepth=0;
 	MaxSlope=16;
 	EnergyUse=1;
-	BuildTime=11028;
+	BuildTime=6617;		//11028
 	WorkerTime=90;		//80
 	BMcode=1;
 	Builder=1;
@@ -31,7 +31,7 @@
 	Category=CORE HOVER LEVEL1 CONSTR NOWEAPON NOTAIR NOTSUB CTRL_B;
 	TEDClass=CNSTR;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	Corpse=corch_dead;
+	Corpse=corch_seadead;
 	GermanName=Konstruktions-Hovecraft;
 	GermanDescription=Tech Level 1;
 	UnitNumber=187;
@@ -50,7 +50,7 @@
 	MaxVelocity=2.1;
 	BrakeRate=0.008;
 	Acceleration=0.01;
-	TurnRate=110;
+	TurnRate=330;		//110
 	SteeringMode=1;
 	ShootMe=1;
 	Builddistance=95;	//70

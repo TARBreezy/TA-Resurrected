@@ -9,13 +9,13 @@
 	Description=Converts Energy into Metal;
 	FootprintX=4;
 	FootprintZ=4;
-	BuildCostEnergy=9350;
-	BuildCostMetal=58;
-	MaxDamage=400;
+	BuildCostEnergy=10285;		//9350
+	BuildCostMetal=64;		//58
+	MaxDamage=500;			//400
 	MaxWaterDepth=0;
 	MaxSlope=10;
 	EnergyUse=800;
-	BuildTime=34980;
+	BuildTime=38478;		//34980
 	WorkerTime=0;
 	BMcode=0;
 	Builder=0;
@@ -51,5 +51,5 @@
 	Waterline=16;
 	noshadow=1;
 	MinWaterDepth=11;
-	DamageModifier=0.7;
+	//DamageModifier=0.7;
 	}

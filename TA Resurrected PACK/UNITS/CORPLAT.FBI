@@ -9,12 +9,12 @@
 	Description=Builds Seaplanes;
 	FootprintX=7;
 	FootprintZ=7;
-	BuildCostEnergy=5367;
-	BuildCostMetal=2305;
+	BuildCostEnergy=3757;		//5367
+	BuildCostMetal=1574;		//2305
 	MaxDamage=2000;
 	EnergyUse=0;
-	BuildTime=20102;
-	WorkerTime=150;		//200
+	BuildTime=14071;		//20102
+	WorkerTime=180;		//200
 	BMcode=0;
 	Builder=1;
 	ThreeD=1;

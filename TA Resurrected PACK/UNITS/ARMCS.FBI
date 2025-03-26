@@ -10,7 +10,7 @@
 	FootprintX=4;
 	FootprintZ=4;
 	BuildCostEnergy=2130;
-	BuildCostMetal=255;
+	BuildCostMetal=246;	//255
 	MaxDamage=1105;
 	EnergyUse=0.1;
 	BuildTime=5121;

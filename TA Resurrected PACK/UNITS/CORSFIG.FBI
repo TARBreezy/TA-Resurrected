@@ -9,13 +9,13 @@
 	Description=Seaplane Fighter;
 	FootprintX=3;
 	FootprintZ=3;
-	BuildCostEnergy=6524;
+	BuildCostEnergy=5165;		//6524
 	BuildCostMetal=182;
-	MaxDamage=159;
+	MaxDamage=363;			//159			
 	MaxWaterDepth=0;
 	MaxSlope=10;
 	EnergyUse=0.7;
-	BuildTime=14857;
+	BuildTime=12739;		//14857
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;
@@ -49,7 +49,7 @@
 	ItalianName=Voodoo;
 	ItalianDescription=Caccia idrovolante;
 	canguard=1;
-	MaxVelocity=11.1;
+	MaxVelocity=11.2;	//11.1
 	BrakeRate=3;
 	Acceleration=0.38;
 	TurnRate=512;

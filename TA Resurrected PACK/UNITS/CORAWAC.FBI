@@ -47,10 +47,10 @@
 	ItalianName=Vulture;
 	ItalianDescription=Aereo radar;
 	canguard=1;
-	MaxVelocity=9.3;
+	MaxVelocity=11.3;	//9.3
 	BrakeRate=3;
-	Acceleration=0.08;
-	TurnRate=365;
+	Acceleration=0.28;	//0.08
+	TurnRate=548;		//365
 	SteeringMode=1;
 	ShootMe=1;
 	Canfly=1;

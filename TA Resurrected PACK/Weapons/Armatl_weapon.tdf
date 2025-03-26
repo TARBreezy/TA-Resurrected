@@ -12,9 +12,7 @@
 	range=650;
 	reloadtime=4.5;
 	weapontimer=3;
-	weaponvelocity=90;
-	startvelocity=60;
-	weaponacceleration=20;
+	weaponvelocity=100;	//90
 	turnrate=45500;
 	areaofeffect=16;	
 	soundstart=torpedo1;
@@ -25,7 +23,7 @@
 	waterweapon=1;
 	burnblow=1;
 
-	tolerance=1167;
+	tolerance=2767;		//1167
 
 	explosiongaf=fx;
 	explosionart=explode3;

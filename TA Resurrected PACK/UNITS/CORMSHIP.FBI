@@ -5,7 +5,7 @@
 	Side=CORE;
 	Objectname=CORMSHIP;
 	Designation=SA-GM6;
-	Name=Missile Frigate;
+	Name=Hydra;
 	Description=Missile Ship;
 	FootprintX=6;
 	FootprintZ=6;

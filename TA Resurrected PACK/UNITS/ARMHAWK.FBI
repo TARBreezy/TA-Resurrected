@@ -6,7 +6,7 @@
 	Objectname=ARMHAWK;
 	Designation=AFD-J9;
 	Name=Hawk;
-	Description=Stealth Fighter;
+	Description=Advanced Fighter;
 	FootprintX=2;
 	FootprintZ=2;
 	BuildCostEnergy=6893;

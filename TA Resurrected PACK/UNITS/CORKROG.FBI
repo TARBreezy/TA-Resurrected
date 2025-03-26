@@ -60,7 +60,7 @@
 	EnergyMake=1.1;
 	DefaultMissionType=Standby;
 	maneuverleashlength=640;
-	MovementClass=TANKSH3;
+	MovementClass=KROG;		//TANKSH3
 	Upright=1;
 	canattack=1;
 	Weapon1=CORKROG_FIRE;

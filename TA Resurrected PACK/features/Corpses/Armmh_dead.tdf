@@ -1,0 +1,76 @@
+[armmh_seadead]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=arm_corpses;
+	object=armmh_dead;
+	featuredead=armmh_smudge;
+	footprintx=3;
+	footprintz=3;
+	height=4;
+	blocking=0;
+	hitdensity=100;
+	metal=221;			//260
+	damage=360;
+	reclaimable=1;
+	featurereclamate=smudge01;
+      seqnamereclamate=tree1reclamate;
+	}
+
+[armmh_smudge]
+	{
+	world=All Worlds;
+	description=Damaged Terrain;
+	category=smudges;
+	animating=0;
+	footprintx=0;
+	footprintz=0;
+	height=0;
+	filename=trees;
+	seqname=smudge02;
+	
+	featuredead=armmh_landdead;
+	indestructible=1;
+
+	animtrans=1;
+	flamable=0;
+	reclaimable=0;
+	blocking=0;
+	hitdensity=0;
+	}
+
+[armmh_landdead]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=arm_corpses;
+	object=armmh_dead;
+	footprintx=3;
+	footprintz=3;
+	height=20;
+	blocking=1;
+	hitdensity=100;
+	metal=221;			//260
+	damage=360;
+	reclaimable=1;
+	featurereclamate=smudge01;
+      seqnamereclamate=tree1reclamate;
+	}
+
+[armmh_dead]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=arm_corpses;
+	object=armmh_dead;
+	footprintx=3;
+	footprintz=3;
+	height=20;
+	blocking=1;
+	hitdensity=100;
+	metal=221;			//260
+	damage=360;
+	reclaimable=1;
+	featurereclamate=smudge01;
+      seqnamereclamate=tree1reclamate;
+	}

@@ -9,13 +9,13 @@
 	Description=Seaplane Fighter;
 	FootprintX=3;
 	FootprintZ=3;
-	BuildCostEnergy=6307;
+	BuildCostEnergy=5106;	//6893
 	BuildCostMetal=187;
-	MaxDamage=150;
+	MaxDamage=378;		//150
 	MaxWaterDepth=0;
 	MaxSlope=10;
 	EnergyUse=0.7;
-	BuildTime=14333;
+	BuildTime=12228;	//14333
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;
@@ -49,7 +49,7 @@
 	ItalianName=Tornado;
 	ItalianDescription=Caccia idrovolante;
 	canguard=1;
-	MaxVelocity=11.2;
+	MaxVelocity=11.1;		//11.2
 	BrakeRate=4;
 	Acceleration=0.4;
 	TurnRate=512;

@@ -5,7 +5,7 @@
 	Side=CORE;
 	Objectname=CORFMD;
 	Designation=COR-FMD1;
-	Name=Fortitude Missile Defense;
+	Name=Fortitude;					//Fortitude Missile Defense
 	Description=Anti Missile Defense System;
 	FootprintX=4;
 	FootprintZ=4;

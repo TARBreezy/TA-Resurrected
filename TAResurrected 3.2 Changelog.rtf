@@ -12,7 +12,7 @@
 \pard\tab (Smoother scaling of buildpower)\par
 \par
 
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ul Adjusted all workertime (buildpower) for construction units & coms.\ulnone\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ul Adjusted all workertime (buildpower) for construction units & commanders.\ulnone\par
 
 \pard\tab - Air, Seaplane = 30\par
 \tab - Kbot, DecoyCommander = 60\par
@@ -21,6 +21,7 @@
 \tab - Adv.Kbot = 150\par
 \tab - Adv.Vehicle, FARK, Necro = 180\par
 \tab - Adv.ConSub = 210\par
+\tab - T3 con maybe? 270\par
 \tab - Commander = 300\par
 \par
 
@@ -32,12 +33,19 @@
 
 \pard\par
 
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Nuclear missiles from nuclear silos special damage (2900)to Commanders removed. Edge effective increased from 0.25->0.5. Commanders can now survive the nuclear blast with very low health on the very edge of the blast. Fixes units surviving inside the nuclear blast radius.\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Nuclear missiles from nuclear silos special damage (2900)to Commanders removed. Edge effective increased from 0.25->0.5. Commanders can now survive the nuclear blast with very low health (250) on the very edge of the blast. Fixes units surviving inside the nuclear blast radius.\par
+
+\pard\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Made all amphibious unit sea wreckages non blocking so units can pass through them. (better pathing)\par
 
 \pard\par
 \par
-\ul\b\fs28 Unit Balance\ulnone\b0\fs24\par
-\par
+\ul\b\fs28 Unit Balance\line\line\ulnone\b0\fs24\tab\ul\b CORE Commander\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased movement speed 1.07->1.1\par
+
+\pard\par
 \tab\ul\b ARM Moho Mine\ulnone\b0\par
 
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced energy cost 8700->6960\par
@@ -54,7 +62,10 @@
 \pard\par
 \ulnone\b0\tab\ul\b Flakker (ARM Stationary Flak Gun)\par
 
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Changed weapon from ballistic to lineofsight\line (no arc, straight to target)\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Reduced energy cost 17425->13940\par
+{\pntext\f1\'B7\tab}Reduced metal cost 1069->855\par
+{\pntext\f1\'B7\tab}Reduced build time 38010->24625\par
+{\pntext\f1\'B7\tab}Changed weapon from ballistic to lineofsight\line (no arc, straight to target)\par
 {\pntext\f1\'B7\tab}removed barrel angle & accuracy\line (these are for ballistic weapons)\par
 {\pntext\f1\'B7\tab}Increased tolerance 767->4000\line (Amount of accuracy weapon will use when aiming)\par
 {\pntext\f1\'B7\tab}Added pitch tolerance 6000\line (same as tolerance but vertically)\par
@@ -76,8 +87,113 @@
 {\pntext\f1\'B7\tab}Changed color\par
 {\pntext\f1\'B7\tab}All CORE flaks use this weapon now\par
 
+\pard\par
+\tab\ul\b Ambusher\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced armor 0.95->0.5\par
+{\pntext\f1\'B7\tab}Increased range 910->1300\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 350->380\line\line\ul\b Toaster\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased armor 0.15->0.5\par
+{\pntext\f1\'B7\tab}Reduced metal cost 2146->2039\par
+{\pntext\f1\'B7\tab}Reduced reduced health 1877->1694\par
+{\pntext\f1\'B7\tab}Increased range 885->1300\par
+{\pntext\f1\'B7\tab}Reduced area of effect 105->100\par
+{\pntext\f1\'B7\tab}Reduced barrel angle -40->-35\par
+{\pntext\f1\'B7\tab}Increased damage 295->320\par
+
+\pard\par
+\tab\ul\b Annihilator\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced energy cost 25025->23461\par
+{\pntext\f1\'B7\tab}Reduced metal cost 3985->2989\par
+{\pntext\f1\'B7\tab}Increased health 1410->3937\par
+{\pntext\f1\'B7\tab}Reduced build time 75071->56303\par
+{\pntext\f1\'B7\tab}Removed armor\line\line\ul\b Doomsday Machine\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased energy cost 14245->24634\par
+{\pntext\f1\'B7\tab}Increased metal cost 2140->3138\par
+{\pntext\f1\'B7\tab}Increased health 3140->4145\par
+{\pntext\f1\'B7\tab}Increased build time 39276->59118\par
+{\pntext\f1\'B7\tab}Removed Armor\par
+{\pntext\f1\'B7\tab}Increased blue laser range 600->1100\par
+{\pntext\f1\'B7\tab}Reduced blue laser reload time 8->6\par
+{\pntext\f1\'B7\tab}Increased blue laser energy per shot 800->2000\par
+
+\pard\par
+\tab\ul\b Adv.Torpedo Launcher (ARM)\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Increased build time 6262->12524\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 90->100\par
+{\pntext\f1\'B7\tab}Increased weapon tolerance 1167->2767\line\line\ul\b Adv.Torpedo Launcher (CORE)\par
+{\pntext\f1\'B7\tab}\ulnone\b0 Increased build time 6575->13150\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 85->100\par
+{\pntext\f1\'B7\tab}Increased range 600->650\par
+{\pntext\f1\'B7\tab}Increased reload time 4.4->4.5\line\par
+
+\pard\tab\ul\b Guardian\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced metal cost 1946->1265\par
+{\pntext\f1\'B7\tab}Reduced range 1250->1000\line\line\ul\b Punisher\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced metal cost 1887->1227\par
+{\pntext\f1\'B7\tab}Reduced health 2540->2410\par
+{\pntext\f1\'B7\tab}Reduced range 1200->1000\par
+{\pntext\f1\'B7\tab}Increased reload time 2.8->2.9\par
+{\pntext\f1\'B7\tab}Reduced area of effect 85->64\par
+{\pntext\f1\'B7\tab}Increased damage 320->350\par
+
 \pard\tab\par
-\tab   \par
+\tab\ul\b Moho Metal Maker (ARM)\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased health 400->500\line\line\ul\b Moho Metal Maker (CORE)\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 10928->9835\par
+{\pntext\f1\'B7\tab}Reduced build time 41253->37128\par
+{\pntext\f1\'B7\tab}Increased energy used 625->800\par
+{\pntext\f1\'B7\tab}Increased metal made 12->16\par
+{\pntext\f1\'B7\tab}Removed armor\line\line\ul\b Immolator\ulnone\b0\par
+{\pntext\f1\'B7\tab}This is now a t2 flamethrower tower\line\line\ul\b Viper\ulnone\b0\par
+{\pntext\f1\'B7\tab}This is now a t2 lightnning turret for ARM\line\line\ul\b Stunner\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased reload time 130->150\line\line\ul\b Neutron\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced reload time 180->150\line\line\ul\b L.L.T. (ARM)\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased range 300->380\par
+{\pntext\f1\'B7\tab}Reduced reload time 0.52->.5\par
+{\pntext\f1\'B7\tab}Reduced weapon velocity 900->700\line\line\ul\b Light Laser Tower (CORE)\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased range 300->380\par
+{\pntext\f1\'B7\tab}Reduced reload time .52->.5\par
+{\pntext\f1\'B7\tab}Reduced weapon velocity 800->700\line\line\ul\b Sentinel\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced weapon velocity 800->700\line\line\ul\b Gaat Gun\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased range 400->430\par
+{\pntext\f1\'B7\tab}Increased tolerance 500->8000\line\line\ul\b Stingray\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced range 480->430\par
+{\pntext\f1\'B7\tab}Reduced reload time 1.1->1\par
+{\pntext\f1\'B7\tab}Reduced weapon velocity 800->700\par
+{\pntext\f1\'B7\tab}Reduced damage 200->195\line\line\ul\b Thunderbolt\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased range 410->430\par
+{\pntext\f1\'B7\tab}Added tolerance @ 500\line\line\ul\b Big Bertha\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased reload time 7->9\par
+{\pntext\f1\'B7\tab}Increased energy per shot 1500->2000\par
+{\pntext\f1\'B7\tab}Increased area of effect 80->100\par
+{\pntext\f1\'B7\tab}Increased accuracy 500->625\line (Higher is worse)\par
+{\pntext\f1\'B7\tab}Increased damage 2000->2300\line\line\ul\b Intimidator\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced range 5120->4096\par
+{\pntext\f1\'B7\tab}Increased reload time 8->9.375\par
+{\pntext\f1\'B7\tab}Reduced weapon velocity 1000->800\par
+{\pntext\f1\'B7\tab}Reduced accuracy 1000->625\line (Lower is better)\line\line\ul\b Vulcan\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased range 3080->4096\par
+{\pntext\f1\'B7\tab}Increased reload time 0.25->0.75\par
+{\pntext\f1\'B7\tab}Increased area of effect 100->120\par
+{\pntext\f1\'B7\tab}Increased accuracy 800->1600\par
+{\pntext\f1\'B7\tab}Increased damage 1000->1150\line\line\ul\b Buzzsaw\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased range 3800->4096\par
+{\pntext\f1\'B7\tab}Increased reload time 0.5->0.7725\par
+{\pntext\f1\'B7\tab}Reduced weapon velocity 900->800\par
+{\pntext\f1\'B7\tab}Increased accuracy 800->1600\line (Higher is worse)\par
+{\pntext\f1\'B7\tab}Reduced damage 1800->1200\line\line\ul\b Protector\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased flight time 60->120\par
+{\pntext\f1\'B7\tab}Increased turn rate 32768->63000\line\line\ul\b Fortitude\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased flight time 60->120\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased turn rate 32768->63000\line\par
+
+\pard   \par
 \ul\b\fs28 ARM Kbots\par
 \ulnone\b0\fs24\par
 \tab\ul\b Peewee\ulnone\b0\par
@@ -105,8 +221,24 @@
 {\pntext\f1\'B7\tab}Increased Warrior's EMG weapon range 180->200\par
 
 \pard\par
-   - \i Keeping the original feel of the unit but rebalanced to \tab make it viable\i0\par
-\ul\b\fs28\par
+   - \i Keeping the original feel of the unit but rebalanced to \tab make it viable\par
+\i0\par
+\tab\ul\b Hammer\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Changed movement class to match the Thud\line (This makes it so it can climb over certain terrain like the thud.)\line Increased range 320->415\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 210->250\par
+{\pntext\f1\'B7\tab}Reduced damage 110->85\par
+
+\pard\par
+\tab\ul\b Construction Kbot\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced energy cost 2410->1523\par
+{\pntext\f1\'B7\tab}Increased metal cost 120->139\par
+{\pntext\f1\'B7\tab}Reduced build time 5597->3713\par
+{\pntext\f1\'B7\tab}Increased movement speed 0.8->1\par
+{\pntext\f1\'B7\tab}New movement class to climb certain terrain height\par
+
+\pard\ul\b\fs28\par
 \par
 CORE Kbots\ulnone\b0\fs24\par
          \par
@@ -133,7 +265,14 @@ CORE Kbots\ulnone\b0\fs24\par
          \par
     \tab\ul\b Thud\par
 
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Increased range 230->320 \line (Match Hammer range)\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Increased range 230->415\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 210->250\par
+{\pntext\f1\'B7\tab}Reduced damage 105->80\line\line\ul\b Construction Kbot\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 2540->1609\par
+{\pntext\f1\'B7\tab}Increased metal cost 130->131\par
+{\pntext\f1\'B7\tab}Reduced build time 5818->3860\par
+{\pntext\f1\'B7\tab}Increased acceleration 0.107->0.13\par
+{\pntext\f1\'B7\tab}New movement class to climb certain terrain height\par
 
 \pard\par
 \ul\b\fs28\par
@@ -147,7 +286,9 @@ ARM Vehicles\par
 \pard\fs28\tab\fs24\par
 \tab\ul\b Stumpy\ulnone\b0\par
 
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased damage 50->100 \line (DPS was too low to be effective)\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased damage 50->75 \line (DPS was too low to be effective)\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 170->190\line\line\ul\b Construction Vehicle\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased build distanced 60->95\par
 
 \pard\par
 \ul\b\fs28\par
@@ -168,24 +309,33 @@ CORE Vehicles\fs24\par
 \pard\par
    \tab\ul\b Raider\ulnone\b0\par
 
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased damage 50->100 \line (DPS was too low to be effective)\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased damage 50->75 \line (DPS was too low to be effective)\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 170->190\par
 
-\pard     \par
+\pard\par
     \tab\ul\b Leveler\ulnone\b0\par
 
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased energy cost 1887->2348\par
 {\pntext\f1\'B7\tab}Reduced metal cost 292->209\par
 {\pntext\f1\'B7\tab}Reduced build time 4209->3300\par
 {\pntext\f1\'B7\tab}Increased movement speed 0.8->1.1\par
-{\pntext\f1\'B7\tab}Increased turn rate 220->240\par
+{\pntext\f1\'B7\tab}Increased turn rate 220->260\par
+{\pntext\f1\'B7\tab}Increased acceleration 0.02->0.03\par
 {\pntext\f1\'B7\tab}Changed weapon from ballistic to line of sight\par
-{\pntext\f1\'B7\tab}Reduced range 260->220\par
+{\pntext\f1\'B7\tab}Reduced range 260->210\par
 {\pntext\f1\'B7\tab}Increased damage 180->220\par
-{\pntext\f1\'B7\tab}Increased weapon velocity 280->300\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 280->310\par
 
 \pard\par
    \i - Keeping the original feel of the unit but rebalanced to \tab make it viable\i0\par
 \par
+\tab\ul\b Construction Vehicle\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased acceleration 0.011->0.025\par
+{\pntext\f1\'B7\tab}Increased turn rate 207->220\par
+{\pntext\f1\'B7\tab}Increased build distanced 60->95\par
+
+\pard\par
 \ul\b\fs28\par
 ARM Air\par
 \par
@@ -202,6 +352,7 @@ ARM Air\par
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased brake rate 2->5\par
 {\pntext\f1\'B7\tab}Increased acceleration 0.21->0.25\par
 {\pntext\f1\'B7\tab}Increased turn rate 405->435\par
+{\pntext\f1\'B7\tab}Reduced movement speed 11->10.5\par
 
 \pard\par
    - \i Bringing the unit more in line with freedom fighter but \tab has different feel.\i0\par
@@ -232,8 +383,15 @@ ARM Air\par
 {\pntext\f1\'B7\tab}Reduced buildtime 14538->7451\par
 
 \pard\par
-   - \i Make transporting cons/coms/units more viable early on \tab in the game\i0\par
-\par
+   - \i Make transporting cons/coms/units more viable early on \tab in the game\par
+\i0\par
+\tab\ul\b Construction Ship\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced metal cost 255->246\par
+{\pntext\f1\'B7\tab}Reduced worker time 125->120\par
+{\pntext\f1\'B7\tab}Increased build distance 60->95\par
+
+\pard\par
 \par
 \ul\b\fs28 CORE Ships\ulnone\b0\fs24\par
      \par
@@ -244,8 +402,13 @@ ARM Air\par
 {\pntext\f1\'B7\tab}Reduced build time 13663->7515\par
 
 \pard    \par
-   \i - Make transporting cons/coms/units more viable early on in \tab the game.\i0\par
-\par
+   \i - Make transporting cons/coms/units more viable early on in \tab the game.\i0\line\line\tab\ul\b Construction Ship\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced metal cost 260->233\par
+{\pntext\f1\'B7\tab}Reduced worker time 125->120\par
+{\pntext\f1\'B7\tab}Increased build distance 60->95\par
+
+\pard\par
 \par
 \ul\b\fs28 ARM Adv.Kbots\par
 \par
@@ -259,16 +422,22 @@ ARM Air\par
 {\pntext\f1\'B7\tab}Increased health 875->1568\par
 {\pntext\f1\'B7\tab}Increased build time 5478->5813\par
 {\pntext\f1\'B7\tab}Increased range 180->240\par
-{\pntext\f1\'B7\tab}Increased weapon velocity 00->500\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 400->500\par
 {\pntext\f1\'B7\tab}Increased damage 180->220\par
 {\pntext\f1\'B7\tab}Changed color of weapon to a light blue\par
-{\pntext\f1\'B7\tab}Added energy per shot at 105\par
+{\pntext\f1\'B7\tab}Added energy per shot @ 75\par
 
 \pard\par
 \tab\ul\b Shooter\par
 
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Reduced reload time 20->12 \line (number = seconds, lower is better)\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Reduced metal cost 935->795\par
+{\pntext\f1\'B7\tab}Increased health 320->760\par
+{\pntext\f1\'B7\tab}Reduced build time 28137->14069\par
+{\pntext\f1\'B7\tab}Reduced reload time 20->12 \line (number = seconds, lower is better)\par
 {\pntext\f1\'B7\tab}Reduced movement speed 1.1->0.9\par
+{\pntext\f1\'B7\tab}Increased range 600->700\par
+{\pntext\f1\'B7\tab}Added tolerance @ 1000\par
+{\pntext\f1\'B7\tab}Increased damage 1230->1250\par
 
 \pard\par
 \tab\ul\b Zipper\par
@@ -292,7 +461,35 @@ ARM Air\par
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Reduced build time 24850->12425\par
 
 \pard\par
-\ul\b\fs28\par
+\tab\ul\b Adv.Construction Kbot\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Reduced energy cost 5784->3427\par
+{\pntext\f1\'B7\tab}Increased metal cost 300->313\par
+{\pntext\f1\'B7\tab}Reduced build time 13432->8354\par
+{\pntext\f1\'B7\tab}Increased movement speed 0.6->1.2\par
+{\pntext\f1\'B7\tab}Reduced worker time 160->150\par
+{\pntext\f1\'B7\tab}New movement class to climb certain terrain height\par
+
+\pard\par
+\tab\ul\b F.A.R.K.\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased energy cost 3219->4626\par
+{\pntext\f1\'B7\tab}Reduced metal cost 480->423\par
+{\pntext\f1\'B7\tab}Increased build time 7931->8981\par
+
+\pard\par
+\tab\ul\b Marky\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased radar distance 1250->1440\line (match tier 1 radar range)\par
+{\pntext\f1\'B7\tab}Increased movement speed 0.94->1.1\line\line\ul\b Infiltrator\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced cloak cost 210->125\par
+{\pntext\f1\'B7\tab}Reduced cloak cost while moving 800->250\par
+{\pntext\f1\'B7\tab}Increased cloak reveal distance 80->90\line\line\ul\b Decoy Commander\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased build distance 60->95\par
+{\pntext\f1\'B7\tab}Increased worker time 30->60\line (Builds at the speed of a construction kbot)\par
+{\pntext\f1\'B7\tab}When you put your move cursor over a decoy commander it says commander insteased of decoy commander.\line\par
+
+\pard\ul\b\fs28\par
 CORE Adv.Kbots\ulnone\b0\fs24\par
 \par
 \tab\ul\b Pyro\par
@@ -319,6 +516,7 @@ CORE Adv.Kbots\ulnone\b0\fs24\par
 {\pntext\f1\'B7\tab}Increased range 200->240\par
 {\pntext\f1\'B7\tab}Reduced weapon velocity 700->500\par
 {\pntext\f1\'B7\tab}Reduced damage 220->145\par
+{\pntext\f1\'B7\tab}Reduced energy per shot 75->50\par
 {\pntext\f1\'B7\tab}Increased head & gun turn rate to 45/90->150\par
 
 \pard\tab (Match zeus turn rate)\line\tab\par
@@ -326,13 +524,14 @@ CORE Adv.Kbots\ulnone\b0\fs24\par
 \par
 \tab\ul\b Sumo\par
 
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Increased energy cost 5987->11974\par
-{\pntext\f1\'B7\tab}Reduced health 4950->3960\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Increased energy cost 5987->15866\par
+{\pntext\f1\'B7\tab}Reduced health 4950->3990\par
 {\pntext\f1\'B7\tab}Increased build time 10975->15375\par
 {\pntext\f1\'B7\tab}Increased movement speed 0.34->0.75\par
-{\pntext\f1\'B7\tab}Increased turn rate 90->120\par
+{\pntext\f1\'B7\tab}Increased turn rate 90->150\par
 {\pntext\f1\'B7\tab}Can now be transported in a transport\par
-{\pntext\f1\'B7\tab}Reduced damage 290->230\line\par
+{\pntext\f1\'B7\tab}Increased damage 290->300\par
+{\pntext\f1\'B7\tab}Increased range 300->400\line\par
 
 \pard    \i - Tanky pushing units wont have as much HP in general so \tab lower tiered units can still have some value\par
 \i0\par
@@ -349,7 +548,7 @@ CORE Adv.Kbots\ulnone\b0\fs24\par
 {\pntext\f1\'B7\tab}Reduced Laser range 300->260\par
 {\pntext\f1\'B7\tab}Reduced Laser weapon velocity 700->500\par
 {\pntext\f1\'B7\tab}Increased Laser tolerance 300->1000\par
-{\pntext\f1\'B7\tab}Removed Plasma weapon, added Storm rocket weapon (temporary, will be adding AA)\par
+{\pntext\f1\'B7\tab}Removed Plasma weapon, added Pelican missile weapon\par
 {\pntext\f1\'B7\tab}Gimp can now fire both weapons simutaneously \line (before they were linked so only one weapon would fire at a time)\line\par
 
 \pard  \i   - Pelicans were one of the units that made ARM very strong \tab in OTA. Want the gimp to be on par for balance\par
@@ -366,12 +565,32 @@ CORE Adv.Kbots\ulnone\b0\fs24\par
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced range 600->540\par
 {\pntext\f1\'B7\tab}Reduced reload time 8->5\par
 {\pntext\f1\'B7\tab}Reduced weapon timer 5->4\par
-{\pntext\f1\'B7\tab}Reduced flight time 10->3\par
+{\pntext\f1\'B7\tab}Reduced flight time 10->6\par
 {\pntext\f1\'B7\tab}Increased weapon velocity 350->750\par
 {\pntext\f1\'B7\tab}Starting weapon velocity is now 250\par
 {\pntext\f1\'B7\tab}Increased weapon acceleration 34->50\par
 {\pntext\f1\'B7\tab}Weapon now tracks its target\par
-{\pntext\f1\'B7\tab}Increased weapon tolerance 1000->10000\par
+{\pntext\f1\'B7\tab}Increased weapon tolerance 1000->10000\line\line\ul\b Morty\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased range 655->700\line\line\ul\b Spectre\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased movement speed 1->1.1\line\line\ul\b Voyeur\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased radar distance 1200->1440\line (Match t1 radar range)\line\line\ul\b Parasite\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced cloak cost 350->125\par
+{\pntext\f1\'B7\tab}Reduced cloak cost while moving 900->250\line\line\ul\b Decoy Commander\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased movement speed 1.07->1.1\par
+{\pntext\f1\'B7\tab}Increased build distance 60->95\par
+{\pntext\f1\'B7\tab}Increased worker time 30->60\line (Builds at the speed of a construction kbot)\par
+{\pntext\f1\'B7\tab}When you put your move cursor over a decoy commander it says commander insteased of decoy commander.\line\line\ul\b Adv.Construction Kbot\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 6096->3620\par
+{\pntext\f1\'B7\tab}Reduced metal cost 325->301\par
+{\pntext\f1\'B7\tab}Reduced build time 13963->8685\par
+{\pntext\f1\'B7\tab}Increased movement speed 0.6->1.1\par
+{\pntext\f1\'B7\tab}New movement class to climb certain terrain height\line\line\ul\b Necro\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 10164->4887\par
+{\pntext\f1\'B7\tab}Increased metal cost 376->436\par
+{\pntext\f1\'B7\tab}Reduced build time 11416->9119\par
+{\pntext\f1\'B7\tab}Increased worker time 160->180\par
+{\pntext\f1\'B7\tab}Now makes 17 energy\par
+{\pntext\f1\'B7\tab}Now makes 0.5 metal\line (These are to match FARKs)\par
 
 \pard\par
 \par
@@ -379,7 +598,8 @@ CORE Adv.Kbots\ulnone\b0\fs24\par
 \tab\par
 \tab\ul\b Bulldog\ulnone\b0\par
 
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased turret speed 50->75 (vertical) \par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased energy cost 2994->3658\par
+{\pntext\f1\'B7\tab}Increased turret speed 50->75 (vertical) \par
 {\pntext\f1\'B7\tab}Increased sleeve speed 25->50 (horizontal)\par
 {\pntext\f1\'B7\tab}Increased health 2102->2312\par
 {\pntext\f1\'B7\tab}Increased damage 147->230\par
@@ -390,13 +610,19 @@ CORE Adv.Kbots\ulnone\b0\fs24\par
 \tab\ul\b Triton\par
 
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Added stealth\par
-{\pntext\f1\'B7\tab}Now moves at 100% movement speed underwater\line\par
+{\pntext\f1\'B7\tab}Now moves at 100% movement speed underwater\par
+{\pntext\f1\'B7\tab}Increased turret speed 35->65\par
+{\pntext\f1\'B7\tab}Increased sleeve pitch speed 15->45\line\par
 
 \pard    \i - Give them more mobility & give them a better chance to \tab get to their target\i0\par
 \par
 \tab\ul\b Panther\par
 
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Increased movement speed 1.3->1.7\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Reduced energy cost 3830->2662\par
+{\pntext\f1\'B7\tab}Reduced metal cost 354->293\par
+{\pntext\f1\'B7\tab}Reduced health 1100->1045\par
+{\pntext\f1\'B7\tab}Reduced build time 9676->4125\par
+{\pntext\f1\'B7\tab}Increased movement speed 1.3->1.7\par
 {\pntext\f1\'B7\tab}Increased weapon velocity 400->500\par
 {\pntext\f1\'B7\tab}Increased damage 120->200\line\par
 
@@ -404,7 +630,54 @@ CORE Adv.Kbots\ulnone\b0\fs24\par
 \ul\b\i0\fs28\par
 \ulnone\b0\tab\ul\b\fs24 Penetrator\ulnone\b0\par
 
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased reload time 6->8\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced metal cost 2604->990\par
+{\pntext\f1\'B7\tab}Increased health 650->970\par
+{\pntext\f1\'B7\tab}Reduced build time 35706->17853\par
+{\pntext\f1\'B7\tab}Increased reload time 6->8\par
+{\pntext\f1\'B7\tab}Increased turret speed 8->24\par
+{\pntext\f1\'B7\tab}Increased sleeve pitch speed 4->12\par
+{\pntext\f1\'B7\tab}Increased range 700->750\par
+{\pntext\f1\'B7\tab}Increased reload time 6->8\par
+{\pntext\f1\'B7\tab}Removed accuracy\par
+{\pntext\f1\'B7\tab}Increased tolerance 500->1000\par
+{\pntext\f1\'B7\tab}Increased damage 1300->1500\line\line\ul\b Luger\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased range 620->975\par
+{\pntext\f1\'B7\tab}Increased area of effect 48->96\par
+{\pntext\f1\'B7\tab}Reduced accuracy 2000->1250\line (Lower is better)\par
+{\pntext\f1\'B7\tab}Changed explosion art\line\line\ul\b Merl\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased range 800->1200\par
+{\pntext\f1\'B7\tab}Reduced weapon timer 5->4\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 400->750\par
+{\pntext\f1\'B7\tab}Added starting velocity @ 250\par
+{\pntext\f1\'B7\tab}Increased weapon acceleration 40->50\par
+{\pntext\f1\'B7\tab}Increased tolerance 4000->10000\line\line\ul\b Spider\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased range 220->240\par
+{\pntext\f1\'B7\tab}Reduced damage 900->450\line (15 seconds to 7.5 seconds of paralysis)\par
+
+\pard\par
+\tab\ul\b Jammer\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased movement speed 1->1.2\line\line\ul\b Seer\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased radar distance 1120->1440\line (Match range distance of t1 radar)\line\line\ul\b Phalanx\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased energy cost 10500->12546\par
+{\pntext\f1\'B7\tab}Reduced metal cost 830->770\par
+{\pntext\f1\'B7\tab}Increased health 621->1372\par
+{\pntext\f1\'B7\tab}Increased build time 20380->22163\par
+{\pntext\f1\'B7\tab}Increased sight distance 300->350\line (Match other flaks)\par
+
+\pard\line\tab\ul\b Scarab (Mobile Missile Defense)\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 These are now amphibious!\line (They can now hover so you can protect yourself from nuclear silos & nuclear submarines on water)\par
+{\pntext\f1\'B7\tab}Can now be built out of the Adv. Shipyard\line (You can protect yourself on water maps from nuclear submarines)\par
+{\pntext\f1\'B7\tab}Increased flight time 60->120\par
+{\pntext\f1\'B7\tab}Increased turn rate 32768->63000\line\par
+
+\pard\tab\ul\b Adv.Construction Vehicle\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Reduced energy cost 4263->4112\par
+{\pntext\f1\'B7\tab}Reduced metal cost 481->376\par
+{\pntext\f1\'B7\tab}Reduced build time 10397->9654\par
+{\pntext\f1\'B7\tab}Reduced worker time 200->180\par
 
 \pard\ul\b\fs28\par
 \par
@@ -414,26 +687,68 @@ CORE Adv.Vehicles\ulnone\b0\fs24\par
 
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased turret speed 50->75 (vertical) \par
 {\pntext\f1\'B7\tab}Increased sleeve speed 25->50 (horizontal)\par
-{\pntext\f1\'B7\tab}Increased health 2014->2215\par
+{\pntext\f1\'B7\tab}Reduced health 2014->1772\par
 {\pntext\f1\'B7\tab}Increased damage 143->220\par
-{\pntext\f1\'B7\tab}Increased weapon velocity 210->290\line\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 210->290\par
+{\pntext\f1\'B7\tab}Reduced metal cost 473->378\par
+{\pntext\f1\'B7\tab}Reduced build time 8730->6766\line\par
 
 \pard    \i - Make them all around better so they can be useful in \tab combat.\i0\par
 \par
 \tab\ul\b Goliath\ulnone\b0\par
 
-\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased damage 196->300\par
-{\pntext\f1\'B7\tab}Increased weapon velocity 250->290\line\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased damage 196->280\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 250->290\par
+{\pntext\f1\'B7\tab}Increased movement speed 0.8->0.9\par
+{\pntext\f1\'B7\tab}Increased build time 7058->12970\par
+{\pntext\f1\'B7\tab}Increased health 2845->3414\par
+{\pntext\f1\'B7\tab}Increased energy cost 3906->12890\par
+{\pntext\f1\'B7\tab}Reduced range 400->380\line\par
 
 \pard    - \i Make them all around better so they can be useful in \tab combat.\i0\par
 \par
 \tab\ul\b Crock\ulnone\b0\par
 
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Added stealth\par
-{\pntext\f1\'B7\tab}Now moves at 100% movement speed underwater\line\par
+{\pntext\f1\'B7\tab}Now moves at 100% movement speed underwater\par
+{\pntext\f1\'B7\tab}Increased turret speed 35->65\par
+{\pntext\f1\'B7\tab}Increased sleeve pitch speed 15->45\line\par
 
-\pard    \i - Give them more mobility & give them a better chance to \tab get to their target.\i0\par
-\ul\b\fs28\par
+\pard    \i - Give them more mobility & give them a better chance to \tab get to their target.\i0\line\line\tab\ul\b Pillager\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased range 620->975\par
+{\pntext\f1\'B7\tab}Increased area of effect 48->96\par
+{\pntext\f1\'B7\tab}Reduced accuracy 2000->1250\par
+{\pntext\f1\'B7\tab}Changed explosion art\line\line\ul\b Diplomat\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased range 800->1200\par
+{\pntext\f1\'B7\tab}Reduced reload time 13->12\par
+{\pntext\f1\'B7\tab}Reduced weapon timer 5->4\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 375->750\par
+{\pntext\f1\'B7\tab}Added starting velocity @ 250\par
+{\pntext\f1\'B7\tab}Increased weapon acceleration 38->50\par
+{\pntext\f1\'B7\tab}Increased tolerance 4000->10000\line\line\ul\b Deleter\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased movement speed 1.05->1.15\line\line\ul\b Informer\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased radar distance 1120->1440\par
+{\pntext\f1\'B7\tab}Reduced movement speed 1.4->1.25\par
+{\pntext\f1\'B7\tab}Increased turn rate 210->420\line\line\ul\b Copperhead\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased energy cost 12487->12903\par
+{\pntext\f1\'B7\tab}Reduced metal cost 886->787\par
+{\pntext\f1\'B7\tab}Increased health 685->1490\par
+{\pntext\f1\'B7\tab}Reduced build time 23975->22567\par
+{\pntext\f1\'B7\tab}Increased sight distance 260->350\par
+{\pntext\f1\'B7\tab}Increased movement speed 1.01->1.11\line\line\ul\b Hedgehog (Mobile Missile Defense)\ulnone\b0\par
+{\pntext\f1\'B7\tab}These are now amphibious!\line (They can now hover so you can protect yourself from nuclear silos & nuclear submarines on water)\par
+{\pntext\f1\'B7\tab}Can now be built out of the Adv. Shipyard\line (You can protect yourself on water maps from nuclear submarines)\par
+{\pntext\f1\'B7\tab}Increased range 22000->27000\par
+{\pntext\f1\'B7\tab}Increased flight time 60->120\par
+{\pntext\f1\'B7\tab}Increased turn rate 32768->63000\line\line\ul\b Adv.Construction Vehicle\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 4504->4344\par
+{\pntext\f1\'B7\tab}Reduced metal cost 455->361\par
+{\pntext\f1\'B7\tab}Reduced build time 10806->9906\par
+{\pntext\f1\'B7\tab}Reduced worker time 200->180\par
+
+\pard\ul\b\fs28\par
 \par
 ARM Adv.Air\ulnone\b0\fs24\par
 \par
@@ -448,6 +763,13 @@ ARM Adv.Air\ulnone\b0\fs24\par
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced weapon velocity 450->300\par
 {\pntext\f1\'B7\tab}Reduced burst 4->3\par
 {\pntext\f1\'B7\tab}Increased damage 11->12\par
+
+\pard\par
+\tab\ul\b Eagle\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased movement speed 9.2->11.2\par
+{\pntext\f1\'B7\tab}Increased acceleration 0.095->0.295\par
+{\pntext\f1\'B7\tab}Increased turn rate 356->534\par
 
 \pard\par
 \par
@@ -465,10 +787,96 @@ ARM Adv.Air\ulnone\b0\fs24\par
 {\pntext\f1\'B7\tab}Reduced weapon range 450->370\par
 {\pntext\f1\'B7\tab}Reduced weapon starting velocity 250->125\par
 {\pntext\f1\'B7\tab}Increased weapon acceleration 51->100\par
-{\pntext\f1\'B7\tab}Made both weapons the same stats\line\par
+{\pntext\f1\'B7\tab}Reduced damage 125->63\par
+{\pntext\f1\'B7\tab}Both weapons match these stats\line\par
 
-\pard\i    - Make it slightly harder for land units to shoot them down\i0\par
+\pard\i    - Make it slightly harder for land units to shoot them down\i0\line\line\tab\ul\b Vulture\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased movement speed 9.3->11.3\par
+{\pntext\f1\'B7\tab}Increased acceleration 0.08->0.28\par
+{\pntext\f1\'B7\tab}Increased turn rate 365->548\par
+
+\pard\par
 \par
+\ul\b\fs28 ARM Adv.Ships\ulnone\b0\fs24\par
+\par
+\tab\ul\b Archer\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced buildtime 38628->28971\par
+
+\pard\par
+\tab\ul\b Adv.Construction Sub\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced metal cost 695->541\par
+{\pntext\f1\'B7\tab}Reduced build time 16565->14481\par
+{\pntext\f1\'B7\tab}Reduced worker time 225->210\par
+{\pntext\f1\'B7\tab}Changed movement class BOATD6->BOATD4\line (Fixes unit feeling like 6x6 in game when its 4x4, doesn't feel as clunky)\par
+
+\pard\par
+\tab\ul\b Millenium\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced energy cost 20731->17621\par
+{\pntext\f1\'B7\tab}Reduced metal cost 4404->3303\par
+{\pntext\f1\'B7\tab}Reduced build time 42730->34184\par
+{\pntext\f1\'B7\tab}Reduced range 1250->1220\line\line\ul\b Conqueror\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased range 1300->990\par
+{\pntext\f1\'B7\tab}Reduced reload time 2.9->2.7\par
+{\pntext\f1\'B7\tab}Increased damage 208->248\par
+
+\pard\par
+\tab\ul\b Ranger\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased radar distance 0->1250\line (Match the Hydra's radar distance, must've been overlooked)\par
+{\pntext\f1\'B7\tab}Reduced weapon timer 5->4\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 400->750\par
+{\pntext\f1\'B7\tab}Added starting velocity @ 250\par
+{\pntext\f1\'B7\tab}Increased weapon acceleration 40->50\par
+{\pntext\f1\'B7\tab}Increased tolerance 4000->10000\line\line\line\ul\b Fibber\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced sonar jamming distance 650->250\line\line\ul\b Escort\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased radar jamming distance 700->715\line\line\ul\b Neptune (NEW UNIT!)\ulnone\b0\par
+
+\pard    - This is the ARM's nuclear submarine.\tab\line\par
+\par
+\ul\b\fs28 CORE Adv.Ships\ulnone\b0\fs24\par
+\par
+\tab\ul\b Kraken (NEW UNIT!)\ulnone\b0\par
+   - This is the CORE's nuclear submarine\line\line\tab\ul\b Shreddar\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced build time 41791->31343\par
+{\pntext\f1\'B7\tab}Increased movement speed 2.8->2.9\par
+{\pntext\f1\'B7\tab}Increased acceleration 0.01->0.012\line\line\ul\b Executioner\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced range 1300->990\par
+{\pntext\f1\'B7\tab}Reduced reload time 3->2.8\line (Lower is better)\par
+{\pntext\f1\'B7\tab}Increased damage 220->260\line\line\ul\b Warlord\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 19741->18754\par
+{\pntext\f1\'B7\tab}Reduced metal cost 4181->3554\par
+{\pntext\f1\'B7\tab}Reduced build time 40640->36576\par
+{\pntext\f1\'B7\tab}Reduced cannon range 1250->1220\par
+{\pntext\f1\'B7\tab}Increased cannon damage 270->290\par
+{\pntext\f1\'B7\tab}Reduced laser range 810->660\line\line\ul\b Leviathan\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased sight distance 490->590\par
+{\pntext\f1\'B7\tab}Increased range 500->600\par
+{\pntext\f1\'B7\tab}Reduced reload time 5.8->5\par
+{\pntext\f1\'B7\tab}Increased area of effect 5->16\par
+{\pntext\f1\'B7\tab}Increased damage 812->1000\par
+{\pntext\f1\'B7\tab}Removed all special damages\par
+{\pntext\f1\'B7\tab}Now uses advanced torpedo launcher sounds\line\line\ul\b Hydra\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased reload time 9->12\par
+{\pntext\f1\'B7\tab}Reduced weapon timer 5->4\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 400->750\par
+{\pntext\f1\'B7\tab}Added starting velocity @ 250\par
+{\pntext\f1\'B7\tab}Increased weapon acceleration 40->50\par
+{\pntext\f1\'B7\tab}Increased tolerance 4000->10000\line\par
+
+\pard\line\tab\ul\b Phantom\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased movement speed 2.5->2.6\line\line\ul\b Adv.Construction Sub\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced metal cost 690->525\par
+{\pntext\f1\'B7\tab}Reduced build time 17228->14859\par
+{\pntext\f1\'B7\tab}Reduced worker time 225->210\par
+{\pntext\f1\'B7\tab}Increased build distance 80->100\par
+
+\pard\par
 \par
 \ul\b\fs28 ARM Seaplanes\par
 \ulnone\b0\fs24\par
@@ -476,35 +884,181 @@ ARM Adv.Air\ulnone\b0\fs24\par
 
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Removed guided missile weapon \line (Redundancy with the seaplane fighter)\par
 {\pntext\f1\'B7\tab}Now has hoverattack \line (Attacks moving side to side like a gunship)\par
+{\pntext\f1\'B7\tab}Increased health 216->320\par
+{\pntext\f1\'B7\tab}Reduced build time 22825->20862\line\line\ul\b Seahawk\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased movement speed 9.5->10.5\par
+{\pntext\f1\'B7\tab}Increased acceleration 0.06->0.26\line\line\ul\b Tornado\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 6893->5106\par
+{\pntext\f1\'B7\tab}Increased health 150->378\par
+{\pntext\f1\'B7\tab}Reduced build time 14333->12228\par
+{\pntext\f1\'B7\tab}Reduced movement speed 11.2->11.1\par
 
 \pard\par
-\tab\par
+\tab\ul\b Seaplane Platform\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced energy cost 5396->3777\par
+{\pntext\f1\'B7\tab}Reduced metal cost 2223->1517\par
+{\pntext\f1\'B7\tab}Reduced build time 19248->13474\par
+{\pntext\f1\'B7\tab}Reduced worker time 200->180\par
+
+\pard\tab\par
+\par
 \ul\b\fs28 CORE Seaplanes\ulnone\b0\fs24\par
 \par
 \tab\ul\b Typhoon\par
 
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Removed guided missile weapon \line (Redundancy with the seaplane fighter)\par
-{\pntext\f1\'B7\tab}Now has hoverattack \line (Attacks moving side to side like a gunship)\par
+{\pntext\f1\'B7\tab}Now has hoverattack \line (Attacks moving side to side like a gunship)\line\line\ul\b Hunter\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased movement speed 9.7->10.7\par
+{\pntext\f1\'B7\tab}Increased acceleration 0.05->0.25\line\line\ul\b Typhoon\ulnone\b0\par
+{\pntext\f1\'B7\tab}Increased health 210->315\par
+{\pntext\f1\'B7\tab}Reduced build time 23698->20583\line\line\ul\b Voodoo\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 6524->5165\par
+{\pntext\f1\'B7\tab}Increased health 159->363\par
+{\pntext\f1\'B7\tab}Reduced build time 14857->12739\par
+{\pntext\f1\'B7\tab}Increased movement speed 11.1->11.2\line\line\ul\b Seaplane Platform\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 5367->3757\par
+{\pntext\f1\'B7\tab}Reduced metal cost 2305->1574\par
+{\pntext\f1\'B7\tab}Reduced build time 20102->14071\par
+{\pntext\f1\'B7\tab}Reduced worker time 200->180\par
+
+\pard\par
+\par
+\ul\b\fs28 ARM Hovercraft\ulnone\b0\fs24\par
+\par
+\tab\ul\b Swatter\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased energy cost 1444->2888\par
+{\pntext\f1\'B7\tab}Increased metal cost 120->240\par
+{\pntext\f1\'B7\tab}Increased health 375->785\par
+{\pntext\f1\'B7\tab}Reduced build time 3747->3372\par
+{\pntext\f1\'B7\tab}Reduced movement speed 2.9->2\par
+{\pntext\f1\'B7\tab}Increased turn rate 280->340\par
+
+\pard\par
+\tab\ul\b Anaconda\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced energy cost 2856->2428\par
+{\pntext\f1\'B7\tab}Reduced health 880->850\par
+{\pntext\f1\'B7\tab}Reduced build time 8115->5275\par
+{\pntext\f1\'B7\tab}Reduced movement speed 2.6->2.4\par
+{\pntext\f1\'B7\tab}Increased turn rate 250->310\par
+
+\pard\par
+\tab\ul\b Wombat\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced energy cost 3131->2818\par
+{\pntext\f1\'B7\tab}Reduced metal cost 325->293\par
+{\pntext\f1\'B7\tab}Reduced build time 17933->5679\par
+{\pntext\f1\'B7\tab}Increased turn rate 240->300\par
+{\pntext\f1\'B7\tab}Increased range 670->750\par
+{\pntext\f1\'B7\tab}Reduced weapon timer 5->4\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 400->750\par
+{\pntext\f1\'B7\tab}Added starting velocity @ 250\par
+{\pntext\f1\'B7\tab}Increased weapon acceleration 40->50\par
+{\pntext\f1\'B7\tab}Increased tolerance 4000->10000\par
+{\pntext\f1\'B7\tab}Increased damage 300->320\line\line\ul\b Skimmer\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced build time 3388->2372\par
+{\pntext\f1\'B7\tab}Reduced movement speed 3.7->3.2\par
+{\pntext\f1\'B7\tab}Increased turn rate 310->370\line\line\ul\b Bear\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 7938->5557\par
+{\pntext\f1\'B7\tab}Reduced metal cost 665->466\par
+{\pntext\f1\'B7\tab}Reduced build time 20341->10171\par
+
+\pard\par
+\tab\ul\b Construction Hovercraft\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\ulnone\b0 Reduced energy cost 4370->2841\par
+{\pntext\f1\'B7\tab}Reduced metal cost 396->257\par
+{\pntext\f1\'B7\tab}Reduced build time 10494->6296\par
+{\pntext\f1\'B7\tab}Increased worker time 80->90\par
+{\pntext\f1\'B7\tab}Increased turn rate 120->360\par
+{\pntext\f1\'B7\tab}Increased build distance 70->95\par
+
+\pard\par
+\tab\ul\b Hovercraft Plant\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced energy cost 5277->2230\par
+{\pntext\f1\'B7\tab}Reduced metal cost 2007->1305\par
+{\pntext\f1\'B7\tab}Reduced build time 18520->11436\par
+{\pntext\f1\'B7\tab}Reduced worker time 200->180\par
+
+\pard\par
+\ul\b\fs28 CORE Hovercraft\ulnone\b0\fs24\par
+\par
+\tab\ul\b Slinger\ulnone\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Increased energy cost 1542->2987\par
+{\pntext\f1\'B7\tab}Increased metal cost 115->235\par
+{\pntext\f1\'B7\tab}Increased health 395->770\par
+{\pntext\f1\'B7\tab}Reduced build time 3747->3372\par
+{\pntext\f1\'B7\tab}Reduced movement speed 2.9->2\line\line\ul\b Snapper\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 3069->2609\par
+{\pntext\f1\'B7\tab}Increased health 850->880\par
+{\pntext\f1\'B7\tab}Reduced build time 8564->5567\par
+{\pntext\f1\'B7\tab}Reduced movement speed 2.5->2.3\par
+{\pntext\f1\'B7\tab}Increased acceleration 0.05->0.065\par
+{\pntext\f1\'B7\tab}Increased turnrate 240->300\par
+{\pntext\f1\'B7\tab}Increased range 290->300\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 260->350\par
+{\pntext\f1\'B7\tab}Reduced area of effect 48->16\line\line\ul\b Nixer\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 3352->3017\par
+{\pntext\f1\'B7\tab}Reduced metal cost 318->286\par
+{\pntext\f1\'B7\tab}Reduced build time 19124->5738\par
+{\pntext\f1\'B7\tab}Increased range 650->750\par
+{\pntext\f1\'B7\tab}Reduced weapon timer 5->4\par
+{\pntext\f1\'B7\tab}Increased weapon velocity 400->750\par
+{\pntext\f1\'B7\tab}Added starting velocity @ 250\par
+{\pntext\f1\'B7\tab}Increased weapon acceleration 40->50\par
+{\pntext\f1\'B7\tab}Increased tolerance 4000->10000\line\line\ul\b Scrubber\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced build time 3547->2483\par
+{\pntext\f1\'B7\tab}Reduced movement speed 3.5->3\par
+{\pntext\f1\'B7\tab}Increased turn rate 310->370\line\line\ul\b Turtle\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 7541->5279\par
+{\pntext\f1\'B7\tab}Reduced metal cost 650->455\par
+{\pntext\f1\'B7\tab}Reduced build time 19587->9794\line\line\ul\b Construction Hovercraft\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 4455->2896\par
+{\pntext\f1\'B7\tab}Reduced metal cost 390->254\par
+{\pntext\f1\'B7\tab}Reduced build time 11028->6617\par
+{\pntext\f1\'B7\tab}Increased worker time 80->90\par
+{\pntext\f1\'B7\tab}Increased turn rate 110->330\line\line\ul\b Hovercraft Plant\ulnone\b0\par
+{\pntext\f1\'B7\tab}Reduced energy cost 5421->2622\par
+{\pntext\f1\'B7\tab}Reduced metal cost 1793->1255\par
+{\pntext\f1\'B7\tab}Reduced build time 19005->12044\par
+{\pntext\f1\'B7\tab}Reduced worker time 200->180\par
 
 \pard\par
 \par
 \ul\b\fs28 ARM Level3\ulnone\b0\fs24\par
 \par
-\i    - Units coming soon!\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Added Xubor's Superlab for new ARM T3 factory.\i\par
+{\pntext\f1\'B7\tab}\i0 Added Harambe (new unit, Krogoth counterpart)\i\par
+{\pntext\f1\'B7\tab}\i0 Added Razorback (new unit, light t3 raider)\i\par
+
+\pard\i0\par
+   \i - More units coming soon!\par
 \i0\par
 \par
 \ul\b\fs28 CORE Level3\ulnone\b0\par
 \fs24\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Added Ketzer (new unit, light t3 raider)\par
+
+\pard\par
 \tab\ul\b Krogoth\ulnone\b0\par
 
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720 Reduced health 29918->14959\line (Fixes a duplication bug)\par
 {\pntext\f1\'B7\tab}Added damage modifier (armor) at 0.5\line (Increased the health back to 29918 by giving the unit 50% damage reduction)\par
+{\pntext\f1\'B7\tab}New movement class so they can traverse through water\par
+{\pntext\f1\'B7\tab}Increased cannon range 300->500\par
+{\pntext\f1\'B7\tab}Reduced cannon reload time 1.6->0.8\par
+{\pntext\f1\'B7\tab}Increased cannon tolerance 500->1000\par
 
 \pard\par
   \i  - More units coming soon!\i0\par
  \par
-
-\pard\ul\b\par
+\ul\b\par
 \fs28 Unit Models\ulnone\b0\par
 \fs24\par
     \tab\ul\b Big Bertha\ulnone\b0\par

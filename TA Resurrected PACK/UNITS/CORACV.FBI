@@ -9,13 +9,13 @@
 	Description=Tech Level 2;
 	FootprintX=3;
 	FootprintZ=3;
-	BuildCostEnergy=4504;
-	BuildCostMetal=455;
+	BuildCostEnergy=4344;	//4504	
+	BuildCostMetal=361;	//455
 	MaxDamage=1220;
 	MaxWaterDepth=18;
 	MaxSlope=16;
 	EnergyUse=0.2;
-	BuildTime=10806;
+	BuildTime=9906;		//10806
 	WorkerTime=180;		//200
 	BMcode=1;
 	Builder=1;

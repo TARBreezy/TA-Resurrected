@@ -6,7 +6,7 @@
 	lineofsight=1;
 	turret=1;
 
-	range=410;
+	range=430;	//410
 	reloadtime=1;
 	energypershot=75;
 	weaponvelocity=700;
@@ -20,6 +20,7 @@
 	color=96;	/* blue */
 	color2=98;
 
+	tolerance=500;
 
 	explosiongaf=fx;
 	explosionart=explode5;

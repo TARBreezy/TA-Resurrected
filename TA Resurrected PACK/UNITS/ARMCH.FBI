@@ -9,13 +9,13 @@
 	Description=Tech Level 1;
 	FootprintX=3;
 	FootprintZ=3;
-	BuildCostEnergy=4370;
-	BuildCostMetal=396;
+	BuildCostEnergy=2841;		//4370
+	BuildCostMetal=257;		//396
 	MaxDamage=723;
 	MaxWaterDepth=0;
 	MaxSlope=16;
 	EnergyUse=1;
-	BuildTime=10494;
+	BuildTime=6296;		//10494			
 	WorkerTime=90;		//80
 	BMcode=1;
 	Builder=1;
@@ -31,7 +31,7 @@
 	Category=ARM HOVER LEVEL1 CONSTR NOWEAPON NOTAIR NOTSUB CTRL_B;
 	TEDClass=CNSTR;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	Corpse=armch_dead;
+	Corpse=armch_seadead;
 	GermanName=Konstruktions-Hovecraft;
 	GermanDescription=Tech Level 1;
 	UnitNumber=175;
@@ -50,7 +50,7 @@
 	MaxVelocity=2.2;
 	BrakeRate=0.006;
 	Acceleration=0.01;
-	TurnRate=120;
+	TurnRate=360;		//120
 	SteeringMode=1;
 	ShootMe=1;
 	Builddistance=95;	//70

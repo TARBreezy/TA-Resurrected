@@ -11,9 +11,9 @@
 	lineofsight=1;
 	turret=1;
 
-	range=300;
-	reloadtime=.52;
-	weaponvelocity=900;
+	range=380;	//300
+	reloadtime=.5;		//.52
+	weaponvelocity=700;	//900
 	energypershot=10;
 	areaofeffect=8;
 	soundtrigger=1;
@@ -51,9 +51,9 @@
 	lineofsight=1;
 	turret=1;
 
-	range=300;
-	reloadtime=.52;
-	weaponvelocity=800;
+	range=380;	//300
+	reloadtime=.5;		//.52		
+	weaponvelocity=700;	//800
 	energypershot=10;
 	areaofeffect=8;
 	soundtrigger=1;
@@ -451,7 +451,7 @@
 	range=430;
 	reloadtime=.965;
 	energypershot=75;
-	weaponvelocity=800;
+	weaponvelocity=700;	//800
 	areaofeffect=8;
 
 	soundstart=Lasrmas2;
@@ -487,7 +487,7 @@
 	lineofsight=1;
 	turret=1;
 
-	range=400;
+	range=430;	//400
 	reloadtime=.965;
 	energypershot=75;
 	weaponvelocity=700;
@@ -499,7 +499,7 @@
 	color=96;	/* blue */
 	color2=98;
 
-	tolerance=500;
+	tolerance=8000;		//500
 
 	explosiongaf=fx;
 	explosionart=explode5;
@@ -524,7 +524,7 @@
 	lineofsight=1;
 	turret=1;
 
-	range=810;
+	range=660;	//810
 	reloadtime=1.1;
 	energypershot=75;
 	weaponvelocity=700;
@@ -564,7 +564,7 @@
 
 	range=240;	//200
 	reloadtime=.95;
-	energypershot=75;
+	energypershot=50;	//75
 	weaponvelocity=500;	//700
 	areaofeffect=8;
 	soundstart=lasrhvy3;

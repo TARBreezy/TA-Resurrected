@@ -50,7 +50,7 @@
 	SteeringMode=1;
 	ShootMe=1;
 	maneuverleashlength=640;
-	MovementClass=TANKSH3;
+	MovementClass=TANKHOVER3;		//TANKSH3
 	Weapon1=CORMABM_WEAPON;
 	downloadable=1;
 	wpri_badTargetCategory=VTOL;
@@ -59,6 +59,7 @@
 	DamageModifier=0.5;
 	antiweapons=1;
 	DefaultMissionType=Standby;
+	canhover=1;
 	Germanname=Hedgehog;
 	Germandescription=Mobile Raketenabwehr;
 	Frenchname=Hedgehog;

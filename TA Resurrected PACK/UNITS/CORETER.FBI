@@ -6,7 +6,7 @@
 	Objectname=CORETER;
 	Designation=MB-2-S;
 	Name=Deleter;
-	Description=Mobile Radar Jammer;
+	Description=Radar Jammer Vehicle;
 	FootprintX=3;
 	FootprintZ=3;
 	BuildCostEnergy=1757;
@@ -47,7 +47,7 @@
 	ItalianName=Deleter;
 	ItalianDescription=Crea interferenze radar - mobile;
 	canguard=1;
-	MaxVelocity=1.05;
+	MaxVelocity=1.15;	//1.05
 	BrakeRate=0.014;
 	Acceleration=0.031;
 	TurnRate=512;

@@ -55,5 +55,5 @@
 	wpri_badTargetCategory=VTOL;
 	BadTargetCategory=VTOL;
 	digger=1;
-	DamageModifier=0.95;	//0.28
+	DamageModifier=0.5;	//0.95
 	}

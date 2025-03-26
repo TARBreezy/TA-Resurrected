@@ -7,9 +7,9 @@
 	lineofsight=1;
 	turret=1;
 
-	range=220;	//260
+	range=210;	//260
 	reloadtime=1.83;
-	weaponvelocity=300;	//280
+	weaponvelocity=310;	//280
 	areaofeffect=84;
 	soundstart=canlite3;
 	soundhit=xplosml3;

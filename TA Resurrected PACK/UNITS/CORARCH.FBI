@@ -13,7 +13,7 @@
 	BuildCostMetal=1314;
 	MaxDamage=2450;
 	EnergyUse=8;
-	BuildTime=41791;
+	BuildTime=31343;		//41791
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;
@@ -48,9 +48,9 @@
 	ItalianName=Shredder;
 	ItalianDescription=Nave antiaerea;
 	canguard=1;
-	MaxVelocity=2.8;
+	MaxVelocity=2.9;		//2.8
 	BrakeRate=0.018;
-	Acceleration=0.01;
+	Acceleration=0.012;		//0.01
 	TurnRate=145;
 	SteeringMode=1;
 	ShootMe=1;

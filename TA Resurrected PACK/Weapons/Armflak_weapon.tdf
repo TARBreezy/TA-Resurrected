@@ -17,9 +17,6 @@
 	soundstart=canlite2;
 	soundhit=xplomed2;
 
-	//minbarrelangle=-24;
-
-	//accuracy=1000;
 	tolerance=4000;		//767
 	pitchtolerance=6000;	
 	burnblow=1;

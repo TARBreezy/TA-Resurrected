@@ -9,13 +9,13 @@
 	Description=Energy weapon;
 	FootprintX=4;
 	FootprintZ=4;
-	BuildCostEnergy=25025;
-	BuildCostMetal=3985;
-	MaxDamage=1410;
+	BuildCostEnergy=23461;	//25025
+	BuildCostMetal=2989;	//3985
+	MaxDamage=3937;		//1410
 	MaxWaterDepth=0;
 	MaxSlope=10;
 	EnergyUse=0;
-	BuildTime=75071;
+	BuildTime=56303;	//75071	
 	WorkerTime=0;
 	BMcode=0;
 	Builder=0;
@@ -51,7 +51,7 @@
 	buildangle=4096;
 	canattack=1;
 	Weapon1=ARM_TOTAL_ANNIHILATOR;
-	DamageModifier=0.5;
+	//DamageModifier=0.5;
 	ActivateWhenBuilt=0;
 	Ovradjust=1;
 	}

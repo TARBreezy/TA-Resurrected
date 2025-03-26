@@ -5,7 +5,7 @@
 	Side=CORE;
 	Objectname=CORMART;
 	Designation=MB-PS15;
-	Name=Mobile Artillery;
+	Name=Pillager;
 	Description=Mobile Artillery;
 	FootprintX=3;
 	FootprintZ=3;

@@ -48,10 +48,10 @@
 	ItalianName=Veicolo Costruttore;
 	ItalianDescription=Tecnologia Livello 1;
 	canguard=1;
-	MaxVelocity=1.3;
+	MaxVelocity=1.3;	//1.3
 	BrakeRate=0.085;
-	Acceleration=0.011;
-	TurnRate=207;
+	Acceleration=0.025;	//0.011
+	TurnRate=220;		//207
 	SteeringMode=1;
 	ShootMe=1;
 	Builddistance=95;	//40

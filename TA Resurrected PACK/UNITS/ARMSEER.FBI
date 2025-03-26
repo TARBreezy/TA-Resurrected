@@ -6,7 +6,7 @@
 	Objectname=ARMSEER;
 	Designation=ARM-MRJ;
 	Name=Seer;
-	Description=Mobile Radar;
+	Description=Mobile Radar Vehicle;
 	FootprintX=3;
 	FootprintZ=3;
 	BuildCostEnergy=941;
@@ -23,7 +23,7 @@
 	ZBuffer=1;
 	NoAutoFire=0;
 	SightDistance=320;
-	RadarDistance=1120;
+	RadarDistance=1440;		//1120
 	SoundCategory=ARM_VEHICLE;
 	EnergyStorage=0;
 	MetalStorage=0;

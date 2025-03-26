@@ -15,7 +15,7 @@
 	MaxWaterDepth=0;
 	MaxSlope=16;
 	EnergyUse=2.6;
-	BuildTime=3388;
+	BuildTime=2372;		//3388
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;
@@ -32,7 +32,7 @@
 	Category=ARM HOVER WEAPON LEVEL2 NOTAIR NOTSUB CTRL_W;
 	TEDClass=TANK;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	Corpse=armsh_dead;
+	Corpse=armsh_seadead;
 	GermanName=Skimmer ;
 	GermanDescription=Aufklärungs-Hovercraft;
 	UnitNumber=283;
@@ -50,10 +50,10 @@
 	ItalianName=Skimmer;
 	Italiandescription=Hovercraft di ricognizione;
 	canguard=1;
-	MaxVelocity=3.7;
+	MaxVelocity=3.2;	//3.7
 	BrakeRate=0.05;
 	Acceleration=0.11;
-	TurnRate=310;
+	TurnRate=370;		//310
 	SteeringMode=1;
 	ShootMe=1;
 	EnergyMake=2.6;

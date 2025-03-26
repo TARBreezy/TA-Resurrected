@@ -9,13 +9,13 @@
 	Description=Lightning Tank;
 	FootprintX=2;
 	FootprintZ=2;
-	BuildCostEnergy=3830;
-	BuildCostMetal=354;
-	MaxDamage=1100;
+	BuildCostEnergy=2662;		//3830
+	BuildCostMetal=293;		//354
+	MaxDamage=1045;			//1100
 	MaxWaterDepth=12;
 	MaxSlope=10;
 	EnergyUse=1.5;
-	BuildTime=9676;
+	BuildTime=4125;			//9676
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;

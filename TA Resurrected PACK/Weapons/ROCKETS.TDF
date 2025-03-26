@@ -229,15 +229,16 @@
 
 	model=rocket;
 
-	range=800;
+	range=1200;	//800
 	reloadtime=12;
 
 	noautorange=1;
-	weapontimer=5;
+	weapontimer=4;		//5
 	flighttime=10;
 
-	weaponvelocity=400;
-	weaponacceleration=40;
+	weaponvelocity=750;	//400
+	startingvelocity=250;
+	weaponacceleration=50;		//40
 	turnrate=24384;
 	areaofeffect=96;
 	metalpershot=0;
@@ -249,10 +250,11 @@
 	smokedelay=.1;
 	selfprop=1;
 	smoketrail=1;
+	cruise=1;
 
 	twophase=1;
 	guidance=1;
-	tolerance=4000;
+	tolerance=10000;		//4000
 
 	explosiongaf=fx;
 	explosionart=explode3;
@@ -281,15 +283,16 @@
 
 	model=corvrocket;
 
-	range=800;
-	reloadtime=13;
+	range=1200;	//800
+	reloadtime=12;		//13
 
 	noautorange=1;
-	weapontimer=5;
+	weapontimer=4;		//5
 	flighttime=10;
 
-	weaponvelocity=375;
-	weaponacceleration=38;
+	weaponvelocity=750;	//375
+	startingvelocity=250;
+	weaponacceleration=50;	//38
 	turnrate=24384;
 	areaofeffect=96;
 	metalpershot=0;
@@ -301,10 +304,11 @@
 	smokedelay=.1;
 	selfprop=1;
 	smoketrail=1;
+	cruise=1;
 
 	twophase=1;
 	guidance=1;
-	tolerance=4000;
+	tolerance=10000;		//4000
 
 	explosiongaf=fx;
 	explosionart=explode3;
@@ -337,11 +341,12 @@
 	reloadtime=12;
 
 	noautorange=1;
-	weapontimer=5;
+	weapontimer=4;		//5
 	flighttime=10;
 
-	weaponvelocity=400;
-	weaponacceleration=40;
+	weaponvelocity=750;	//400
+	startingvelocity=250;
+	weaponacceleration=50;	//40
 	turnrate=24384;
 	areaofeffect=96;
 	metalpershot=0;
@@ -353,10 +358,11 @@
 	smokedelay=.1;
 	selfprop=1;
 	smoketrail=1;
+	cruise=1;
 
 	twophase=1;
 	guidance=1;
-	tolerance=4000;
+	tolerance=10000;		//4000
 
 	explosiongaf=fx;
 	explosionart=explode3;
@@ -386,14 +392,15 @@
 	model=corshiprckt1;
 
 	range=1300;
-	reloadtime=9;
+	reloadtime=12;	//9
 
 	noautorange=1;
-	weapontimer=5;
+	weapontimer=4;		//5
 	flighttime=10;
 
-	weaponvelocity=400;
-	weaponacceleration=40;
+	weaponvelocity=750;		//400
+	startingvelocity=250;
+	weaponacceleration=50;		//40
 	turnrate=24384;
 	areaofeffect=96;
 	metalpershot=0;
@@ -405,10 +412,11 @@
 	smokedelay=.1;
 	selfprop=1;
 	smoketrail=1;
+	cruise=1;
 
 	twophase=1;
 	guidance=1;
-	tolerance=4000;
+	tolerance=10000;		//4000
 
 	explosiongaf=fx;
 	explosionart=explode3;
@@ -441,13 +449,11 @@
 	reloadtime=2;
 	weapontimer=5;
 	weaponvelocity=350;		//350
-	startvelocity=125;		//131
+	startvelocity=150;		//131
 	weaponacceleration=100;		//51
 	metalpershot=0;
 
-	guidance=1;
-	tracks=1;
-	turnrate=20000;		//7680
+	turnrate=7680;
 	areaofeffect=48;
 
 	soundstart=rocklit3;
@@ -472,7 +478,7 @@
 
 	[DAMAGE]
 		{
-		default=125;
+		default=63;		//125
 		}
 	}
 
@@ -489,13 +495,11 @@
 	reloadtime=2;
 	weapontimer=5;
 	weaponvelocity=350;		//350
-	startvelocity=125;		//250
+	startvelocity=150;		//250
 	weaponacceleration=100;		//131
 	metalpershot=0;
 
-	guidance=1;
-	tracks=1;
-	turnrate=20000;		//7680
+	turnrate=7680;		//7680
 	areaofeffect=48;
 
 	soundstart=rocklit3;
@@ -520,6 +524,6 @@
 
 	[DAMAGE]
 		{
-		default=125;
+		default=63;		//125
 		}
 	}

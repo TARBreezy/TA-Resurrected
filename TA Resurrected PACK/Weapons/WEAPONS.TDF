@@ -353,8 +353,6 @@
 	reloadtime=2.6;
 	weapontimer=3;
 	weaponvelocity=100;
-	startvelocity=100;
-	weaponacceleration=15;
 	turnrate=500;
 	areaofeffect=16;
 	
@@ -396,8 +394,6 @@
 	reloadtime=2.7;
 	weapontimer=3;
 	weaponvelocity=100;
-	startvelocity=100;
-	weaponacceleration=15;
 	turnrate=500;
 	areaofeffect=16;	
 	soundstart=torpedo1;
@@ -442,8 +438,6 @@
 	reloadtime=2.71;
 	weapontimer=3;
 	weaponvelocity=100;
-	startvelocity=100;
-	weaponacceleration=15;
 	turnrate=500;
 	areaofeffect=16;	
 	soundstart=torpedo2;
@@ -490,8 +484,6 @@
 	reloadtime=2.3;
 	weapontimer=3;
 	weaponvelocity=100;
-	startvelocity=100;
-	weaponacceleration=15;	
 
 	turnrate=10000;
 	areaofeffect=16;
@@ -519,6 +511,7 @@
 		default=200;
 		armsub=580;
 		corsub=580;
+		corssub=580;
 
 		}
 	}
@@ -538,8 +531,6 @@
 	reloadtime=2.28;
 	weapontimer=3;
 	weaponvelocity=100;
-	startvelocity=100;
-	weaponacceleration=15;	
 
 	turnrate=10000;
 	areaofeffect=16;
@@ -567,6 +558,7 @@
 		default=210;
 		armsub=600;
 		corsub=600;
+		corssub=600;
 		}
 	}
 
@@ -589,8 +581,6 @@
 	reloadtime=8.5;
 	weapontimer=5;
 	weaponvelocity=100;
-	startvelocity=100;
-	weaponacceleration=15;	
 
 	turnrate=10000;
 	areaofeffect=16;
@@ -635,8 +625,6 @@
 	reloadtime=9;
 	weapontimer=5;
 	weaponvelocity=100;
-	startvelocity=100;
-	weaponacceleration=15;	
 
 	turnrate=10000;
 	areaofeffect=16;
@@ -722,7 +710,7 @@
 	range=370;
 	reloadtime=.6;
 	weapontimer=1;
-	weaponvelocity=300;	//450
+	weaponvelocity=350;	//450
 	//startvelocity=150;
 	//weaponacceleration=200;
 	sprayangle=1024;
@@ -736,9 +724,6 @@
 	pitchtolerance=12000;
 
 	startsmoke=1;
-	guidance=1;
-	tracks=1;
-	turnrate=20000;
 
 	explosiongaf=fx;
 	explosionart=explode5;
@@ -967,7 +952,7 @@
 	lineofsight=1;
 	turret=1;
 
-	range=1200;
+	range=1200;		//1200
 	reloadtime=5;
 	energypershot=2000;
 	weaponvelocity=1000;
@@ -1006,9 +991,9 @@
 	lineofsight=1;
 	turret=1;
 
-	range=600;
-	reloadtime=8;
-	energypershot=800;
+	range=1100;	//600
+	reloadtime=6;			//8
+	energypershot=2000;		//800
 	weaponvelocity=1000;
 	areaofeffect=8;
 
@@ -1047,7 +1032,7 @@
 
 	range=240;	//180
 	reloadtime=1.45;
-	energypershot=105;
+	energypershot=75;	//105
 	weaponvelocity=500;	//400
 	areaofeffect=8;
 	duration=10;
@@ -1149,7 +1134,7 @@
 	paralyzer=1;
 	minbarrelangle=0;
 
-	range=220;
+	range=240;	//220
 	reloadtime=1.2;
 	weaponvelocity=600;
 	areaofeffect=8;
@@ -1160,8 +1145,8 @@
 	soundhit=lashit;
 
 	beamweapon=1;
-	color=209;	/* Redish */
-	color2=211;
+	color=252;	/* Redish */		//209
+	color2=254;				//211
 
 	explosiongaf=fx;
 	explosionart=explode5;
@@ -1171,7 +1156,7 @@
 
 	[DAMAGE]
 		{
-		default=900;		/* 15 seconds of paralysis */
+		default=450;	/* 7.5 seconds of paralysis */		//900
 		}
 	}
 
@@ -1191,11 +1176,11 @@
 
 	noautorange=1;
 	weapontimer=4;
-	flighttime=60;
+	flighttime=120;		//60
 
 	weaponvelocity=800;
 	weaponacceleration=60;
-	turnrate=32768;
+	turnrate=63000;		//32768
 	areaofeffect=96;
 
 	energypershot=10000;
@@ -1227,6 +1212,8 @@
 	lavaexplosionart=lavasplashlg;
 
 	startsmoke=1;
+
+	toaironly=1;
 
 	[DAMAGE]
 		{
@@ -1250,11 +1237,11 @@
 
 	noautorange=1;
 	weapontimer=4;
-	flighttime=60;
+	flighttime=120;		//60
 
 	weaponvelocity=800;
 	weaponacceleration=60;
-	turnrate=32768;
+	turnrate=63000;		//32768
 	areaofeffect=96;
 
 	energypershot=10000;
@@ -1286,6 +1273,8 @@
 	lavaexplosionart=lavasplashlg;
 
 	startsmoke=1;
+
+	toaironly=1;
 
 	[DAMAGE]
 		{

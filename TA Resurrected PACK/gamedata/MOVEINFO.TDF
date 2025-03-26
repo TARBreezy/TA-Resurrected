@@ -103,7 +103,7 @@
 	FootprintX=4;
 	FootprintZ=4;
 	MaxSlope=12;
-	BadSlope=12;
+	//BadSlope=12;
 	MaxWaterSlope=255;
 	BadWaterSlope=255;
 	}
@@ -113,9 +113,27 @@
 	FootprintX=3;
 	FootprintZ=3;
 	MaxSlope=12;
-	BadSlope=12;
+	//BadSlope=12;
 	MaxWaterSlope=255;
 	BadWaterSlope=255;
+	}
+[CLASS15]
+	{
+	Name=KBOTCONS;
+	FootprintX=2;
+	FootprintZ=2;
+	MaxWaterDepth=23;
+	MaxSlope=18;
+	}
+[CLASS16]
+	{
+	Name=KROG;
+	FootprintX=3;		//4
+	FootprintZ=3;		//4
+	//MinWaterDepth=15;	//remove
+	MaxWaterDepth=100;	//23   //12
+	MaxWaterSlope=30;	//added
+	MaxSlope=15;
 	}
 
 

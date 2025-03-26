@@ -56,7 +56,7 @@
 	maneuverleashlength=640;
 	MovementClass=BOATD3;
 	MinWaterDepth=15;
-	SonarDistanceJam=650;
+	SonarDistanceJam=250;		//650
 	WaterLine=20;
 	downloadable=1;
 	onoffable=1;

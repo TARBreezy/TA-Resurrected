@@ -9,7 +9,7 @@
 	Description=Heavy Assault Tank;
 	FootprintX=3;
 	FootprintZ=3;
-	BuildCostEnergy=2994;
+	BuildCostEnergy=3658;	//2994
 	BuildCostMetal=467;
 	MaxDamage=2312;		//2102
 	MaxWaterDepth=100;

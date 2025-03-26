@@ -1,0 +1,133 @@
+//define TA
+piece base,wake1,wake2,nuke,wake3,d1,d2;
+
+static-var restore_delay;
+
+#define SIG_NUM1 2
+#define SIG_NUM2 4
+#define SMOKEPIECE1 base
+#define SMOKEPIECE2 nuke
+
+#include "exptype.h"
+#include "sfxtype.h"
+#include "watersmokeunit.h" 
+
+Create()
+{ HIDE wake1;
+  HIDE wake2;
+  hide wake3;
+  HIDE nuke;
+  restore_delay = 3000;
+  start-script SmokeUnit();
+ }
+
+SetMaxReloadTime(Time)
+{ restore_delay = (Time * 2);
+ }
+
+RestoreAfterDelay()
+{ 
+  sleep 10000;
+  move base to y-axis[0] speed [3];
+  turn d1 to z-axis <0> speed <60>;
+  turn d2 to z-axis <0> speed <60>;
+ }
+
+StartMoving()
+{ signal SIG_NUM2;
+  set-signal-mask SIG_NUM2;
+  sleep 150;
+  while (TRUE)
+   { sleep 100;
+     	emit-sfx 256 | 3 from wake1;
+	emit-sfx 256 | 3 from wake2;
+    }
+ }
+
+StopMoving()
+{ signal SIG_NUM2;
+ }
+
+AimPrimary()
+{ 
+  signal SIG_NUM1;
+  set-signal-mask SIG_NUM1;
+  move base to y-axis[3] speed [3];
+  start-script RestoreAfterDelay();
+  turn d1 to z-axis <90> speed <60>;
+  turn d2 to z-axis <-90> speed <60>;
+  SLEEP 50;
+	emit-sfx 256 | 3 from wake3;
+  SLEEP 50;
+	emit-sfx 256 | 3 from wake3;
+  SLEEP 50;
+	emit-sfx 256 | 3 from wake3;
+  SLEEP 50;
+	emit-sfx 256 | 3 from wake3;
+  SLEEP 50;
+	emit-sfx 256 | 3 from wake3;
+  SLEEP 50;
+	emit-sfx 256 | 3 from wake3;
+  SLEEP 50;
+	emit-sfx 256 | 3 from wake3;
+  SLEEP 50;
+	emit-sfx 256 | 3 from wake3;
+  SLEEP 50;
+	emit-sfx 256 | 3 from wake3;
+  SLEEP 50;
+	emit-sfx 256 | 3 from wake3;
+  SLEEP 50;
+wait-for-turn d1 around z-axis;
+  return (1);
+ }
+
+AimFromPrimary(piecenum)
+{ 
+piecenum = nuke;
+ }
+
+FirePrimary()
+{
+start-script RestoreAfterDelay();
+}
+
+QueryPrimary(piecenum)
+{
+piecenum = nuke;
+ }
+
+SweetSpot(piecenum)
+{ piecenum = base;
+ }
+
+Killed(severity,corpsetype)
+{ if ((severity <= 25))
+   { corpsetype = 1;
+     EXPLODE base type BITMAPONLY | BITMAP1;
+     EXPLODE wake1 type BITMAPONLY | BITMAP1;
+     EXPLODE wake2 type BITMAPONLY | BITMAP1;
+     EXPLODE nuke type BITMAPONLY | BITMAP1;
+     return 0;
+    }
+  if ((severity <= 50))
+   { corpsetype = 2;
+     EXPLODE wake1 type FALL | BITMAP1;
+     EXPLODE wake2 type FALL | BITMAP1;
+     EXPLODE base type BITMAPONLY | BITMAP5;
+     EXPLODE nuke type FALL | BITMAP1;
+     return 0;
+    }
+  if ((severity <= 99))
+   { corpsetype = 3;
+     EXPLODE wake1 type FALL | SMOKE | FIRE |EXPLODE_ON_HIT | BITMAP3;
+     EXPLODE wake2 type FALL | SMOKE | FIRE |EXPLODE_ON_HIT | BITMAP3;
+     EXPLODE base type BITMAPONLY | BITMAP5;
+     EXPLODE nuke type BITMAPONLY | BITMAP5;
+     return 0;
+    }
+  corpsetype = 3;
+  EXPLODE wake1 type FALL | SMOKE | FIRE |EXPLODE_ON_HIT | BITMAP3;
+  EXPLODE wake2 type FALL | SMOKE | FIRE |EXPLODE_ON_HIT | BITMAP3;
+  EXPLODE nuke type FALL | SMOKE | FIRE |EXPLODE_ON_HIT | BITMAP3;
+  EXPLODE base type BITMAPONLY | BITMAP5;
+}

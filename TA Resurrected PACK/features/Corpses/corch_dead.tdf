@@ -1,0 +1,76 @@
+[corch_seadead]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=core_corpses;
+	object=corch_dead;
+	featuredead=corch_smudge;
+	footprintx=3;
+	footprintz=3;
+	height=4;
+	blocking=0;
+	hitdensity=100;
+	metal=210;			//218	//312
+	damage=592;
+	reclaimable=1;
+	featurereclamate=smudge01;
+	seqnamereclamate=tree1reclamate;
+	}
+
+[corch_smudge]
+	{
+	world=All Worlds;
+	description=Damaged Terrain;
+	category=smudges;
+	animating=0;
+	footprintx=0;
+	footprintz=0;
+	height=0;
+	filename=trees;
+	seqname=smudge02;
+
+	featuredead=corch_landdead;
+	indestructible=1;
+
+	animtrans=1;
+	flamable=0;
+	reclaimable=0;
+	blocking=0;
+	hitdensity=0;
+	}
+
+[corch_landdead]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=core_corpses;
+	object=corch_dead;
+	footprintx=3;
+	footprintz=3;
+	height=20;
+	blocking=1;
+	hitdensity=100;
+	metal=210;			//218	//312
+	damage=592;
+	reclaimable=1;
+	featurereclamate=smudge01;
+	seqnamereclamate=tree1reclamate;
+	}
+
+[corch_dead]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=core_corpses;
+	object=corch_dead;
+	footprintx=3;
+	footprintz=3;
+	height=20;
+	blocking=1;
+	hitdensity=100;
+	metal=210;			//218	//312
+	damage=592;
+	reclaimable=1;
+	featurereclamate=smudge01;
+	seqnamereclamate=tree1reclamate;
+	}

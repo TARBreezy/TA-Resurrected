@@ -6,7 +6,7 @@
 	Objectname=CORVAMP;
 	Designation=AFD-J9;
 	Name=Vamp;
-	Description=Stealth Fighter;
+	Description=Advanced Fighter;
 	FootprintX=2;
 	FootprintZ=2;
 	BuildCostEnergy=6973;

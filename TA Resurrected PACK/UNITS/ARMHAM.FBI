@@ -59,7 +59,7 @@
 	EnergyMake=0.6;
 	DefaultMissionType=Standby;
 	maneuverleashlength=640;
-	MovementClass=TANKSH2;
+	MovementClass=KBOTSS2;		//TANKSH2
 	Upright=1;
 	canattack=1;
 	Weapon1=ARM_HAM;

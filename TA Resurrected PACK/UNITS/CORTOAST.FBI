@@ -10,8 +10,8 @@
 	FootprintX=3;
 	FootprintZ=3;
 	BuildCostEnergy=12687;
-	BuildCostMetal=2146;
-	MaxDamage=1877;
+	BuildCostMetal=2039;		//2146
+	MaxDamage=1694;			//1877
 	MaxWaterDepth=0;
 	MaxSlope=10;
 	EnergyUse=0;
@@ -51,5 +51,5 @@
 	wpri_badTargetCategory=VTOL;
 	BadTargetCategory=VTOL;
 	digger=1;
-	DamageModifier=0.15;
+	DamageModifier=0.5;		//0.15
 	}

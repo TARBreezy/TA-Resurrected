@@ -8,17 +8,17 @@
 
 	model=fmdmisl;
 
-	range=22000;
+	range=27000;		//22000
 	coverage=2000;
 	reloadtime=120;
 
 	noautorange=1;
 	weapontimer=4;
-	flighttime=60;
+	flighttime=120;		//60
 
 	weaponvelocity=800;
 	weaponacceleration=60;
-	turnrate=32768;
+	turnrate=63000;		//32768
 	areaofeffect=96;
 
 	energypershot=10000;

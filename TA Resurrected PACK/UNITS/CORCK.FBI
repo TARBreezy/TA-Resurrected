@@ -9,13 +9,13 @@
 	Description=Tech Level 1;
 	FootprintX=2;
 	FootprintZ=2;
-	BuildCostEnergy=2540;
-	BuildCostMetal=130;
+	BuildCostEnergy=1609;		//2540
+	BuildCostMetal=131;		//130
 	MaxDamage=710;
 	MaxWaterDepth=25;
 	MaxSlope=20;
 	EnergyUse=0.2;
-	BuildTime=5818;
+	BuildTime=3860;		//5818
 	WorkerTime=60;		//80
 	BMcode=1;
 	Builder=1;
@@ -50,7 +50,7 @@
 	canguard=1;
 	MaxVelocity=0.9;
 	BrakeRate=0.2;
-	Acceleration=0.107;
+	Acceleration=0.13;	//0.107
 	TurnRate=965;
 	SteeringMode=1;
 	ShootMe=1;
@@ -60,7 +60,7 @@
 	MetalMake=0.25;
 	DefaultMissionType=Standby;
 	maneuverleashlength=640;
-	MovementClass=TANKSH2;
+	MovementClass=KBOTCONS;		//TANKSH2
 	Upright=1;
 	Ovradjust=1;
 	}

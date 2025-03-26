@@ -71,7 +71,7 @@
 		}
 	}
 
-/*[CORAMPH_WEAPON2]
+[CORAMPH_WEAPON2]
 	{
 	ID=159;
 	name=Missiles;
@@ -138,9 +138,8 @@
 		CORVALK=97;
 		}
 	}
-*/
 
-[CORAMPH_WEAPON2]
+/*[CORAMPH_WEAPON2]
 	{
 	ID=159;
 	name=Rockets;
@@ -183,4 +182,5 @@
 		default=100;
 		}
 	}
+*/
 

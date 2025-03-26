@@ -13,7 +13,7 @@
 
 	noautorange=1;
 	weapontimer=4;		//5
-	flighttime=3;			//10
+	flighttime=6;			//10
 
 	weaponvelocity=750;		//350
 	startingvelocity=250;

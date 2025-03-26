@@ -9,13 +9,13 @@
 	Description=Energy Weapon;
 	FootprintX=3;
 	FootprintZ=3;
-	BuildCostEnergy=14245;
-	BuildCostMetal=2140;
-	MaxDamage=3140;
+	BuildCostEnergy=24634;		//14245
+	BuildCostMetal=3138;		//2140
+	MaxDamage=4145;		//3140
 	MaxWaterDepth=0;
 	MaxSlope=10;
 	EnergyUse=0;
-	BuildTime=39276;
+	BuildTime=59118;		//39276
 	WorkerTime=0;
 	BMcode=0;
 	Builder=0;
@@ -50,7 +50,7 @@
 	buildangle=4096;
 	canattack=1;
 	Weapon1=CORE_DOOMSDAY;
-	DamageModifier=0.5;
+	//DamageModifier=0.5;
 	Weapon2=CORE_LIGHTLASER;
 	wsec_badTargetCategory=NOTAIR;
 	Weapon3=CORE_LASERH1;

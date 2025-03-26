@@ -14,11 +14,11 @@
 
 	noautorange=1;
 	weapontimer=4;
-	flighttime=60;
+	flighttime=120;		//60
 
 	weaponvelocity=800;
 	weaponacceleration=60;
-	turnrate=32768;
+	turnrate=63000;		//32768
 	areaofeffect=96;
 
 	energypershot=10000;

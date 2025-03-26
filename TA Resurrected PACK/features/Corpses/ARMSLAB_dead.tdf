@@ -1,0 +1,37 @@
+[ARMSLAB_dead]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=arm_corpses;
+	object=ArmSLab_dead;
+	featuredead=ArmSLab_heap;
+	footprintx=10;
+	footprintz=8;
+	height=55;
+	blocking=1;
+	hitdensity=100;
+	metal=6400;
+	damage=3600;
+	reclaimable=1;
+	featurereclamate=smudge01;
+      seqnamereclamate=tree1reclamate;
+	}
+
+[ARMSLAB_heap]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=arm_corpses;
+	object=7x7d;
+	featuredead=smudge01;
+	footprintx=7;
+	footprintz=7;
+	height=5;
+	blocking=0;
+	hitdensity=100;
+	metal=3200;
+	damage=3600;
+	reclaimable=1;
+	featurereclamate=smudge01;
+   	seqnamereclamate=tree1reclamate;
+	}

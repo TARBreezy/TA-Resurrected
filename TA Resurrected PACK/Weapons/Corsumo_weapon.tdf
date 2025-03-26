@@ -6,7 +6,7 @@
 	lineofsight=1;
 	turret=1;
 
-	range=300;
+	range=400;	//300
 	reloadtime=1.05;
 	energypershot=100;
 	weaponvelocity=700;
@@ -29,7 +29,7 @@
 
 	[DAMAGE]
 		{
-		default=230;	//290
+		default=300;		//290
 		}
 	}
 

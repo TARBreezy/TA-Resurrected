@@ -46,14 +46,14 @@
 	turret=1;
 	minbarrelangle=-15;
 
-	range=300;
-	reloadtime=1.6;
+	range=500;
+	reloadtime=0.8;		//1.6
 	weaponvelocity=450;
 	areaofeffect=8;
 	soundstart=Krogun1;
 	soundhit=xplomed2;
 
-	tolerance=500;
+	tolerance=1000;		//500
 
 	explosiongaf=fx;
 	explosionart=explode5;

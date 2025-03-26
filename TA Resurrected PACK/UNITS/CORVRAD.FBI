@@ -5,7 +5,7 @@
 	Side=CORE;
 	Objectname=CORVRAD;
 	Name=Informer;
-	Description=Mobile Radar;
+	Description=Mobile Radar Vehicle;
 	FootprintX=3;
 	FootprintZ=3;
 	BuildCostEnergy=1209;
@@ -22,7 +22,7 @@
 	ZBuffer=1;
 	NoAutoFire=0;
 	SightDistance=210;
-	RadarDistance=1120;
+	RadarDistance=1440;		//1120	
 	SoundCategory=CORE_VEHICLE;
 	EnergyStorage=0;
 	MetalStorage=0;
@@ -47,10 +47,10 @@
 	ItalianName=Informer;
 	ItalianDescription=Radar mobile;
 	canguard=1;
-	MaxVelocity=1.4;
+	MaxVelocity=1.25;	//1.4
 	BrakeRate=0.012;
 	Acceleration=0.03;
-	TurnRate=210;
+	TurnRate=420;		//210
 	SteeringMode=1;
 	ShootMe=1;
 	EnergyMake=11;

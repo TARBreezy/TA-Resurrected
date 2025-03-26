@@ -23,7 +23,7 @@
 	ZBuffer=1;
 	NoAutoFire=0;
 	SightDistance=240;
-	RadarDistance=1250;
+	RadarDistance=1440;		//1250
 	SoundCategory=ARM_KBOT;
 	EnergyStorage=0;
 	MetalStorage=0;
@@ -46,7 +46,7 @@
 	SpanishName=Marker;
 	ItalianName=Marker;
 	canguard=1;
-	MaxVelocity=0.94;
+	MaxVelocity=1.1;	//0.94
 	BrakeRate=0.018;
 	Acceleration=0.045;
 	TurnRate=505;

@@ -61,6 +61,6 @@
 	downloadable=1;
 	ActivateWhenBuilt=1;
 	onoffable=1;
-	RadarDistanceJam=700;
+	RadarDistanceJam=715;	//700
 	Floater=1;
 	}

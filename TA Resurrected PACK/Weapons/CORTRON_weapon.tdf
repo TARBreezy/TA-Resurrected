@@ -9,7 +9,7 @@
 	model=tronmisl;
 
 	range=32000;
-	reloadtime=180;
+	reloadtime=150;		//180
 
 	noautorange=1;
 	weapontimer=5;

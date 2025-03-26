@@ -60,7 +60,8 @@
 	MovementClass=TANKSH2;
 	Upright=1;
 	downloadable=1;
-	CloakCost=210;
-	CloakCostMoving=800;
-	mincloakdistance=80;
+	CloakCost=125;			//210
+	CloakCostMoving=250;		//800
+	mincloakdistance=90;		//80
+	Stealth=1;
 	}
