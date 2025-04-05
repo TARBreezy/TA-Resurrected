@@ -7,8 +7,8 @@
 	Designation=AEM-UMEM;
 	Name=Floating Moho Metal Maker;
 	Description=Converts Energy into Metal;
-	FootprintX=4;
-	FootprintZ=4;
+	FootprintX=5;
+	FootprintZ=5;
 	BuildCostEnergy=10285;		//9350
 	BuildCostMetal=64;		//58
 	MaxDamage=500;			//400
@@ -32,7 +32,7 @@
 	Category=ARM METAL LEVEL2 NOWEAPON NOTAIR NOTSUB  ;
 	TEDClass=METAL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	YardMap=www www www;	//ooo ooo ooo
+	YardMap=wwwwwwwww;	//www www www //ooo ooo ooo
 	Corpse=armuwmmkr_dead;
 	GermanName=Moho-Metallschmelze;
 	GermanDescription=Metallgewinnung;
@@ -48,7 +48,8 @@
 	ActivateWhenBuilt=1;
 	onoffable=1;
 	MakesMetal=16;
-	Waterline=16;
+	Waterline=7;	//5	//16
+	Ovradjust=1;
 	noshadow=1;
 	MinWaterDepth=11;
 	//DamageModifier=0.7;

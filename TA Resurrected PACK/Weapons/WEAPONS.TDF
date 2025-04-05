@@ -110,19 +110,19 @@
 	range=200;	//160
 	reloadtime=0.96;	//1.2
 	weapontimer=0.8;	//1
-	weaponvelocity=277;	//188
+	weaponvelocity=300;	//188
 	areaofeffect=32;
 	burst=18;
 	burstrate=.04;
 	sprayangle=1024;
 	randomdecay=.3;
 	soundstart=Flamhvy1;
-	soundhit=burn02;
+	//soundhit=burn02;
 	firestarter=100;
-	//groundbounce=1;
+	groundbounce=1;
 	smokedelay=1;
 	startsmoke=0;
-	//endsmoke=1;
+	endsmoke=1;
 	tolerance=2000;		//200
 
 	[DAMAGE]
@@ -1183,8 +1183,8 @@
 	turnrate=63000;		//32768
 	areaofeffect=96;
 
-	energypershot=10000;
-	metalpershot=200;
+	energypershot=36000;	//10000
+	metalpershot=300;	//200
 
 	stockpile=1;
 	interceptor=1;
@@ -1244,8 +1244,8 @@
 	turnrate=63000;		//32768
 	areaofeffect=96;
 
-	energypershot=10000;
-	metalpershot=200;
+	energypershot=36000;	//10000
+	metalpershot=300;	//200
 
 	stockpile=1;
 	interceptor=1;

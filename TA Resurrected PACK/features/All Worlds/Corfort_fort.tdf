@@ -6,7 +6,7 @@
 	object=corfort;
 	footprintx=2;
 	footprintz=2;
-	height=55;
+	height=45;		//55
 	blocking=1;
 	hitdensity=95;
 	metal=21;

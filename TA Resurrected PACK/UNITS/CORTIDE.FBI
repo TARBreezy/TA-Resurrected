@@ -6,8 +6,8 @@
 	Objectname=CORTIDE;
 	Name=Tidal Generator;
 	Description=Produces Energy;
-	FootprintX=4;
-	FootprintZ=4;
+	FootprintX=3;		//4
+	FootprintZ=3;		//4
 	BuildCostEnergy=752;
 	BuildCostMetal=81;
 	MaxDamage=253;

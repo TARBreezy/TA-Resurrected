@@ -135,5 +135,11 @@
 	MaxWaterSlope=30;	//added
 	MaxSlope=15;
 	}
-
+[CLASS17]
+	{
+	Name=BOATD4;
+	FootprintX=4;
+	FootprintZ=4;
+	MinWaterDepth=15;
+	}
 

@@ -16,6 +16,7 @@
 	areaofeffect=15;
 	soundtrigger=1;
 	tolerance=1000;
+ 	pitchtolerance=500;
 	soundstart=lasfirerb;
 	soundhit=lasrhit1b;
 	firestarter=10;
@@ -33,8 +34,6 @@
 	[DAMAGE]
 		{
 		default=110;
-		armcom=100;
-		corcom=100;
 		}
 	}
 
@@ -50,14 +49,14 @@
 	range=580;
 	reloadtime=5;
 	weapontimer=2;
-	energypershot=1500;        //        1500 E per shot
-     	 weaponvelocity=780;
+	energypershot=1500;        //1500 E per shot
+     	weaponvelocity=780;
 	areaofeffect=100;
 	accuracy=1000;
 	soundstart=RazPlasma;
 	firestarter=0;
 	beamweapon=1;
-	 noexplode=1;     
+	noexplode=1;     
 	tolerance=6000;
  	pitchtolerance=12000;
 	explosiongaf=RazFX2;
@@ -69,7 +68,6 @@
 	[DAMAGE]
 		{
 		default=300;
-		armcom=200;
-		corcom=200;		}
+		}
 	}
 

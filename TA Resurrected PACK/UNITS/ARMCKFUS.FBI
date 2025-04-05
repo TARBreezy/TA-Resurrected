@@ -43,8 +43,8 @@
 	SpanishDescription=Genera energía;
 	ItalianName=Reattore a Fusione-Nascosto;
 	ItalianDescription=Produce energia;
-	EnergyMake=1000;
+	EnergyMake=1250;	//1000
 	buildangle=4096;
 	downloadable=1;
-	CloakCost=450;
+	CloakCost=250;		//450
 	}

@@ -21,8 +21,8 @@
 	turnrate=63000;		//32768
 	areaofeffect=96;
 
-	energypershot=10000;
-	metalpershot=200;
+	energypershot=36000;		//10000
+	metalpershot=300;		//200
 
 	stockpile=1;
 	interceptor=1;

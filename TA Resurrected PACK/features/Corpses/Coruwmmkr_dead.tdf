@@ -3,10 +3,10 @@
 	world=All Worlds;
 	description=Wreckage;
 	category=core_corpses;
-	object=Cormmkr_dead;
-	featuredead=cormmkr_heap;
-	footprintx=4;
-	footprintz=4;
+	object=Coruwmmkr_dead;
+	featuredead=coruwmmkr_heap;
+	footprintx=5;
+	footprintz=5;
 	height=20;
 	blocking=1;
 	hitdensity=100;
@@ -22,9 +22,9 @@
 	world=All Worlds;
 	description=Wreckage;
 	category=heaps;
-	object=4x4a;
-	footprintx=4;
-	footprintz=4;
+	object=5x5a;
+	footprintx=5;
+	footprintz=5;
 	height=4;
 	blocking=0;
 	hitdensity=100;

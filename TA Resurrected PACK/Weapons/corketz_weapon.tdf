@@ -14,9 +14,10 @@
 	reloadtime=0.4;
 	weapontimer=4;
 	energypershot=200;
-	weaponvelocity=500;
+	weaponvelocity=700;		//500
 	areaofeffect=15;
 	tolerance=1500;
+ 	pitchtolerance=500;
 	soundstart=Ketzer-Gauﬂ1;
 	soundhit=Ketzer-Gauﬂ2;
 	
@@ -37,7 +38,7 @@
 
 	[DAMAGE]
 		{
-		default=190;
+		default=170;
 		}
 	}
 
@@ -51,7 +52,7 @@
 
 	model=Ketzer-Rakete;
 
-	range=750;
+	range=580;		//750
 	reloadtime=0.9;
 	weapontimer=5;
 	weaponvelocity=850;
@@ -71,6 +72,7 @@
 	selfprop=1;
 	smoketrail=1;
 	tolerance=8000;
+ 	pitchtolerance=1000;
 
 	explosiongaf=fx;
 	explosionart=explode3;

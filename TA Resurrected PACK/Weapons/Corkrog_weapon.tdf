@@ -20,7 +20,8 @@
 	color=144;	/* PURPLE */
 	color2=217;
 
-	tolerance=500;
+	tolerance=1500;		//500
+ 	pitchtolerance=1000;
 
 	explosiongaf=fx;
 	explosionart=explode5;
@@ -54,6 +55,7 @@
 	soundhit=xplomed2;
 
 	tolerance=1000;		//500
+ 	pitchtolerance=500;
 
 	explosiongaf=fx;
 	explosionart=explode5;

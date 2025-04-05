@@ -7,8 +7,8 @@
 	Designation=ARM-KL;
 	Name=Krogoth;
 	Description=Experimental Kbot;
-	FootprintX=3;
-	FootprintZ=3;
+	FootprintX=3;		//4
+	FootprintZ=3;		//4
 	BuildCostEnergy=116664;
 	BuildCostMetal=29489;
 	MaxDamage=14959;		//Duplication bug @ 29918

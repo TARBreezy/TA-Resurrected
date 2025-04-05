@@ -111,7 +111,7 @@
 	weaponvelocity=350;
 	weaponacceleration=50;
 	turnrate=32768;
-	areaofeffect=512;
+	areaofeffect=640;		//512
 	edgeeffectiveness=0.5;		//0.25
 
 	energypershot=180000;
@@ -175,7 +175,7 @@
 	weaponvelocity=350;
 	weaponacceleration=50;
 	turnrate=32768;
-	areaofeffect=512;
+	areaofeffect=640;		//512
 	edgeeffectiveness=0.5;		//0.25
 
 	energypershot=180000;

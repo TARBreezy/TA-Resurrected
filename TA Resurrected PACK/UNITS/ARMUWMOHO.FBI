@@ -31,7 +31,7 @@
 	Category=ARM metal extractor level2 NOWEAPON NOTAIR NOTSUB  ;
 	TEDClass=METAL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	YardMap=ooooooooo;
+	YardMap=ooooo ooooo ooooo ooooo ooooo;		//ooooooooo
 	Corpse=armuwmoho_dead;
 	GermanName=Tauchschmelze;
 	GermanDescription=Unterwasser-Metallgewinnung;
@@ -42,10 +42,11 @@
 	SpanishDescription=Extractor de metal submarino;
 	ItalianName=Estr. Metallo subacqueo;
 	ItalianDescription=Estrattore di Metallo sottomarino;
-	buildangle=8192;
+	buildangle=8192;  	//32768 //8192
 	downloadable=1;
 	ActivateWhenBuilt=1;
 	onoffable=1;
 	ExtractsMetal=0.003;
 	MinWaterDepth=19;
+	Ovradjust=1;
 	}

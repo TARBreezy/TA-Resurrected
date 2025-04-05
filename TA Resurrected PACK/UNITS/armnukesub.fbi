@@ -26,7 +26,7 @@
 	MetalStorage=0;
 	ExplodeAs=ATOMIC_BLASTSML;
 	SelfDestructAs=NUCLEAR_MISSILE;
-	Category=ARM UNDERWATER LEVEL2 SPECIAL WEAPON NOTAIR;
+	Category=ARM UNDERWATER LEVEL3 SPECIAL WEAPON NOTAIR;
 	TEDClass=WATER;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=armnukesub_dead;

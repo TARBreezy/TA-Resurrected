@@ -11,7 +11,7 @@
 	FootprintZ=4;
 	BuildCostEnergy=462648;
 	BuildCostMetal=35264;
-	MaxDamage=1700;
+	MaxDamage=2514;		//1700
 	MaxWaterDepth=0;
 	MaxSlope=10;
 	EnergyUse=0;
@@ -29,10 +29,10 @@
 	MetalStorage=0;
 	ExplodeAs=ATOMIC_BLAST;
 	SelfDestructAs=ATOMIC_BLAST;
-	Category=CORE LEVEL3 strategic weapon NOTAIR NOTSUB ;
+	Category=CORE LEVEL3 strategic weapon NOTAIR NOTSUB CTRL_L;
 	TEDClass=FORT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	YardMap=ooooooooo;
+	YardMap=oooooooooooooooo;
 	Corpse=corbuzz_dead;
 	GermanName=Kettensäge;
 	GermanDescription=Schnellfeuer-Plasmakanone;
@@ -40,7 +40,7 @@
 	FrenchName=Scie Bourdonnante;
 	Frenchdescription=Canon Plasma Tir Rapide;
 	firestandorders=1;
-	StandingFireOrder=0;
+	StandingFireOrder=2;
 	canstop=1;
 	SpanishName=Buzzsaw;
 	SpanishDescription=Cañón de plasma rápido;
@@ -49,7 +49,7 @@
 	ShootMe=1;
 	EnergyMake=0;
 	DefaultMissionType=GUARD_NOMOVE;
-	buildangle=29096;
+	buildangle=1024;		//29096
 	canattack=1;
 	Weapon1=corbuzz_weapon;
 	wpri_badTargetCategory=VTOL;

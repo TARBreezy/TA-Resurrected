@@ -12,7 +12,7 @@
 	BuildCostEnergy=8027;	//9121
 	BuildCostMetal=1276;	//1450
 	MaxDamage=1465;
-	MaxSlope=20;
+	MaxSlope=24;
 	EnergyUse=12;
 	BuildTime=28600;	//32500
 	WorkerTime=0;
@@ -31,7 +31,7 @@
 	Category=CORE METAL EXTRACTOR LEVEL2 NOWEAPON NOTAIR NOTSUB  ;
 	TEDClass=METAL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	YardMap=ooooooooo;
+	YardMap=ooooo ooooo ooooo ooooo ooooo;		//ooooooooo
 	Corpse=coruwmoho_dead;
 	GermanName=Tauchschmelze;
 	GermanDescription=Unterwasser-Metallgewinnung;
@@ -42,10 +42,11 @@
 	SpanishDescription=Extractor de metal submarino;
 	ItalianName=Estrattore di Metallo;
 	ItalianDescription=Estrattore di Metallo sottomarino;
-	buildangle=8192;
+	buildangle=8192;	//32768 //8192
 	downloadable=1;
 	ActivateWhenBuilt=1;
 	onoffable=1;
 	ExtractsMetal=0.003;
-	MinWaterDepth=10;
+	MinWaterDepth=19;
+	Ovradjust=1;
 	}

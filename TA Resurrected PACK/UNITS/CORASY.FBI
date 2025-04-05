@@ -30,7 +30,7 @@
 	Category=CORE PLANT CTRL_F LEVEL2 NOWEAPON NOTAIR NOTSUB ;
 	TEDClass=PLANT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	YardMap=wCCCCCCw CCCCCCCC CCCCCCCC CCCCCCCC CCCCCCCC CCCCCCCC CCCCCCCC wCCCCCCw;
+	YardMap=wCCCCCCw wCCCCCCw wCCCCCCw wCCCCCCw wCCCCCCw wCCCCCCw wCCCCCCw wCCCCCCw;
 	Corpse=corasy_dead;
 	GermanName=Verbesserte Werft;
 	GermanDescription=Tech Level 2;

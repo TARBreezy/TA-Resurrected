@@ -43,9 +43,9 @@
 	SpanishDescription=Produce energía;
 	ItalianName=Imp. di fusione invisibile;
 	ItalianDescription=Prod. energia: invisibile al nemico;
-	EnergyMake=1050;
+	EnergyMake=1250;	//1050
 	buildangle=4096;
 	downloadable=1;
-	CloakCost=550;
+	CloakCost=250;		//550
 	mincloakdistance=110;
 	}

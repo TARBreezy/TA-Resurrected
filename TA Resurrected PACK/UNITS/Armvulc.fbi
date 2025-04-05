@@ -7,11 +7,11 @@
 	Designation=ARM-QLRC;
 	Name=Vulcan;
 	Description=Rapid Fire Plasma Cannon;
-	FootprintX=3;
-	FootprintZ=3;
+	FootprintX=4;		//3
+	FootprintZ=4;		//3
 	BuildCostEnergy=479111;
 	BuildCostMetal=45198;
-	MaxDamage=1400;
+	MaxDamage=2514;		//1400
 	MaxWaterDepth=0;
 	MaxSlope=10;
 	EnergyUse=0;
@@ -29,10 +29,10 @@
 	MetalStorage=0;
 	ExplodeAs=ATOMIC_BLAST;
 	SelfDestructAs=ATOMIC_BLAST;
-	Category=ARM LEVEL3 strategic weapon NOTAIR NOTSUB ;
+	Category=ARM LEVEL3 strategic weapon NOTAIR NOTSUB CTRL_L;
 	TEDClass=FORT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	YardMap=ooooooooo;
+	YardMap=oooooooooooooooo;
 	Corpse=armvulc_dead;
 	GermanName=Vulcan;
 	GermanDescription=Plasma-Schnellfeuerkanone;
@@ -40,7 +40,7 @@
 	FrenchName=Vulcain;
 	Frenchdescription=Canon Plasma à Tir Rapide;
 	firestandorders=1;
-	StandingFireOrder=0;
+	StandingFireOrder=2;
 	canstop=1;
 	SpanishName=Vulcan;
 	SpanishDescription=Cañón rápido de Plasma;
@@ -49,7 +49,7 @@
 	ShootMe=1;
 	EnergyMake=0;
 	DefaultMissionType=GUARD_NOMOVE;
-	buildangle=29096;
+	buildangle=1024;		//29096
 	canattack=1;
 	Weapon1=armvulc_weapon;
 	wpri_badTargetCategory=VTOL;

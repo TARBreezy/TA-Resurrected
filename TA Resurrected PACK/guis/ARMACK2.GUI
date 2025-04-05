@@ -284,7 +284,7 @@
 	{
 		id=1;
 		assoc=0;
-		name=ARMSHLT;
+		name=ARMSLAB;
 		xpos=0;
 		ypos=192;
 		width=64;

@@ -5,9 +5,9 @@
 	category=arm_corpses;
 	object=Armuwmoho_dead;
 	featuredead=Armuwmoho_heap;
-	footprintx=3;
-	footprintz=3;
-	height=20;
+	footprintx=5;
+	footprintz=5;
+	height=140;
 	blocking=1;
 	hitdensity=100;
 	metal=104;
@@ -22,9 +22,9 @@
 	world=All Worlds;
 	description=Wreckage;
 	category=heaps;
-	object=3x3d;
-	footprintx=3;
-	footprintz=3;
+	object=5x5c;
+	footprintx=5;
+	footprintz=5;
 	height=4;
 	blocking=0;
 	hitdensity=100;

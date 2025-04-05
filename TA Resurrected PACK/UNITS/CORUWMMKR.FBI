@@ -7,8 +7,8 @@
 	Designation=MMUC;
 	Name=Floating Moho Metal Maker;
 	Description=Converts Energy into Metal;
-	FootprintX=4;
-	FootprintZ=4;
+	FootprintX=5;
+	FootprintZ=5;
 	BuildCostEnergy=10928;
 	BuildCostMetal=57;	//51
 	MaxDamage=500;
@@ -32,7 +32,7 @@
 	Category=CORE METAL LEVEL2 NOWEAPON NOTAIR NOTSUB  ;
 	TEDClass=METAL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	YardMap=www www www;	//ooo ooo ooo
+	YardMap=wwwwwwwww;	//www www www //ooo ooo ooo
 	Corpse=coruwmmkr_dead;
 	GermanName=Moho-Metallschmelze;
 	GermanDescription=Metallgewinnung;
@@ -49,7 +49,8 @@
 	onoffable=1;
 	MakesMetal=16;		//12
 	//DamageModifier=0.7;
-	Waterline=6;
+	Waterline=7;	//5
+	Ovradjust=1;
 	MinWaterDepth=11;
 	noshadow=1;
 	

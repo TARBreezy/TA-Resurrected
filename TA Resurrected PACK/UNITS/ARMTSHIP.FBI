@@ -27,7 +27,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=ARM SHIP TPORT LEVEL1 NOWEAPON NOTAIR NOTSUB ;
+	Category=ARM SHIP TPORT LEVEL1 NOWEAPON NOTAIR NOTSUB CTRL_T;
 	TEDClass=SHIP;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=armtship_dead;

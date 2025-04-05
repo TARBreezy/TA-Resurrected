@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=ATOMIC_BLAST;
 	SelfDestructAs=CRAWL_BLASTSML;
-	Category=CORE SPECIAL DEFENSIVE WEAPON LEVEL3 NOTAIR NOTSUB ;
+	Category=CORE SPECIAL DEFENSIVE WEAPON LEVEL3 NOTAIR NOTSUB CTRL_F;
 	TEDClass=TANK;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=CORMABM_dead;

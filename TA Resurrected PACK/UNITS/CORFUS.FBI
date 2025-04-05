@@ -43,7 +43,7 @@
 	SpanishDescription=Produce energía;
 	ItalianName=Generatore a Fusione;
 	ItalianDescription=Produce energia;
-	EnergyMake=1050;
+	EnergyMake=1000;	//1050
 	buildangle=16384;
 	ActivateWhenBuilt=1;
 	Ovradjust=1;
