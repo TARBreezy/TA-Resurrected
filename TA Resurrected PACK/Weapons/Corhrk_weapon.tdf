@@ -12,15 +12,14 @@
 	reloadtime=5;	//8
 
 	noautorange=1;
-	weapontimer=4;		//5
-	flighttime=6;			//10
+	weapontimer=3;			//4 //5
+	flighttime=2;			//10
 
 	weaponvelocity=750;		//350
-	startingvelocity=250;
-	weaponacceleration=50;		//34
-	turnrate=28384;		//28384
+	startingvelocity=250;		//250
+	weaponacceleration=75;		//50 //34
+	turnrate=85152;			//28384
 	areaofeffect=60;
-	metalpershot=0;
 	edgeeffectiveness=0.50;
 
 	soundstart=Rockhvy1;
@@ -49,7 +48,7 @@
 
 	[DAMAGE]
 		{
-		default=240;
+		default=250;		//240
 		}
 	}
 

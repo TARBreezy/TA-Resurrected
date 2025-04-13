@@ -48,7 +48,7 @@
 	ItalianName=Eraser;
 	ItalianDescription=Crea interferenze radar;
 	canguard=1;
-	MaxVelocity=1;
+	MaxVelocity=1.05;	//1
 	BrakeRate=1;
 	Acceleration=0.1;
 	TurnRate=950;

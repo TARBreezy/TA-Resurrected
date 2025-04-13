@@ -300,62 +300,62 @@ drawgun()
 {
 	if( TRUE )
 	{
-		turn ruparm to x-axis <-27.934066> now;		//-17.934066
+		turn ruparm to x-axis <-17.934066> now;
 		turn luparm to x-axis <-36.571429> now;
 		turn lloarm to z-axis <22.153846> now;
 		turn lhand to y-axis <-43.950549> now;
-		turn rloarm to x-axis <-67.868132> now;
+		turn rloarm to x-axis <-67.868132> speed <1350>;			//now all rloarm
 		sleep 80;
 	}
 	if( TRUE )
 	{
-		turn ruparm to x-axis <-81.615385> now;		//-56.615385
+		turn ruparm to x-axis <-56.615385> now;
 		turn luparm to x-axis <-36.571429> now;
 		turn lloarm to z-axis <22.153846> now;
 		turn lhand to y-axis <-43.956044> now;
-		turn rloarm to x-axis <-82.637363> now;
+		turn rloarm to x-axis <-82.637363> speed <1350>;
 		sleep 70;
 	}
 	if( TRUE )
 	{
-		turn ruparm to x-axis <-100.604396> now;		//-75.604396
+		turn ruparm to x-axis <-75.604396> now;
 		turn luparm to x-axis <-36.571429> now;
 		turn lloarm to z-axis <22.148352> now;
 		turn lhand to y-axis <-43.950549> now;
-		turn rloarm to x-axis <-92.131868> now;
+		turn rloarm to x-axis <-92.131868> speed <1350>;
 		sleep 70;
 	}
 	if( TRUE )
 	{
-		turn ruparm to x-axis <-128.027473> now;	//-103.027473
+		turn ruparm to x-axis <-103.027473> now;
 		turn luparm to x-axis <-36.571429> now;
 		turn lloarm to z-axis <22.153846> now;
 		turn lhand to y-axis <-43.956044> now;
-		turn rloarm to x-axis <-107.604396> now;
+		turn rloarm to x-axis <-107.604396> speed <1350>;
 		sleep 70;
 	}
 	if( TRUE )
 	{
-		turn ruparm to x-axis <-139.280220> now;	//-114.280220
+		turn ruparm to x-axis <-114.280220> now;
 		turn luparm to x-axis <-36.571429> now;
 		turn lloarm to z-axis <22.148352> now;
 		turn lhand to y-axis <-43.950549> now;
-		turn rloarm to x-axis <-123.428571> now;
+		turn rloarm to x-axis <-123.428571> speed <1350>;
 		sleep 80;
 	}
 	if( TRUE )
 	{
-		turn ruparm to x-axis <-161.439560> now;	//-136.439560
+		turn ruparm to x-axis <-136.439560> now;
 		turn lloarm to z-axis <22.153846> now;
 		turn lhand to y-axis <-43.956044> now;
-		turn rloarm to x-axis <-134.675824> now;
+		turn rloarm to x-axis <-134.675824> speed <1350>;
 		sleep 70;
 	}
 	if( TRUE )
 	{
 		turn lloarm to z-axis <22.153846> now;
 		turn lhand to y-axis <-43.956044> now;
-		turn rloarm to x-axis <-107.604396> now;
+		turn rloarm to x-axis <-107.604396> speed <1350>;
 		sleep 70;
 	}
 	if( TRUE )
@@ -363,7 +363,7 @@ drawgun()
 		move luparm to z-axis [0.250000] now;
 		turn luparm to x-axis <-36.571429> now;
 		turn lhand to y-axis <-43.956044> now;
-		turn rloarm to x-axis <-78.412088> now;
+		turn rloarm to x-axis <-78.412088> speed <1350>;
 		sleep 60;
 	}
 	if( TRUE )
@@ -373,23 +373,23 @@ drawgun()
 		turn lelbow to z-axis <15.824176> now;
 		turn lloarm to z-axis <20.747253> now;
 		turn lhand to y-axis <0.000000> now;
-		turn rloarm to x-axis <-56.609890> now;
+		turn rloarm to x-axis <-56.609890> speed <1350>;
 		sleep 50;
 	}
 	if( TRUE )
 	{
 		move luparm to z-axis [0.800000] now;
-		turn ruparm to x-axis <-129.280220> now;	//-114.280220
+		turn ruparm to x-axis <-114.280220> now;
 		turn luparm to x-axis <-55.912088> now;
 		turn lelbow to z-axis <21.098901> now;
 		turn lloarm to z-axis <35.868132> now;
-		turn rloarm to x-axis <-55.560440> now;
+		turn rloarm to x-axis <-55.560440> speed <1350>;
 		sleep 40;
 	}
 	if( TRUE )
 	{
 		move luparm to z-axis [1.600000] now;
-		turn ruparm to x-axis <-93.769231> now;		//-78.769231
+		turn ruparm to x-axis <-78.769231> now;
 		turn luparm to x-axis <-59.428571> now;
 		turn lelbow to z-axis <24.263736> now;
 		turn lloarm to z-axis <52.390110> now;
@@ -399,7 +399,7 @@ drawgun()
 	{
 		move luparm to z-axis [1.750000] now;
 		move rloarm to y-axis [1.249994] now;
-		turn ruparm to x-axis <-63.527473> now;		//-48.527473
+		turn ruparm to x-axis <-48.527473> now;
 		turn luparm to x-axis <-61.890110> now;
 		turn lelbow to z-axis <48.879121> now;
 		turn lloarm to z-axis <40.791209> now;
@@ -413,7 +413,7 @@ drawgun()
 	turn lelbow to z-axis <44.659341> now;
 	turn lloarm to z-axis <46.065934> now;
 	turn lhand to y-axis <394.549451> now;
-	turn rloarm to x-axis <-95.291209> now;
+	turn rloarm to x-axis <-95.291209> speed <1350>;
 	sleep 70;
 }
 
@@ -599,7 +599,7 @@ MotionControl(moving, aiming, justmoved)
 				turn lleg to x-axis <0.000000> speed <200.043956>;
 				if( !aiming )
 				{
-					turn torso to y-axis <0.000000> speed <90.021978>;
+					turn torso to y-axis <0.000000> speed <150>;		//90.021978
 				}
 				justmoved = FALSE;
 			}

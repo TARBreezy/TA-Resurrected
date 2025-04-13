@@ -9,13 +9,13 @@
 	Description=Heavy Rocket Kbot;
 	FootprintX=2;
 	FootprintZ=2;
-	BuildCostEnergy=2107;
-	BuildCostMetal=388;
-	MaxDamage=620;
+	BuildCostEnergy=8955;		//2107
+	BuildCostMetal=531;		//388
+	MaxDamage=930;			//620
 	MaxWaterDepth=21;
 	MaxSlope=14;
 	EnergyUse=0.6;
-	BuildTime=5191;
+	BuildTime=11420;			//5191
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;
@@ -50,7 +50,7 @@
 	ItalianName=Dominator;
 	ItalianDescription=Kbot lanciarazzi pesante;
 	canguard=1;
-	MaxVelocity=1.25;
+	MaxVelocity=1.05;	//1.25
 	BrakeRate=0.15;
 	Acceleration=0.091552734;
 	TurnRate=1003;

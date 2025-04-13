@@ -11,11 +11,11 @@
 	FootprintZ=2;
 	BuildCostEnergy=2348;	//1887
 	BuildCostMetal=209;	//292
-	MaxDamage=713;		//375
+	MaxDamage=893;		//375
 	MaxWaterDepth=12;
 	MaxSlope=17;
 	EnergyUse=0.3;
-	BuildTime=3300;     //4209
+	BuildTime=3431;     //4209
 	WorkerTime=0;
 	BMcode=1;
 	Builder=0;
@@ -53,7 +53,7 @@
 	MaxVelocity=1.1;	//0.8
 	BrakeRate=0.19;
 	Acceleration=0.03;	//0.02
-	TurnRate=260;	//220
+	TurnRate=330;		//220
 	SteeringMode=2;
 	ShootMe=1;
 	EnergyMake=0.3;

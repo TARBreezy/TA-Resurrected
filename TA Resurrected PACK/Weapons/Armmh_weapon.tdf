@@ -15,7 +15,7 @@
 	weapontimer=4;		//5
 	flighttime=10;
 
-	weaponvelocity=750;	//400
+	weaponvelocity=1000;		//750 //400
 	startingvelocity=250;
 	weaponacceleration=50;		//40
 	turnrate=24384;

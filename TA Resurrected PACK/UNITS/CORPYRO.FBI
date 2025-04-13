@@ -6,7 +6,7 @@
 	Objectname=CORPYRO;
 	Designation=KB-C9;
 	Name=Pyro;
-	Description=Assault Kbot;
+	Description=Flamethrower Kbot;
 	FootprintX=2;
 	FootprintZ=2;
 	BuildCostEnergy=2420;	//2200

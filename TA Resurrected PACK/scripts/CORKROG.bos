@@ -684,6 +684,7 @@ MotionControl(moving, aiming, justmoved)
 
 Create()
 {
+	set ARMORED to 1;
 	hide eyeflare;
 	hide lgunflare;
 	hide rgunflare;
@@ -694,7 +695,7 @@ Create()
 	Static_Var_5 = 1;
 	gun_1 = torso;
 	gun_3 = torso;
-	restore_delay = 10000;	//2000
+	restore_delay = 8000;	//2000
 	start-script MotionControl();
 	start-script SmokeUnit();
 }

@@ -273,13 +273,13 @@
 	ballistic=1;
 	turret=1;
 
-	range=975;	//620
+	range=990;	//620
 	reloadtime=2.75;
 	weaponvelocity=310;
 	areaofeffect=96;	//48
 	soundstart=cannhvy2;
 	soundhit=xplomed4;
-	accuracy=1250;		//2000
+	accuracy=1000;		//2000
 
 	explosiongaf=fx;
 	explosionart=explode2;		//explode3
@@ -306,13 +306,13 @@
 	ballistic=1;
 	turret=1;
 
-	range=975;	//620
+	range=990;	//620
 	reloadtime=2.95;
 	weaponvelocity=310;
 	areaofeffect=96;	//48
 	soundstart=cannhvy2;
 	soundhit=xplomed4;
-	accuracy=1250;		//2000
+	accuracy=1000;		//2000
 
 	explosiongaf=fx;
 	explosionart=explode2;		//explode3
@@ -342,11 +342,15 @@
 	minbarrelangle=-15;
 
 	range=480;
-	reloadtime=2.6;
-	weaponvelocity=450;
-	areaofeffect=8;
+	reloadtime=2;				//2.6
+	weaponvelocity=425;			//450
+	areaofeffect=48;			//8
 	soundstart=cannhvy1;
 	soundhit=xplomed2;
+
+	burst=3;
+	burstrate=0.03;
+	sprayangle=500;	
 
 	explosiongaf=fx;
 	explosionart=explode5;
@@ -361,7 +365,7 @@
 
 	[DAMAGE]
 		{
-		default=120;
+		default=60;		//50
 		}
 	}
 
@@ -475,7 +479,7 @@
 	minbarrelangle=-25;
 
 	range=990;	//1300
-	reloadtime=2.7;		//2.9
+	reloadtime=2.4;		//2.9
 	weaponvelocity=350;
 	areaofeffect=64;
 	soundstart=cannhvy1;
@@ -494,7 +498,7 @@
 
 	[DAMAGE]
 		{
-		default=248;	//208
+		default=228;	//208
 		}
 	}
 
@@ -508,7 +512,7 @@
 	minbarrelangle=-25;
 
 	range=990;	//1300
-	reloadtime=2.8;	//3
+	reloadtime=2.5;	//3
 	weaponvelocity=350;
 	areaofeffect=64;
 	soundstart=cannhvy1;
@@ -527,7 +531,7 @@
 
 	[DAMAGE]
 		{
-		default=260;	//220
+		default=240;	//220
 		}
 	}
 
@@ -605,7 +609,7 @@
 	ballistic=1;
 	turret=1;
 
-	range=1000;		//1250
+	range=1200;		//1250
 	reloadtime=3;
 	weaponvelocity=350;
 	areaofeffect=64;
@@ -638,7 +642,7 @@
 	ballistic=1;
 	turret=1;
 
-	range=1000;		//1200
+	range=1200;
 	reloadtime=2.9;			//2.8
 	weaponvelocity=350;
 	areaofeffect=64;		//85

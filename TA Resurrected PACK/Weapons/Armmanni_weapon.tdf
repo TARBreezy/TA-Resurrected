@@ -7,8 +7,8 @@
 	turret=1;
 
 	range=750;		//700
-	reloadtime=8;		//6
-	energypershot=1500;
+	reloadtime=10;		//6
+	energypershot=1750;	//1500
 	weaponvelocity=1000;
 	areaofeffect=8;
 

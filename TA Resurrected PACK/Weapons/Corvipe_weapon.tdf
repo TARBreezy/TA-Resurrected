@@ -21,8 +21,8 @@
 	firestarter=50;
 
 	beamweapon=1;
-	color=11;	/* Light Blue */		//128
-	color2=130;					//130
+	color=128;	/* Light Blue */		//128
+	color2=129;					//130
 
 	explosiongaf=fx;
 	explosionart=explode5;

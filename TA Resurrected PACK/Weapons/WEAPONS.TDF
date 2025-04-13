@@ -108,21 +108,21 @@
 	turret=1;
 
 	range=200;	//160
-	reloadtime=0.96;	//1.2
+	reloadtime=0.94;	//1.2
 	weapontimer=0.8;	//1
 	weaponvelocity=300;	//188
 	areaofeffect=32;
-	burst=18;
+	burst=17;		//18
 	burstrate=.04;
 	sprayangle=1024;
 	randomdecay=.3;
 	soundstart=Flamhvy1;
 	//soundhit=burn02;
 	firestarter=100;
-	groundbounce=1;
+	//groundbounce=1;
 	smokedelay=1;
 	startsmoke=0;
-	endsmoke=1;
+	//endsmoke=1;
 	tolerance=2000;		//200
 
 	[DAMAGE]
@@ -953,7 +953,7 @@
 	turret=1;
 
 	range=1200;		//1200
-	reloadtime=5;
+	reloadtime=8;		//5
 	energypershot=2000;
 	weaponvelocity=1000;
 	areaofeffect=8;
@@ -992,7 +992,7 @@
 	turret=1;
 
 	range=1100;	//600
-	reloadtime=6;			//8
+	reloadtime=8;
 	energypershot=2000;		//800
 	weaponvelocity=1000;
 	areaofeffect=8;
@@ -1030,8 +1030,8 @@
 	lineofsight=1;
 	turret=1;
 
-	range=240;	//180
-	reloadtime=1.45;
+	range=240;		//180
+	reloadtime=1.15;		//1.45
 	energypershot=75;	//105
 	weaponvelocity=500;	//400
 	areaofeffect=8;
@@ -1044,8 +1044,8 @@
 	firestarter=50;
 
 	beamweapon=1;
-	color=128;	/* Light Blue */
-	color2=130;
+	color=128;		//128/* Light Blue */
+	color2=129;		//130
 
 	explosiongaf=fx;
 	explosionart=explode5;
@@ -1057,7 +1057,7 @@
 
 	[DAMAGE]
 		{
-		default=220;	//180
+		default=180;
 		}
 	}
 

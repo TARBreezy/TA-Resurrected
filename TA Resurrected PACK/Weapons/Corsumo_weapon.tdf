@@ -8,7 +8,7 @@
 
 	range=400;	//300
 	reloadtime=1.05;
-	energypershot=100;
+	energypershot=300;		//100
 	weaponvelocity=700;
 	areaofeffect=12;
 	soundstart=lasrhvy3;

@@ -1,0 +1,33 @@
+[CORE_WOLF]
+	{
+	ID=236;
+	name=Gattling Gauss Cannon;
+	rendertype=4;
+	//lineofsight=1;
+	ballistic=1;
+	turret=1;
+	minbarrelangle=-15;
+
+	range=480;	//400
+	reloadtime=1.5;
+	weaponvelocity=425;
+	areaofeffect=48;
+	soundstart=cannhvy1;
+	soundhit=xplomed2;
+
+	explosiongaf=fx;
+	explosionart=explode5;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom1;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashsm;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=135;
+		}
+	}

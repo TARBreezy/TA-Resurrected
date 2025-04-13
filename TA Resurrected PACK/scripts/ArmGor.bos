@@ -695,7 +695,7 @@ Create()
 	Static_Var_5 = 1;
 	gun_1 = torso;
 	gun_3 = torso;
-	restore_delay = 9000;
+	restore_delay = 8000;
 	start-script MotionControl();
 	start-script SmokeUnit();
 }
@@ -751,7 +751,7 @@ AimPrimary(heading, pitch)
 	bAiming = TRUE;
 	while( !Static_Var_5 )
 	{
-		sleep 300;
+		sleep 250;
 	}
 	move rmissle2 to y-axis [6.000000] speed [10.000000];
 	move lmissle2 to y-axis [6.000000] speed [10.000000];

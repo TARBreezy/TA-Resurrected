@@ -230,13 +230,13 @@
 	model=rocket;
 
 	range=1200;	//800
-	reloadtime=12;
+	reloadtime=9;		//12
 
 	noautorange=1;
 	weapontimer=4;		//5
 	flighttime=10;
 
-	weaponvelocity=750;	//400
+	weaponvelocity=1000;		//750 //400
 	startingvelocity=250;
 	weaponacceleration=50;		//40
 	turnrate=24384;
@@ -284,15 +284,15 @@
 	model=corvrocket;
 
 	range=1200;	//800
-	reloadtime=12;		//13
+	reloadtime=9;		//13
 
 	noautorange=1;
 	weapontimer=4;		//5
 	flighttime=10;
 
-	weaponvelocity=750;	//375
+	weaponvelocity=1000;		//750 //375
 	startingvelocity=250;
-	weaponacceleration=50;	//38
+	weaponacceleration=50;		//38
 	turnrate=24384;
 	areaofeffect=96;
 	metalpershot=0;
@@ -338,15 +338,15 @@
 	model=rocket;
 
 	range=1300;
-	reloadtime=12;
+	reloadtime=9;			//12
 
 	noautorange=1;
-	weapontimer=4;		//5
+	weapontimer=4;			//5
 	flighttime=10;
 
-	weaponvelocity=750;	//400
+	weaponvelocity=1000;		//750 //400
 	startingvelocity=250;
-	weaponacceleration=50;	//40
+	weaponacceleration=50;		//40
 	turnrate=24384;
 	areaofeffect=96;
 	metalpershot=0;
@@ -392,13 +392,13 @@
 	model=corshiprckt1;
 
 	range=1300;
-	reloadtime=12;	//9
+	reloadtime=9;
 
 	noautorange=1;
 	weapontimer=4;		//5
 	flighttime=10;
 
-	weaponvelocity=750;		//400
+	weaponvelocity=1000;		//750 //400
 	startingvelocity=250;
 	weaponacceleration=50;		//40
 	turnrate=24384;

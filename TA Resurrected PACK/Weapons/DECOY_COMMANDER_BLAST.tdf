@@ -24,7 +24,7 @@
 	shakemagnitude=32;
 	shakeduration=2;
 
-	areaofeffect=950;
+	areaofeffect=475;			//950
 	edgeeffectiveness=0.15;
 
 	[DAMAGE]
