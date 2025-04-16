@@ -9,13 +9,13 @@
 	Description=Automatic Radar Targeting;
 	FootprintX=5;
 	FootprintZ=4;
-	BuildCostEnergy=141148;
-	BuildCostMetal=14982;
+	BuildCostEnergy=70574;		//141148
+	BuildCostMetal=7491;		//14982
 	MaxDamage=1800;
 	MaxWaterDepth=0;
 	MaxSlope=10;
-	EnergyUse=1300;
-	BuildTime=161287;
+	EnergyUse=1000;			//1300
+	BuildTime=80644;		//161287
 	WorkerTime=0;
 	BMcode=0;
 	Builder=0;
@@ -48,5 +48,5 @@
 	downloadable=1;
 	ActivateWhenBuilt=1;
 	istargetingupgrade=1;
-	DamageModifier=0.7;
+	DamageModifier=0.6;		//0.7
 	}

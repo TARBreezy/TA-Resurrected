@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=lARGE_BUILDINGEX;
 	SelfDestructAs=LARGE_BUILDING;
-	Category=ARM LEVEL2 strategic weapon NOTAIR NOTSUB ;
+	Category=ARM LEVEL2 strategic weapon NOTAIR NOTSUB CTRL_X;
 	TEDClass=FORT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	YardMap=oooo;

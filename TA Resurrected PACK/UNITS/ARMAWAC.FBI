@@ -38,6 +38,7 @@
 	FrenchName=Eagle;
 	Frenchdescription=Avion de radar;
 	mobilestandorders=1;
+	StandingFireOrder=0;
 	StandingMoveOrder=1;
 	canmove=1;
 	canpatrol=1;
@@ -58,6 +59,11 @@
 	Scale=1;
 	BankScale=1;
 	EnergyMake=23;
+	canattack=1;
+	weapon1=NULL_WEAPON;
+	BadTargetCategory=AIR;
+	wpri_badtargetcategory=AIR;
+	NoChaseCategory=AIR;
 	DefaultMissionType=VTOL_standby;
 	maneuverleashlength=1280;
 	downloadable=1;

@@ -6,7 +6,7 @@
 	Objectname=ARMPNIX;
 	Designation=AFD-HAB;
 	Name=Phoenix;
-	Description=Bomber;
+	Description=Strategic Bomber;
 	FootprintX=3;
 	FootprintZ=3;
 	BuildCostEnergy=7624;
@@ -50,9 +50,9 @@
 	ItalianDescription=Bombardiere;
 	canguard=1;
 	MaxVelocity=9.5;
-	BrakeRate=4;
+	BrakeRate=0.4;		//4
 	Acceleration=0.06;
-	TurnRate=365;
+	TurnRate=303;		//365
 	SteeringMode=1;
 	ShootMe=1;
 	Canfly=1;

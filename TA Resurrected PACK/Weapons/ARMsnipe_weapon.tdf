@@ -35,6 +35,9 @@
 	[DAMAGE]
 		{
 		default=1250;		//1230
+		CORSUMO=2000;
+		ARMMANNI=500;
+		ARMSNIPE=500;
 		}
 	}
 

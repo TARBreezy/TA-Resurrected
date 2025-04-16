@@ -669,7 +669,7 @@
 	reloadtime=.4;
 	weapontimer=1;
 	weaponvelocity=300;
-	sprayangle=1024;
+	sprayangle=973;		//1024
 	areaofeffect=8;
 	burst=3;
 	burstrate=.1;
@@ -710,11 +710,11 @@
 	range=370;
 	reloadtime=.6;
 	weapontimer=1;
-	weaponvelocity=350;	//450
+	weaponvelocity=500;	//450
 	//startvelocity=150;
 	//weaponacceleration=200;
-	sprayangle=1024;
-	areaofeffect=8;
+	sprayangle=768;		//1024
+	areaofeffect=16;		//8
 	burst=3;	//4
 	burstrate=.1;
 	soundstart=armsml3;
@@ -736,7 +736,7 @@
 
 	[DAMAGE]
 		{
-		default=12;	//11
+		default=15;	//11
 		}
 	}
 
@@ -953,7 +953,7 @@
 	turret=1;
 
 	range=1200;		//1200
-	reloadtime=8;		//5
+	reloadtime=6;		//5
 	energypershot=2000;
 	weaponvelocity=1000;
 	areaofeffect=8;

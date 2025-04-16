@@ -13,7 +13,7 @@
 	areaofeffect=32;
 	burst=17;
 	burstrate=.04;
-	sprayangle=1024;
+	sprayangle=922;	
 	randomdecay=.3;
 	soundstart=Flamhvy1;
 	soundhit=burn02;

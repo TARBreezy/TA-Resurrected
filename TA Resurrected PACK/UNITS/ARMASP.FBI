@@ -46,7 +46,7 @@
 	Builddistance=6;
 	EnergyMake=10;
 	buildangle=1024;
-	ActivateWhenBuilt=1;
+	ActivateWhenBuilt=0;		//1
 	onoffable=1;
 	sortbias=0;
 	IsAirBase=1;

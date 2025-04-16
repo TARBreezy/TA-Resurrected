@@ -16,7 +16,7 @@
 	range=400;
 	reloadtime=4;
 	weapontimer=2;
-	weaponvelocity=250;
+	weaponvelocity=400;	//250
 	startvelocity=250;
 	weaponacceleration=120;
 	areaofeffect=48;
@@ -60,7 +60,7 @@
 	range=400;
 	reloadtime=3.7;
 	weapontimer=2;
-	weaponvelocity=250;
+	weaponvelocity=400;	//250
 	startvelocity=250;
 	weaponacceleration=120;
 	areaofeffect=48;
@@ -446,14 +446,14 @@
 	model=missile;
 
 	range=370;	//450
-	reloadtime=2;
+	reloadtime=1;			//2
 	weapontimer=5;
-	weaponvelocity=350;		//350
-	startvelocity=150;		//131
+	weaponvelocity=500;		//350
+	startvelocity=250;		//131
 	weaponacceleration=100;		//51
 	metalpershot=0;
 
-	turnrate=7680;
+	turnrate=85152;			//7680
 	areaofeffect=48;
 
 	soundstart=rocklit3;
@@ -462,6 +462,8 @@
 	firestarter=70;
 	smokedelay=.1;
 	selfprop=1;
+	guidance=1;
+	tracks=1;
 	smoketrail=1;
 	tolerance=8000;
 
@@ -478,10 +480,10 @@
 
 	[DAMAGE]
 		{
-		default=63;		//125
+		default=75;		//125
 		}
 	}
-
+/*
 [VTOL_ROCKET2]
 	{
 	ID=136;
@@ -527,3 +529,4 @@
 		default=63;		//125
 		}
 	}
+*/

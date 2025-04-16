@@ -12,7 +12,7 @@
 	turret=1;
 
 	range=240;
-	reloadtime=1.53;
+	reloadtime=1.25;	//1.53
 	weaponvelocity=190;	//170
 	areaofeffect=32;
 	soundstart=canlite3;
@@ -44,7 +44,7 @@
 	turret=1;
 
 	range=240;
-	reloadtime=1.53;
+	reloadtime=1.25;	//1.53
 	weaponvelocity=190;	//170
 	areaofeffect=32;
 	soundstart=canlite3;
@@ -76,7 +76,7 @@
 	turret=1;
 
 	range=320;
-	reloadtime=1.8;
+	reloadtime=1.4;		//1.8
 	weaponvelocity=210;
 	areaofeffect=48;
 	soundstart=cannon2;
@@ -108,7 +108,7 @@
 	turret=1;
 
 	range=320;
-	reloadtime=1.9;
+	reloadtime=1.5;		//1.9
 	weaponvelocity=220;
 	areaofeffect=48;
 	soundstart=cannon2;
@@ -140,8 +140,8 @@
 	turret=1;
 	minbarrelangle=-35;
 
-	range=415;	//320
-	reloadtime=1.95;
+	range=425;	//320
+	reloadtime=1.85;	//1.95
 	weaponvelocity=250;	//210
 	areaofeffect=48;
 	soundstart=cannon1;
@@ -173,8 +173,8 @@
 	turret=1;
 	minbarrelangle=-35;
 
-	range=415;	//230
-	reloadtime=1.9;
+	range=425;	//230
+	reloadtime=1.8;		//1.9
 	weaponvelocity=250;	//210
 	areaofeffect=48;
 	soundstart=cannon1;

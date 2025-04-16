@@ -9,8 +9,8 @@
 	model=torpedo;
 	propeller=1;
 
-	range=300;
-	reloadtime=6;
+	range=350;		//300
+	reloadtime=3;		//6
 	weapontimer=5;
 	weaponvelocity=100;
 
@@ -37,11 +37,11 @@
 
 	[DAMAGE]
 		{
-		default=400;
+		default=200;		//400
 		}
 	}
 
-[CORSEAP_WEAPON2]
+/*[CORSEAP_WEAPON2]
 	{
 	ID=194;
 	name=Torpedo Launcher;
@@ -84,7 +84,7 @@
 		}
 	}
 
-/*[CORSEAP_WEAPON3]
+[CORSEAP_WEAPON3]
 	{
 	ID=98;
 	name=Guided Missiles;

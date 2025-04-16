@@ -165,7 +165,7 @@
 	}
 
 
-[GATOR_LASER]
+[CORE_LASER]
 	{
 	ID=85;
 	name=Laser;
@@ -174,7 +174,7 @@
 	turret=1;
 
 	range=180;
-	reloadtime=.75;	//1
+	reloadtime=.5;	//1
 	weaponvelocity=300;	//400
 	areaofeffect=8;
 	burstrate=.2;
@@ -200,7 +200,7 @@
 
 	[DAMAGE]
 		{
-		default=45;	//44
+		default=30;	//44
 		}
 	}
 

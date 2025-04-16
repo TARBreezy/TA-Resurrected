@@ -53,7 +53,7 @@
 	MaxVelocity=0.75;	//0.34
 	BrakeRate=0.1;
 	Acceleration=0.04;
-	TurnRate=150;	//90
+	TurnRate=180;	//90
 	SteeringMode=2;
 	ShootMe=1;
 	EnergyMake=2.8;

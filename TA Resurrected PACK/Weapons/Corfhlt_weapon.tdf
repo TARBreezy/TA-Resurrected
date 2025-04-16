@@ -20,7 +20,7 @@
 	color=96;	/* blue */
 	color2=98;
 
-	tolerance=500;
+	tolerance=8000;		//500
 
 	explosiongaf=fx;
 	explosionart=explode5;

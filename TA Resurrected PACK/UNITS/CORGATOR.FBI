@@ -61,7 +61,7 @@
 	maneuverleashlength=640;
 	MovementClass=TANKSH2;
 	canattack=1;
-	Weapon1=GATOR_LASER;
+	Weapon1=CORE_LASER;		//GATOR_LASER
 	wpri_badTargetCategory=VTOL;
 	BadTargetCategory=VTOL;
 	NoChaseCategory=VTOL;

@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=ATOMIC_BLAST;
 	SelfDestructAs=CRAWL_BLASTSML;
-	Category=ARM SPECIAL WEAPON LEVEL3 NOTAIR NOTSUB ;
+	Category=ARM SPECIAL WEAPON LEVEL3 NOTAIR NOTSUB CTRL_X;
 	TEDClass=FORT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	YardMap=ooooooooo;

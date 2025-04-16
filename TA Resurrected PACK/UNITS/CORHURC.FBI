@@ -52,7 +52,7 @@
 	MaxVelocity=9.1;
 	BrakeRate=0.5;
 	Acceleration=0.05;
-	TurnRate=256;
+	TurnRate=285;		//256
 	SteeringMode=1;
 	ShootMe=1;
 	Canfly=1;

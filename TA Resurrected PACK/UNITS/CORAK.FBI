@@ -10,7 +10,7 @@
 	FootprintX=2;
 	FootprintZ=2;
 	BuildCostEnergy=696;
-	BuildCostMetal=56;
+	BuildCostMetal=59;	//56
 	MaxDamage=295;		//265
 	MaxWaterDepth=25;
 	MaxSlope=17;
@@ -62,6 +62,6 @@
 	MovementClass=TANKSH2;
 	Upright=1;
 	canattack=1;
-	Weapon1=AK_LASER;	//CORE_LASER
+	Weapon1=CORE_LASER;
 	Ovradjust=1;
 	}
