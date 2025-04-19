@@ -12,7 +12,7 @@
 	BuildCostEnergy=5496;
 	BuildCostMetal=130;
 	MaxDamage=320;
-	MaxWaterDepth=0;
+	MaxWaterDepth=255;		//0
 	MaxSlope=10;
 	EnergyUse=1.1;
 	BuildTime=10155;
@@ -27,9 +27,9 @@
 	SoundCategory=ARM_VTOL;
 	EnergyStorage=0;
 	MetalStorage=0;
-	ExplodeAs=LIGHTNING;
-	SelfDestructAs=CRAWL_BLASTSML;
-	Category=ARM VTOL CTRL_V LEVEL1 WEAPON BOMB NOTSUB CTRL_W CTRL_P;
+	ExplodeAs=BIG_UNITEX;		//LIGHTNING
+	SelfDestructAs=BIG_UNIT;		//CRAWL_BLASTSML
+	Category=ARM VTOL LEVEL1 WEAPON BOMB NOTSUB CTRL_W CTRL_P CTRL_Q;
 	TEDClass=VTOL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Thunder;

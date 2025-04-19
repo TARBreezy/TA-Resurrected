@@ -46,7 +46,7 @@
 	ItalianName=Comandante Esca;
 	ItalianDescription=Comandante Esca;
 	canguard=1;
-	MaxVelocity=1.1;		//1.07
+	MaxVelocity=1.17;		//1.07
 	BrakeRate=0.32;
 	Acceleration=0.16;
 	TurnRate=1030;
