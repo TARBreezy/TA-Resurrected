@@ -73,7 +73,7 @@ AimPrimary(heading, pitch)
 {
 	signal SIG_AIM;
 	set-signal-mask SIG_AIM;
-	turn gun to y-axis heading speed <180.021978>;
+	turn gun to y-axis heading speed <180.021978>;		//90
 	turn gun to x-axis <0.000000> - pitch speed <50.010989>;
 	wait-for-turn gun around y-axis;
 	wait-for-turn gun around x-axis;

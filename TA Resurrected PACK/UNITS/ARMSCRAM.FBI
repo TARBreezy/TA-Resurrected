@@ -45,7 +45,7 @@
 	ItalianName=Fibber;
 	ItalianDescription=Disturbo sonar subacqueo;
 	canguard=1;
-	MaxVelocity=2.4;
+	MaxVelocity=2.1;	//2.4
 	BrakeRate=0.36;
 	Acceleration=0.2;
 	TurnRate=622;

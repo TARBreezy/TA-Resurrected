@@ -49,9 +49,9 @@
 	ItalianDescription=Nave da battaglia;
 	canguard=1;
 	MaxVelocity=2.15;
-	BrakeRate=0.018310547;
-	Acceleration=0.0045;
-	TurnRate=69;
+	BrakeRate=0.09;			//0.018
+	Acceleration=0.0125;		//0.0045
+	TurnRate=103;			//69
 	SteeringMode=1;
 	ShootMe=1;
 	EnergyMake=46;

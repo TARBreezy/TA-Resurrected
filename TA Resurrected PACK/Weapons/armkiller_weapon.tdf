@@ -8,7 +8,7 @@
 	lineofsight=1;
 	turret=1;
 	model=aemg;
-	range=200;
+	range=210;
 	reloadtime=0.4;
 	sprayangle=1024;
 	burst=2;

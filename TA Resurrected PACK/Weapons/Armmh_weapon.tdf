@@ -8,7 +8,7 @@
 
 	model=armmhmsl;
 
-	range=750;	//670
+	range=900;	//670
 	reloadtime=9;
 
 	noautorange=1;
@@ -48,6 +48,6 @@
 
 	[DAMAGE]
 		{
-		default=320;	//300
+		default=500;	//300
 		}
 	}

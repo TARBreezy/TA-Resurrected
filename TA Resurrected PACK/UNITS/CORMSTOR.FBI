@@ -26,7 +26,7 @@
 	RadarDistance=0;
 	SoundCategory=CORE_MSTOR;
 	EnergyStorage=0;
-	MetalStorage=1000;
+	MetalStorage=2000;	//1000
 	ExplodeAs=SMALL_BUILDINGEX;
 	SelfDestructAs=SMALL_BUILDING;
 	Category=CORE METAL LEVEL1 NOWEAPON  NOTAIR NOTSUB STORAGE;

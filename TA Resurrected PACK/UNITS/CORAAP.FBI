@@ -9,8 +9,8 @@
 	Description=Produces Aircraft;
 	FootprintX=7;
 	FootprintZ=6;
-	BuildCostEnergy=4422;
-	BuildCostMetal=2191;
+	BuildCostEnergy=4864;		//4422
+	BuildCostMetal=2410;		//2191
 	MaxDamage=2200;
 	MaxWaterDepth=0;
 	MaxSlope=10;

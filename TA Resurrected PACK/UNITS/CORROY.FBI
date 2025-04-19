@@ -49,7 +49,7 @@
 	ItalianDescription=Distruttore;
 	canguard=1;
 	MaxVelocity=2.93;
-	BrakeRate=0.018310547;
+	BrakeRate=0.018;
 	Acceleration=0.03;		//0.0091
 	TurnRate=128;
 	SteeringMode=1;

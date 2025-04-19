@@ -9,7 +9,7 @@
 	Description=Increases Metal Storage;
 	FootprintX=4;
 	FootprintZ=4;
-	BuildCostEnergy=1255;
+	BuildCostEnergy=708;		//1255
 	BuildCostMetal=360;
 	MaxDamage=1625;
 	MaxSlope=20;
@@ -25,7 +25,7 @@
 	RadarDistance=0;
 	SoundCategory=ARM_MSTOR;
 	EnergyStorage=0;
-	MetalStorage=1500;
+	MetalStorage=2500;	//1500
 	ExplodeAs=SMALL_BUILDINGEX;
 	SelfDestructAs=SMALL_BUILDING;
 	Category=ARM metal NOWEAPON NOTAIR NOTSUB  ;

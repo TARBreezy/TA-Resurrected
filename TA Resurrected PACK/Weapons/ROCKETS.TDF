@@ -229,7 +229,7 @@
 
 	model=rocket;
 
-	range=1200;	//800
+	range=1100;	//800
 	reloadtime=9;		//12
 
 	noautorange=1;
@@ -269,7 +269,7 @@
 
 	[DAMAGE]
 		{
-		default=500;
+		default=700;	//500
 		}
 	}
 
@@ -283,7 +283,7 @@
 
 	model=corvrocket;
 
-	range=1200;	//800
+	range=1100;	//800
 	reloadtime=9;		//13
 
 	noautorange=1;
@@ -323,7 +323,7 @@
 
 	[DAMAGE]
 		{
-		default=500;
+		default=700;		//500
 		}
 	}
 
@@ -377,7 +377,7 @@
 
 	[DAMAGE]
 		{
-		default=500;
+		default=700;		//500
 		}
 	}
 
@@ -431,7 +431,7 @@
 
 	[DAMAGE]
 		{
-		default=500;
+		default=700;		//500
 		}
 	}
 

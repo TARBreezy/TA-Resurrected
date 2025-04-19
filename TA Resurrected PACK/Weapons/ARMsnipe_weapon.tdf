@@ -7,7 +7,7 @@
 	turret=1;
 
 	range=700;		//600
-	reloadtime=12;		//20
+	reloadtime=10;		//20
 	energypershot=1500;
 	weaponvelocity=1000;
 	areaofeffect=8;
@@ -35,7 +35,7 @@
 	[DAMAGE]
 		{
 		default=1250;		//1230
-		CORSUMO=2000;
+		CORSUMO=2500;
 		ARMMANNI=500;
 		ARMSNIPE=500;
 		}

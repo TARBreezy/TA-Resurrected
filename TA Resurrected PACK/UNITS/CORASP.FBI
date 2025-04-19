@@ -9,13 +9,13 @@
 	Description=Automatically repairs aircraft;
 	FootprintX=4;
 	FootprintZ=4;
-	BuildCostEnergy=8540;
-	BuildCostMetal=430;
+	BuildCostEnergy=2135;		//8540
+	BuildCostMetal=108;		//430
 	MaxDamage=690;
 	MaxSlope=10;
 	EnergyUse=0;
-	BuildTime=21587;
-	WorkerTime=200;
+	BuildTime=5397;			//21587
+	WorkerTime=300;			//200
 	MaxWaterDepth=1;
 	BMcode=0;
 	Builder=1;

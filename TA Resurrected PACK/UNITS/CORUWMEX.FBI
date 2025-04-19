@@ -9,12 +9,12 @@
 	Description=Extracts Metal;
 	FootprintX=3;
 	FootprintZ=3;
-	BuildCostEnergy=2219;
-	BuildCostMetal=125;
+	BuildCostEnergy=900;		//2219
+	BuildCostMetal=87;		//125
 	MaxDamage=355;
 	MaxSlope=20;
 	EnergyUse=2;
-	BuildTime=4587;
+	BuildTime=4357;			//4587
 	WorkerTime=0;
 	BMcode=0;
 	Builder=0;

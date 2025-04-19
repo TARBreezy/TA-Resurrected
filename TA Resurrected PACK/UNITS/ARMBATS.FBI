@@ -48,10 +48,10 @@
 	ItalianName=Millennium;
 	ItalianDescription=Nave da battaglia;
 	canguard=1;
-	MaxVelocity=2;
-	BrakeRate=0.018;
-	Acceleration=0.005;
-	TurnRate=64;
+	MaxVelocity=2.1;			//2
+	BrakeRate=0.08;			//0.018
+	Acceleration=0.01;		//0.005
+	TurnRate=97;			//64
 	SteeringMode=1;
 	ShootMe=1;
 	Scale=0.6;

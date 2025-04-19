@@ -9,12 +9,12 @@
 	Description=Increases Energy Storage;
 	FootprintX=4;
 	FootprintZ=4;
-	BuildCostEnergy=2540;
+	BuildCostEnergy=1501;		//2540
 	BuildCostMetal=280;
 	MaxDamage=1521;
 	MaxSlope=20;
 	EnergyUse=0;
-	BuildTime=14482;
+	BuildTime=7241;		//14482
 	WorkerTime=0;
 	BMcode=0;
 	Builder=0;
@@ -24,7 +24,7 @@
 	SightDistance=130;
 	RadarDistance=0;
 	SoundCategory=CORE_ESTOR;
-	EnergyStorage=4000;
+	EnergyStorage=4500;	//4000
 	MetalStorage=0;
 	ExplodeAs=ESTOR_BUILDINGEX;
 	SelfDestructAs=ESTOR_BUILDING;

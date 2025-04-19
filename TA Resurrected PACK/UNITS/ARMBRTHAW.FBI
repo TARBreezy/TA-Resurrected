@@ -9,7 +9,7 @@
 	Description=Long Range Plasma Cannon;
 	FootprintX=4;					//3
 	FootprintZ=4;					//3
-	BuildCostEnergy=64680;
+	BuildCostEnergy=66297;		//64680
 	BuildCostMetal=4328;		//4184
 	MaxDamage=2285;					//1800
 	MaxWaterDepth=0;

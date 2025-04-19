@@ -9,8 +9,8 @@
 	Description=Produces Ships;
 	FootprintX=8;
 	FootprintZ=8;
-	BuildCostEnergy=750;
-	BuildCostMetal=600;
+	BuildCostEnergy=755;	//750
+	BuildCostMetal=605;	//600
 	MaxDamage=2490;
 	EnergyUse=0;
 	BuildTime=6000;

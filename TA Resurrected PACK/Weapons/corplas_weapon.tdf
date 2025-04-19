@@ -15,10 +15,14 @@
 	burstrate=.04;
 	sprayangle=922;	
 	randomdecay=.3;
-	soundstart=Flamhvy1;
-	soundhit=burn02;
+	soundstart=Flamlit1;		//Flamhvy1
+	//soundhit=burn02;
 	firestarter=100;
 	//groundbounce=1;
+
+	explosiongaf=trees;
+	explosionart=shruburn;
+
 	smokedelay=1;
 	startsmoke=0;
 	//endsmoke=1;

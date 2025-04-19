@@ -8,7 +8,7 @@
 
 	model=cormhmsl;
 
-	range=750;		//650
+	range=900;		//650
 	reloadtime=9;
 
 	noautorange=1;
@@ -48,7 +48,7 @@
 
 	[DAMAGE]
 		{
-		default=320;		
+		default=500;		//320		
 		}
 	}
 

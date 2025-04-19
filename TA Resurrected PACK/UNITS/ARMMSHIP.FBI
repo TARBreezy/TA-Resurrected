@@ -48,9 +48,9 @@
 	ItalianName=Ranger;
 	ItalianDescription=Nave lanciamissili;
 	canguard=1;
-	MaxVelocity=1;
-	BrakeRate=0.022;
-	Acceleration=0.01;
+	MaxVelocity=2;		//1
+	BrakeRate=0.06;		//0.22
+	Acceleration=0.012;	//0.01
 	TurnRate=134;
 	SteeringMode=1;
 	ShootMe=1;

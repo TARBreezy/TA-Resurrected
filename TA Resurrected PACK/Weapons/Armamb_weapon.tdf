@@ -7,7 +7,7 @@
 	turret=1;
 
 	range=1300;		//910
-	reloadtime=3.1;
+	reloadtime=3;		//3.1
 	weaponvelocity=380;	//350
 	areaofeffect=100;
 	soundstart=cannhvy5;
@@ -27,7 +27,7 @@
 
 	[DAMAGE]
 		{
-		default=310;
+		default=400;		//310
 		}
 	}
 

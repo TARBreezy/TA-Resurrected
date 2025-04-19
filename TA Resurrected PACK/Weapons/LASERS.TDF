@@ -175,7 +175,7 @@
 
 	range=180;
 	reloadtime=.5;	//1
-	weaponvelocity=300;	//400
+	weaponvelocity=400;
 	areaofeffect=8;
 	burstrate=.2;
 	duration=.02;
@@ -562,7 +562,7 @@
 	lineofsight=1;
 	turret=1;
 
-	range=240;	//200
+	range=260;	//200
 	reloadtime=.8;
 	energypershot=50;	//75
 	weaponvelocity=500;	//700

@@ -48,9 +48,9 @@
 	ItalianName=Fregata Lanciamissili;
 	ItalianDescription=Nave lanciamissili;
 	canguard=1;
-	MaxVelocity=0.9;
-	BrakeRate=0.018310547;
-	Acceleration=0.009155273;
+	MaxVelocity=1.9;		//0.9
+	BrakeRate=0.064;		//0.018
+	Acceleration=0.01;	//0.009
 	TurnRate=128;
 	SteeringMode=1;
 	ShootMe=1;

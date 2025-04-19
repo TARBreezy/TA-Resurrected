@@ -107,7 +107,7 @@
 	lineofsight=1;
 	turret=1;
 
-	range=200;	//160
+	range=210;	//160
 	reloadtime=0.94;	//1.2
 	weapontimer=0.8;	//1
 	weaponvelocity=300;	//188
@@ -116,10 +116,14 @@
 	burstrate=.04;
 	sprayangle=1024;
 	randomdecay=.3;
-	soundstart=Flamhvy1;
+	soundstart=Flamlit1;		//Flamhvy1
 	//soundhit=burn02;
 	firestarter=100;
 	//groundbounce=1;
+
+	explosiongaf=trees;
+	explosionart=shruburn;
+
 	smokedelay=1;
 	startsmoke=0;
 	//endsmoke=1;
@@ -177,13 +181,13 @@
 
 	range=1280;
 	reloadtime=.15;
-	areaofeffect=59;
+	areaofeffect=64;		//59
 	soundstart=bombrel;
 	soundhit=xplomed2;
 	commandfire=1;
 
 	explosiongaf=fx;
-	explosionart=explode3;
+	explosionart=explode2;		//explode3
 	
 	waterexplosiongaf=fx;
 	waterexplosionart=h2o;
@@ -251,7 +255,7 @@
 	commandfire=1;
 
 	explosiongaf=fx;
-	explosionart=explode3;
+	explosionart=explode2;		//explode3
 	
 	waterexplosiongaf=fx;
 	waterexplosionart=h2o;
@@ -1030,7 +1034,7 @@
 	lineofsight=1;
 	turret=1;
 
-	range=240;		//180
+	range=260;		//180
 	reloadtime=1.15;		//1.45
 	energypershot=75;	//105
 	weaponvelocity=500;	//400
@@ -1134,7 +1138,7 @@
 	paralyzer=1;
 	minbarrelangle=0;
 
-	range=240;	//220
+	range=260;	//220
 	reloadtime=1.2;
 	weaponvelocity=600;
 	areaofeffect=8;

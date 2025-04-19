@@ -9,7 +9,7 @@
 	Description=Increases Metal Storage;
 	FootprintX=4;
 	FootprintZ=4;
-	BuildCostEnergy=1523;
+	BuildCostEnergy=762;		//1523
 	BuildCostMetal=350;
 	MaxDamage=1750;
 	MaxSlope=20;
@@ -25,7 +25,7 @@
 	RadarDistance=0;
 	SoundCategory=CORE_MSTOR;
 	EnergyStorage=0;
-	MetalStorage=1500;
+	MetalStorage=2500;	//1500
 	ExplodeAs=SMALL_BUILDINGEX;
 	SelfDestructAs=SMALL_BUILDING;
 	Category=CORE METAL LEVEL1 NOWEAPON  NOTAIR NOTSUB STORAGE;

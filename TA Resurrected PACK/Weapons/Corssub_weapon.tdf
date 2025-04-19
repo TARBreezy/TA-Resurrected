@@ -10,7 +10,7 @@
 	propeller=1;
 
 	range=600;	//500
-	reloadtime=5;		//5.8
+	reloadtime=4.5;		//5.8
 	weapontimer=3;
 	weaponvelocity=100;
 	startvelocity=100;	//60
