@@ -48,7 +48,7 @@
 	ItalianDescription=Cannone al plasma a lungo raggio;
 	ShootMe=1;
 	DefaultMissionType=GUARD_NOMOVE;
-	buildangle=4096;
+	//buildangle=32700;
 	canattack=1;
 	Weapon1=CORE_INTIMIDATOR;
 	wpri_badTargetCategory=VTOL;

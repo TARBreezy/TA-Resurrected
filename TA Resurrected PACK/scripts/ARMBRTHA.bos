@@ -1,0 +1,141 @@
+#define TA			// This is a TA script
+
+#include "sfxtype.h"
+#include "exptype.h"
+
+piece  base, flare, turret, barrel, sleeve, gayhem;
+
+static-var  gayta;
+
+// Signal definitions
+#define SIG_AIM				2
+
+
+SmokeUnit(healthpercent, sleeptime, smoketype)
+{
+	while( TRUE )
+	{
+		healthpercent = get HEALTH;
+		if( healthpercent < 66 )
+		{
+			smoketype = 256 | 2;
+			if( Rand( 1, 66 ) < healthpercent )
+			{
+				smoketype = 256 | 1;
+			}
+			emit-sfx smoketype from base;
+		}
+		sleeptime = healthpercent * 50;
+		if( sleeptime < 200 )
+		{
+			sleeptime = 200;
+		}
+		sleep sleeptime;
+	}
+}
+
+Create()
+{
+	gayta = 0;
+	hide flare;
+	dont-cache flare;
+	hide barrel;
+	hide sleeve;
+	hide turret;
+	dont-shade gayhem;
+	var placement;
+	placement = (0);
+	turn gayhem to y-axis placement now;
+	while( get BUILD_PERCENT_LEFT )
+	{
+		sleep 400;
+	}
+	sleep 100;
+	turn turret to y-axis placement now;
+	hide gayhem;				
+	show turret;
+	show sleeve;
+	show barrel;
+	dont-shade barrel;
+	dont-shade sleeve;
+	dont-shade turret;
+	gayta = 1;
+	start-script SmokeUnit();
+}
+
+AimPrimary(heading, pitch)
+{
+	signal SIG_AIM;
+	set-signal-mask 0;
+	set-signal-mask SIG_AIM;
+	while( !gayta )
+	{
+		sleep 200;
+	}
+	turn turret to y-axis heading speed <8.000000>;
+	turn sleeve to x-axis <0.000000> - pitch speed <3.000000>;
+	wait-for-turn turret around y-axis;
+	wait-for-turn sleeve around x-axis;
+	return (1);
+}
+
+FirePrimary()
+{
+	move barrel to z-axis [-5.000000] speed [500.000000];
+	show flare;
+	sleep 250;
+	hide flare;
+	wait-for-move barrel along z-axis;
+	move barrel to z-axis [0.000000] speed [3.000000];
+}
+
+QueryPrimary(piecenum)
+{
+	piecenum = flare;
+}
+
+AimFromPrimary(piecenum)
+{
+	piecenum = barrel;
+}
+
+SweetSpot(piecenum)
+{
+	piecenum = turret;
+}
+
+Killed(severity, corpsetype)
+{
+	hide flare;
+	if( severity <= 25 )
+	{
+		corpsetype = 1;
+		explode base type BITMAPONLY | BITMAP1;
+		explode turret type BITMAPONLY | BITMAP2;
+		explode barrel type BITMAPONLY | BITMAP3;
+		explode sleeve type BITMAPONLY | BITMAP4;
+		return (0);
+	}
+	if( severity <= 50 )
+	{
+		corpsetype = 2;
+		explode base type BITMAPONLY | BITMAP1;
+		explode turret type FALL | BITMAP2;
+		explode barrel type BITMAPONLY | BITMAP3;
+		explode sleeve type SHATTER | BITMAP4;
+		return (0);
+	}
+	corpsetype = 3;
+	if( severity <= 99 )
+	{
+		explode base type BITMAPONLY | BITMAP1;
+		explode turret type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+		explode barrel type BITMAPONLY | BITMAP3;
+		explode sleeve type SHATTER | BITMAP4;
+		return (0);
+	}
+	explode base type BITMAPONLY | BITMAP1;
+	explode turret type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+	explode barrel type BITMAPONLY | BITMAP3;
+	explode sleeve type SHATTER | EXPLODE_ON_HIT | BITMAP4;
+}

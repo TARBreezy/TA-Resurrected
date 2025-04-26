@@ -32,7 +32,7 @@
 	Category=CORE LEVEL3 strategic weapon NOTAIR NOTSUB CTRL_L;
 	TEDClass=FORT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	YardMap=oooooooooooooooo;
+	YardMap=oooooooooooooooo;		//oooooooooooooooo
 	Corpse=corint_dead;
 	GermanName=Intimidator;
 	GermanDescription=Langstrecken-Plasmawerfer;
@@ -48,7 +48,7 @@
 	ItalianDescription=Cannone al plasma a lungo raggio;
 	ShootMe=1;
 	DefaultMissionType=GUARD_NOMOVE;
-	buildangle=4096;
+	//buildangle=32700; 
 	canattack=1;
 	Weapon1=CORE_INTIMIDATOR;
 	wpri_badTargetCategory=VTOL;
