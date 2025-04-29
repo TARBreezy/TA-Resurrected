@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=SMALL_UNITEX;
 	SelfDestructAs=SMALL_UNIT;
-	Category=ARM KBOT LEVEL1 WEAPON NOTAIR NOTSUB CTRL_W;
+	Category=ARM KBOT LEVEL1 WEAPON NOTAIR NOTSUB CTRL_W CTRL_K CTRL_G;
 	TEDClass=KBOT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=armwar_dead;
@@ -50,7 +50,7 @@
 	ItalianName=Warrior;
 	ItalianDescription=Kbot da fanteria medio;
 	canguard=1;
-	MaxVelocity=1.25;
+	MaxVelocity=1.35;	//1.25
 	BrakeRate=0.19;
 	Acceleration=0.06;
 	TurnRate=700;

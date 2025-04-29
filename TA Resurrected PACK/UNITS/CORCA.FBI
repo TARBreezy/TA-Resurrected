@@ -29,7 +29,7 @@
 	MetalStorage=50;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=CORE VTOL CTRL_V LEVEL1 CONSTR NOWEAPON NOTSUB CTRL_B;
+	Category=CORE VTOL LEVEL1 CONSTR NOWEAPON NOTSUB CTRL_B;
 	TEDClass=CNSTR;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Konstr.-Flugzeug;

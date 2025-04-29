@@ -29,7 +29,7 @@
 	MetalStorage=50;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=CORE KBOT LEVEL3 WEAPON NOTAIR ;
+	Category=CORE KBOT LEVEL3 WEAPON NOTAIR CTRL_B;
 	TEDClass=KBOT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=CORNECRO_dead;
@@ -38,7 +38,7 @@
 	UnitNumber=256;
 	FrenchName=Necro;
 	Frenchdescription=Kbot de resurrection;
-	firestandorders=1;
+	firestandorders=0;		//1
 	StandingFireOrder=2;
 	mobilestandorders=1;
 	StandingMoveOrder=1;

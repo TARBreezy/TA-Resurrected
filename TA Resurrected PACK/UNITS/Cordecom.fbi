@@ -26,7 +26,7 @@
 	SoundCategory=CORE_COM;
 	ExplodeAs=DECOY_COMMANDER_BLAST;
 	SelfDestructAs=DECOY_COMMANDER_BLAST;
-	Category=CORE WEAPON NOTAIR NOTSUB CTRL_W; 
+	Category=CORE WEAPON NOTAIR NOTSUB; 
 	TEDClass=COMMANDER;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Commander-Double;

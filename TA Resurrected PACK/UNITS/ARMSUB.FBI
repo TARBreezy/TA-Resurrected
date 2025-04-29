@@ -27,7 +27,7 @@
 	MetalStorage=0;
 	ExplodeAs=SMALL_UNITEX;
 	SelfDestructAs=SMALL_UNIT;
-	Category=ARM UNDERWATER LEVEL1 TORP WEAPON NOTAIR CTRL_W;
+	Category=ARM UNDERWATER LEVEL1 TORP WEAPON NOTAIR CTRL_W CTRL_U;
 	TEDClass=WATER;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=armsub_dead;

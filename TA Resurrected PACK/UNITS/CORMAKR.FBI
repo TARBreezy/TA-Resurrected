@@ -7,7 +7,7 @@
 	Designation=MM-15;
 	Name=Metal Maker;
 	Description=Metal Maker;
-	FootprintX=4;
+	FootprintX=3;		//4
 	FootprintZ=3;
 	BuildCostEnergy=700;
 	BuildCostMetal=0;
@@ -29,10 +29,10 @@
 	MetalStorage=0;
 	ExplodeAs=SMALL_BUILDINGEX;
 	SelfDestructAs=SMALL_BUILDING;
-	Category=CORE METAL LEVEL1 NOWEAPON  NOTAIR NOTSUB ;
+	Category=CORE METAL LEVEL1 NOWEAPON  NOTAIR NOTSUB CTRL_J;
 	TEDClass=METAL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	YardMap=oooooooooooo;
+	YardMap=ooooooooo;
 	Corpse=cormakr_dead;
 	GermanName=Metallgenerator;
 	GermanDescription=Wandelt Energie in Metall um;

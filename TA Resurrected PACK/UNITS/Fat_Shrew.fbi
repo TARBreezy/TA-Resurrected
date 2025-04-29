@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=NUCLEAR_MISSILE;
 	SelfDestructAs=NUCLEAR_MISSILE;
-	Category=ARM KBOT LEVEL3 WEAPON NOTAIR NOTSUB CTRL_W;
+	Category=ARM KBOT LEVEL3 WEAPON NOTAIR NOTSUB CTRL_W CTRL_K CTRL_G;
 	TEDClass=KBOT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=Fat_Shrew_dead;

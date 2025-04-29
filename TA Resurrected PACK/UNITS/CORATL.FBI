@@ -27,7 +27,7 @@
 	MetalStorage=0;
 	ExplodeAs=MEDIUM_UNITEX;
 	SelfDestructAs=MEDIUM_UNIT;
-	Category=CORE SPECIAL WEAPON TORP LEVEL3 NOTAIR;
+	Category=CORE SPECIAL WEAPON TORP LEVEL3 NOTAIR CTRL_X;
 	TEDClass=WATER;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	YardMap=wwwwwwwww;

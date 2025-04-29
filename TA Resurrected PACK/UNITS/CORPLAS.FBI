@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=MEDIUM_BUILDINGEX;
 	SelfDestructAs=MEDIUM_BUILDING;
-	Category=CORE weapon NOTAIR NOTSUB ;
+	Category=CORE weapon NOTAIR NOTSUB CTRL_X;
 	TEDClass=FORT;
 	Copyright=Copyright 1999 Humongous Entertainment. All rights reserved.;
 	YardMap=ooo;

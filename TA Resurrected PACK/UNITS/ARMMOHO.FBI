@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=SMALL_BUILDINGEX;
 	SelfDestructAs=SMALL_BUILDING;
-	Category=ARM metal extractor level3 NOWEAPON NOTAIR NOTSUB ;
+	Category=ARM metal extractor level2 NOWEAPON NOTAIR NOTSUB ;
 	TEDClass=METAL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	YardMap=ooooooooooooooooooooooooo;

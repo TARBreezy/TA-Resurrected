@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=MEDIUM_UNITEX;
 	SelfDestructAs=MEDIUM_UNIT;
-	Category=ARM VTOL CTRL_V LEVEL2 WEAPON  NOTSUB CTRL_W CTRL_P;
+	Category=ARM VTOL LEVEL2 WEAPON  NOTSUB CTRL_W CTRL_P CTRL_O;
 	TEDClass=VTOL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Tornado;

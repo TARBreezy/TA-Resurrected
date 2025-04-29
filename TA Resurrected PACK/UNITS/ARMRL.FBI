@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=ARM SPECIAL LEVEL2 WEAPON NOTAIR NOTSUB ;
+	Category=ARM SPECIAL LEVEL2 WEAPON NOTAIR NOTSUB CTRL_X;
 	TEDClass=FORT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	YardMap=ooooooooo;

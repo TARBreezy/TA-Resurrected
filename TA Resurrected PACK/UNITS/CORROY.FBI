@@ -27,7 +27,7 @@
 	MetalStorage=0;
 	ExplodeAs=SMALL_UNITEX;
 	SelfDestructAs=SMALL_UNIT;
-	Category=CORE SHIP LEVEL2 WEAPON ANTISUB NOTAIR NOTSUB CTRL_W;
+	Category=CORE SHIP LEVEL2 WEAPON ANTISUB NOTAIR NOTSUB CTRL_W CTRL_N;
 	TEDClass=SHIP;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=corroy_dead;
@@ -39,7 +39,7 @@
 	firestandorders=1;
 	StandingFireOrder=2;
 	mobilestandorders=1;
-	StandingMoveOrder=1;
+	StandingMoveOrder=0;		//1
 	canmove=1;
 	canpatrol=1;
 	canstop=1;

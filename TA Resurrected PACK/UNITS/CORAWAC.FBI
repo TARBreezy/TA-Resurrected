@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=CORE VTOL CTRL_V LEVEL2 NOWEAPON NOTSUB CTRL_R;
+	Category=CORE VTOL LEVEL2 NOWEAPON NOTSUB CTRL_R;
 	TEDClass=VTOL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Geier;
@@ -58,6 +58,11 @@
 	Scale=1;
 	BankScale=1;
 	EnergyMake=20;
+	canattack=1;
+	weapon1=NULL_WEAPON;
+	BadTargetCategory=AIR;
+	wpri_badtargetcategory=AIR;
+	NoChaseCategory=AIR;
 	DefaultMissionType=VTOL_standby;
 	maneuverleashlength=1280;
 	downloadable=1;

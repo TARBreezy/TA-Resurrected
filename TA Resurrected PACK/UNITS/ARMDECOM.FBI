@@ -26,7 +26,7 @@
 	SoundCategory=ARM_COM;
 	ExplodeAs=DECOY_COMMANDER_BLAST;
 	SelfDestructAs=DECOY_COMMANDER_BLAST;
-	Category=ARM WEAPON NOTAIR NOTSUB CTRL_W;
+	Category=ARM WEAPON NOTAIR NOTSUB ;
 	TEDClass=COMMANDER;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Commander-Double;

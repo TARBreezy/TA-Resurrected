@@ -26,7 +26,7 @@
 	MetalStorage=0;
 	ExplodeAs=SMALL_UNITEX;
 	SelfDestructAs=SMALL_UNIT;
-	Category=CORE UNDERWATER LEVEL2 TORP WEAPON NOTAIR CTRL_W;
+	Category=CORE UNDERWATER LEVEL2 TORP WEAPON NOTAIR CTRL_W CTRL_U;
 	TEDClass=SHIP;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=corshark_dead;

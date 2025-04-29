@@ -65,6 +65,6 @@
 	downloadable=1;
 	wpri_badTargetCategory=VTOL;
 	BadTargetCategory=VTOL;
-	NoChaseCategory=VTOL;
+	//NoChaseCategory=VTOL;
 	canhover=1;
 	}

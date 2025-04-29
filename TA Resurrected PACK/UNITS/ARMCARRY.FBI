@@ -27,7 +27,7 @@
 	MetalStorage=0;
 	ExplodeAs=ATOMIC_BLAST;
 	SelfDestructAs=ATOMIC_BLAST;
-	Category=ARM SHIP LEVEL1 CARRY NOWEAPON NOTAIR NOTSUB ;
+	Category=ARM SHIP LEVEL2 CARRY NOWEAPON NOTAIR NOTSUB ;
 	TEDClass=SHIP;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=armcarry_dead;
@@ -58,7 +58,7 @@
 	MovementClass=BOATD6;
 	MinWaterDepth=30;
 	buildangle=16384;
-	ActivateWhenBuilt=1;
+	ActivateWhenBuilt=0;		//1
 	onoffable=1;
 	IsAirBase=1;
 	Floater=1;

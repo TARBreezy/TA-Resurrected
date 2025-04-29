@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=ARM VTOL CTRL_V LEVEL2 NOWEAPON NOTSUB CTRL_R;
+	Category=ARM VTOL LEVEL2 NOWEAPON NOTSUB CTRL_R;
 	TEDClass=VTOL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Eagle;

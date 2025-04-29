@@ -27,7 +27,7 @@
 	MetalStorage=0;
 	ExplodeAs=SMALL_UNITEX;
 	SelfDestructAs=SMALL_UNIT;
-	Category=ARM SHIP LEVEL2 WEAPON ANTISUB NOTAIR NOTSUB CTRL_W ;
+	Category=ARM SHIP LEVEL2 WEAPON ANTISUB NOTAIR NOTSUB CTRL_W CTRL_N;
 	TEDClass=SHIP;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=armcrus_dead;

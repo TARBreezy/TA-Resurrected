@@ -30,7 +30,7 @@
 	MetalStorage=0;
 	ExplodeAs=NUCLEAR_MISSILE;
 	SelfDestructAs=NUCLEAR_MISSILE;
-	Category=CORE KBOT LEVEL3 WEAPON NOTAIR NOTSUB CTRL_W;
+	Category=CORE KBOT LEVEL3 WEAPON NOTAIR NOTSUB CTRL_W CTRL_K CTRL_G;
 	TEDClass=KBOT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=corkrog_dead;
@@ -69,4 +69,9 @@
 	Weapon2=CORKROG_HEAD;
 	Weapon3=CORKROG_ROCKET;
 	cantbetransported=1;
+	wpri_BadTargetCategory=LEVEL1;
+	wsec_BadTargetCategory=NOTAIR;
+	wspe_BadTargetCategory=CTRL_V;
+	BadTargetCategory=NOWEAPON;
+	NoChaseCategory=CTRL_V;
 	}

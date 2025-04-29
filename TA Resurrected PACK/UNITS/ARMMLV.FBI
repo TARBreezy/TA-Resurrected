@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=ARM MINELAYER TANK LEVEL2 NOTAIR NOTSUB;
+	Category=ARM MINELAYER TANK LEVEL2 NOTAIR NOTSUB CTRL_B;
 	TEDClass=CNSTR;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=armmlv_dead;

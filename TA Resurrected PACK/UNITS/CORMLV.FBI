@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=CORE MINELAYER TANK LEVEL1 WEAPON NOTAIR NOTSUB;
+	Category=CORE MINELAYER TANK LEVEL1 WEAPON NOTAIR NOTSUB CTRL_B;
 	TEDClass=CNSTR;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=cormlv_dead;

@@ -110,7 +110,7 @@
 	range=210;	//160
 	reloadtime=0.94;	//1.2
 	weapontimer=0.8;	//1
-	weaponvelocity=300;	//188
+	weaponvelocity=310;	//188
 	areaofeffect=32;
 	burst=17;		//18
 	burstrate=.04;

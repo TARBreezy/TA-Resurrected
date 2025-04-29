@@ -28,7 +28,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=CORE TANK LEVEL2 WEAPON NOTAIR NOTSUB CTRL_W;
+	Category=CORE TANK LEVEL2 WEAPON NOTAIR NOTSUB CTRL_W CTRL_V CTRL_G;
 	TEDClass=TANK;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=corvroc_dead;
@@ -40,7 +40,7 @@
 	firestandorders=1;
 	StandingFireOrder=2;
 	mobilestandorders=1;
-	StandingMoveOrder=1;
+	StandingMoveOrder=0;		//1
 	canmove=1;
 	canpatrol=1;
 	canstop=1;

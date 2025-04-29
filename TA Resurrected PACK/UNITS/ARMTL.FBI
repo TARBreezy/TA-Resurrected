@@ -27,7 +27,7 @@
 	MetalStorage=0;
 	ExplodeAs=SMALL_UNITEX;
 	SelfDestructAs=SMALL_UNIT;
-	Category=ARM SPECIAL WEAPON TORP LEVEL2 NOTAIR NOTSUB ;
+	Category=ARM SPECIAL WEAPON TORP LEVEL2 NOTAIR NOTSUB CTRL_X;
 	TEDClass=WATER;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	YardMap=wwwwwwwww;

@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=CORE VTOL CTRL_V LEVEL2 WEAPON TORP NOTSUB CTRL_R;
+	Category=CORE VTOL LEVEL2 WEAPON TORP NOTSUB CTRL_R;
 	TEDClass=VTOL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Hunter;
@@ -57,6 +57,11 @@
 	cruisealt=190;
 	BankScale=1;
 	EnergyMake=15;
+	canattack=1;
+	weapon1=NULL_WEAPON;
+	BadTargetCategory=AIR;
+	wpri_badtargetcategory=AIR;
+	NoChaseCategory=AIR;
 	DefaultMissionType=VTOL_standby;
 	maneuverleashlength=1280;
 	SonarDistance=1445;

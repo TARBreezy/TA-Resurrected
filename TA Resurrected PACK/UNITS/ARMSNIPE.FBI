@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=ARM KBOT LEVEL2 WEAPON NOTAIR CTRL_W;
+	Category=ARM KBOT LEVEL2 WEAPON NOTAIR CTRL_W CTRL_K CTRL_G;
 	TEDClass=KBOT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=ARMSNIPE_dead;
@@ -69,7 +69,7 @@
 	ai_weight=weight ARMAMPH 0.5;
 	ai_limit=limit ARMAMPH 20;
 	NoChaseCategory=VTOL;
-	CloakCost=780;
-	CloakCostMoving=1100;
-	mincloakdistance=40;
+	CloakCost=250;			//780
+	CloakCostMoving=500;		//1100
+	mincloakdistance=120;		//40
 	}

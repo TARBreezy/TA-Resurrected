@@ -22,14 +22,15 @@
 	ThreeD=1;
 	ZBuffer=1;
 	NoAutoFire=0;
-	SightDistance=280;
+	SightDistance=400;	//280
 	RadarDistance=0;
+	RadarDistanceJam=30;
 	SoundCategory=ARM_KBOT;
 	EnergyStorage=0;
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=ARM KBOT SPY NOWEAPON LEVEL2 NOTAIR NOTSUB ;
+	Category=ARM KBOT SPY NOWEAPON LEVEL2 NOTAIR NOTSUB CTRL_R;
 	TEDClass=KBOT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=armspy_dead;

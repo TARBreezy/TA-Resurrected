@@ -29,7 +29,7 @@
 	MetalStorage=50;
 	ExplodeAs=SMALL_UNITEX;
 	SelfDestructAs=SMALL_UNIT;
-	Category=CORE VTOL CTRL_V LEVEL1 CONSTR NOWEAPON NOTSUB CTRL_B;
+	Category=CORE VTOL LEVEL1 CONSTR NOWEAPON NOTSUB CTRL_B;
 	TEDClass=VTOL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Bau-Wasserflugzeug;

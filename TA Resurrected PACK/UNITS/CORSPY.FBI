@@ -22,8 +22,9 @@
 	ThreeD=1;
 	ZBuffer=1;
 	NoAutoFire=0;
-	SightDistance=250;
+	SightDistance=400;		//250
 	RadarDistance=0;
+	RadarDistanceJam=35;
 	SoundCategory=CORE_KBOT;
 	EnergyStorage=0;
 	MetalStorage=0;
@@ -63,4 +64,5 @@
 	CloakCost=125;		//350
 	CloakCostMoving=250;		//900
 	mincloakdistance=90;
+	Stealth=1;
 	}

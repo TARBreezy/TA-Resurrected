@@ -11,7 +11,7 @@
 	FootprintZ=2;
 	BuildCostEnergy=10914;
 	BuildCostMetal=492;
-	MaxDamage=957;			//870
+	MaxDamage=870;
 	MaxWaterDepth=0;
 	MaxSlope=14;
 	EnergyUse=0.4;
@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=ARM KBOT LEVEL2 WEAPON NOTAIR NOTSUB CTRL_W ;
+	Category=ARM KBOT LEVEL2 WEAPON NOTAIR NOTSUB CTRL_W CTRL_K CTRL_G;
 	TEDClass=KBOT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=armmav_dead;

@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=ARM TANK LEVEL1 WEAPON NOTAIR NOTSUB CTRL_W;
+	Category=ARM TANK LEVEL1 WEAPON NOTAIR NOTSUB CTRL_W CTRL_V CTRL_G;
 	TEDClass=TANK;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=armstump_dead;

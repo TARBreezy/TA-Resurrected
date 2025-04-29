@@ -48,4 +48,5 @@
 	downloadable=1;
 	CloakCost=250;		//550
 	mincloakdistance=110;
+	Init_Cloaked=1;
 	}

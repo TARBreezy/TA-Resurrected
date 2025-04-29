@@ -174,7 +174,7 @@
 	turret=1;
 
 	range=180;
-	reloadtime=.5;	//1
+	reloadtime=.5;		//1
 	weaponvelocity=400;
 	areaofeffect=8;
 	burstrate=.2;

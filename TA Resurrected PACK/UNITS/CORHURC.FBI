@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=CORE VTOL CTRL_V LEVEL2 WEAPON TORP  NOTSUB CTRL_W CTRL_P;
+	Category=CORE VTOL LEVEL2 WEAPON TORP  NOTSUB CTRL_W CTRL_P CTRL_Q;
 	TEDClass=VTOL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Hurricane;

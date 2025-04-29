@@ -765,15 +765,15 @@ Ziehen()
 {	
 	gezogen =TRUE;
 	Kanonebewegt=TRUE;
-	turn Torso to y-axis <-50> speed <120>;
-	turn luArm to z-axis <20> speed <100.021978>;
-	turn luArm to z-axis <30> speed <90>;
-	turn luArm to x-axis <0> speed <90>;
-	turn luArm to y-axis <45> speed <90.021978>;
-	turn loArm to z-axis <20> speed <100.021978>;
-	turn lSchulter to x-axis <-50> speed <160.038462>;
-	turn rSchulter to x-axis <-160> speed <500>;
-	turn ruArm to x-axis <-60> speed <300>;
+	turn Torso to y-axis <-50> speed <360>;
+	turn luArm to z-axis <20> speed <300>;
+	turn luArm to z-axis <30> speed <270>;
+	turn luArm to x-axis <0> speed <270>;
+	turn luArm to y-axis <45> speed <270>;
+	turn loArm to z-axis <20> speed <300>;
+	turn lSchulter to x-axis <-50> speed <480>;
+	turn rSchulter to x-axis <-160> speed <1500>;
+	turn ruArm to x-axis <-60> speed <900>;
 
 
 
@@ -785,12 +785,12 @@ Ziehen()
 
 	//sleep 1000;
 
-	turn Kanone to z-axis <-30> speed <220>;
-	turn Kanone to x-axis <-10> speed <220>;
-	turn rSchulter to x-axis <20> speed <500>;
-	turn ruArm to x-axis <-100> speed <300>;
-	turn lSchulter to x-axis <-50> speed <160.038462>;
-	turn roArm to y-axis <20> speed <50>;
+	turn Kanone to z-axis <-30> speed <660>;
+	turn Kanone to x-axis <-10> speed <660>;
+	turn rSchulter to x-axis <20> speed <1500>;
+	turn ruArm to x-axis <-100> speed <900>;
+	turn lSchulter to x-axis <-50> speed <480>;
+	turn roArm to y-axis <20> speed <150>;
 
 
 
@@ -899,7 +899,7 @@ AimPrimary(heading, pitch)
 	set-signal-mask SIG_AIM;
 	
 
-	turn Punkt to y-axis heading speed <180>;
+	turn Punkt to y-axis heading speed <150>;
 	wait-for-turn Punkt around y-axis;
 	start-script RestoreAfterDelay();
 	return (1);

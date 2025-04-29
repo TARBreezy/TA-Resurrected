@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=MEDIUM_UNITEX;
 	SelfDestructAs=MEDIUM_UNIT;
-	Category=CORE VTOL CTRL_V LEVEL2 WEAPON  NOTSUB CTRL_W CTRL_P;
+	Category=CORE VTOL LEVEL2 WEAPON  NOTSUB CTRL_W CTRL_P;
 	TEDClass=VTOL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Typhoon;
@@ -70,7 +70,7 @@
 	wpri_badTargetCategory=VTOL;
 	MoveRate1=8;
 	maxwaterdepth=255;
-	attackrunlength=100;
+	//attackrunlength=100;
 	amphibious=1;
-	HoverAttack=1;		//test
+	HoverAttack=1;
 	}

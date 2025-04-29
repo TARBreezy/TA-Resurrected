@@ -27,7 +27,7 @@
 	MetalStorage=0;
 	ExplodeAs=CRAWL_BLAST;
 	SelfDestructAs=CRAWL_BLAST;
-	Category=CORE SHIP LEVEL1 CARRY NOWEAPON NOTAIR NOTSUB;
+	Category=CORE SHIP LEVEL2 CARRY NOWEAPON NOTAIR NOTSUB;
 	TEDClass=SHIP;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=corcarry_dead;
@@ -58,7 +58,7 @@
 	MovementClass=BOATD6;
 	MinWaterDepth=30;
 	buildangle=16384;
-	ActivateWhenBuilt=1;
+	ActivateWhenBuilt=0;		//1
 	onoffable=1;
 	IsAirBase=1;
 	Floater=1;

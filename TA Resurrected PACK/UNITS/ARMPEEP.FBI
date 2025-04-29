@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=SMALL_UNITEX;
 	SelfDestructAs=SMALL_UNIT;
-	Category=ARM VTOL LEVEL1 NOWEAPON NOTSUB ;
+	Category=ARM VTOL LEVEL1 NOTSUB ;
 	TEDClass=VTOL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Peeper;
@@ -37,8 +37,10 @@
 	UnitNumber=52;
 	FrenchName=Voyeur;
 	Frenchdescription=Avion de reconnaissance;
+	firestandorders=1;
+	StandingFireOrder=0;
 	mobilestandorders=1;
-	StandingMoveOrder=1;
+	StandingMoveOrder=0;
 	canmove=1;
 	canpatrol=1;
 	canstop=1;
@@ -59,6 +61,9 @@
 	EnergyMake=0.2;
 	canattack=1;
 	weapon1=NULL_WEAPON;
+	BadTargetCategory=AIR;
+	wpri_badtargetcategory=AIR;
+	NoChaseCategory=AIR;
 	DefaultMissionType=VTOL_standby;
 	maneuverleashlength=1280;
 	Ovradjust=1;

@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=SMALL_BUILDINGEX;
 	SelfDestructAs=SMALL_BUILDING;
-	Category=ARM METAL LEVEL1 NOWEAPON  NOTAIR NOTSUB ;
+	Category=ARM METAL LEVEL1 NOWEAPON  NOTAIR NOTSUB CTRL_J;
 	TEDClass=METAL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	YardMap=ooooooooo;

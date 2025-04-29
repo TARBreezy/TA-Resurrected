@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=CORE HOVER WEAPON LEVEL2 NOTAIR NOTSUB CTRL_W;
+	Category=CORE HOVER WEAPON LEVEL2 NOTAIR NOTSUB CTRL_W CTRL_H;
 	TEDClass=TANK;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=corsh_seadead;

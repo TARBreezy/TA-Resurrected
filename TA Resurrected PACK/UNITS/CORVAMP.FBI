@@ -26,7 +26,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=CORE VTOL CTRL_V LEVEL2 WEAPON STEALTH NOTSUB CTRL_W CTRL_P;
+	Category=CORE VTOL LEVEL2 WEAPON STEALTH NOTSUB CTRL_W CTRL_P CTRL_O;
 	TEDClass=VTOL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Vamp;
@@ -47,9 +47,9 @@
 	ItalianDescription=Caccia Stealth;
 	canguard=1;
 	MaxVelocity=12.5;		//12
-	BrakeRate=7;
+	BrakeRate=8;		//7
 	Acceleration=0.35;
-	TurnRate=738;	//620
+	TurnRate=775;	//620
 	SteeringMode=1;
 	ShootMe=1;
 	Canfly=1;

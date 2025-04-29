@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=CORE TANK LEVEL2 WEAPON PHIB NOTAIR NOTSUB CTRL_W;
+	Category=CORE TANK LEVEL2 WEAPON PHIB NOTAIR NOTSUB CTRL_W CTRL_V CTRL_G;
 	TEDClass=TANK;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=corseal_seadead;

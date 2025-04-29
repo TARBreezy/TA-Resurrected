@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=SMALL_UNITEX;
 	SelfDestructAs=SMALL_UNIT;
-	Category=CORE KBOT LEVEL2 WEAPON NOTAIR NOTSUB CTRL_W;
+	Category=CORE KBOT LEVEL2 WEAPON NOTAIR NOTSUB CTRL_W CTRL_K CTRL_G;
 	TEDClass=KBOT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=CORFAST_dead;
@@ -50,7 +50,7 @@
 	ItalianName=Freaker;
 	ItalianDescription=Kbot veloce d'attacco;
 	canguard=1;
-	MaxVelocity=2.25;
+	MaxVelocity=2.9;	//2.25
 	BrakeRate=0.2;
 	Acceleration=0.1;
 	TurnRate=1111;

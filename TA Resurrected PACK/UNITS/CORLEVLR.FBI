@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=MEDIUM_UNITEX;
 	SelfDestructAs=MEDIUM_UNIT;
-	Category=CORE TANK LEVEL1 WEAPON NOTAIR NOTSUB CTRL_W;
+	Category=CORE TANK LEVEL1 WEAPON NOTAIR NOTSUB CTRL_W CTRL_V CTRL_G;
 	TEDClass=TANK;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=CORLEVLR_dead;
@@ -50,7 +50,7 @@
 	ItalianName=Leveler;
 	ItalianDescription=Carro armato d'assalto;
 	canguard=1;
-	MaxVelocity=1.1;	//0.8
+	MaxVelocity=1.4;	//0.8
 	BrakeRate=0.19;
 	Acceleration=0.03;	//0.02
 	TurnRate=330;		//220
