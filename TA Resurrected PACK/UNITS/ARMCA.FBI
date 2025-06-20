@@ -29,7 +29,7 @@
 	MetalStorage=50;
 	ExplodeAs=SMALL_UNITEX;
 	SelfDestructAs=SMALL_UNIT;
-	Category=ARM VTOL CTRL_V LEVEL1 CONSTR NOWEAPON  NOTSUB CTRL_B;
+	Category=ARM VTOL LEVEL1 CONSTR NOWEAPON  NOTSUB CTRL_B;
 	TEDClass=VTOL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Konstruktions-Flugzeug;
@@ -57,7 +57,7 @@
 	cruisealt=70;
 	Scale=0.8;
 	BankScale=1.5;
-	Builddistance=95;	//40
+	Builddistance=40;
 	CanReclamate=1;
 	EnergyMake=11;
 	MetalMake=0.2;

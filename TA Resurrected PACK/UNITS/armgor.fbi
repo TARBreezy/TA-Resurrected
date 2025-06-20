@@ -11,8 +11,8 @@
 	FootprintZ=3;
 	BuildCostEnergy=116664;
 	BuildCostMetal=29489;
-	MaxDamage=14959;
-	damagemodifier=0.5;	//0.375	//fixed duplication bug
+	MaxDamage=14000;
+	damagemodifier=0.4;	//0.375	//fixed duplication bug
 	MaxWaterDepth=12;
 	MaxSlope=17;
 	EnergyUse=1.1;
@@ -51,7 +51,7 @@
 	ItalianName=Gorilla;
 	ItalianDescription=Kbot sperimentale;
 	canguard=1;
-	MaxVelocity=1;
+	MaxVelocity=1.1;
 	BrakeRate=0.19;
 	Acceleration=0.09;
 	TurnRate=960;

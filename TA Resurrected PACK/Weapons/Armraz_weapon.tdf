@@ -8,10 +8,10 @@
 	rendertype=1;
 	lineofsight=1;
 	turret=1;
-	range=500;
-	reloadtime=0.26;
+	range=450;
+	reloadtime=0.25;
 	weapontimer=4;
-	energypershot=150;  //                   150 E per shot
+	energypershot=150;
 	weaponvelocity=920;
 	areaofeffect=15;
 	soundtrigger=1;
@@ -33,7 +33,7 @@
 
 	[DAMAGE]
 		{
-		default=110;
+		default=100;
 		}
 	}
 
@@ -49,7 +49,7 @@
 	range=580;
 	reloadtime=5;
 	weapontimer=2;
-	energypershot=1500;        //1500 E per shot
+	energypershot=1500;
      	weaponvelocity=780;
 	areaofeffect=100;
 	accuracy=1000;
@@ -67,7 +67,7 @@
 	lavaexplosionart=lavasplashsm;
 	[DAMAGE]
 		{
-		default=300;
+		default=200;
 		}
 	}
 

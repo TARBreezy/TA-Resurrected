@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=ARM KBOT LEVEL2 WEAPON NOTAIR NOTSUB CTRL_W;
+	Category=ARM KBOT LEVEL2 WEAPON NOTAIR NOTSUB CTRL_W CTRL_G CTRL_K;
 	TEDClass=KBOT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	Corpse=armzeus_dead;

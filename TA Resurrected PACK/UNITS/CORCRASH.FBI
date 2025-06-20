@@ -50,7 +50,7 @@
 	ItalianName=Crasher;
 	ItalianDescription=Kbot lanciamissili;
 	canguard=1;
-	MaxVelocity=1.25;
+	MaxVelocity=1.35;	//1.25
 	BrakeRate=0.15;
 	Acceleration=0.1;
 	TurnRate=1011;

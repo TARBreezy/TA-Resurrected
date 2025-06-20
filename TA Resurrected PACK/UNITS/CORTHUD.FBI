@@ -50,7 +50,7 @@
 	ItalianName=Thud;
 	ItalianDescription=Kbot da artiglieria;
 	canguard=1;
-	MaxVelocity=1.13;
+	MaxVelocity=1.175;	//1.13
 	BrakeRate=0.183105469;
 	Acceleration=0.091552734;
 	TurnRate=999;

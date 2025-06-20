@@ -1224,4 +1224,8 @@
 		{
 		canbuild1=MAKEANTICOR;
 		}
+	[CORTNUK]
+		{
+		canbuild1=MAKETNUKCOR;
+		}
 	}

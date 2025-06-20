@@ -11,7 +11,7 @@
 	FootprintZ=3;
 	BuildCostEnergy=1031;
 	BuildCostMetal=173;
-	MaxDamage=1200;
+	MaxDamage=1260;		//1200
 	MaxWaterDepth=0;
 	MaxSlope=16;
 	EnergyUse=1;
@@ -48,8 +48,8 @@
 	ItalianName=Podger;
 	ItalianDescription=Posamine di terra;
 	canguard=0;
-	MaxVelocity=1.8;		//0.9
-	BrakeRate=0.08;
+	MaxVelocity=1.9;		//0.9
+	BrakeRate=0.15;		//0.08
 	Acceleration=0.015;
 	TurnRate=250;
 	SteeringMode=1;

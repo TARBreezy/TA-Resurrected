@@ -6,7 +6,7 @@
 	Objectname=ARMEMP;
 	Designation=ARM-MIDS;
 	Name=Stunner;
-	Description=EMP Missile Launcher;
+	Description=Eliminates BP units, removes wreckages, anti drainer;
 	FootprintX=4;
 	FootprintZ=4;
 	BuildCostEnergy=52134;
@@ -50,7 +50,7 @@
 	EnergyMake=0;
 	buildangle=8192;
 	canattack=1;
-	Weapon1=ARMEMP_WEAPON;
+	Weapon1=ARMEMP_WEAPON;		//ARMEMP_WEAPON
 	wpri_badTargetCategory=VTOL;
 	BadTargetCategory=VTOL;
 	Ovradjust=1;

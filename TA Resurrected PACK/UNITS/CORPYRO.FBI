@@ -50,7 +50,7 @@
 	ItalianName=Pyro;
 	ItalianDescription=Kbot d'assalto;
 	canguard=1;
-	MaxVelocity=1.525878906;
+	MaxVelocity=1.6;	//1.5
 	BrakeRate=0.183105469;
 	Acceleration=0.1;
 	TurnRate=950;

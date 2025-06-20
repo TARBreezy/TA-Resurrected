@@ -50,7 +50,7 @@
 	ItalianName=Hammer;
 	ItalianDescription=Kbot da artilglieria;
 	canguard=1;
-	MaxVelocity=1.1;
+	MaxVelocity=1.2;	//1.1
 	BrakeRate=0.183105469;
 	Acceleration=0.1;
 	TurnRate=995;

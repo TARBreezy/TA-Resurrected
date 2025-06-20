@@ -7,7 +7,7 @@
 
 	model=missile;
 
-	range=510;
+	range=585;	//510
 	reloadtime=3;
 	weapontimer=6;
 	weaponvelocity=522;
@@ -74,7 +74,7 @@
 
 	model=missile;
 
-	range=510;
+	range=585;	//510
 	reloadtime=3;
 	weapontimer=6;
 	weaponvelocity=522;

@@ -7,7 +7,7 @@
 	turret=1;
 
 	range=4096;	//3800
-	reloadtime=0.7725;
+	reloadtime=0.5225;
 	weaponvelocity=800;	//900
 	energypershot=2000;
 	areaofeffect=120;
@@ -16,7 +16,7 @@
 	soundhit=xplonuk1;
 
 	firestarter=50;
-	accuracy=1600;	//800
+	accuracy=1200;	//800
 	aimrate=2500;
 	tolerance=300;
 //	holdtime=1;

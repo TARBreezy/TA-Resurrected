@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=CORE VTOL LEVEL2 WEAPON TORP  NOTSUB CTRL_W CTRL_P CTRL_Y;
+	Category=CORE VTOL LEVEL2 WEAPON TORP  NOTSUB CTRL_P CTRL_Y;
 	TEDClass=VTOL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Titan;

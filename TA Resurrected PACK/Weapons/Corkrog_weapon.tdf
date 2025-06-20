@@ -121,7 +121,7 @@
 
 	[DAMAGE]
 		{
-		default=131;
+		default=383;		//383
 		ARMTHUND=383;
 		ARMBRAWL=383;
 		ARMPEEP=383;

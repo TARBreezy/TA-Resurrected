@@ -1,0 +1,131 @@
+[FBOY_CANNON]
+	{
+	ID=228;
+	name=Medium Artillery Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	minbarrelangle=-35;
+
+	range=1250;
+	reloadtime=0.51;			
+	weaponvelocity=380;
+	areaofeffect=64;
+	soundstart=cannhvy2;
+	soundhit=xplomed4;
+
+	tolerance=500;
+
+	explosiongaf=fx;
+	explosionart=explode2;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=200;
+		}
+	}
+	
+[FBOY_CANNON2]
+	{
+	ID=229;
+	name=Medium Artillery Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	minbarrelangle=-35;
+
+	range=1250;
+	reloadtime=0.49;		
+	weaponvelocity=360;
+	areaofeffect=64;
+	soundstart=cannhvy2;
+	soundhit=xplomed4;
+
+	tolerance=500;
+
+	explosiongaf=fx;
+	explosionart=explode2;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=200;
+		}
+	}
+
+[FATTY_ROCKET]
+	{
+	ID=230;
+	name=Tactical Missile;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+
+	model=TacNuke;
+
+	range=3072;
+	reloadtime=90;
+
+	noautorange=1;
+	weapontimer=3;
+	flighttime=200;
+
+	weaponvelocity=350;
+	weaponacceleration=200;
+	turnrate=32768;
+	areaofeffect=448;
+	edgeeffectiveness=0.5;
+
+	energypershot=10000;
+	
+	targetable=1;
+	commandfire=1;
+	cruise=1;
+
+	soundstart=misicbm1;
+	soundhit=xplomed4;
+
+	firestarter=100;
+	smokedelay=.1;
+	selfprop=1;
+	smoketrail=1;
+	propeller=1;
+
+	twophase=1;
+	guidance=1;
+	tolerance=4000;
+
+	shakemagnitude=24;
+	shakeduration=1.5;
+
+	explosiongaf=commboom;
+	explosionart=commboom;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=2500;
+		}
+	}	

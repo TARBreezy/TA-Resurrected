@@ -142,4 +142,12 @@
 	FootprintZ=4;
 	MinWaterDepth=15;
 	}
+[CLASS18]
+	{
+	Name=FATTY;
+	FootprintX=6;
+	FootprintZ=6;
+	MaxWaterDepth=12;
+	MaxSlope=15;
+	}
 

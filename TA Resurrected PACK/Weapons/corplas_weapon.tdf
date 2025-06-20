@@ -9,7 +9,7 @@
 	range=450;	
 	reloadtime=0.925;		
 	weapontimer=0.78;	
-	weaponvelocity=400;	
+	weaponvelocity=600;	
 	areaofeffect=32;
 	burst=17;
 	burstrate=.04;

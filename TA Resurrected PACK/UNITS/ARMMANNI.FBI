@@ -27,8 +27,8 @@
 	SoundCategory=ARM_TANK;
 	EnergyStorage=0;
 	MetalStorage=0;
-	ExplodeAs=CRAWL_BLASTSML;
-	SelfDestructAs=ATOMIC_BLAST;
+	ExplodeAs=BIG_UNITEX;		//CRAWL_BLASTSML
+	SelfDestructAs=BIG_UNIT;		//ATOMIC_BLAST
 	Category=ARM TANK LEVEL2 WEAPON NOTAIR NOTSUB CTRL_W CTRL_V CTRL_G;
 	TEDClass=TANK;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
@@ -50,7 +50,7 @@
 	ItalianName=Penetrator;
 	ItalianDescription=Arma mobile a energia;
 	canguard=1;
-	MaxVelocity=.6;
+	MaxVelocity=0.6;
 	BrakeRate=0.07;
 	Acceleration=0.02;	//0.01
 	TurnRate=170;

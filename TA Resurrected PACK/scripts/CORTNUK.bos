@@ -1,0 +1,198 @@
+#define TA			// This is a TA script
+
+#include "sfxtype.h"
+#include "exptype.h"
+
+piece  base, flap1, flap2, flap3, flap4, 
+	   flap5, flap6, flap7, flap8,
+       pad, missile ;
+
+static-var  Open_1, Busy_2;
+
+SmokeUnit(healthpercent, sleeptime, smoketype)
+{
+	while( TRUE )
+	{
+		healthpercent = ( get HEALTH );
+		if( healthpercent < 66 )
+		{
+			smoketype = ( 256 | 2 );
+			if( Rand(1,66) < healthpercent )
+			{
+				smoketype = ( 256 | 1 );
+			}
+			emit-sfx smoketype from base;
+		}
+		sleeptime = ( healthpercent * 50 );
+		if( sleeptime < 200 )
+		{
+			sleeptime = 200;
+		}
+		sleep sleeptime;
+	}
+	return (0);
+}
+
+Create()
+{
+	dont-shade base;
+	dont-shade pad;
+	dont-shade missile;
+	dont-shade flap1;
+	dont-shade flap2;
+	dont-shade flap3;
+	dont-shade flap4;
+	dont-shade flap5;
+	dont-shade flap6;
+	dont-shade flap7;
+	dont-shade flap8;
+	Open_1 = 0;
+	Busy_2 = 0;
+	while( get BUILD_PERCENT_LEFT )
+	{
+		sleep 400;
+	}
+	start-script SmokeUnit();
+}
+
+AimPrimary(heading, pitch)
+{
+	while( Busy_2 )
+	{
+		sleep 250;
+	}
+	if( !Open_1 )
+	{
+		Busy_2 = 1;
+		dont-cache flap1;
+		dont-cache flap2;
+		dont-cache flap3;
+		dont-cache flap4;
+		dont-cache flap5;
+		dont-cache flap6;
+		dont-cache flap7;
+		dont-cache flap8;
+		dont-cache missile;
+		dont-cache pad;
+		show missile;
+		turn flap1 to z-axis <110> speed <100>;
+		turn flap2 to z-axis <110> speed <100>;
+		turn flap3 to x-axis <110> speed <100>;
+		turn flap4 to z-axis <-110> speed <100>;
+		turn flap5 to z-axis <-110> speed <100>;
+		turn flap6 to z-axis <-110> speed <100>;
+		turn flap7 to x-axis <-110> speed <100>;
+		turn flap8 to x-axis <-110> speed <100>;
+		sleep 1500;
+		move pad to y-axis [15] speed [5];
+		sleep 4000;
+		Open_1 = 1;
+		Busy_2 = 0;
+	}
+	return (1);
+}
+
+FirePrimary()
+{
+	hide missile;
+	Busy_2 = 1;
+		Open_1 = 0;
+		sleep 4000;
+		move pad to y-axis [0] speed [5];
+		sleep 3000;
+		turn flap8 to x-axis <0> speed <100>;
+		turn flap7 to x-axis <0> speed <100>;
+		turn flap6 to z-axis <0> speed <100>;
+		turn flap5 to z-axis <0> speed <100>;
+		turn flap4 to z-axis <0> speed <100>;
+		turn flap3 to x-axis <0> speed <100>;
+		turn flap2 to z-axis <0> speed <100>;
+		turn flap1 to z-axis <0> speed <100>;
+		sleep 3000;
+		cache flap1;
+		cache flap2;
+		cache flap3;
+		cache flap4;
+		cache flap5;
+		cache flap6;
+		cache flap7;
+		cache flap8;
+		cache missile;
+		cache pad;
+	Busy_2 = 0;
+}
+
+QueryPrimary(piecenum)
+{
+	piecenum = missile;
+}
+
+SweetSpot(piecenum)
+{
+	piecenum = base;
+}
+
+Killed(severity, corpsetype)
+{
+	hide missile;
+	if( severity <= 25 )
+	{
+		corpsetype = 1;
+		explode base type BITMAPONLY | BITMAP1;
+		explode flap1 type BITMAPONLY | BITMAP2;
+		explode flap2 type BITMAPONLY | BITMAP2;
+		explode flap3 type BITMAPONLY | BITMAP3;
+		explode flap4 type BITMAPONLY | BITMAP4;
+		explode flap5 type BITMAPONLY | BITMAP5;
+		explode flap6 type BITMAPONLY | BITMAP1;
+		explode flap7 type BITMAPONLY | BITMAP2;
+		explode flap8 type BITMAPONLY | BITMAP3;
+		explode pad type FALL | BITMAP2;
+		explode missile type FALL | BITMAP3;
+		return (0);
+	}
+	if( severity <= 50 )
+	{
+		corpsetype = 2;
+		explode base type BITMAPONLY | BITMAP1;
+		explode flap1 type SHATTER | BITMAP1;
+		explode flap2 type SHATTER | BITMAP2;
+		explode flap3 type SHATTER | BITMAP3;
+		explode flap4 type SHATTER | BITMAP4;
+		explode flap5 type SHATTER | BITMAP5;
+		explode flap6 type SHATTER | BITMAP1;
+		explode flap7 type SHATTER | BITMAP2;
+		explode flap8 type SHATTER | BITMAP3;
+		explode missile type FALL | BITMAP3;
+		explode pad type FALL | BITMAP2;
+		return (0);
+	}
+	corpsetype = 3;
+	if( severity <= 99 )
+	{
+		explode base type BITMAPONLY | BITMAP1;
+		explode flap1 type SHATTER | BITMAP1;
+		explode flap2 type SHATTER | BITMAP2;
+		explode flap3 type SHATTER | BITMAP3;
+		explode flap4 type SHATTER | BITMAP4;
+		explode flap5 type SHATTER | BITMAP5;
+		explode flap6 type SHATTER | BITMAP1;
+		explode flap7 type SHATTER | BITMAP2;
+		explode flap8 type SHATTER | BITMAP3;
+		explode missile type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+		explode pad type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+		return (0);
+	}
+	explode base type BITMAPONLY | BITMAP1;
+	explode flap1 type SHATTER | EXPLODE_ON_HIT | BITMAP1;
+	explode flap2 type SHATTER | EXPLODE_ON_HIT | BITMAP2;
+	explode flap3 type SHATTER | EXPLODE_ON_HIT | BITMAP3;
+	explode flap4 type SHATTER | EXPLODE_ON_HIT | BITMAP4;
+	explode flap5 type SHATTER | EXPLODE_ON_HIT | BITMAP5;
+	explode flap6 type SHATTER | EXPLODE_ON_HIT | BITMAP1;
+	explode flap7 type SHATTER | EXPLODE_ON_HIT | BITMAP2;
+	explode flap8 type SHATTER | EXPLODE_ON_HIT | BITMAP3;
+	explode missile type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+	explode pad type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+	return (0);
+}

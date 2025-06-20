@@ -26,7 +26,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=CORE VTOL LEVEL2 WEAPON STEALTH NOTSUB CTRL_W CTRL_P CTRL_O;
+	Category=CORE VTOL LEVEL2 WEAPON NOTSUB CTRL_P CTRL_O;
 	TEDClass=VTOL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Vamp;

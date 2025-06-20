@@ -48,7 +48,7 @@
 	ItalianName=Spoiler;
 	ItalianDescription=Posamine di terra;
 	canguard=0;
-	MaxVelocity=1.6;		//0.8
+	MaxVelocity=1.8;		//0.8
 	BrakeRate=0.2;
 	Acceleration=0.011;
 	TurnRate=230;

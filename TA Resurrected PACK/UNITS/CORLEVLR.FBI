@@ -50,9 +50,9 @@
 	ItalianName=Leveler;
 	ItalianDescription=Carro armato d'assalto;
 	canguard=1;
-	MaxVelocity=1.4;	//0.8
+	MaxVelocity=1.55;	//0.8
 	BrakeRate=0.19;
-	Acceleration=0.03;	//0.02
+	Acceleration=0.05;	//0.02
 	TurnRate=330;		//220
 	SteeringMode=2;
 	ShootMe=1;

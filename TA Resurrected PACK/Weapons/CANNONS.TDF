@@ -77,7 +77,7 @@
 
 	range=320;
 	reloadtime=1.4;		//1.8
-	weaponvelocity=210;
+	weaponvelocity=230;	//210
 	areaofeffect=48;
 	soundstart=cannon2;
 	soundhit=xplomed4;
@@ -109,7 +109,7 @@
 
 	range=320;
 	reloadtime=1.5;		//1.9
-	weaponvelocity=220;
+	weaponvelocity=230;	//220
 	areaofeffect=48;
 	soundstart=cannon2;
 	soundhit=xplomed4;
@@ -142,7 +142,7 @@
 
 	range=425;	//320
 	reloadtime=1.85;	//1.95
-	weaponvelocity=250;	//210
+	weaponvelocity=270;	//210
 	areaofeffect=48;
 	soundstart=cannon1;
 	soundhit=xplomed3;
@@ -175,7 +175,7 @@
 
 	range=425;	//230
 	reloadtime=1.8;		//1.9
-	weaponvelocity=250;	//210
+	weaponvelocity=270;	//210
 	areaofeffect=48;
 	soundstart=cannon1;
 	soundhit=xplomed3;
@@ -208,7 +208,7 @@
 
 	range=320;
 	reloadtime=1.4;		//1.4
-	weaponvelocity=300;	//210
+	weaponvelocity=310;	//210
 	areaofeffect=48;
 	soundstart=cannon3;
 	soundhit=xplomed2;
@@ -243,7 +243,7 @@
 
 	range=320;
 	reloadtime=1.3;		//1.3
-	weaponvelocity=300;	//210
+	weaponvelocity=310;	//210
 	areaofeffect=48;
 	soundstart=canlite2;		//cannon3
 	soundhit=xplomed3;		//xplomed2
@@ -277,7 +277,7 @@
 
 	range=990;	//620
 	reloadtime=2.75;
-	weaponvelocity=310;
+	weaponvelocity=350;	//310
 	areaofeffect=96;	//48
 	soundstart=cannhvy2;
 	soundhit=xplomed4;
@@ -310,7 +310,7 @@
 
 	range=990;	//620
 	reloadtime=2.95;
-	weaponvelocity=310;
+	weaponvelocity=350;	//310
 	areaofeffect=96;	//48
 	soundstart=cannhvy2;
 	soundhit=xplomed4;
@@ -382,7 +382,7 @@
 
 	range=360;	//400
 	reloadtime=1.5;
-	weaponvelocity=300;	//250
+	weaponvelocity=310;	//250
 	areaofeffect=64;
 	soundstart=cannhvy2;
 	soundhit=xplomed4;
@@ -548,7 +548,7 @@
 
 	range=1220;	//1250
 	reloadtime=2.2;
-	weaponvelocity=350;
+	weaponvelocity=390;	//350
 	areaofeffect=64;
 	soundstart=cannhvy1;
 	soundhit=xplomed2;
@@ -581,7 +581,7 @@
 
 	range=1220;	//1250
 	reloadtime=2.46;
-	weaponvelocity=350;
+	weaponvelocity=390;	//350
 	areaofeffect=64;
 	soundstart=cannhvy1;
 	soundhit=xplomed2;

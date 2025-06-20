@@ -158,7 +158,7 @@
 	{
 		id=1;
 		assoc=0;
-		name=CORBUZZ;
+		name=CORTNUK;
 		xpos=64;
 		ypos=64;
 		width=64;
@@ -200,7 +200,7 @@
 	{
 		id=1;
 		assoc=0;
-		name=CORASP;
+		name=CORBUZZ;
 		xpos=64;
 		ypos=128;
 		width=64;
@@ -221,7 +221,7 @@
 	{
 		id=1;
 		assoc=0;
-		name=IGPATCH;
+		name=CORSHROUD;
 		xpos=0;
 		ypos=192;
 		width=64;
@@ -232,9 +232,9 @@
 		texturenumber=0;
 		fontnumber=0;
 		active=1;
-		commonattribs=0;
+		commonattribs=4;
 	}
-	grayedout=1;
+	grayedout=0;
 }
 [GADGET11]
 {
@@ -242,7 +242,7 @@
 	{
 		id=1;
 		assoc=0;
-		name=IGPATCH;
+		name=CORASP;
 		xpos=64;
 		ypos=192;
 		width=64;
@@ -253,9 +253,9 @@
 		texturenumber=0;
 		fontnumber=0;
 		active=1;
-		commonattribs=0;
+		commonattribs=4;
 	}
-	grayedout=1;
+	grayedout=0;
 }
 [GADGET12]
 {

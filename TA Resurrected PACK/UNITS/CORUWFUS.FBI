@@ -42,7 +42,7 @@
 	SpanishDescription=Planta de fusión submarina;
 	ItalianName=Imp. di Fusione subacqueo;
 	ItalianDescription=Impianto di Fusione sottomarino;
-	EnergyMake=1200;
+	EnergyMake=1250;	//1200
 	buildangle=8192;
 	downloadable=1;
 	ActivateWhenBuilt=1;

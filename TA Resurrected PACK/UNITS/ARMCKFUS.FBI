@@ -47,4 +47,6 @@
 	buildangle=4096;
 	downloadable=1;
 	CloakCost=250;		//450
+	mincloakdistance=110;
+	Init_Cloaked=1;
 	}

@@ -15,7 +15,7 @@
 
 	range=400;
 	reloadtime=4;
-	weapontimer=2;
+	weapontimer=3;		//2
 	weaponvelocity=400;	//250
 	startvelocity=250;
 	weaponacceleration=120;
@@ -59,7 +59,7 @@
 
 	range=400;
 	reloadtime=3.7;
-	weapontimer=2;
+	weapontimer=3;		//2
 	weaponvelocity=400;	//250
 	startvelocity=250;
 	weaponacceleration=120;
@@ -229,8 +229,8 @@
 
 	model=rocket;
 
-	range=1100;	//800
-	reloadtime=9;		//12
+	range=1150;	//800
+	reloadtime=8;		//12
 
 	noautorange=1;
 	weapontimer=4;		//5
@@ -238,10 +238,9 @@
 
 	weaponvelocity=1000;		//750 //400
 	startingvelocity=250;
-	weaponacceleration=50;		//40
+	weaponacceleration=75;		//40
 	turnrate=24384;
 	areaofeffect=96;
-	metalpershot=0;
 
 	soundstart=Rockhvy1;
 	soundhit=xplomed4;
@@ -269,7 +268,7 @@
 
 	[DAMAGE]
 		{
-		default=700;	//500
+		default=500;
 		}
 	}
 
@@ -283,8 +282,8 @@
 
 	model=corvrocket;
 
-	range=1100;	//800
-	reloadtime=9;		//13
+	range=1150;	//800
+	reloadtime=8;		//13
 
 	noautorange=1;
 	weapontimer=4;		//5
@@ -292,10 +291,9 @@
 
 	weaponvelocity=1000;		//750 //375
 	startingvelocity=250;
-	weaponacceleration=50;		//38
+	weaponacceleration=75;		//38
 	turnrate=24384;
 	areaofeffect=96;
-	metalpershot=0;
 
 	soundstart=Rockhvy1;
 	soundhit=xplomed4;
@@ -323,7 +321,7 @@
 
 	[DAMAGE]
 		{
-		default=700;		//500
+		default=500;
 		}
 	}
 
@@ -337,8 +335,8 @@
 
 	model=rocket;
 
-	range=1300;
-	reloadtime=9;			//12
+	range=1350;			//1300
+	reloadtime=8;			//12
 
 	noautorange=1;
 	weapontimer=4;			//5
@@ -346,10 +344,9 @@
 
 	weaponvelocity=1000;		//750 //400
 	startingvelocity=250;
-	weaponacceleration=50;		//40
+	weaponacceleration=75;		//40
 	turnrate=24384;
 	areaofeffect=96;
-	metalpershot=0;
 
 	soundstart=Rockhvy1;
 	soundhit=xplomed4;
@@ -377,7 +374,7 @@
 
 	[DAMAGE]
 		{
-		default=700;		//500
+		default=500;		//500
 		}
 	}
 
@@ -391,8 +388,8 @@
 
 	model=corshiprckt1;
 
-	range=1300;
-	reloadtime=9;
+	range=1350;		//1300
+	reloadtime=8;		//9
 
 	noautorange=1;
 	weapontimer=4;		//5
@@ -400,10 +397,9 @@
 
 	weaponvelocity=1000;		//750 //400
 	startingvelocity=250;
-	weaponacceleration=50;		//40
+	weaponacceleration=75;		//40
 	turnrate=24384;
 	areaofeffect=96;
-	metalpershot=0;
 
 	soundstart=Rockhvy1;
 	soundhit=xplomed4;
@@ -431,7 +427,7 @@
 
 	[DAMAGE]
 		{
-		default=700;		//500
+		default=500;		//500
 		}
 	}
 

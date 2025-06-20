@@ -68,4 +68,5 @@
 	Weapon2=COR_BATS;
 	Floater=1;
 	Ovradjust=1;
+	candgun=1;
 	}

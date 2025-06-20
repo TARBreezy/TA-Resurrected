@@ -9,7 +9,7 @@
 	model=armmhmsl;
 
 	range=900;	//670
-	reloadtime=9;
+	reloadtime=8;	//9
 
 	noautorange=1;
 	weapontimer=4;		//5
@@ -17,7 +17,7 @@
 
 	weaponvelocity=1000;		//750 //400
 	startingvelocity=250;
-	weaponacceleration=50;		//40
+	weaponacceleration=75;		//40
 	turnrate=24384;
 	areaofeffect=80;
 	metalpershot=0;
@@ -48,6 +48,6 @@
 
 	[DAMAGE]
 		{
-		default=500;	//300
+		default=400;	//300
 		}
 	}

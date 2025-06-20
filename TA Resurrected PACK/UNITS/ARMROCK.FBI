@@ -50,7 +50,7 @@
 	ItalianName=Rocko;
 	ItalianDescription=Kbot lanciarazzi;
 	canguard=1;
-	MaxVelocity=1.2;
+	MaxVelocity=1.25;	//1.2
 	BrakeRate=0.15;
 	Acceleration=0.1;
 	TurnRate=1005;

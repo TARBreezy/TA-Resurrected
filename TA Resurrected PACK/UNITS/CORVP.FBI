@@ -32,7 +32,7 @@
 	Category=CORE PLANT CTRL_F LEVEL1 NOWEAPON NOTAIR NOTSUB ;
 	TEDClass=PLANT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	YardMap=yyoooyy yyoooyy ooooooo oocccoo oocccoo oocccoo oocccoo;
+	YardMap=yycccyy yycccyy oocccoo oocccoo oocccoo oocccoo oocccoo;
 	Corpse=corvp_dead;
 	GermanName=Fahrzeugfabrik;
 	GermanDescription=Tech Level 1;
@@ -42,7 +42,7 @@
 	firestandorders=1;
 	StandingFireOrder=2;
 	mobilestandorders=1;
-	StandingMoveOrder=1;
+	StandingMoveOrder=0;		//1
 	canmove=1;
 	canpatrol=1;
 	canstop=1;

@@ -11,8 +11,8 @@
 	FootprintZ=3;		//4
 	BuildCostEnergy=116664;
 	BuildCostMetal=29489;
-	MaxDamage=14959;		//Duplication bug @ 29918
-	damagemodifier=0.5;		//For Duplication bug
+	MaxDamage=14000;		//Duplication bug @ 29918
+	damagemodifier=0.4;		//For Duplication bug
 	MaxWaterDepth=12;
 	MaxSlope=17;
 	EnergyUse=1.1;
@@ -51,7 +51,7 @@
 	ItalianName=Krogoth;
 	ItalianDescription=Kbot sperimentale;
 	canguard=1;
-	MaxVelocity=1;
+	MaxVelocity=1.1;
 	BrakeRate=0.19;
 	Acceleration=0.09;
 	TurnRate=960;
@@ -63,11 +63,11 @@
 	MovementClass=KROG;		//TANKSH3
 	Upright=1;
 	canattack=1;
-	Weapon1=CORKROG_FIRE;
+	Weapon1=CORKROG_HEAD;
 	downloadable=1;
 	NoChaseCategory=VTOL;
-	Weapon2=CORKROG_HEAD;
-	Weapon3=CORKROG_ROCKET;
+	Weapon2=CORKROG_ROCKET;
+	Weapon3=CORKROG_FIRE;
 	cantbetransported=1;
 	wpri_BadTargetCategory=LEVEL1;
 	wsec_BadTargetCategory=NOTAIR;

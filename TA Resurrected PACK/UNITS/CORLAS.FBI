@@ -44,7 +44,7 @@
 	ItalianName=Ravager;
 	ItalianDescription=Carro armato d'assalto;
 	canguard=1;
-	MaxVelocity=1.75;
+	MaxVelocity=1.85;	//1.75
 	BrakeRate=0.02;
 	Acceleration=0.08;
 	TurnRate=460;

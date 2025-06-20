@@ -24,6 +24,7 @@
 	NoAutoFire=0;
 	SightDistance=350;
 	RadarDistance=1650;
+	SonarDistance=350;
 	SoundCategory=ARM_VTOL;
 	EnergyStorage=0;
 	MetalStorage=0;

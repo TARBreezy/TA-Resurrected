@@ -270,7 +270,7 @@ Create()
 	bAiming = FALSE;
 	aimtert = FALSE;
 	movearms =TRUE;
-	restore_delay = 3500;
+	restore_delay = 10000;		//3500
 	headprim = 0;
 
 	dont-cache enrgycell1;
@@ -291,8 +291,8 @@ StartMoving()
 	if (!baiming) 
 	{
 		headprim = 0;
-		turn body to y-axis <0> speed <60>;
-		turn axis to y-axis <0> speed <60>;
+		turn body to y-axis <0> speed <200>;		//60
+		turn axis to y-axis <0> speed <200>;			//60
 		if(rand(1,7)==1)
 		{	spin canonbarrel1 around z-axis speed <100> accelerate <10>;
 			spin canonbarrel2 around z-axis speed <100> accelerate <10>;
@@ -357,7 +357,6 @@ RestoreAfterDelay(moving)
 	wait-for-turn cannonr around y-axis;
 	movearms = TRUE;
 	bAiming = FALSE;
-
 }
 
 
@@ -385,6 +384,8 @@ AimPrimary(heading, pitch)
 	signal SIG_AIM;
 	set-signal-mask SIG_AIM;
 	bAiming = TRUE;
+	signal 2;
+	set-signal-mask 2;
 	spin canonbarrel1 around z-axis speed <1500> accelerate <25>;
 	spin canonbarrel2 around z-axis speed <1500> accelerate <25>;
 
@@ -423,7 +424,7 @@ AimPrimary(heading, pitch)
 	wait-for-turn arml around x-axis;
 	wait-for-turn armr around x-axis;
 	wait-for-turn cannonr around y-axis;
-	start-script RestoreAfterDelay();
+	//start-script RestoreAfterDelay();
 	return (1);
 }
 

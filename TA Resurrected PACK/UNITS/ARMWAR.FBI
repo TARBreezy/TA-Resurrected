@@ -50,7 +50,7 @@
 	ItalianName=Warrior;
 	ItalianDescription=Kbot da fanteria medio;
 	canguard=1;
-	MaxVelocity=1.35;	//1.25
+	MaxVelocity=1.5;	//1.25
 	BrakeRate=0.19;
 	Acceleration=0.06;
 	TurnRate=700;

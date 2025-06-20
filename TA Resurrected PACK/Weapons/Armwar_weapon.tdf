@@ -9,7 +9,7 @@
 	range=200;	//180
 	reloadtime=.4;
 	weapontimer=1;
-	weaponvelocity=300;
+	weaponvelocity=310;		//300
 	sprayangle=1024;
 	areaofeffect=8;
 	burst=3;	//2

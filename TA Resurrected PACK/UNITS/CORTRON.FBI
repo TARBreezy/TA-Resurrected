@@ -6,7 +6,7 @@
 	Objectname=CORTRON;
 	Designation=COR-TRON;
 	Name=Neutron;
-	Description=Neutron Missile Launcher;
+	Description=Neutralizes BP units, removes wreckages, anti drainer;
 	FootprintX=4;
 	FootprintZ=4;
 	BuildCostEnergy=52134;

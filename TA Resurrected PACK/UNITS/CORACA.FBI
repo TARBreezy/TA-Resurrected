@@ -57,7 +57,7 @@
 	cruisealt=70;
 	Scale=0.8;
 	BankScale=1.5;
-	Builddistance=95;	//60
+	Builddistance=60;
 	CanReclamate=1;
 	EnergyMake=22;
 	MetalMake=0.5;

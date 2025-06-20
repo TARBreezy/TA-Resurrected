@@ -50,7 +50,7 @@
 	ItalianName=Crock;
 	ItalianDescription=Carro armato anfibio;
 	canguard=1;
-	MaxVelocity=1.2;
+	MaxVelocity=1.25;		//1.2
 	BrakeRate=0.008;
 	Acceleration=0.008;
 	TurnRate=320;

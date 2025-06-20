@@ -33,7 +33,7 @@
 
 	[DAMAGE]
 		{
-		default=8;
+		default=10;		//8
 	
 		}
 	}

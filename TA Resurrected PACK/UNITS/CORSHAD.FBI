@@ -29,7 +29,7 @@
 	MetalStorage=0;
 	ExplodeAs=BIG_UNITEX;
 	SelfDestructAs=BIG_UNIT;
-	Category=CORE VTOL LEVEL1 WEAPON BOMB NOTSUB CTRL_W CTRL_P CTRL_Q;
+	Category=CORE VTOL LEVEL1 WEAPON BOMB NOTSUB CTRL_P CTRL_Q;
 	TEDClass=VTOL;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
 	GermanName=Shadow;

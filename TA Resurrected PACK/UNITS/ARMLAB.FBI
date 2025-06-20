@@ -41,7 +41,7 @@
 	Frenchdescription=Niveau Tech 1;
 	firestandorders=1;
 	mobilestandorders=1;
-	StandingMoveOrder=1;
+	StandingMoveOrder=0;		//1
 	canmove=1;
 	canpatrol=1;
 	canstop=1;

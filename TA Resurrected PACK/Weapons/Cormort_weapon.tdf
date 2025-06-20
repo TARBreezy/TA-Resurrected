@@ -9,12 +9,10 @@
 
 	range=700;		//655
 	reloadtime=1.45;
-	weaponvelocity=290;
+	weaponvelocity=310;	//290
 	areaofeffect=36;
 	soundstart=cannon1;
 	soundhit=xplomed3;
-	minbarrelangle=-35;
-
 
 	explosiongaf=fx;
 	explosionart=explode3;

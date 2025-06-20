@@ -32,7 +32,8 @@
 	Category=CORE PLANT CTRL_F LEVEL3 NOWEAPON NOTAIR NOTSUB ;
 	TEDClass=PLANT;
 	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
-	YardMap=ooooooooo ooooooooo oocccccoo oocccccoo oocccccoo oocccccoo oocccccoo oocccccoo oocccccoo ;
+	YardMap=ooooooooo occccccco occccccco occccccco occccccco occccccco occccccco occccccco occccccco ;
+	//ooooooooo ooooooooo oocccccoo oocccccoo oocccccoo oocccccoo oocccccoo oocccccoo oocccccoo
 	Corpse=corgant_dead;
 	GermanName=Krogoth-Werft;
 	GermanDescription=Baut Krogoth-Bots;
@@ -42,7 +43,7 @@
 	firestandorders=1;
 	StandingFireOrder=2;
 	mobilestandorders=1;
-	StandingMoveOrder=1;
+	StandingMoveOrder=0;		//1
 	canmove=1;
 	canpatrol=1;
 	canstop=1;
