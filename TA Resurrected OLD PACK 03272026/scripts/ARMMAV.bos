@@ -1,0 +1,1065 @@
+#define TA			// This is a TA script
+
+#include "sfxtype.h"
+#include "exptype.h"
+
+piece  flare1, flare2, torso, hips, rlegmain, llegmain, rfoot, head,
+       luparm, lgunbase, lgunshaft, ruparm, rgunbase, rgunshaft, rshoulder, lshoulder,
+       larm, rarm, lfoot, lgunhide, rgunhide, lgunbarrel, rgunbarrel, llegdoor,
+       rlegdoor;
+
+static-var  Open_1, Gun_2, Moving_3, Aiming_4, Busy_5;
+
+
+SmokeUnit(healthpercent, sleeptime, smoketype)
+{
+	while( TRUE )
+	{
+		healthpercent = ( get HEALTH );
+		if( healthpercent < 66 )
+		{
+			smoketype = ( 256 | 2 );
+			if( Rand(1,66) < healthpercent )
+			{
+				smoketype = ( 256 | 1 );
+			}
+			emit-sfx smoketype from torso;
+		}
+		sleeptime = ( healthpercent * 50 );
+		if( sleeptime < 200 )
+		{
+			sleeptime = 200;
+		}
+		sleep sleeptime;
+//		if( !Open_1 and !Aiming_4)
+//		{
+//			signal 2;
+//			set-signal-mask 0;
+//			Busy_5 = 0;
+//			Static_Var_7 = 0;
+//			explode torso type SHATTER | EXPLODE_ON_HIT | BITMAP1;
+//		}
+	}
+	return (0);
+}
+
+MotionControl(justmoved)
+{
+	justmoved = TRUE;
+	while( TRUE )
+	{
+//			if( Aiming_4 )
+			if( (Aiming_4 OR Busy_5) and Moving_3 )
+			{
+//				Busy_5 = 0;
+				move hips to y-axis [0.80] now;
+				move hips to z-axis [0] now;
+				move rlegmain to y-axis [1.10] now;
+				move llegmain to y-axis [-0.95] now;
+				move rfoot to y-axis [1.20] now;
+				move lgunbase to y-axis [0] now;
+				move lgunshaft to x-axis [0] now;
+				move rgunbase to y-axis [0] now;
+				move rgunshaft to x-axis [0] now;
+				turn rlegmain to x-axis <-19.33> now;
+				turn rfoot to x-axis <26.71> now;
+				sleep 95;
+				move hips to y-axis [0.60] now;
+				move rlegmain to y-axis [0.57] now;
+				move llegmain to y-axis [-0.98] now;
+				move rfoot to y-axis [0.95] now;
+				turn hips to x-axis <3.16> now;
+				turn rlegmain to x-axis <-34.98> now;
+				turn llegmain to x-axis <6.15> now;
+				turn lfoot to x-axis <-9.14> now;
+				turn rfoot to x-axis <20.03> now;
+				sleep 87;
+				move hips to y-axis [0.40] now;
+				move rlegmain to y-axis [0] now;
+				move llegmain to y-axis [-1] now;
+				move rfoot to y-axis [0.70] now;
+				turn hips to x-axis <6.32> now;
+				turn rlegmain to x-axis <-50.62> now;
+				turn llegmain to x-axis <12.30> now;
+				turn lfoot to x-axis <-18.27> now;
+				turn rfoot to x-axis <13.35> now;
+				sleep 71;
+				move rlegmain to y-axis [-0.28] now;
+				move llegmain to y-axis [-0.80] now;
+				move rfoot to y-axis [0.35] now;
+				turn hips to x-axis <8.77> now;
+				turn rlegmain to x-axis <-52.03> now;
+				turn llegmain to x-axis <17.40> now;
+				turn lfoot to x-axis <-13> now;
+				turn rfoot to x-axis <6.66> now;
+				sleep 68;
+				move rlegmain to y-axis [-0.60] now;
+				move llegmain to y-axis [-0.60] now;
+				move rfoot to y-axis [0] now;
+				turn hips to x-axis <11.25> now;
+				turn rlegmain to x-axis <-53.43> now;
+				turn llegmain to x-axis <22.50> now;
+				turn lfoot to x-axis <-7.73> now;
+				turn rfoot to x-axis <0> now;
+				sleep 68;
+				move rlegmain to y-axis [-0.40] now;
+				move llegmain to y-axis [-0.30] now;
+				turn hips to x-axis <14.93> now;
+				turn rlegmain to x-axis <-53.26> now;
+				turn lfoot to x-axis <10.71> now;
+				turn rfoot to x-axis <17.74> now;
+				sleep 68;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [0] now;
+				turn hips to x-axis <18.63> now;
+				turn rlegmain to x-axis <-53.08> now;
+				turn lfoot to x-axis <29.16> now;
+				turn rfoot to x-axis <35.50> now;
+				sleep 60;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <13.96> now;
+				turn rlegmain to x-axis <-39.80> now;
+				turn llegmain to x-axis <12.04> now;
+				turn lfoot to x-axis <28.47> now;
+				turn rfoot to x-axis <26.62> now;
+				sleep 58;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <9.31> now;
+				turn rlegmain to x-axis <-26.54> now;
+				turn llegmain to x-axis <1.57> now;
+				turn lfoot to x-axis <27.76> now;
+				turn rfoot to x-axis <17.74> now;
+				sleep 90;
+				move hips to y-axis [0.70] now;
+				move rlegmain to y-axis [-0.76] now;
+				move llegmain to y-axis [0.82] now;
+				move lfoot to y-axis [0.90] now;
+				turn hips to x-axis <4.65> now;
+				turn rlegmain to x-axis <-13.26> now;
+				turn llegmain to x-axis <-8.87> now;
+				turn lfoot to x-axis <27.05> now;
+				turn rfoot to x-axis <8.87> now;
+				sleep 90;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <0> now;
+				turn rlegmain to x-axis <0> now;
+				turn llegmain to x-axis <-19.33> now;
+				turn lfoot to x-axis <26.36> now;
+				turn rfoot to x-axis <0> now;
+				sleep 98;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <3.16> now;
+				turn rlegmain to x-axis <6.32> now;
+				turn llegmain to x-axis <-34.80> now;
+				turn lfoot to x-axis <19.85> now;
+				turn rfoot to x-axis <-9.14> now;
+				sleep 86;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <6.32> now;
+				turn rlegmain to x-axis <12.65> now;
+				turn llegmain to x-axis <-50.26> now;
+				turn lfoot to x-axis <13.35> now;
+				turn rfoot to x-axis <-18.27> now;
+				sleep 80;
+				move rlegmain to y-axis [-0.80] now;
+				move llegmain to y-axis [-0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <8.77> now;
+				turn rlegmain to x-axis <17.40> now;
+				turn llegmain to x-axis <-51.66> now;
+				turn lfoot to x-axis <6.66> now;
+				turn rfoot to x-axis <-12.82> now;
+				sleep 81;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [-0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <11.25> now;
+				turn rlegmain to x-axis <22.14> now;
+				turn llegmain to x-axis <-53.08> now;
+				turn lfoot to x-axis <0> now;
+				turn rfoot to x-axis <-7.38> now;
+				sleep 79;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [-0] now;
+				turn hips to x-axis <14.93> now;
+				turn rlegmain to x-axis <22.14> now;
+				turn llegmain to x-axis <-53.26> now;
+				turn lfoot to x-axis <17.74> now;
+				turn rfoot to x-axis <10.88> now;
+				sleep 80;
+				move rlegmain to y-axis [0] now;
+				move llegmain to y-axis [-0] now;
+				turn hips to x-axis <18.63> now;
+				turn rlegmain to x-axis <22.14> now;
+				turn llegmain to x-axis <-53.43> now;
+				turn lfoot to x-axis <35.50> now;
+				turn rfoot to x-axis <29.16> now;
+				sleep 48;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [0] now;
+				move llegmain to y-axis [-0] now;
+				move rfoot to y-axis [0] now;
+				turn hips to x-axis <13.96> now;
+				turn rlegmain to x-axis <11.77> now;
+				turn llegmain to x-axis <-40.07> now;
+				turn lfoot to x-axis <26.62> now;
+				turn rfoot to x-axis <28.55> now;
+				sleep 49;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [0] now;
+				move llegmain to y-axis [-0] now;
+				move rfoot to y-axis [0] now;
+				turn hips to x-axis <9.31> now;
+				turn rlegmain to x-axis <1.40> now;
+				turn llegmain to x-axis <-26.71> now;
+				turn lfoot to x-axis <17.74> now;
+				turn rfoot to x-axis <27.94> now;
+				sleep 65;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [0] now;
+				move llegmain to y-axis [-0] now;
+				move rfoot to y-axis [0] now;
+				turn hips to x-axis <4.65> now;
+				turn rlegmain to x-axis <-8.96> now;
+				turn llegmain to x-axis <-13.35> now;
+				turn lfoot to x-axis <8.87> now;
+				turn rfoot to x-axis <27.32> now;
+
+				Busy_5 = 0;
+				sleep 64;
+			justmoved = TRUE;
+			}
+//			if( !Aiming_4 AND !Busy_5 )
+			if( !Aiming_4 and Moving_3 )
+			{
+				Busy_5 = 1;
+				move hips to y-axis [0.80] now;
+				move hips to z-axis [0] now;
+				move torso to y-axis [0] now;
+				move rlegmain to y-axis [1.10] now;
+				move llegmain to y-axis [-0.95] now;
+				move rfoot to y-axis [1.20] now;
+				move head to z-axis [0] now;
+				move luparm to x-axis [0] now;
+				move lgunbase to y-axis [0] now;
+				move lgunshaft to x-axis [0] now;
+				move ruparm to x-axis [0] now;
+				move rgunbase to y-axis [0] now;
+				move rgunshaft to x-axis [0] now;
+				turn rlegmain to x-axis <-19.33> now;
+				turn rfoot to x-axis <26.71> now;
+				turn rshoulder to x-axis <16.52> now;
+				turn lshoulder to x-axis <-17.57> now;
+				turn luparm to z-axis <-15.11> now;
+				turn larm to x-axis <-14.05> now;
+				turn ruparm to z-axis <15.11> now;
+				turn rarm to x-axis <-26.01> now;
+				sleep 95;
+				move hips to y-axis [0.60] now;
+				move rlegmain to y-axis [0.57] now;
+				move llegmain to y-axis [-0.98] now;
+				move rfoot to y-axis [0.95] now;
+				turn hips to x-axis <3.16> now;
+				turn torso to y-axis <-1.93> now;
+				turn rlegmain to x-axis <-34.98> now;
+				turn llegmain to x-axis <6.15> now;
+				turn lfoot to x-axis <-9.14> now;
+				turn rfoot to x-axis <20.03> now;
+				turn head to y-axis <2.46> now;
+				turn rshoulder to x-axis <25.65> now;
+				turn lshoulder to x-axis <-24.25> now;
+				turn luparm to z-axis <-11.25> now;
+				turn larm to x-axis <-20.55> now;
+				turn ruparm to z-axis <13.52> now;
+				turn rarm to x-axis <-38.66> now;
+				sleep 87;
+				move hips to y-axis [0.40] now;
+				move rlegmain to y-axis [0] now;
+				move llegmain to y-axis [-1] now;
+				move rfoot to y-axis [0.70] now;
+				turn hips to x-axis <6.32> now;
+				turn torso to y-axis <-3.86> now;
+				turn rlegmain to x-axis <-50.62> now;
+				turn llegmain to x-axis <12.30> now;
+				turn lfoot to x-axis <-18.27> now;
+				turn rfoot to x-axis <13.35> now;
+				turn head to y-axis <4.92> now;
+				turn rshoulder to x-axis <34.79> now;
+				turn lshoulder to x-axis <-30.93> now;
+				turn luparm to z-axis <-7.37> now;
+				turn larm to x-axis <-27.07> now;
+				turn ruparm to z-axis <11.95> now;
+				turn rarm to x-axis <-51.32> now;
+				sleep 71;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [-0] now;
+				move rfoot to y-axis [0] now;
+				turn hips to x-axis <8.77> now;
+				turn torso to y-axis <-5.79> now;
+				turn rlegmain to x-axis <-52.03> now;
+				turn llegmain to x-axis <17.40> now;
+				turn lfoot to x-axis <-13> now;
+				turn rfoot to x-axis <6.66> now;
+				turn head to y-axis <6.49> now;
+				turn rshoulder to x-axis <44.82> now;
+				turn lshoulder to x-axis <-38.32> now;
+				turn luparm to z-axis <-3.68> now;
+				turn larm to x-axis <-16.87> now;
+				turn ruparm to z-axis <10.54> now;
+				turn rarm to x-axis <-60.29> now;
+				sleep 68;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [-0] now;
+				move rfoot to y-axis [0] now;
+				turn hips to x-axis <11.25> now;
+				turn torso to y-axis <-7.73> now;
+				turn rlegmain to x-axis <-53.43> now;
+				turn llegmain to x-axis <22.50> now;
+				turn lfoot to x-axis <-7.73> now;
+				turn rfoot to x-axis <0> now;
+				turn head to y-axis <8.08> now;
+				turn rshoulder to x-axis <54.84> now;
+				turn lshoulder to x-axis <-45.70> now;
+				turn luparm to z-axis <0> now;
+				turn larm to x-axis <-6.66> now;
+				turn ruparm to z-axis <9.14> now;
+				turn rarm to x-axis <-69.25> now;
+				sleep 68;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [-0] now;
+				turn hips to x-axis <14.93> now;
+				turn torso to y-axis <-5.62> now;
+				turn rlegmain to x-axis <-53.26> now;
+				turn lfoot to x-axis <10.71> now;
+				turn rfoot to x-axis <17.74> now;
+				turn head to y-axis <6.15> now;
+				turn rshoulder to x-axis <45.34> now;
+				turn lshoulder to x-axis <-40.60> now;
+				turn luparm to z-axis <-4.92> now;
+				turn larm to x-axis <-14.76> now;
+				turn ruparm to z-axis <12.48> now;
+				sleep 68;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [0] now;
+				turn hips to x-axis <18.63> now;
+				turn torso to y-axis <-3.51> now;
+				turn rlegmain to x-axis <-53.08> now;
+				turn lfoot to x-axis <29.16> now;
+				turn rfoot to x-axis <35.50> now;
+				turn head to y-axis <4.21> now;
+				turn rshoulder to x-axis <35.85> now;
+				turn lshoulder to x-axis <-35.50> now;
+				turn luparm to z-axis <-9.84> now;
+				turn larm to x-axis <-22.84> now;
+				turn ruparm to z-axis <15.82> now;
+				sleep 60;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <13.96> now;
+				turn torso to y-axis <-2.63> now;
+				turn rlegmain to x-axis <-39.80> now;
+				turn llegmain to x-axis <12.04> now;
+				turn lfoot to x-axis <28.47> now;
+				turn rfoot to x-axis <26.62> now;
+				turn head to y-axis <3.16> now;
+				turn rshoulder to x-axis <22.50> now;
+				turn lshoulder to x-axis <-22.58> now;
+				turn luparm to z-axis <-11.15> now;
+				turn larm to x-axis <-23.73> now;
+				turn ruparm to z-axis <15.63> now;
+				turn rarm to x-axis <-55.54> now;
+				sleep 58;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <9.31> now;
+				turn torso to y-axis <-1.75> now;
+				turn rlegmain to x-axis <-26.54> now;
+				turn llegmain to x-axis <1.57> now;
+				turn lfoot to x-axis <27.76> now;
+				turn rfoot to x-axis <17.74> now;
+				turn head to y-axis <2.10> now;
+				turn rshoulder to x-axis <9.14> now;
+				turn lshoulder to x-axis <-9.66> now;
+				turn luparm to z-axis <-12.48> now;
+				turn larm to x-axis <-24.60> now;
+				turn ruparm to z-axis <15.46> now;
+				turn rarm to x-axis <-41.83> now;
+				sleep 90;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <4.65> now;
+				turn torso to y-axis <-0.87> now;
+				turn rlegmain to x-axis <-13.26> now;
+				turn llegmain to x-axis <-8.87> now;
+				turn lfoot to x-axis <27.05> now;
+				turn rfoot to x-axis <8.87> now;
+				turn head to y-axis <1.05> now;
+				turn rshoulder to x-axis <-4.21> now;
+				turn lshoulder to x-axis <3.24> now;
+				turn luparm to z-axis <-13.79> now;
+				turn larm to x-axis <-25.48> now;
+				turn ruparm to z-axis <15.29> now;
+				turn rarm to x-axis <-28.12> now;
+				sleep 90;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <0> now;
+				turn torso to y-axis <0> now;
+				turn rlegmain to x-axis <0> now;
+				turn llegmain to x-axis <-19.33> now;
+				turn lfoot to x-axis <26.36> now;
+				turn rfoot to x-axis <0> now;
+				turn head to y-axis <0> now;
+				turn rshoulder to x-axis <-17.57> now;
+				turn lshoulder to x-axis <16.16> now;
+				turn luparm to z-axis <-15.11> now;
+				turn larm to x-axis <-26.36> now;
+				turn ruparm to z-axis <15.11> now;
+				turn rarm to x-axis <-14.41> now;
+				sleep 98;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <3.16> now;
+				turn torso to y-axis <2.46> now;
+				turn rlegmain to x-axis <6.32> now;
+				turn llegmain to x-axis <-34.80> now;
+				turn lfoot to x-axis <19.85> now;
+				turn rfoot to x-axis <-9.14> now;
+				turn head to y-axis <-1.93> now;
+				turn rshoulder to x-axis <-24.07> now;
+				turn lshoulder to x-axis <25.13> now;
+				turn luparm to z-axis <-13.52> now;
+				turn larm to x-axis <-38.84> now;
+				turn ruparm to z-axis <11.25> now;
+				turn rarm to x-axis <-20.73> now;
+				sleep 86;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <6.32> now;
+				turn torso to y-axis <4.92> now;
+				turn rlegmain to x-axis <12.65> now;
+				turn llegmain to x-axis <-50.26> now;
+				turn lfoot to x-axis <13.35> now;
+				turn rfoot to x-axis <-18.27> now;
+				turn head to y-axis <-3.86> now;
+				turn rshoulder to x-axis <-30.58> now;
+				turn lshoulder to x-axis <34.10> now;
+				turn luparm to z-axis <-11.95> now;
+				turn larm to x-axis <-51.32> now;
+				turn ruparm to z-axis <7.37> now;
+				turn rarm to x-axis <-27.05> now;
+				sleep 80;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [-0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <8.77> now;
+				turn torso to y-axis <6.49> now;
+				turn rlegmain to x-axis <17.40> now;
+				turn llegmain to x-axis <-51.66> now;
+				turn lfoot to x-axis <6.66> now;
+				turn rfoot to x-axis <-12.82> now;
+				turn head to y-axis <-5.79> now;
+				turn rshoulder to x-axis <-37.96> now;
+				turn lshoulder to x-axis <44.12> now;
+				turn luparm to z-axis <-10.54> now;
+				turn larm to x-axis <-60.29> now;
+				turn ruparm to z-axis <3.68> now;
+				turn rarm to x-axis <-16.87> now;
+				sleep 81;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [-0] now;
+				move lfoot to y-axis [0] now;
+				turn hips to x-axis <11.25> now;
+				turn torso to y-axis <8.08> now;
+				turn rlegmain to x-axis <22.14> now;
+				turn llegmain to x-axis <-53.08> now;
+				turn lfoot to x-axis <0> now;
+				turn rfoot to x-axis <-7.38> now;
+				turn head to y-axis <-7.73> now;
+				turn rshoulder to x-axis <-45.35> now;
+				turn lshoulder to x-axis <54.14> now;
+				turn luparm to z-axis <-9.14> now;
+				turn larm to x-axis <-69.25> now;
+				turn ruparm to z-axis <0> now;
+				turn rarm to x-axis <-6.66> now;
+				sleep 79;
+				move rlegmain to y-axis [-0] now;
+				move llegmain to y-axis [-0] now;
+				turn hips to x-axis <14.93> now;
+				turn torso to y-axis <6.49> now;
+				turn rlegmain to x-axis <22.14> now;
+				turn llegmain to x-axis <-53.26> now;
+				turn lfoot to x-axis <17.74> now;
+				turn rfoot to x-axis <10.88> now;
+				turn head to y-axis <-6.15> now;
+				turn rshoulder to x-axis <-40.24> now;
+				turn lshoulder to x-axis <44.64> now;
+				turn luparm to z-axis <-12.12> now;
+				turn larm to x-axis <-69.43> now;
+				turn ruparm to z-axis <4.92> now;
+				turn rarm to x-axis <-19.68> now;
+				sleep 80;
+				move rlegmain to y-axis [0] now;
+				move llegmain to y-axis [-0] now;
+				turn hips to x-axis <18.63> now;
+				turn torso to y-axis <4.92> now;
+				turn rlegmain to x-axis <22.14> now;
+				turn llegmain to x-axis <-53.43> now;
+				turn lfoot to x-axis <35.50> now;
+				turn rfoot to x-axis <29.16> now;
+				turn head to y-axis <-4.57> now;
+				turn rshoulder to x-axis <-35.15> now;
+				turn lshoulder to x-axis <35.15> now;
+				turn luparm to z-axis <-15.11> now;
+				turn larm to x-axis <-69.60> now;
+				turn ruparm to z-axis <9.84> now;
+				turn rarm to x-axis <-32.68> now;
+				sleep 48;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [0] now;
+				move llegmain to y-axis [-0] now;
+				move rfoot to y-axis [0] now;
+				turn hips to x-axis <13.96> now;
+				turn torso to y-axis <3.68> now;
+				turn rlegmain to x-axis <11.77> now;
+				turn llegmain to x-axis <-40.07> now;
+				turn lfoot to x-axis <26.62> now;
+				turn rfoot to x-axis <28.55> now;
+				turn head to y-axis <-3.42> now;
+				turn rshoulder to x-axis <-22.23> now;
+				turn lshoulder to x-axis <21.96> now;
+				turn larm to x-axis <-55.71> now;
+				turn ruparm to z-axis <11.15> now;
+				turn rarm to x-axis <-31.02> now;
+				sleep 49;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [0] now;
+				move llegmain to y-axis [-0] now;
+				move rfoot to y-axis [0] now;
+				turn hips to x-axis <9.31> now;
+				turn torso to y-axis <2.46> now;
+				turn rlegmain to x-axis <1.40> now;
+				turn llegmain to x-axis <-26.71> now;
+				turn lfoot to x-axis <17.74> now;
+				turn rfoot to x-axis <27.94> now;
+				turn head to y-axis <-2.27> now;
+				turn rshoulder to x-axis <-9.31> now;
+				turn lshoulder to x-axis <8.77> now;
+				turn larm to x-axis <-41.83> now;
+				turn ruparm to z-axis <12.48> now;
+				turn rarm to x-axis <-29.35> now;
+				sleep 65;
+				move hips to y-axis [0] now;
+				move rlegmain to y-axis [0] now;
+				move llegmain to y-axis [-0] now;
+				move rfoot to y-axis [0] now;
+				turn hips to x-axis <4.65> now;
+				turn torso to y-axis <1.23> now;
+				turn rlegmain to x-axis <-8.96> now;
+				turn llegmain to x-axis <-13.35> now;
+				turn lfoot to x-axis <8.87> now;
+				turn rfoot to x-axis <27.32> now;
+				turn head to y-axis <-1.13> now;
+				turn rshoulder to x-axis <3.60> now;
+				turn lshoulder to x-axis <-4.38> now;
+				turn larm to x-axis <-27.94> now;
+				turn ruparm to z-axis <13.79> now;
+				turn rarm to x-axis <-27.68> now;
+
+				Busy_5 = 0;
+				sleep 64;
+			justmoved = TRUE;
+		}
+		if( !Moving_3 )
+		{
+//			Busy_5 = 0;
+			if( justmoved )
+			{
+				move hips to y-axis [0] speed [6];
+				move rlegmain to y-axis [0] speed [6];
+				move llegmain to y-axis [0] speed [6];
+				move lfoot to y-axis [0] speed [6];
+				move rfoot to y-axis [0] speed [6];
+				turn hips to x-axis <0> speed <200>;
+				turn llegmain to x-axis <0> speed <200>;
+				turn rlegmain to x-axis <0> speed <200>;
+				turn rfoot to x-axis <0> speed <200>;
+				turn lfoot to x-axis <0> speed <200>;
+				if( !Aiming_4 )
+				{
+					turn torso to y-axis <0> speed <200>;
+					turn rshoulder to x-axis <0> speed <200>;
+					turn lshoulder to x-axis <0> speed <200>;
+					turn luparm to z-axis <0> speed <200>;
+					turn larm to x-axis <0> speed <200>;
+					turn ruparm to z-axis <0> speed <200>;
+					turn rarm to x-axis <0> speed <200>;
+				}
+				justmoved = FALSE;
+			}
+			sleep 200;
+		}
+	}
+	return (0);
+}
+
+Create()
+{
+	Open_1 = 0;
+	Gun_2 = 0;
+	Moving_3 = 0;
+	Aiming_4 = 0;
+	Busy_5 = 0;
+	hide lgunbarrel;
+	hide lgunshaft;
+	hide lgunbase;
+	hide rgunbarrel;
+	hide rgunshaft;
+	hide rgunbase;
+	hide flare1;
+	hide flare2;
+	while( get BUILD_PERCENT_LEFT )
+	{
+		sleep 400;
+	}
+	spin flare1 around y-axis speed <100>;
+	spin flare2 around y-axis speed <100>;
+	start-script MotionControl();
+	start-script SmokeUnit();
+	return (0);
+}
+
+StartMoving()
+{
+	Moving_3 = 1;
+	return (0);
+}
+
+StopMoving()
+{
+	Moving_3 = 0;
+	return (0);
+}
+
+RestoreAfterDelay()
+{
+	sleep 10000;
+	set-signal-mask 0;
+	Aiming_4 = 0;
+	Open_1 = 0;
+	Busy_5 = 1;
+	move torso to y-axis [0] now;
+	turn torso to y-axis <0> speed <200>;
+	move hips to z-axis [0] now;
+	move head to z-axis [0] now;
+	move luparm to x-axis [0] now;
+	move lgunshaft to x-axis [0] now;
+	move lgunshaft to y-axis [0] now;
+	move lgunshaft to y-axis [1] speed [7.14];
+	move ruparm to x-axis [0] now;
+	move rgunshaft to x-axis [0] now;
+	move rgunshaft to y-axis [0] now;
+	move rgunshaft to y-axis [1] speed [6.80];
+	turn rshoulder to x-axis <-90> now;
+	turn lshoulder to x-axis <-90> now;
+	turn lgunbase to y-axis <0> now;
+	turn lgunbase to y-axis <45> speed <306.19>;
+	turn rgunbase to y-axis <0> now;
+	turn rgunbase to y-axis <-45> speed <306.19>;
+	sleep 147;
+	move lgunbarrel to y-axis [2.25] speed [15];
+	move rgunbarrel to y-axis [2.20] speed [14.67];
+	turn llegdoor to y-axis <90> speed <600.14>;
+	turn rlegdoor to y-axis <-90> speed <600.14>;
+	turn lgunbase to y-axis <90> speed <300.07>;
+	turn rgunbase to y-axis <-90> speed <300.07>;
+	sleep 150;
+	turn llegdoor to y-axis <144.88> speed <287.21>;
+	turn rlegdoor to y-axis <-144.53> speed <285.37>;
+	turn rshoulder to x-axis <-39.38> speed <265.12>;
+	turn lshoulder to x-axis <-36.22> speed <281.69>;
+	turn luparm to z-axis <-35.51> speed <185.95>;
+	turn lgunbase to y-axis <-90> speed [1.05];
+	turn ruparm to z-axis <35.16> speed <184.10>;
+	turn rgunbase to y-axis <-90> speed <0>;
+	sleep 191;
+	turn rshoulder to x-axis <0> speed <281.32>;
+	turn lshoulder to x-axis <0> speed <258.71>;
+	turn luparm to z-axis <-40.09> speed <32.65>;
+	turn lgunbase to y-axis <45> speed [1.07];
+	turn ruparm to z-axis <38.32> speed <22.60>;
+	turn rgunbase to y-axis <-45> speed <321.51>;
+	sleep 140;
+	turn lgunbase to y-axis <0> speed <409.19>;
+	turn rgunbase to y-axis <0> speed <409.19>;
+	sleep 110;
+	turn luparm to z-axis <-26.73> speed <139.19>;
+	turn ruparm to z-axis <28.13> speed <106.23>;
+	sleep 96;
+	move rshoulder to y-axis [1] speed [4.53];
+	move lshoulder to y-axis [1.15] speed [4.96];
+	turn luparm to z-axis <-38.68> speed <51.53>;
+	turn larm to z-axis <43.95> speed <189.46>;
+	turn ruparm to z-axis <37.27> speed <39.41>;
+	turn rarm to z-axis <-43.25> speed <186.43>;
+	sleep 232;
+	move rshoulder to y-axis [0] speed [7.84];
+	move lshoulder to y-axis [0] speed [8.58];
+	turn rshoulder to x-axis <0> speed <0>;
+	turn luparm to z-axis <-14.77> speed <178.45>;
+	turn larm to z-axis <33.76> speed <76.10>;
+	turn ruparm to z-axis <17.93> speed <144.33>;
+	turn rarm to z-axis <-36.57> speed <49.86>;
+	sleep 134;
+	move luparm to x-axis [0] speed [0];
+	move ruparm to x-axis [0] speed [0];
+	turn luparm to z-axis <0> speed <175.82>;
+	turn larm to z-axis <0> speed <401.88>;
+	turn ruparm to z-axis <0> speed <213.50>;
+	turn rarm to z-axis <0> speed <435.37>;
+	sleep 168;
+	show rgunhide;
+	show lgunhide;
+	hide lgunbarrel;
+	hide lgunshaft;
+	hide lgunbase;
+	hide rgunbarrel;
+	hide rgunshaft;
+	hide rgunbase;
+	move hips to z-axis [0] now;
+	move torso to y-axis [0] now;
+	move head to z-axis [0] now;
+	move rshoulder to y-axis [-0.70] now;
+	move rshoulder to y-axis [-0.50] speed [1.18];
+	move lshoulder to y-axis [-0.70] now;
+	move lshoulder to y-axis [-0.50] speed [1.18];
+	move luparm to x-axis [0] now;
+	move lgunbase to y-axis [0] now;
+	move lgunshaft to x-axis [0] now;
+	move lgunshaft to y-axis [1] now;
+	move lgunbarrel to y-axis [2.25] now;
+	move ruparm to x-axis [0] now;
+	move rgunbase to y-axis [0] now;
+	move rgunshaft to x-axis [0] now;
+	move rgunshaft to y-axis [1] now;
+	move rgunbarrel to y-axis [2.20] now;
+	turn llegdoor to y-axis <144.84> now;
+	turn lgunhide to z-axis <-90> now;
+	turn rlegdoor to y-axis <-144.49> now;
+	turn rgunhide to z-axis <90> now;
+	turn luparm to z-axis <4.57> now;
+	turn luparm to z-axis <2.81> speed <10.34>;
+	turn ruparm to z-axis <-3.86> now;
+	turn ruparm to z-axis <-2.81> speed <6.20>;
+	sleep 170;
+	turn lgunhide to z-axis <-45> speed <375.09>;
+	turn rgunhide to z-axis <45> speed <375.09>;
+	turn rshoulder to x-axis <-36.92> speed <307.69>;
+	turn lshoulder to x-axis <-35.16> speed <293>;
+	turn luparm to z-axis <-22.51> speed <210.99>;
+	turn ruparm to z-axis <22.15> speed <208>;
+	sleep 120;
+	turn llegdoor to y-axis <90> speed <365.71>;
+	turn lgunhide to z-axis <0> speed <300.07>;
+	turn rlegdoor to y-axis <-90> speed <363.37>;
+	turn rgunhide to z-axis <0> speed <300.07>;
+	turn rshoulder to x-axis <-39.38> speed <16.41>;
+	turn lshoulder to x-axis <-39.38> speed <28.13>;
+	turn luparm to z-axis <-29.19> speed <44.54>;
+	turn ruparm to z-axis <32> speed <65.64>;
+	sleep 150;
+	turn llegdoor to y-axis <0> speed <600.14>;
+	turn rlegdoor to y-axis <0> speed <600.14>;
+	turn rshoulder to x-axis <-43.60> speed <28.13>;
+	turn lshoulder to x-axis <-45.71> speed <42.20>;
+	turn luparm to z-axis <-38.68> speed <63.30>;
+	turn ruparm to z-axis <44.66> speed <84.40>;
+	sleep 150;
+	turn rshoulder to x-axis <-28.13> speed <103.15>;
+	turn lshoulder to x-axis <-30.95> speed <98.46>;
+	turn luparm to z-axis <-17.58> speed <140.66>;
+	turn ruparm to z-axis <14.07> speed <203.96>;
+	sleep 150;
+	turn rshoulder to x-axis <0> speed <187.54>;
+	turn lshoulder to x-axis <0> speed <206.30>;
+	turn luparm to z-axis <0> speed <117.21>;
+	turn ruparm to z-axis <0> speed <93.77>;
+	sleep 160;
+//	Aiming_4 = 0;
+	Busy_5 = 0;
+	return (0);
+}
+
+AimPrimary(heading, pitch)
+{
+	Aiming_4 = 1;
+	while( Busy_5 )
+	{
+		sleep 200;
+	}
+	while( !Open_1 )
+	{
+//		Aiming_4 = 1;
+		Busy_5 = 1;
+		move hips to z-axis [0] now;
+		move torso to y-axis [0] now;
+		move head to z-axis [0] now;
+		move luparm to x-axis [0] now;
+		move lgunbase to y-axis [0] now;
+		move lgunshaft to x-axis [0] now;
+		move ruparm to x-axis [0] now;
+		move rgunbase to y-axis [0] now;
+		move rgunshaft to x-axis [0] now;
+		turn luparm to z-axis <0> now;
+		turn luparm to z-axis <-23.21> speed <140.66>;
+		turn larm to x-axis <0> now;
+		turn larm to x-axis <-28.84> speed <174.76>;
+		turn ruparm to z-axis <0> now;
+		turn ruparm to z-axis <22.86> speed <138.53>;
+		turn rarm to x-axis <0> now;
+		turn rarm to x-axis <-28.48> speed <172.63>;
+		sleep 165;
+		turn llegdoor to y-axis <90> speed <517.36>;
+		turn rlegdoor to y-axis <-90> speed <517.36>;
+		turn rshoulder to x-axis <19.34> speed <111.15>;
+		turn lshoulder to x-axis <19.34> speed <111.15>;
+		turn luparm to z-axis <-28.13> speed <28.29>;
+		turn larm to x-axis <-40.44> speed <66.69>;
+		turn ruparm to z-axis <28.13> speed <30.31>;
+		turn rarm to x-axis <-41.14> speed <72.75>;
+		sleep 174;
+		move lgunhide to y-axis [0.50] speed [2.72];
+		move rgunhide to y-axis [0.50] speed [2.72];
+		turn llegdoor to y-axis <144.18> speed <294.31>;
+		turn lgunhide to z-axis <-45> speed <244.62>;
+		turn rlegdoor to y-axis <-144.88> speed <298.13>;
+		turn rgunhide to z-axis <45> speed <244.62>;
+		turn rshoulder to x-axis <54.86> speed <193>;
+		turn lshoulder to x-axis <54.15> speed <189.20>;
+		turn luparm to z-axis <-34.81> speed <36.31>;
+		turn larm to x-axis <-64.70> speed <131.87>;
+		turn ruparm to z-axis <34.81> speed <36.31>;
+		turn rarm to x-axis <-64.35> speed <126.13>;
+		sleep 184;
+		move lgunhide to y-axis [1] speed [2.10];
+		move rgunhide to y-axis [1] speed [2.10];
+		turn lgunhide to z-axis <-90> speed <189.12>;
+		turn rgunhide to z-axis <90> speed <189.12>;
+		sleep 238;
+		turn rshoulder to x-axis <66.11> speed <98.70>;
+		turn lshoulder to x-axis <66.81> speed <111>;
+		turn luparm to z-axis <-15.12> speed <172.74>;
+		turn larm to x-axis <-90> speed <222.09>;
+		turn ruparm to z-axis <15.12> speed <172.74>;
+		turn rarm to x-axis <-90> speed <225.18>;
+		sleep 184;
+		hide rgunhide;
+		hide lgunhide;
+		show lgunbarrel;
+		show lgunshaft;
+		show lgunbase;
+		show rgunbarrel;
+		show rgunshaft;
+		show rgunbase;
+		move hips to z-axis [0] now;
+		move torso to y-axis [0] now;
+		move lgunhide to y-axis [1] now;
+		move lgunhide to y-axis [0] speed [14.29];
+		move rgunhide to y-axis [1] now;
+		move rgunhide to y-axis [0] speed [14.29];
+		move head to z-axis [0] now;
+		move luparm to x-axis [0] now;
+		move lgunbase to y-axis [0] now;
+		move lgunshaft to x-axis [0] now;
+		move lgunshaft to y-axis [0] now;
+		move lgunshaft to y-axis [2] speed [29.29];
+		move lgunbarrel to y-axis [0] now;
+		move lgunbarrel to y-axis [1.10] speed [15.71];
+		move ruparm to x-axis [0] now;
+		move rgunbase to y-axis [0] now;
+		move rgunshaft to x-axis [0] now;
+		move rgunshaft to y-axis [0] now;
+		move rgunshaft to y-axis [2.10] speed [30];
+		move rgunbarrel to y-axis [0] now;
+		move rgunbarrel to y-axis [1] speed [15];
+		turn llegdoor to y-axis <144.14> now;
+		turn lgunhide to z-axis <-90> now;
+		turn lgunhide to z-axis <0> speed [1.43];
+		turn rlegdoor to y-axis <-144.84> now;
+		turn rgunhide to z-axis <90> now;
+		turn rgunhide to z-axis <0> speed [1.43];
+		turn rshoulder to x-axis <35.15> now;
+		turn rshoulder to x-axis <13.71> speed <306.43>;
+		turn lshoulder to x-axis <35.15> now;
+		turn lshoulder to x-axis <13.36> speed <311.46>;
+		turn luparm to z-axis <0> now;
+		turn luparm to z-axis <-24.62> speed <351.65>;
+		turn larm to x-axis <-52.38> now;
+		turn larm to x-axis <-32.35> speed <286.34>;
+		turn ruparm to z-axis <0> now;
+		turn ruparm to z-axis <24.62> speed <351.65>;
+		turn rarm to x-axis <-52.03> now;
+		turn rarm to x-axis <-32.35> speed <281.32>;
+		sleep 70;
+		move lgunshaft to y-axis [1.85] speed [2.50];
+		move lgunbarrel to y-axis [1.10] speed [0];
+		move rgunshaft to y-axis [1.75] speed [4.38];
+		move rgunbarrel to y-axis [1] speed [0];
+		turn llegdoor to y-axis <120.97> speed <290.11>;
+		turn rlegdoor to y-axis <-120.26> speed <307.69>;
+		turn rshoulder to x-axis <0> speed <171.43>;
+		turn lshoulder to x-axis <0> speed <167>;
+		turn luparm to z-axis <-20> speed <57.14>;
+		turn larm to x-axis <-30.95> speed <17.58>;
+		turn ruparm to z-axis <20> speed <57.14>;
+		turn rarm to x-axis <-30.95> speed <17.58>;
+		sleep 80;
+		move lgunshaft to y-axis [1.10] speed [12.50];
+		move lgunbarrel to y-axis [1.55] speed [7.50];
+		move rgunshaft to y-axis [1] speed [12.50];
+		move rgunbarrel to y-axis [1.80] speed [12.50];
+		turn llegdoor to y-axis <100.57> speed <339.92>;
+		turn rlegdoor to y-axis <-100.22> speed <334.07>;
+		turn rshoulder to x-axis <-41.49> speed <691.57>;
+		turn lshoulder to x-axis <-41.14> speed <685.71>;
+		turn luparm to z-axis <-11.25> speed <146.52>;
+		turn larm to x-axis <-17.23> speed <228.57>;
+		turn ruparm to z-axis <11.25> speed <146.52>;
+		turn rarm to x-axis <-16.53> speed <240.29>;
+		sleep 60;
+		move lgunshaft to y-axis [1.70] speed [12];
+		move lgunbarrel to y-axis [1] speed [11];
+		move rgunshaft to y-axis [1.65] speed [13];
+		move rgunbarrel to y-axis [1] speed [15];
+		turn llegdoor to y-axis <80.88> speed <393.85>;
+		turn rlegdoor to y-axis <-80.18> speed <400.88>;
+		turn rshoulder to x-axis <-68.22> speed <534.51>;
+		turn lshoulder to x-axis <-68.22> speed <541.54>;
+		turn luparm to z-axis <0> speed <225>;
+		turn larm to x-axis <0> speed <344.62>;
+		turn ruparm to z-axis <0> speed <225>;
+		turn rarm to x-axis <0> speed <330.55>;
+		sleep 50;
+		move lgunshaft to y-axis [1.30] speed [8];
+		move lgunbarrel to y-axis [1.15] speed [3];
+		move rgunshaft to y-axis [1.50] speed [3];
+		move rgunbarrel to y-axis [1] speed [0];
+		turn llegdoor to y-axis <60.84> speed <400.88>;
+		turn rlegdoor to y-axis <-60.13> speed <400.88>;
+		turn rshoulder to x-axis <-90> speed <436>;
+		turn lshoulder to x-axis <-90> speed <436>;
+		sleep 50;
+		move lgunshaft to y-axis [0.70] speed [8.57];
+		move lgunbarrel to y-axis [0.90] speed [3.57];
+		move rgunshaft to y-axis [0.60] speed [12.86];
+		move rgunbarrel to y-axis [1.10] speed [0.71];
+		turn llegdoor to y-axis <30.95> speed <427>;
+		turn rlegdoor to y-axis <-30.59> speed <421.98>;
+		sleep 70;
+		move lgunshaft to y-axis [0] speed [10];
+		move lgunbarrel to y-axis [1.10] speed [2.86];
+		move rgunshaft to y-axis [0] speed [8.57];
+		move rgunbarrel to y-axis [1.15] speed [0.71];
+		turn llegdoor to y-axis <0> speed <442.07>;
+		turn rlegdoor to y-axis <0> speed <437>;
+		sleep 70;
+		move lgunbarrel to y-axis [0] speed [22];
+		move rgunbarrel to y-axis [0] speed [23];
+		sleep 60;
+		Open_1 = 1;
+		Busy_5 = 0;
+	}
+	signal 2;
+	set-signal-mask 0;
+	set-signal-mask 2;
+	turn torso to y-axis heading speed <150>;
+	wait-for-turn torso around y-axis;
+	start-script RestoreAfterDelay();
+	return (1);
+}
+
+FirePrimary()
+{
+	if( !Gun_2 )
+	{
+		move rgunbarrel to y-axis [1] now;
+		show flare1;
+		sleep 150;
+		hide flare1;
+		move rgunbarrel to y-axis [0] speed [15];
+	}
+	if( Gun_2 )
+	{
+		move lgunbarrel to y-axis [1] now;
+		show flare2;
+		sleep 150;
+		hide flare2;
+		move lgunbarrel to y-axis [0] speed [15];
+	}
+	Gun_2 = ( !Gun_2 );
+	return (0);
+}
+
+AimFromPrimary(piecenum)
+{
+	piecenum = torso;
+	return (0);
+}
+
+QueryPrimary(piecenum)
+{
+	piecenum = Gun_2;
+	return (0);
+}
+
+SweetSpot(piecenum)
+{
+	piecenum = torso;
+	return (0);
+}
+
+Killed(severity, corpsetype)
+{
+	hide flare1;
+	hide flare2;
+	explode torso type SHATTER | EXPLODE_ON_HIT | BITMAP1;
+	if( severity <= 25 )
+	{
+		corpsetype = 1;
+		return (0);
+	}
+	if( severity <= 50 )
+	{
+		corpsetype = 2;
+		return (0);
+	}
+	corpsetype = 3;
+	return (0);
+}

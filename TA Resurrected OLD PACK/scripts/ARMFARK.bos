@@ -1,0 +1,453 @@
+#define TA			// This is a TA script
+
+#include "sfxtype.h"
+#include "exptype.h"
+
+piece  llathe, rlathe, torso, hips, Lleg, Rleg, Rfoot, Lfoot,
+       Lshoulder, Rshoulder, head, Rarm, Larm, llathepoint, rlathepoint, shield1,
+       shield2, shield3, shield4;
+
+static-var  Nano_1, Moving_2, ReqState_3, On_4, Nanopiece_5, Busy_6;
+
+
+SmokeUnit(healthpercent, sleeptime, smoketype)
+{
+	while( TRUE )
+	{
+		healthpercent = ( get HEALTH );
+		if( healthpercent < 66 )
+		{
+			smoketype = ( 256 | 2 );
+			if( Rand(1,66) < healthpercent )
+			{
+				smoketype = ( 256 | 1 );
+			}
+			emit-sfx smoketype from torso;
+		}
+		sleeptime = ( healthpercent * 50 );
+		if( sleeptime < 200 )
+		{
+			sleeptime = 200;
+		}
+		sleep sleeptime;
+
+	}
+	return (0);
+}
+
+MotionControl(justmoved)
+{
+	justmoved = TRUE;
+	while( TRUE )
+	{
+			if( Moving_2 )
+			{
+					move hips to z-axis [0] now;
+					move hips to z-axis [0.12] speed [1];
+					move Lleg to y-axis [0] now;
+					move Lleg to y-axis [-0.20] speed [0];
+					turn hips to x-axis <3.03> now;
+					turn hips to x-axis <5> speed <24>;
+					turn Lleg to x-axis <-29.19> now;
+					turn Lleg to x-axis <-26> speed <27>;
+					turn Rleg to x-axis <24.32> now;
+					turn Rleg to x-axis <28> speed <45>;
+					turn Rfoot to x-axis <-4.25> now;
+					turn Rfoot to x-axis <16> speed <203>;
+					turn Lfoot to x-axis <0> now;
+					turn Lfoot to x-axis <7> speed <76>;
+					sleep 100;
+					move hips to z-axis [0.25] speed [1];
+					move Lleg to y-axis [-0.50] speed [0];
+					turn hips to x-axis <7> speed <24>;
+					turn Lleg to x-axis <-23> speed <27>;
+					turn Rleg to x-axis <33> speed <45>;
+					turn Rfoot to x-axis <36> speed <203>;
+					turn Lfoot to x-axis <15> speed <76>;
+					sleep 100;
+					move hips to y-axis [0.15] speed [2];
+					move hips to z-axis [0.25] speed [0];
+					move Lleg to y-axis [-0.12] speed [1];
+					move Rleg to y-axis [0.40] speed [6];
+					move Rfoot to y-axis [0.70] speed [1];
+					move Lfoot to y-axis [-0.50] speed [0];
+					turn hips to x-axis <6> speed <20>;
+					turn Lleg to x-axis <-14> speed <152>;
+					turn Rleg to x-axis <13> speed <334>;
+					turn Rfoot to x-axis <45> speed <157>;
+					turn Lfoot to x-axis <7> speed <126>;
+					sleep 60;
+					move hips to y-axis [0.30] speed [2];
+					move hips to z-axis [0.25] speed [0];
+					move Lleg to y-axis [-0.20] speed [1];
+					move Rleg to y-axis [0.79] speed [6];
+					move Rfoot to y-axis [0.15] speed [1];
+					move Lfoot to y-axis [-0.10] speed [0];
+					turn hips to x-axis <5> speed <20>;
+					turn Lleg to x-axis <-5> speed <152>;
+					turn Rleg to x-axis <-6> speed <334>;
+					turn Rfoot to x-axis <55> speed <157>;
+					turn Lfoot to x-axis <0> speed <126>;
+					sleep 60;
+					move hips to z-axis [0.20] speed [0];
+					move Lleg to y-axis [-0.25] speed [0];
+					move Rleg to y-axis [0.40] speed [6];
+					move Rfoot to y-axis [0.70] speed [1];
+					turn hips to x-axis <1> speed <65>;
+					turn Lleg to x-axis <8> speed <228>;
+					turn Rleg to x-axis <-20> speed <238>;
+					turn Rfoot to x-axis <43> speed <197>;
+					turn Lfoot to x-axis <-10> speed <167>;
+					sleep 60;
+					move hips to z-axis [0.15] speed [0];
+					move Lleg to y-axis [-0.30] speed [0];
+					move Rleg to y-axis [0] speed [3];
+					move Rfoot to y-axis [0] speed [0];
+					turn hips to x-axis <-2> speed <39>;
+					turn Lleg to x-axis <21> speed <136>;
+					turn Rleg to x-axis <-35> speed <142>;
+					turn Rfoot to x-axis <31> speed <118>;
+					turn Lfoot to x-axis <-20> speed <100>;
+					sleep 100;
+					move hips to y-axis [0.15] speed [1];
+					move Lleg to y-axis [-0.15] speed [1];
+					move Lfoot to y-axis [-0.50] speed [0];
+					turn hips to x-axis <0> speed <27>;
+					turn Lleg to x-axis <22> speed <6>;
+					turn Rleg to x-axis <-32> speed <27>;
+					turn Rfoot to x-axis <15> speed <158>;
+					turn Lfoot to x-axis <-13> speed <66>;
+					sleep 100;
+					move hips to y-axis [0] speed [1];
+					move Lleg to y-axis [0] speed [1];
+					move Lfoot to y-axis [0] speed [0];
+					turn hips to x-axis <3> speed <27>;
+					turn Lleg to x-axis <23> speed <6>;
+					turn Rleg to x-axis <-29> speed <27>;
+					turn Rfoot to x-axis <0> speed <158>;
+					turn Lfoot to x-axis <-6> speed <66>;
+					sleep 100;
+					move hips to z-axis [0.20] speed [0];
+					move Rleg to y-axis [-0.20] speed [0];
+					turn hips to x-axis <5> speed <24>;
+					turn Lleg to x-axis <28> speed <57>;
+					turn Rleg to x-axis <-26> speed <33>;
+					turn Rfoot to x-axis <7> speed <72>;
+					turn Lfoot to x-axis <14> speed <215>;
+					sleep 100;
+					move hips to z-axis [0.25] speed [0];
+					move Rleg to y-axis [-0.50] speed [0];
+					turn hips to x-axis <7> speed <24>;
+					turn Lleg to x-axis <34> speed <57>;
+					turn Rleg to x-axis <-23> speed <33>;
+					turn Rfoot to x-axis <14> speed <72>;
+					turn Lfoot to x-axis <36> speed <215>;
+					sleep 100;
+					move Lleg to y-axis [0.40] speed [6];
+					move Rleg to y-axis [-0.70] speed [0];
+					move Rfoot to y-axis [-0.20] speed [0];
+					move Lfoot to y-axis [0.70] speed [1];
+					turn hips to x-axis <6> speed <25>;
+					turn Lleg to x-axis <13> speed <344>;
+					turn Rleg to x-axis <-13> speed <157>;
+					turn Rfoot to x-axis <6> speed <136>;
+					turn Lfoot to x-axis <45> speed <157>;
+					sleep 60;
+					move Lleg to y-axis [0.79] speed [6];
+					move Rleg to y-axis [-0.10] speed [0];
+					move Rfoot to y-axis [-0.50] speed [0];
+					move Lfoot to y-axis [0.15] speed [1];
+					turn hips to x-axis <4> speed <25>;
+					turn Lleg to x-axis <-6> speed <344>;
+					turn Rleg to x-axis <-4> speed <157>;
+					turn Rfoot to x-axis <-1> speed <136>;
+					turn Lfoot to x-axis <55> speed <157>;
+					sleep 60;
+					move Lleg to y-axis [0.47] speed [5];
+					move Rleg to y-axis [-0.12] speed [0];
+					move Lfoot to y-axis [0.70] speed [1];
+					turn hips to x-axis <1> speed <50>;
+					turn Lleg to x-axis <-21> speed <253>;
+					turn Rleg to x-axis <7> speed <197>;
+					turn Rfoot to x-axis <-9> speed <131>;
+					turn Lfoot to x-axis <42> speed <217>;
+					sleep 60;
+					move Lleg to y-axis [0.15] speed [3];
+					move Rleg to y-axis [-0.15] speed [0];
+					move Lfoot to y-axis [0] speed [0];
+					turn hips to x-axis <-1> speed <30>;
+					turn Lleg to x-axis <-37> speed <152>;
+					turn Rleg to x-axis <19> speed <118>;
+					turn Rfoot to x-axis <-17> speed <79>;
+					turn Lfoot to x-axis <29> speed <130>;
+					sleep 100;
+					move hips to z-axis [0.12] speed [1];
+					move Lleg to y-axis [0.70] speed [0];
+					move Rleg to y-axis [-0.70] speed [0];
+					move Rfoot to y-axis [-0.20] speed [0];
+					turn hips to x-axis <0> speed <21>;
+					turn Lleg to x-axis <-33> speed <39>;
+					turn Rleg to x-axis <21> speed <24>;
+					turn Rfoot to x-axis <-10> speed <66>;
+					turn Lfoot to x-axis <14> speed <145>;
+					sleep 200;
+			justmoved = TRUE;
+			}
+		if( !Moving_2 )
+		{
+			if( justmoved )
+			{
+				move hips to y-axis [0] now;
+				move hips to z-axis [0] now;
+				move Lleg to y-axis [0] now;
+				move Rleg to y-axis [0] now;
+				move Rfoot to y-axis [0] now;
+				move Lfoot to y-axis [0] now;
+				turn hips to x-axis <0> now;
+				turn Lleg to x-axis <0> now;
+				turn Rleg to x-axis <0> now;
+				turn Rfoot to x-axis <0> now;
+				turn Lfoot to x-axis <0> now;
+				justmoved = FALSE;
+			}
+			sleep 200;
+		}
+	}
+	return (0);
+}
+
+RequestState()
+{
+	while( !Busy_6 AND ReqState_3 != On_4 )
+	{
+		Busy_6 = 1;
+		if( ReqState_3 and !On_4 )
+		{
+			turn Lshoulder to x-axis <0> now;
+			turn Lshoulder to x-axis <-10> speed <59>;
+			turn Rshoulder to x-axis <0> now;
+			turn Rshoulder to x-axis <-10> speed <57>;
+			turn Rarm to x-axis <0> now;
+			turn Rarm to x-axis <-22> speed <120>;
+			turn Larm to x-axis <0> now;
+			turn Larm to x-axis <-22> speed <120>;
+			sleep 185;
+			turn Lshoulder to x-axis <-21> speed <48>;
+			turn Rshoulder to x-axis <-21> speed <47>;
+			turn Rarm to x-axis <-44> speed <98>;
+			turn Larm to x-axis <-44> speed <98>;
+			sleep 225;
+			turn Rarm to z-axis <33> speed <145>;
+			turn rlathe to z-axis <-63> speed <277>;
+			turn Larm to z-axis <-33> speed <145>;
+			turn llathe to z-axis <62> speed <272>;
+			sleep 230;
+			turn torso to x-axis <27> speed <121>;
+			turn Rarm to z-axis <20> speed <58>;
+			turn Larm to z-axis <-20> speed <58>;
+			sleep 240;
+			set INBUILDSTANCE to 1;
+			On_4 = 1;
+		}
+		if( !ReqState_3 and On_4 )
+		{
+			On_4 = 0;
+			set INBUILDSTANCE to 0;
+			turn torso to y-axis <0> speed <160>;
+			turn torso to x-axis <27.97> now;
+			turn torso to x-axis <0> speed <139>;
+			turn Lshoulder to x-axis <-21.89> now;
+			turn Rshoulder to x-axis <-21.28> now;
+			turn Rarm to x-axis <-44.40> now;
+			turn Rarm to z-axis <20.05> now;
+			turn Rarm to z-axis <33> speed <66>;
+			turn rlathe to z-axis <-63.85> now;
+			turn Larm to x-axis <-44.40> now;
+			turn Larm to z-axis <-20.05> now;
+			turn Larm to z-axis <-33> speed <66>;
+			turn llathe to z-axis <62.64> now;
+			sleep 200;
+			turn Rarm to z-axis <0> speed <167>;
+			turn rlathe to z-axis <0> speed <319>;
+			turn Larm to z-axis <0> speed <167>;
+			turn llathe to z-axis <0> speed <313>;
+			sleep 200;
+			turn Lshoulder to x-axis <-10> speed <54>;
+			turn Rshoulder to x-axis <-10> speed <53>;
+			turn Rarm to x-axis <-22> speed <111>;
+			turn Larm to x-axis <-22> speed <111>;
+			sleep 200;
+			turn Lshoulder to x-axis <0> speed <54>;
+			turn Rshoulder to x-axis <0> speed <53>;
+			turn Rarm to x-axis <0> speed <111>;
+			turn Larm to x-axis <0> speed <111>;
+			sleep 210;
+		}
+		Busy_6 = 0;
+	}
+	return (0);
+}
+
+Create()
+{
+	Nano_1 = 0;
+	Moving_2 = 0;
+	ReqState_3 = 0;
+	On_4 = 0;
+	Nanopiece_5 = 0;
+	Busy_6 = 0;
+	while( get BUILD_PERCENT_LEFT )
+	{
+		sleep 400;
+	}
+	start-script SmokeUnit();
+	start-script MotionControl();
+	return (0);
+}
+
+StartBuilding(Func_Var_1)
+{
+	Nano_1 = Func_Var_1;
+	ReqState_3 = 1;
+	turn torso to y-axis Nano_1 speed <160>;
+	start-script RequestState();
+	return (0);
+}
+
+StopBuilding()
+{
+	ReqState_3 = 0;
+	sleep 5000;
+	if( !ReqState_3 )
+	{
+		start-script RequestState();
+	}
+	return (0);
+}
+
+StartMoving()
+{
+	Moving_2 = 1;
+	return (0);
+}
+
+StopMoving()
+{
+	Moving_2 = 0;
+	return (0);
+}
+
+QueryNanoPiece(piecenum)
+{
+	piecenum = Nanopiece_5;
+	Nanopiece_5 = ( !Nanopiece_5 );
+	return (0);
+}
+
+TargetHeading(Func_Var_1)
+{
+	Nano_1 = ( 0 - Func_Var_1 );
+	return (0);
+}
+
+SweetSpot(piecenum)
+{
+	piecenum = torso;
+	return (0);
+}
+
+Killed(severity, corpsetype)
+{
+	if( severity <= 25 )
+	{
+		corpsetype = 1;
+		explode head type BITMAPONLY | BITMAP1;
+		explode hips type BITMAPONLY | BITMAP2;
+		explode Larm type BITMAPONLY | BITMAP3;
+		explode Lfoot type BITMAPONLY | BITMAP4;
+		explode llathe type BITMAPONLY | BITMAP5;
+		explode llathepoint type BITMAPONLY | BITMAP1;
+		explode Lleg type BITMAPONLY | BITMAP2;
+		explode Lshoulder type BITMAPONLY | BITMAP3;
+		explode Rarm type BITMAPONLY | BITMAP4;
+		explode Rfoot type BITMAPONLY | BITMAP5;
+		explode rlathe type BITMAPONLY | BITMAP1;
+		explode rlathepoint type BITMAPONLY | BITMAP2;
+		explode Rleg type BITMAPONLY | BITMAP3;
+		explode Rshoulder type BITMAPONLY | BITMAP4;
+		explode shield1 type BITMAPONLY | BITMAP5;
+		explode shield2 type BITMAPONLY | BITMAP1;
+		explode shield3 type BITMAPONLY | BITMAP2;
+		explode shield4 type BITMAPONLY | BITMAP3;
+		explode torso type BITMAPONLY | BITMAP4;
+		return (0);
+	}
+	if( severity <= 50 )
+	{
+		corpsetype = 2;
+		explode head type SHATTER | BITMAP1;
+		explode hips type FALL | BITMAP2;
+		explode Larm type FALL | BITMAP3;
+		explode Lfoot type FALL | BITMAP4;
+		explode llathe type FALL | BITMAP5;
+		explode llathepoint type FALL | BITMAP1;
+		explode Lleg type FALL | BITMAP2;
+		explode Lshoulder type FALL | BITMAP3;
+		explode Rarm type FALL | BITMAP4;
+		explode Rfoot type FALL | BITMAP5;
+		explode rlathe type FALL | BITMAP1;
+		explode rlathepoint type FALL | BITMAP2;
+		explode Rleg type FALL | BITMAP3;
+		explode Rshoulder type FALL | BITMAP4;
+		explode shield1 type BITMAPONLY | BITMAP5;
+		explode shield2 type BITMAPONLY | BITMAP1;
+		explode shield3 type BITMAPONLY | BITMAP2;
+		explode shield4 type BITMAPONLY | BITMAP3;
+		explode torso type BITMAPONLY | BITMAP4;
+		return (0);
+	}
+	corpsetype = 3;
+	if( severity <= 99 )
+	{
+		explode head type SHATTER | BITMAP1;
+		explode hips type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP2;
+		explode Larm type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP3;
+		explode Lfoot type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP4;
+		explode llathe type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP5;
+		explode llathepoint type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP1;
+		explode Lleg type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP2;
+		explode Lshoulder type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP3;
+		explode Rarm type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP4;
+		explode Rfoot type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP5;
+		explode rlathe type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP1;
+		explode rlathepoint type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP2;
+		explode Rleg type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP3;
+		explode Rshoulder type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP4;
+		explode shield1 type BITMAPONLY | BITMAP5;
+		explode shield2 type BITMAPONLY | BITMAP1;
+		explode shield3 type BITMAPONLY | BITMAP2;
+		explode shield4 type BITMAPONLY | BITMAP3;
+		explode torso type BITMAPONLY | BITMAP4;
+		return (0);
+	}
+	explode head type SHATTER | EXPLODE_ON_HIT | BITMAP1;
+	explode hips type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP2;
+	explode Larm type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP3;
+	explode Lfoot type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP4;
+	explode llathe type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP5;
+	explode llathepoint type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP1;
+	explode Lleg type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP2;
+	explode Lshoulder type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP3;
+	explode Rarm type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP4;
+	explode Rfoot type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP5;
+	explode rlathe type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP1;
+	explode rlathepoint type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP2;
+	explode Rleg type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP3;
+	explode Rshoulder type FALL | FIRE | SMOKE | EXPLODE_ON_HIT | BITMAP4;
+	explode shield1 type BITMAPONLY | BITMAP5;
+	explode shield2 type BITMAPONLY | BITMAP1;
+	explode shield3 type BITMAPONLY | BITMAP2;
+	explode shield4 type BITMAPONLY | BITMAP3;
+	explode torso type BITMAPONLY | BITMAP4;
+	return (0);
+}

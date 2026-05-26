@@ -1,0 +1,17 @@
+[corauwms_dead]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=core_corpses;
+	object=corauwms_dead;
+	footprintx=5;
+	footprintz=5;
+	height=40;
+	blocking=0;
+	hitdensity=100;
+	metal=1024;
+	damage=1045;
+	reclaimable=1;
+	featurereclamate=smudge01;
+	seqnamereclamate=tree1reclamate;
+	}

@@ -1,0 +1,774 @@
+/* Cannons.tdf -- Ballistic cannon weapons */
+
+/* Allowed IDs = 50-79 */
+
+
+[ARM_LIGHTCANNON]
+	{
+	ID=50;
+	name=Light Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+
+	range=240;
+	reloadtime=1.25;	//1.53
+	weaponvelocity=220;	//210 //190 //170
+	areaofeffect=32;
+	soundstart=canlite3;
+	soundhit=xplosml3;
+
+	explosiongaf=fx;
+	explosionart=explode4;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=75;	//50
+		}
+	}
+
+[CORE_LIGHTCANNON]
+	{
+	ID=51;
+	name=Light Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+
+	range=240;
+	reloadtime=1.25;	//1.53
+	weaponvelocity=220;	//210 //190 //170
+	areaofeffect=32;
+	soundstart=canlite3;
+	soundhit=xplosml3;
+
+	explosiongaf=fx;
+	explosionart=explode4;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=75;	//50
+		}
+	}
+
+[ARM_MEDIUMCANNON]
+	{
+	ID=52;
+	name=Plasma Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+
+	range=320;
+	reloadtime=1.25;		//1.4 //1.8
+	weaponvelocity=230;		//250 //230 //210
+	areaofeffect=48;
+	soundstart=cannon2;
+	soundhit=xplomed4;
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=90;		//112
+		}
+	}
+
+[CORE_MEDIUMCANNON]
+	{
+	ID=53;
+	name=Plasma Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+
+	range=320;
+	reloadtime=1.35;		//1.5 //1.9
+	weaponvelocity=230;		//250 //230 //220
+	areaofeffect=48;
+	soundstart=cannon2;
+	soundhit=xplomed4;
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=103;		//127
+		}
+	}
+
+[ARM_HAM]
+	{
+	ID=54;
+	name=Plasma Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	minbarrelangle=-35;
+
+	range=450;		//430 //425 //320
+	reloadtime=1.95;	//1.85 //1.95
+	weaponvelocity=270;	//270 //210
+	areaofeffect=48;
+	soundstart=cannon1;
+	soundhit=xplomed3;
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=75;	//85 //110
+		}
+	}
+
+[CORE_THUD]
+	{
+	ID=55;
+	name=Plasma Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	minbarrelangle=-35;
+
+	range=450;		//430 //425 //230
+	reloadtime=1.9;		//1.8 //1.9
+	weaponvelocity=270;	//210
+	areaofeffect=48;
+	soundstart=cannon1;
+	soundhit=xplomed3;
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=70;	//80 //105
+		}
+	}
+
+[ARM_BULL]
+	{
+	ID=56;
+	name=Plasma Cannon;
+	rendertype=4;
+//	ballistic=1;
+	lineofsight=1;
+	turret=1;
+
+	range=320;
+	reloadtime=1.5;		//1.4
+	weaponvelocity=400;	//390 //350 //330 //210
+	areaofeffect=48;
+	tolerance=500;
+	soundstart=cannon3;
+	soundhit=xplomed2;
+
+	explosiongaf=fx;
+	explosionart=explode2;		//explode3
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+	//tolerance=2000;
+
+	[DAMAGE]
+		{
+		default=230;
+		}
+	}
+
+[CORE_REAP]
+	{
+	ID=57;
+	name=Plasma Cannon;
+	rendertype=4;
+//	ballistic=1;
+	lineofsight=1;
+	turret=1;
+
+	range=320;
+	reloadtime=1.4;		//1.3
+	weaponvelocity=400;	//390 //350 //330 //210
+	areaofeffect=48;
+	tolerance=500;
+	soundstart=canlite1;		//cannon3
+	soundhit=xplomed2;		//xplomed2
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+	//tolerance=2000;
+
+	[DAMAGE]
+		{
+		default=220;		//143
+		}
+	}
+
+[ARM_ARTILLERY]
+	{
+	ID=58;
+	name=Plasma Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	minbarrelangle=-25;	
+
+	range=950;		//990 //620
+	reloadtime=2.75;
+	weaponvelocity=330;	//310
+	areaofeffect=60;	//96 //48
+	soundstart=cannhvy2;
+	soundhit=xplomed4;
+	accuracy=1000;		//2000
+
+	explosiongaf=fx;
+	explosionart=explode2;		//explode3
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=130;
+		}
+	}
+
+[CORE_ARTILLERY]
+	{
+	ID=59;
+	name=Plasma Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	minbarrelangle=-25;
+
+	range=950;		//990 //620
+	reloadtime=2.95;
+	weaponvelocity=330;	//310
+	areaofeffect=60;	//96 //48
+	soundstart=cannhvy2;
+	soundhit=xplomed4;
+	accuracy=1000;		//2000
+
+	explosiongaf=fx;
+	explosionart=explode2;		//explode3
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=140;
+		}
+	}
+
+
+[GAUSS]
+	{
+	ID=60;
+	name=Gauss Cannon;
+	rendertype=4;
+	ballistic=1;
+//	lineofsight=1;
+	turret=1;
+	minbarrelangle=-35;			//-15
+
+	range=900;				//500 //480
+	reloadtime=2.125;				//1.325 //2 //2.6
+	weaponvelocity=330;			//470 //450
+	areaofeffect=36;			//48 //8
+	soundstart=cannon1;
+	soundhit=xplomed3;
+	accuracy=1000;
+
+	//burst=3;
+	//burstrate=0.03;
+	//sprayangle=500;	
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=80;		//50 //150 //50 //60 //50
+		}
+	}
+
+
+[COR_GOL]
+	{
+	ID=62;
+	name=Heavy Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+
+	range=400;		//360 //400
+	reloadtime=1.6;		//1.5
+	weaponvelocity=330;	//310 //250
+	areaofeffect=64;
+	tolerance=500;
+	soundstart=cannhvy2;
+	soundhit=xplomed4;
+
+	explosiongaf=fx;
+	explosionart=explode2;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=260;		//280 //196
+		}
+	}
+
+
+[ARM_ROY]
+	{
+	ID=64;
+	name=Heavy Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	minbarrelangle=-25;
+
+	range=660;
+	reloadtime=2;
+	weaponvelocity=300;
+	areaofeffect=48;
+	soundstart=cannon3;
+	soundhit=xplomed2;
+
+	explosiongaf=fx;
+	explosionart=explode2;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=165;
+		}
+	}
+
+[CORE_ROY]
+	{
+	ID=65;
+	name=Heavy Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	minbarrelangle=-25;
+
+	range=660;
+	reloadtime=2.4;
+	weaponvelocity=300;
+	areaofeffect=48;
+	soundstart=cannhvy1;
+	soundhit=xplomed2;
+
+	explosiongaf=fx;
+	explosionart=explode2;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=180;
+		}
+	}
+
+[ARM_CRUS]
+	{
+	ID=66;
+	name=Cruiser Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	minbarrelangle=-25;
+
+	range=990;	//1300
+	reloadtime=2.4;		//2.9
+	weaponvelocity=350;
+	areaofeffect=64;
+	soundstart=cannhvy1;
+	soundhit=xplomed2;
+
+	explosiongaf=fx;
+	explosionart=explode2;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=228;	//208
+		}
+	}
+
+[COR_CRUS]
+	{
+	ID=67;
+	name=Cruiser Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	minbarrelangle=-25;
+
+	range=990;	//1300
+	reloadtime=2.5;	//3
+	weaponvelocity=350;
+	areaofeffect=64;
+	soundstart=cannhvy1;
+	soundhit=xplomed2;
+
+	explosiongaf=fx;
+	explosionart=explode2;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=240;	//220
+		}
+	}
+
+[ARM_BATS]
+	{
+	ID=68;
+	name=BattleShip Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	minbarrelangle=-25;
+
+	range=1220;	//1250
+	reloadtime=2.2;
+	weaponvelocity=390;	//350
+	areaofeffect=64;
+	soundstart=cannhvy1;
+	soundhit=xplomed2;
+
+	explosiongaf=fx;
+	explosionart=explode2;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=260;
+		}
+	}
+
+[COR_BATS]
+	{
+	ID=69;
+	name=BattleShip Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+	minbarrelangle=-25;
+
+	range=1220;	//1250
+	reloadtime=2.46;
+	weaponvelocity=390;	//350
+	areaofeffect=64;
+	soundstart=cannhvy1;
+	soundhit=xplomed2;
+
+	explosiongaf=fx;
+	explosionart=explode2;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=290;	//270
+		}
+	}
+
+[ARMFIXED_GUN]
+	{
+	ID=70;
+	name=Plasma Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+
+	range=1150;		//1200 //1250
+	reloadtime=3;
+	weaponvelocity=350;
+	areaofeffect=64;
+	soundstart=cannhvy5;
+	soundhit=xplomed2;
+
+	explosiongaf=fx;
+	explosionart=explode2;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=300;		//360
+		}
+	}
+
+
+[CORFIXED_GUN]
+	{
+	ID=71;
+	name=Plasma Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+
+	range=1150;			//1200
+	reloadtime=3;			//2.8
+	weaponvelocity=350;
+	areaofeffect=64;		//85
+	soundstart=cannhvy5;
+	soundhit=xplomed2;
+
+	explosiongaf=fx;
+	explosionart=explode2;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=300;		//360 //320
+		}
+	}
+
+[ARM_BERTHACANNON]
+	{
+	ID=72;
+	name=Bertha Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+
+	range=4096;
+	reloadtime=10;		//9 //7
+	weaponvelocity=800;
+	energypershot=2000;	//1500
+	areaofeffect=100;	//80
+
+	soundstart=xplonuk4;
+	soundhit=xplonuk1;
+
+	firestarter=50;
+	accuracy=675;		//625 //500
+	aimrate=2500;
+	tolerance=300;
+	holdtime=1;
+
+	explosiongaf=fx;
+	explosionart=NUKE1;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=2000;		//2300 //2000
+		ARMRAZ=1500;
+		ARMORCO=1500;
+		ARMFBOY=1500;
+		ARMCOB=1500;
+		ARMGOR=1500;
+		CORKETZ=1500;
+		CORJUGG=1500;
+		CORHELL=1500;
+		CORPULS=1500;
+		CORKROG=1500;
+		}
+	}
+
+[CORE_INTIMIDATOR]
+	{
+	ID=73;
+	name=Intimidator Cannon;
+	rendertype=4;
+	ballistic=1;
+	turret=1;
+
+	range=4096;		//5120
+	reloadtime=10.5;	//9.425 //9.375
+	weaponvelocity=800;	//1000
+	energypershot=2000;
+	areaofeffect=100;
+
+	soundstart=xplonuk3;
+	soundhit=xplonuk1;
+
+	firestarter=50;
+	accuracy=675;		//625 //1000
+	aimrate=2500;
+	tolerance=300;
+	holdtime=1;
+
+	explosiongaf=fx;
+	explosionart=NUKE1;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=2100;		//2400
+		ARMRAZ=1575;
+		ARMORCO=1575;
+		ARMFBOY=1575;
+		ARMCOB=1575;
+		ARMGOR=1575;
+		CORKETZ=1575;
+		CORJUGG=1575;
+		CORHELL=1575;
+		CORPULS=1575;
+		CORKROG=1575;
+		}
+	}

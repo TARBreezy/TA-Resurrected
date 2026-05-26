@@ -1,0 +1,76 @@
+[Corthovr_seadead]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=core_corpses;
+	object=Corthovr_dead;
+	featuredead=corthovr_smudge;
+	footprintx=4;
+	footprintz=4;
+	height=4;
+	blocking=0;
+	hitdensity=100;
+	metal=260;		//520
+	damage=864;
+	reclaimable=1;
+	featurereclamate=smudge01;
+	seqnamereclamate=tree1reclamate;
+	}
+
+[corthovr_smudge]
+	{
+	world=All Worlds;
+	description=Damaged Terrain;
+	category=smudges;
+	animating=0;
+	footprintx=0;
+	footprintz=0;
+	height=0;
+	filename=trees;
+	seqname=smudge02;
+	
+	featuredead=corthovr_landdead;
+	indestructible=1;
+
+	animtrans=1;
+	flamable=0;
+	reclaimable=0;
+	blocking=0;
+	hitdensity=0;
+	}
+
+[Corthovr_landdead]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=core_corpses;
+	object=Corthovr_dead;
+	footprintx=4;
+	footprintz=4;
+	height=20;
+	blocking=1;
+	hitdensity=100;
+	metal=260;		//520
+	damage=864;
+	reclaimable=1;
+	featurereclamate=smudge01;
+	seqnamereclamate=tree1reclamate;
+	}
+
+[Corthovr_dead]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=core_corpses;
+	object=Corthovr_dead;
+	footprintx=4;
+	footprintz=4;
+	height=20;
+	blocking=1;
+	hitdensity=100;
+	metal=260;		//520
+	damage=864;
+	reclaimable=1;
+	featurereclamate=smudge01;
+	seqnamereclamate=tree1reclamate;
+	}

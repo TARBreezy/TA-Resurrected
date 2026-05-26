@@ -1,0 +1,266 @@
+#define TA			// This is a TA script
+
+#include "sfxtype.h"
+#include "exptype.h"
+
+piece  Body, Turret, Gun, Barrel, Barrel1, Barrelflare, Gun1, Gun2,
+	   RBay, RBayDM, RBayDT, LBay, LBayDM, LBayDT,
+	   TacNuke, TacNukeP, missile, Body2, wake1, wake2;
+	
+static-var  gun_1, gun_3, restore_delay, restore_delay3, firing, launching;
+
+// Signal definitions
+#define SIG_AIM				2
+#define SIG_AIM_3			4
+#define SIG_MOVE			8
+
+
+SmokeUnit(healthpercent, sleeptime, smoketype)
+{
+	while( get BUILD_PERCENT_LEFT )
+	{
+		sleep 400;
+	}
+	while( TRUE )
+	{
+		healthpercent = get HEALTH;
+		if( healthpercent < 66 )
+		{
+			smoketype = 256 | 2;
+			if( Rand( 1, 66 ) < healthpercent )
+			{
+				smoketype = 256 | 1;
+			}
+			emit-sfx smoketype from Body;
+		}
+		sleeptime = healthpercent * 50;
+		if( sleeptime < 200 )
+		{
+			sleeptime = 200;
+		}
+		sleep sleeptime;
+	}
+}
+
+Create()
+{
+	Set ARMORED to 1;
+	gun_1 = Barrel;
+	gun_3 = missile;
+	hide Gun1;
+	hide Gun2;
+	hide Barrel1;
+	hide Barrelflare;
+	restore_delay = 12000;
+	restore_delay3 = 4000;
+	firing = 0;
+	start-script SmokeUnit();
+}
+
+RestoreAfterDelay()
+{
+	sleep restore_delay;
+	turn Turret to y-axis <0.000000> speed <50>;
+	turn Turret to x-axis <0.000000> speed <25>;
+	wait-for-turn Turret around y-axis;
+	move Barrel to z-axis [0] speed [30];
+	wait-for-move Barrel along z-axis;
+	move Turret to y-axis [0] speed [10];
+	move Gun to y-axis [0] speed [10];
+	sleep 50;
+	hide Barrel1;
+	sleep 50;
+	hide Gun2;
+	sleep 50;
+	hide Gun1;
+}
+
+RestoreAfterDelay3()
+{
+	sleep restore_delay3;
+	move RBayDM to x-axis [0] speed [3];
+	move LBayDM to x-axis [0] speed [3];
+	move RBayDM to y-axis [0] speed [3];
+	move LBayDM to y-axis [0] speed [3];	
+	wait-for-move RBayDM along y-axis;
+	wait-for-move LBayDM along y-axis;	
+	move RBayDM to x-axis [0] speed [5];
+	move LBayDM to x-axis [0] speed [5];	
+	wait-for-move RBayDM along x-axis;
+	wait-for-move LBayDM along x-axis;	
+	turn RBayDT to z-axis <0> speed <50>;
+	turn LBayDT to z-axis <0> speed <50>;	
+	wait-for-turn RBayDT around z-axis;
+	wait-for-turn LBayDT around z-axis;
+}
+
+StartMoving()
+{
+	signal SIG_MOVE;
+	set-signal-mask SIG_MOVE;
+	while( TRUE )
+	{
+		emit-sfx 2 from wake1;
+		emit-sfx 2 from wake2;
+		sleep 300;
+	}
+}
+
+StopMoving()
+{
+	signal SIG_MOVE;
+}
+
+AimPrimary(heading, pitch)
+{
+	signal SIG_AIM;
+	set-signal-mask SIG_AIM;
+	move Turret to y-axis [5] speed [10.000000];
+	move Gun to y-axis [5] speed [10.000000];
+	move Barrel to z-axis [10] speed [5.000000];
+	wait-for-move Gun along y-axis;
+	sleep 200;
+	turn Turret to y-axis heading speed <50>;
+	turn Turret to x-axis <0.000000> - pitch speed <25>;
+	wait-for-turn Turret around y-axis;
+	wait-for-turn Turret around x-axis;
+	wait-for-move Barrel along z-axis;
+	while(firing) //sleep while script-based reload is in process
+	{
+		sleep 10;
+	}
+	start-script RestoreAfterDelay();
+	return (1);
+}
+
+HideFlareAfterDelay()
+{
+	sleep 100;
+	hide Gun1;
+	hide Gun2;
+	hide Barrel1;
+	}
+
+FirePrimary()
+{
+	firing = 1;
+	start-script HideFlareAfterDelay();
+	firing = 0;
+	sleep 2500;
+	show Gun1;
+	sleep 2500;
+	show Gun2;
+	sleep 2500;
+	show Barrel1;
+	sleep 2500;
+}
+
+
+AimFromPrimary(piecenum)
+{
+	piecenum = Barrel;
+}
+
+QueryPrimary(piecenum)
+{
+	piecenum = Barrelflare;
+}
+
+AimTertiary(heading, pitch)
+{
+	signal SIG_AIM_3;
+	set-signal-mask SIG_AIM_3;
+	turn RBayDT to z-axis <-120> speed <50>;
+	turn LBayDT to z-axis <120> speed <50>;
+	wait-for-turn RBayDT around z-axis;
+	wait-for-turn LBayDT around z-axis;
+	move RBayDM to x-axis [2] speed [10];
+	move LBayDM to x-axis [-2] speed [10];
+	wait-for-move RBayDM along x-axis;
+	wait-for-move LBayDM along x-axis;
+	move RBayDM to y-axis [-5] speed [6];
+	move LBayDM to y-axis [-5] speed [6];
+	move RBayDM to x-axis [-2] speed [6];
+	move LBayDM to x-axis [2] speed [6];
+	wait-for-move RBayDM along x-axis;
+	wait-for-move LBayDM along x-axis;
+	sleep 700;
+	while( !gun_3 )
+	{
+		sleep 250;
+	}
+	start-script RestoreAfterDelay3();
+	return (1);
+}
+
+FireTertiary()
+{
+	launching = 1;
+	hide missile;
+	sleep 90000;
+	show missile;
+}
+
+QueryTertiary(piecenum)
+{
+	piecenum = TacNukeP;
+}
+
+SweetSpot(piecenum)
+{
+	piecenum = Body;
+}
+
+Killed(severity, corpsetype)
+{
+	if( severity <= 25 )
+	{
+		corpsetype = 1;
+		explode Turret type BITMAPONLY | BITMAP1;
+		explode Gun type BITMAPONLY | BITMAP2;
+		explode Body type BITMAPONLY | BITMAP2;
+		explode Body2 type BITMAPONLY | BITMAP2;
+		explode wake1 type BITMAPONLY | BITMAP1;
+		explode wake2 type BITMAPONLY | BITMAP2;
+		explode RBay type BITMAPONLY | BITMAP3;
+		explode LBay type BITMAPONLY | BITMAP3;
+		explode RBayDM type BITMAPONLY | BITMAP4;
+		explode LBayDM type BITMAPONLY | BITMAP4;
+		explode RBayDT type BITMAPONLY | BITMAP5;
+		explode LBayDT type BITMAPONLY | BITMAP5;
+		explode missile type BITMAPONLY | BITMAP1;
+		return (0);
+	}
+	if( severity <= 50 )
+	{
+		corpsetype = 2;
+		explode Turret type FALL | EXPLODE_ON_HIT | BITMAP1;
+		explode Gun type FALL | EXPLODE_ON_HIT | BITMAP2;
+		explode Body type BITMAPONLY | BITMAP2;
+		explode Body2 type BITMAPONLY | BITMAP2;
+		explode wake1 type FALL | EXPLODE_ON_HIT | BITMAP1;
+		explode wake2 type FALL | EXPLODE_ON_HIT | BITMAP2;
+		explode RBay type FALL | EXPLODE_ON_HIT | BITMAP3;
+		explode LBay type FALL | EXPLODE_ON_HIT | BITMAP3;
+		explode RBayDM type FALL | EXPLODE_ON_HIT | BITMAP4;
+		explode LBayDM type FALL | EXPLODE_ON_HIT | BITMAP4;
+		explode RBayDT type FALL | EXPLODE_ON_HIT | BITMAP5;
+		explode LBayDT type FALL | EXPLODE_ON_HIT | BITMAP5;
+		explode missile type FALL | EXPLODE_ON_HIT | BITMAP1;
+		return (0);
+	}
+	corpsetype = 3;
+	explode Turret type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+	explode Gun type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+	explode Body type BITMAPONLY | BITMAP2;
+	explode Body2 type BITMAPONLY | BITMAP2;
+	explode wake1 type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+	explode wake2 type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+	explode RBay type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+	explode LBay type FALL | EXPLODE_ON_HIT | BITMAP3;
+	explode RBayDM type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+	explode LBayDM type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+	explode RbayDT type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+	explode LbayDT type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+	explode missile type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+}

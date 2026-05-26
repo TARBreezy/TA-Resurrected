@@ -1,0 +1,38 @@
+[CORJUGG_DEAD]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=CORE_corpses;
+	object=CORJUGG_DEAD;
+	featuredead=CORJUGG_HEAP;
+	footprintx=3;
+	footprintz=3;
+	height=8;
+	blocking=1;
+	hitdensity=600;
+	metal=11796;
+	damage=8847;
+	reclaimable=1;
+	featurereclamate=smudge01;
+	seqnamereclamate=tree1reclamate;
+	}
+
+[CORJUGG_HEAP]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=heaps;
+	object=4x4a;
+	footprintx=3;
+	footprintz=3;
+	height=2;
+	blocking=0;
+	hitdensity=100;
+	Metal=5898;
+	Damage=4424;
+	reclaimable=1;
+
+	featurereclamate=smudge01;
+	seqnamereclamate=tree1reclamate;
+	}
+

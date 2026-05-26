@@ -1,0 +1,108 @@
+[HELL_RANGE]
+	{
+	ID=250;
+	name=LRM;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+
+	model=corvrocket;
+
+	range=1250;
+	reloadtime=1;
+	noautorange=1;
+	flighttime=5;		//10
+	weapontimer=0.8;		//2 //4			
+	weaponvelocity=750;		//750 //1000
+	startvelocity=500;		//250
+	weaponacceleration=250;		//75
+	turnrate=99000;			//73152 //24384
+	areaofeffect=96;
+
+	soundstart=Rockhvy1;
+	soundhit=xplomed4;
+
+	firestarter=100;
+	smokedelay=.1;
+	selfprop=1;
+	
+	twophase=1;
+	guidance=1;
+	tracks=1;
+	guidance=1;
+	selfprop=1;
+	smoketrail=1;
+	cruise=1;
+	tolerance=4000;
+
+	explosiongaf=fx;
+	explosionart=explosion;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=500;
+		}
+	}
+	
+[HELL_DOM]
+	{
+	ID=251;
+	name=Heavy Rockets;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+
+	model=missile;
+
+	range=540;
+	reloadtime=0.3;
+
+	noautorange=1;
+	weapontimer=1;		//3
+	flighttime=1;
+
+	weaponvelocity=1000;
+	startvelocity=250;		//250
+	weaponacceleration=150;		//250 //75
+	turnrate=85152;
+	areaofeffect=60;
+	edgeeffectiveness=0.5;
+
+	//soundstart=rockhvy2;
+	//soundhit=xplomed2;
+	soundstart=rocklit1;
+	soundhit=xplosml2;
+
+	firestarter=100;
+	smokedelay=.1;
+	selfprop=1;
+	//smoketrail=1;
+	twophase=1;
+	guidance=1;
+	tracks=1;
+	tolerance=10000;
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=90;		//100
+		}
+	}	

@@ -1,0 +1,36 @@
+[ARMORION_BOMBE]
+	{
+	ID=248;
+	name=Bombs;
+	rendertype=6;
+	dropped=1;
+
+	model=CorTacNuke;		//bomb
+
+	range=1600;			//3000
+	reloadtime=30;			//.10
+	areaofeffect=384;		//130
+	edgeeffectiveness=0.8;		//0.75
+	soundstart=bombrel;
+	soundhit=xplomed4;
+	commandfire=1;
+
+	explosiongaf=commboom;
+	explosionart=commboom;
+	
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	//metal=100;
+	//energy=500;
+
+	[DAMAGE]
+		{
+		default=4000;
+		ARMCOM=2750;
+		CORCOM=2750;
+		}
+	}

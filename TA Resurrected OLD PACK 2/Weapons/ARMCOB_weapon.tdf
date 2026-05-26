@@ -1,0 +1,108 @@
+[RAILGUN]
+	{
+	ID=232;
+	name=Heavy Railgun;
+	rendertype=7;
+	lineofsight=1;
+	turret=1;
+
+	range=2048;		//1475
+	reloadtime=9; 		//5
+	energypershot=2000; 
+     	weaponvelocity=1100;		//1200
+	areaofeffect=100;		//32 
+      
+	duration=0.075;		//0.25
+	soundstart=mesonfire;
+	soundhit=railghit;
+
+	firestarter=0;
+	beamweapon=1;
+	color=128;		//128/* Light Blue */
+	color2=129;		//130
+//	color=140;		//140	/* Blue */ 
+//	color2=150;		//150
+	tolerance=500;
+ 	pitchtolerance=250;
+
+//	explosiongaf=gzfx;   
+//	explosionart=fusionhit1; 
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom1;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashsm;
+
+	[DAMAGE]
+		{
+		default=1600; 		//1200 //2500
+		}
+	}
+
+[COB_ROCKET]			//ARMEMP_WEAPON
+	{
+	ID=233;
+	name=EMP Weapon;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+	paralyzer=1;
+
+	model=empmisl;
+
+	range=3072;		//2048
+	reloadtime=90;
+
+	noautorange=1;
+	weapontimer=5;
+	flighttime=400;
+
+	weaponvelocity=350;
+	weaponacceleration=50;
+	turnrate=32768;
+	areaofeffect=512;
+	edgeeffectiveness=0.80;
+
+	energypershot=25000;		//10000
+	//metalpershot=1000;
+
+	//stockpile=1;
+	targetable=1;
+	commandfire=1;
+	cruise=1;
+
+	soundstart=misicbm1;
+	soundhit=xplomed4;
+
+	firestarter=100;
+	smokedelay=.1;
+	selfprop=1;
+	smoketrail=1;
+	propeller=1;
+
+	twophase=1;
+	guidance=1;
+	tolerance=4000;
+
+	shakemagnitude=24;
+	shakeduration=1.5;
+
+	explosiongaf=empboom;
+	explosionart=empboom;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=1800;		//1
+		armcom=1;
+		corcom=1;
+		}
+	}	

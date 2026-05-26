@@ -1,0 +1,66 @@
+[ARMEMP_WEAPON]
+	{
+	ID=139;
+	name=Atomic Blast Weapon;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+	paralyzer=1;
+
+	model=empmisl;
+
+	range=32000;
+	reloadtime=150;		//130
+
+	noautorange=1;
+	weapontimer=5;
+	flighttime=400;
+
+	weaponvelocity=350;
+	weaponacceleration=50;
+	turnrate=32768;
+	areaofeffect=512;		//384 //362 //512
+	edgeeffectiveness=0.8;		//0.5 //0.8
+
+	energypershot=112500;		//90000 //18000
+	metalpershot=1200;		//1000
+
+	stockpile=1;
+	targetable=1;
+	commandfire=1;
+	cruise=1;
+
+	soundstart=misicbm1;
+	soundhit=xplomed4;
+
+	firestarter=100;
+	smokedelay=.1;
+	selfprop=1;
+	smoketrail=1;
+	propeller=1;
+
+	twophase=1;
+	guidance=1;
+	tolerance=4000;
+
+	shakemagnitude=24;
+	shakeduration=1.5;
+
+	explosiongaf=empboom;
+	explosionart=empboom;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=1800;		//10000
+		armcom=1;
+		corcom=1;
+		}
+	}

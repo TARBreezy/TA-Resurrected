@@ -1,0 +1,439 @@
+#define TA			// This is a TA script
+
+#include "sfxtype.h"
+#include "exptype.h"
+
+piece	Flare0, Flare1, Flare2, Flare3, FlareM,  
+		Base, Body, LHF, LLF, LFF, LHM, LLM, LFM, 
+		LHR, LLR, LFR, RHF, RLF, RFF, RHM, RLM, 
+		RFM, RHR, RLR, RFR, Neck, Turret, Energy,
+		Glow, WTBL, WTL, WTBR, WTR;
+
+
+static-var	G1Pos, G2Pos, MovingStraight, Moving, LeftFootTurnDeg, FootTurnSpd, LeftLegTurnDeg,
+			LegTurnSpd, LeftHipTurnDeg, HipTurnSpd, LeftTurnRateDeg, TurnRateSpd, Restore_Delay, Restore_Delay2,
+			Restore_Delay3, guns_1, guns_2, RightFootTurnDeg, RightLegTurnDeg, RightHipTurnDeg, RightTurnRateDeg;
+
+// Signal definitions
+#define SIG_AIM				2
+#define SIG_AIM_2			4
+#define SIG_AIM_3			8
+
+
+SmokeUnit(healthpercent, sleeptime, smoketype)
+{
+	while( TRUE )
+	{
+		healthpercent = get HEALTH;
+		if( healthpercent < 66 )
+		{
+			smoketype = 256 | 2;
+			if(Rand( 1, 66 ) < healthpercent )
+			{
+				smoketype = 256 | 1;
+			}
+			emit-sfx smoketype from Body;
+		}
+		sleeptime = healthpercent * 50;
+		if( sleeptime < 200 )
+		{
+			sleeptime = 200;
+		}
+		sleep sleeptime;
+	}
+	return (0);
+}
+																				
+MotionControl()
+{
+	while( TRUE )																
+	{
+		If (MovingStraight)
+		{														
+			If (Moving == 1 )
+			{
+				If (G1Pos == 1 && G2Pos == 0)
+				{
+					turn LHF to y-axis <0> speed HipTurnSpd;
+					turn LHR to y-axis <0> speed HipTurnSpd;
+					turn RHM to y-axis <0> speed HipTurnSpd;
+					turn RHF to y-axis RightHipTurnDeg speed HipTurnSpd;
+					turn RHR to y-axis RightHipTurnDeg speed HipTurnSpd;
+					turn LHM to y-axis LeftHipTurnDeg speed HipTurnSpd;
+					sleep 300;
+					turn RFF to z-axis RightFootTurnDeg speed FootTurnSpd;
+					turn RFR to z-axis RightFootTurnDeg speed FootTurnSpd;
+					turn LFM to z-axis LeftFootTurnDeg speed FootTurnSpd;
+					turn RLF to z-axis RightLegTurnDeg speed LegTurnSpd;
+					turn RLR to z-axis RightLegTurnDeg speed LegTurnSpd;
+					turn LLM to z-axis LeftLegTurnDeg speed LegTurnSpd;
+					turn RHF to y-axis RightHipTurnDeg speed HipTurnSpd;
+					turn RHR to y-axis RightHipTurnDeg speed HipTurnSpd;
+					turn LHM to y-axis LeftHipTurnDeg speed HipTurnSpd;
+					sleep 300;
+					turn RLF to z-axis <0> speed LegTurnSpd;
+					turn RLR to z-axis <0> speed LegTurnSpd;
+					turn LLM to z-axis <0> speed LegTurnSpd;
+					turn RFF to z-axis <0> speed FootTurnSpd;
+					turn RFR to z-axis <0> speed FootTurnSpd;
+					turn LFM to z-axis <0> speed FootTurnSpd;
+					sleep 300;			
+					G1Pos = 0;
+					G2Pos = 1;
+				}
+				If (G1Pos == 0 && G2Pos == 1)
+				{	
+					turn LHF to y-axis LeftHipTurnDeg speed HipTurnSpd;
+					turn LHR to y-axis LeftHipTurnDeg speed HipTurnSpd;
+					turn RHM to y-axis RightHipTurnDeg speed HipTurnSpd;
+					turn RHF to y-axis <0> speed HipTurnSpd;
+					turn RHR to y-axis <0> speed HipTurnSpd;
+					turn LHM to y-axis <0> speed HipTurnSpd;
+					sleep 300;
+					turn LFF to z-axis LeftFootTurnDeg speed FootTurnSpd;
+					turn LFR to z-axis LeftFootTurnDeg speed FootTurnSpd;
+					turn RFM to z-axis RightFootTurnDeg speed FootTurnSpd;
+					turn LLF to z-axis LeftLegTurnDeg speed LegTurnSpd;
+					turn LLR to z-axis LeftLegTurnDeg speed LegTurnSpd;
+					turn RLM to z-axis RightLegTurnDeg speed LegTurnSpd;
+					turn LHF to y-axis LeftHipTurnDeg speed HipTurnSpd;
+					turn LHR to y-axis LeftHipTurnDeg speed HipTurnSpd;
+					turn RHM to y-axis RightHipTurnDeg speed HipTurnSpd;
+					sleep 300;
+					turn LLF to z-axis <0> speed LegTurnSpd;
+					turn LLR to z-axis <0> speed LegTurnSpd;
+					turn RLM to z-axis <0> speed LegTurnSpd;
+					turn LFF to z-axis <0> speed FootTurnSpd;
+					turn LFR to z-axis <0> speed FootTurnSpd;
+					turn RFM to z-axis <0> speed FootTurnSpd;
+					sleep 300;
+					G1Pos = 1;
+					G2Pos = 0;
+				}			
+			}
+			If (Moving == 0)
+			{	
+				If (G1Pos == 1 && G2Pos == 0)
+				{
+					turn LFF to z-axis <0> speed FootTurnSpd;
+					turn LFR to z-axis <0> speed FootTurnSpd;
+					turn RFM to z-axis <0> speed FootTurnSpd;
+					turn LFF to z-axis <0> speed FootTurnSpd;
+					turn LFR to z-axis <0> speed FootTurnSpd;
+					turn RFM to z-axis <0> speed FootTurnSpd;
+					turn LLF to z-axis <0> speed LegTurnSpd;
+					turn LLR to z-axis <0> speed LegTurnSpd;
+					turn RLM to z-axis <0> speed LegTurnSpd;
+					turn LLF to z-axis <0> speed LegTurnSpd;
+					turn LLR to z-axis <0> speed LegTurnSpd;
+					turn RLM to z-axis <0> speed LegTurnSpd;
+					turn LHF to y-axis <0> speed HipTurnSpd;
+					turn LHM to y-axis <0> speed HipTurnSpd;
+					turn LHR to y-axis <0> speed HipTurnSpd;
+					turn RHF to y-axis <0> speed HipTurnSpd;
+					turn RHM to y-axis <0> speed HipTurnSpd;
+					turn RHR to y-axis <0> speed HipTurnSpd;
+
+				}
+			sleep 50;
+			}
+		}
+	}
+}
+
+Create()
+{
+	set ARMORED to 1;
+	hide Flare0;
+	hide Flare1;
+	hide Flare2;
+	hide Flare3;
+	hide FlareM;
+	dont-cache glow;
+	dont-shade glow;
+	G1Pos = 1;
+	G2Pos = 0;
+	guns_1 = 0;
+	guns_2 = 2;
+	MovingStraight = 1;
+	Moving = 0;
+	LeftFootTurnDeg = <30>;
+	RightFootTurnDeg = <-30>;
+	FootTurnSpd = <30>;
+	LeftLegTurnDeg = <60>;
+	RightLegTurnDeg = <-60>;
+	LegTurnSpd = <60>;
+	LeftHipTurnDeg = <25>;
+	RightHipTurnDeg = <-25>;
+	HipTurnSpd = <25>;
+	Restore_Delay3 = 9000;
+	Restore_Delay2 = 3999;
+	Restore_Delay = 4001;
+	while( get BUILD_PERCENT_LEFT )
+	{
+		sleep 400;
+	}
+	start-script MotionControl();
+	start-script SmokeUnit();
+	return(0);
+}
+
+StartMoving()
+{
+	Moving = 1;
+	return (0);
+}
+
+StopMoving()
+{
+	Moving = 0;
+	return (0);
+}
+
+RestoreAfterDelay()
+{
+	sleep Restore_Delay;
+	turn WTBL to y-axis <0> speed <75>;
+	turn WTL to x-axis <0> speed <45>;
+	wait-for-turn WTBL around y-axis;
+	wait-for-turn WTL around x-axis;
+}
+
+RestoreAfterDelay2()
+{
+	sleep Restore_Delay2;
+	turn WTBR to y-axis <0> speed <75>;
+	turn WTR to x-axis <0> speed <45>;
+	wait-for-turn WTBR around y-axis;
+	wait-for-turn WTR around x-axis;
+}
+
+RestoreAfterDelay3()
+{
+	sleep Restore_Delay3;
+	turn Turret to y-axis <0> speed <50>;
+	turn Turret to x-axis <0> speed <25>;
+	wait-for-turn Turret around y-axis;
+	wait-for-turn Turret around x-axis;	
+}
+
+AimFromPrimary(piecenum)
+{
+	if(guns_1 == 0)
+	{
+		piecenum = Flare0;
+	}
+	if(guns_1 == 1)
+	{
+		piecenum = Flare1;
+	}
+}
+
+QueryPrimary(piecenum)
+{
+	piecenum = guns_1;
+}
+
+AimPrimary(heading, pitch)
+{
+	signal SIG_AIM;
+	set-signal-mask SIG_AIM;
+	turn WTBL to y-axis heading speed <150>;
+	turn WTL to x-axis <0> - pitch speed <90>;
+	wait-for-turn WTBL around y-axis;
+	wait-for-turn WTL around x-axis;
+	start-script RestoreAfterDelay();
+	return (1);
+}
+
+FirePrimary()
+{
+	++guns_1;
+	if( guns_1 > 1 )
+	{
+		guns_1 = 0;
+	}
+}
+
+AimFromSecondary(piecenum)
+{
+	if(guns_2 == 2)
+	{
+		piecenum = Flare2;
+	}
+	if(guns_2 == 3)
+	{
+		piecenum = Flare3;
+	}
+}
+
+QuerySecondary(piecenum)
+{
+	piecenum = guns_2;
+}
+
+AimSecondary(heading, pitch)
+{
+	signal SIG_AIM_2;
+	set-signal-mask SIG_AIM_2;
+	turn WTBR to y-axis heading speed <150>;
+	turn WTR to x-axis <0> - pitch speed <90>;
+	wait-for-turn WTBR around y-axis;
+	wait-for-turn WTR around x-axis;
+	start-script RestoreAfterDelay2();
+	return (1);
+}
+
+FireSecondary()
+{
+	++guns_2;
+	if( guns_2 > 3 )
+	{
+		guns_2 = 2;
+	}
+}
+
+AimFromTertiary(piecenum)
+{
+	piecenum = FlareM;
+}
+
+QueryTertiary(piecenum)
+{
+	piecenum = FlareM;
+}
+
+AimTertiary(heading, pitch)
+{
+	signal SIG_AIM_3;
+	set-signal-mask SIG_AIM_3;
+	turn Turret to y-axis heading speed <100>;
+	turn Turret to x-axis <0> - pitch speed <50>;
+	wait-for-turn Turret around y-axis;
+	wait-for-turn Turret around x-axis;
+	start-script RestoreAfterDelay3();
+	return (1);
+}
+
+FireTertiary()
+{
+}
+
+SweetSpot(piecenum)
+{
+	piecenum = Body;
+}
+
+Killed(severity, corpsetype)
+{
+	hide Flare0;
+	hide Flare1;
+	hide Flare2;
+	hide Flare3;
+	hide FlareM;
+	if( severity <= 25 )
+	{
+		corpsetype = 1;
+		explode Body type BITMAPONLY | BITMAP1;
+		explode LHF type BITMAPONLY | BITMAP2;
+		explode RHF type BITMAPONLY | BITMAP3;
+		explode LHM type BITMAPONLY | BITMAP4;
+		explode RHM type BITMAPONLY | BITMAP5;
+		explode LHR type BITMAPONLY | BITMAP1;
+		explode RHR type BITMAPONLY | BITMAP2;
+		explode LLF type BITMAPONLY | BITMAP3;
+		explode RLF type BITMAPONLY | BITMAP4;
+		explode LLM type BITMAPONLY | BITMAP5;
+		explode RLM type BITMAPONLY | BITMAP1;
+		explode LLR type BITMAPONLY | BITMAP2;
+		explode RLR type BITMAPONLY | BITMAP3;
+		explode Neck type BITMAPONLY | BITMAP4;
+		explode Turret type BITMAPONLY | BITMAP5;
+		explode Energy type BITMAPONLY | BITMAP1;
+		explode Glow type BITMAPONLY | BITMAP2;
+		explode WTBL type BITMAPONLY | BITMAP3;
+		explode WTL type BITMAPONLY | BITMAP4;
+		explode WTBR type BITMAPONLY | BITMAP5;
+		explode WTR type BITMAPONLY | BITMAP1;
+		explode Base type BITMAPONLY | BITMAP2;
+		return (0);
+	}
+	if( severity <= 50 )
+	{
+		corpsetype = 2;
+		explode LHF type FALL | BITMAP1;
+		explode RHF type FALL | BITMAP2;
+		explode LHM type FALL | BITMAP3;
+		explode RHM type FALL | BITMAP4;
+		explode LHR type FALL | BITMAP5;
+		explode RHR type FALL | BITMAP1;
+		explode LLF type FALL | BITMAP2;
+		explode RLF type FALL | BITMAP3;
+		explode LLM type FALL | BITMAP4;
+		explode RLM type FALL | BITMAP5;
+		explode LLR type FALL | BITMAP1;
+		explode RLR type FALL | BITMAP2;
+		explode Neck type FALL | BITMAP3;
+		explode Turret type FALL | BITMAP4;
+		explode Energy type FALL | BITMAP5;
+		explode Glow type FALL | BITMAP1;
+		explode WTBL type FALL | BITMAP2;
+		explode WTL type FALL | BITMAP3;
+		explode WTBR type FALL | BITMAP4;
+		explode WTR type FALL | BITMAP5;
+		explode Base type FALL | BITMAP1;
+		explode Body type SHATTER | BITMAP2;
+		return (0);
+	}
+	if( severity <= 99 )
+	{
+		corpsetype = 3;
+		explode LHF type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+		explode RHF type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+		explode LHM type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+		explode RHM type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+		explode LHR type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+		explode RHR type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+		explode LLF type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+		explode RLF type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+		explode LLM type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+		explode RLM type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+		explode LLR type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+		explode RLR type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+		explode Neck type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+		explode Turret type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+		explode Energy type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+		explode Glow type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+		explode WTBL type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+		explode WTL type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+		explode WTBR type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+		explode WTR type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+		explode Base type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+		explode Body type SHATTER | BITMAP2;
+		return (0);
+	}
+	corpsetype = 3;
+		explode LHF type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+		explode RHF type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+		explode LHM type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+		explode RHM type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+		explode LHR type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+		explode RHR type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+		explode LLF type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+		explode RLF type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+		explode LLM type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+		explode RLM type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+		explode LLR type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+		explode RLR type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+		explode Neck type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+		explode Turret type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+		explode Energy type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+		explode Glow type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+		explode WTBL type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+		explode WTL type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+		explode WTBR type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+		explode WTR type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+		explode Base type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+		explode Body type SHATTER | BITMAP2;
+}
+

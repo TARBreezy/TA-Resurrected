@@ -1,0 +1,39 @@
+[CORRAILGUN]
+	{
+	ID=182;
+	name=Tri-Dimensional Railgun;
+	rendertype=1;
+	lineofsight=1;
+	turret=1;
+
+	model=corrailshot;
+	//propeller=1;
+
+	range=1536;		//2048
+	reloadtime=9;
+	weapontimer=2;		//6
+	weaponvelocity=1050;
+	//startvelocity=1200;
+	//weaponacceleration=60;
+	energypershot=2000;
+	areaofeffect=100;		//32	
+	soundstart=mesonfire;		//flamhit1
+	soundhit=lashit;
+	burst=5;
+	burstrate=.02;
+	//duration=1.1;
+	tracks=1;
+	//selfprop=1;
+	burnblow=1;
+	groundbounce=1;
+	//unitsonly=1;
+	beamweapon=1;
+
+	tolerance=500;
+ 	pitchtolerance=250;
+
+	[DAMAGE]
+		{
+		default=360;		//320 //240
+		}
+	}

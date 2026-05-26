@@ -1,0 +1,65 @@
+[CORTNUKKY]
+	{
+	ID=140;
+	name=Rocket;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+
+	model=CorTacNuke;
+
+	range=2560;		//3072
+	reloadtime=150;		//180 //150
+
+	noautorange=1;
+	weapontimer=5;
+	flighttime=400;
+
+	weaponvelocity=350;
+	weaponacceleration=50;
+	turnrate=32768;
+	areaofeffect=384;		//320 //384 //448
+	edgeeffectiveness=0.5;
+
+	energypershot=75000;		//90000 //67500
+	metalpershot=750;		//900 //600
+
+	stockpile=1;
+	targetable=1;
+	commandfire=1;
+	cruise=1;
+
+	soundstart=misicbm1;
+	soundhit=xplomed4;
+
+	firestarter=100;
+	smokedelay=.1;
+	selfprop=1;
+	smoketrail=1;
+	propeller=1;
+
+	twophase=1;
+	guidance=1;
+	tolerance=4000;
+
+	shakemagnitude=24;
+	shakeduration=1.5;
+
+	explosiongaf=commboom;
+	explosionart=commboom;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=3500;		//2500
+		ARMCOM=2000;
+		CORCOM=2000;
+		}
+	}

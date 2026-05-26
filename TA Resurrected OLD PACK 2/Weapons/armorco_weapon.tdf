@@ -1,0 +1,73 @@
+[ARMORCO_FIRE]
+	{
+	ID=221;
+	name=Plasma Cannon;
+	rendertype=4;
+	lineofsight=1;
+	turret=1;
+
+	range=500;
+	reloadtime=0.5;	
+	weaponvelocity=410;	//375
+	areaofeffect=200;	//48
+	soundstart=cannhvy1;
+	soundhit=xplomed4;
+
+	tolerance=1000;		//500
+ 	pitchtolerance=500;
+
+	explosiongaf=fx;
+	explosionart=explode2;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+	
+	[DAMAGE]
+		{
+		default=250;		//150
+		}
+	}
+
+[ARMORCO_LASER]
+	{
+	ID=222;
+	name=High Energy Laser;
+	rendertype=0;
+	lineofsight=1;
+	turret=1;
+
+	range=500;
+	reloadtime=0.5;
+	energypershot=100;		//500
+	weaponvelocity=900;		//900
+	areaofeffect=12;
+	soundstart=lasrhvy3;
+	soundhit=lasrhit1;
+
+	firestarter=90;
+	beamweapon=1;
+	tolerance=1000;		//500
+ 	pitchtolerance=500;
+
+	color=144;	//144 /* PURPLE */
+	color2=217;	//217
+
+	explosiongaf=fx;
+	explosionart=explode5;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom1;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashsm;
+
+	[DAMAGE]
+		{
+		default=50;		//300
+		}
+	}

@@ -1,0 +1,52 @@
+[ARMMH_WEAPON]
+	{
+	ID=197;
+	name=Rocket;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+
+	model=armmhmsl;
+
+	range=850;	//670
+	reloadtime=9;	//8 //9
+
+	noautorange=1;
+	weapontimer=2;		//4 //5
+	flighttime=5;		//10
+
+	weaponvelocity=750;		//1000 //750 //400
+	startvelocity=250;
+	weaponacceleration=75;		//40
+	turnrate=24384;
+	areaofeffect=80;
+
+	soundstart=Rockhvy1;
+	soundhit=xplomed4;
+
+	firestarter=100;
+	smokedelay=.1;
+	selfprop=1;
+	smoketrail=1;
+	cruise=1;
+
+	twophase=1;
+	guidance=1;
+	tolerance=4000;
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=400;	//300
+		}
+	}

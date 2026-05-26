@@ -1,0 +1,44 @@
+[UNITINFO]
+	{
+	UnitName=ARMAESTOR;
+	Version=1;
+	Side=ARM;
+	Objectname=ARMAESTOR;
+	Designation=AE-ESF;
+	Name=Adv. Energy Storage;
+	Description=Increases Energy Storage [15000];
+	FootprintX=5;
+	FootprintZ=5;
+	BuildCostEnergy=7290;		//2430 x3
+	BuildCostMetal=720;		//240  x3		
+	MaxDamage=1750;			//1000 x1.75
+	MaxWaterDepth=0;
+	MaxSlope=10;
+	EnergyUse=0;
+	BuildTime=25420;		//12710 x2
+	WorkerTime=0;
+	BMcode=0;
+	Builder=0;
+	ThreeD=1;
+	ZBuffer=1;
+	NoAutoFire=0;
+	SightDistance=210;
+	RadarDistance=0;
+	SoundCategory=ARM_ESTOR;
+	EnergyStorage=15000;
+	MetalStorage=0;
+	ExplodeAs=ESTOR_BUILDINGEX;
+	SelfDestructAs=CRAWL_BLASTSML;
+	Category=ARM ENERGY LEVEL2 NOWEAPON NOTAIR NOTSUB STORAGE BUILDING;
+	TEDClass=ENERGY;
+	Copyright=Copyright 1997 Humongous Entertainment. All rights reserved.;
+	YardMap=oooooooooooooooo;
+	Corpse=armaestor_dead;
+	GermanName=Energiespeicher;
+	GermanDescription=Vergrößert Lager für Energievorräte;
+	UnitNumber=10027;
+	FrenchName=Dépôt d'énergie;
+	Frenchdescription=Augmente le stockage d'énergie;
+	buildangle=4096;
+	ActivateWhenBuilt=1;
+	}

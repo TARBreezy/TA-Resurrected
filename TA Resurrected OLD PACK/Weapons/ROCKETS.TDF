@@ -1,0 +1,528 @@
+/* Rockets.tdf -- Rocket weapons */
+
+/* Allowed IDs = 120-139 */
+
+
+[KBOT_ROCKET]
+	{
+	ID=120;
+	name=Rockets;
+	rendertype=1;
+	lineofsight=1;
+	turret=1;
+
+	model=missile;
+
+	range=400;
+	reloadtime=4;
+	weapontimer=3;		//2
+	weaponvelocity=350;	//250
+	startvelocity=300;	//250
+	weaponacceleration=120;
+	areaofeffect=48;
+	metalpershot=0;
+
+	soundstart=rocklit1;
+	soundhit=xplosml2;
+
+	firestarter=70;
+	smokedelay=.1;
+	selfprop=1;
+	smoketrail=1;
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=105;
+		}
+	}
+
+[CORKBOT_ROCKET]
+	{
+	ID=121;
+	name=Rockets;
+	rendertype=1;
+	lineofsight=1;
+	turret=1;
+
+	model=missile;
+
+	range=400;
+	reloadtime=3.7;
+	weapontimer=3;		//2
+	weaponvelocity=350;	//250
+	startvelocity=300;	//250
+	weaponacceleration=120;
+	areaofeffect=48;
+	metalpershot=0;
+
+	soundstart=rocklit1;
+	soundhit=xplosml2;
+
+	firestarter=70;
+	smokedelay=.1;
+	selfprop=1;
+	smoketrail=1;
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=100;
+		}
+	}
+
+[NUCLEAR_MISSILE]
+	{
+	ID=122;
+	name=Nuclear Missile;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+
+	model=ballmiss;
+
+	range=32000;
+	reloadtime=180;
+
+	noautorange=1;
+	weapontimer=5;
+	flighttime=400;
+
+	weaponvelocity=350;
+	weaponacceleration=50;
+	turnrate=32768;
+	areaofeffect=640;		//512
+	edgeeffectiveness=0.5;		//0.25
+
+	energypershot=180000;
+	metalpershot=2000;
+
+	stockpile=1;
+	targetable=1;
+	commandfire=1;
+	cruise=1;
+
+	soundstart=misicbm1;
+	soundhit=xplomed4;
+
+	firestarter=100;
+	smokedelay=.1;
+	selfprop=1;
+	smoketrail=1;
+	propeller=1;
+
+	twophase=1;
+	guidance=1;
+	tolerance=4000;
+
+	shakemagnitude=24;
+	shakeduration=1.5;
+
+	explosiongaf=commboom;
+	explosionart=commboom;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=5500;
+		}
+	}
+
+[CRBLMSSL]
+	{
+	ID=123;
+	name=Rocket;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+
+	model=crblmssl;
+
+	range=32000;
+	reloadtime=180;
+
+	noautorange=1;
+	weapontimer=5;
+	flighttime=400;
+
+	weaponvelocity=350;
+	weaponacceleration=50;
+	turnrate=32768;
+	areaofeffect=640;		//512
+	edgeeffectiveness=0.5;		//0.25
+
+	energypershot=180000;
+	metalpershot=2000;
+
+	stockpile=1;
+	targetable=1;
+	commandfire=1;
+	cruise=1;
+
+	soundstart=misicbm1;
+	soundhit=xplomed4;
+
+	firestarter=100;
+	smokedelay=.1;
+	selfprop=1;
+	smoketrail=1;
+	propeller=1;
+
+	twophase=1;
+	guidance=1;
+	tolerance=4000;
+
+	shakemagnitude=24;
+	shakeduration=1.5;
+
+	explosiongaf=commboom;
+	explosionart=commboom;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=5500;	
+		}
+	}
+
+[ARMTRUCK_ROCKET]
+	{
+	ID=124;
+	name=Rocket;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+
+	model=rocket;
+
+	range=1150;	//800
+	reloadtime=8;		//12
+
+	noautorange=1;
+	weapontimer=4;		//5
+	flighttime=10;
+
+	weaponvelocity=1000;		//750 //400
+	startingvelocity=250;
+	weaponacceleration=75;		//40
+	turnrate=24384;
+	areaofeffect=96;
+
+	soundstart=Rockhvy1;
+	soundhit=xplomed4;
+
+	firestarter=100;
+	smokedelay=.1;
+	selfprop=1;
+	smoketrail=1;
+	cruise=1;
+
+	twophase=1;
+	guidance=1;
+	tolerance=10000;		//4000
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=500;
+		}
+	}
+
+[CORTRUCK_ROCKET]
+	{
+	ID=126;
+	name=Rocket;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+
+	model=corvrocket;
+
+	range=1150;	//800
+	reloadtime=8;		//13
+
+	noautorange=1;
+	weapontimer=4;		//5
+	flighttime=10;
+
+	weaponvelocity=1000;		//750 //375
+	startingvelocity=250;
+	weaponacceleration=75;		//38
+	turnrate=24384;
+	areaofeffect=96;
+
+	soundstart=Rockhvy1;
+	soundhit=xplomed4;
+
+	firestarter=100;
+	smokedelay=.1;
+	selfprop=1;
+	smoketrail=1;
+	cruise=1;
+
+	twophase=1;
+	guidance=1;
+	tolerance=10000;		//4000
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=500;
+		}
+	}
+
+[ARMMSHIP_ROCKET]
+	{
+	ID=128;
+	name=Rocket;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+
+	model=rocket;
+
+	range=1350;			//1300
+	reloadtime=8;			//12
+
+	noautorange=1;
+	weapontimer=4;			//5
+	flighttime=10;
+
+	weaponvelocity=1000;		//750 //400
+	startingvelocity=250;
+	weaponacceleration=75;		//40
+	turnrate=24384;
+	areaofeffect=96;
+
+	soundstart=Rockhvy1;
+	soundhit=xplomed4;
+
+	firestarter=100;
+	smokedelay=.1;
+	selfprop=1;
+	smoketrail=1;
+	cruise=1;
+
+	twophase=1;
+	guidance=1;
+	tolerance=10000;		//4000
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=500;		//500
+		}
+	}
+
+[CORMSHIP_ROCKET]
+	{
+	ID=130;
+	name=Rocket;
+	rendertype=1;
+	lineofsight=1;
+	vlaunch=1;
+
+	model=corshiprckt1;
+
+	range=1350;		//1300
+	reloadtime=8;		//9
+
+	noautorange=1;
+	weapontimer=4;		//5
+	flighttime=10;
+
+	weaponvelocity=1000;		//750 //400
+	startingvelocity=250;
+	weaponacceleration=75;		//40
+	turnrate=24384;
+	areaofeffect=96;
+
+	soundstart=Rockhvy1;
+	soundhit=xplomed4;
+
+	firestarter=100;
+	smokedelay=.1;
+	selfprop=1;
+	smoketrail=1;
+	cruise=1;
+
+	twophase=1;
+	guidance=1;
+	tolerance=10000;		//4000
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2oboom2;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplashlg;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=500;		//500
+		}
+	}
+
+
+[VTOL_ROCKET]
+	{
+	ID=135;
+	name=Rockets;
+	rendertype=1;
+	lineofsight=1;
+
+	model=missile;
+
+	range=400;			//450
+	reloadtime=1;			//2
+	weapontimer=5;
+	weaponvelocity=500;		//350
+	startvelocity=250;		//131
+	weaponacceleration=100;		//51
+	metalpershot=0;
+
+	turnrate=85152;			//7680
+	areaofeffect=48;
+
+	soundstart=rocklit3;
+	soundhit=explode;
+
+	firestarter=70;
+	smokedelay=.1;
+	selfprop=1;
+	guidance=1;
+	tracks=1;
+	smoketrail=1;
+	tolerance=8000;
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=80;		//125
+		}
+	}
+/*
+[VTOL_ROCKET2]
+	{
+	ID=136;
+	name=Rockets;
+	rendertype=1;
+	lineofsight=1;
+
+	model=missile;
+
+	range=370;	//450
+	reloadtime=2;
+	weapontimer=5;
+	weaponvelocity=350;		//350
+	startvelocity=150;		//250
+	weaponacceleration=100;		//131
+	metalpershot=0;
+
+	turnrate=7680;		//7680
+	areaofeffect=48;
+
+	soundstart=rocklit3;
+	soundhit=explode;
+
+	firestarter=70;
+	smokedelay=.1;
+	selfprop=1;
+	smoketrail=1;
+	tolerance=8000;
+
+	explosiongaf=fx;
+	explosionart=explode3;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=63;		//125
+		}
+	}
+*/

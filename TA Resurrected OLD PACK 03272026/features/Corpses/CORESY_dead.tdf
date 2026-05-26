@@ -1,0 +1,17 @@
+[CORESY_dead]
+{
+	world=All Worlds;
+	description=Wreckage;
+	category=core_corpses;
+	object=CORESY_dead;
+	footprintx=11;
+	footprintz=11;
+	height=4;
+	blocking=0;
+	hitdensity=100;
+	metal=5797;
+	damage=7000;
+	reclaimable=1;
+	featurereclamate=smudge01;
+      	seqnamereclamate=tree1reclamate;
+}

@@ -1,0 +1,32 @@
+// Arm "Killer Machine" Adv. EMG-Kbot by M. Hüdepohl
+
+[ADV-EMG]
+	{
+	ID=237;
+	name=Advanced EMG;
+	rendertype=1;
+	lineofsight=1;
+	turret=1;
+	model=aemg;
+	range=210;
+	reloadtime=0.4;
+	sprayangle=973;
+	burst=3;
+	burstrate=.1;		//.2
+	soundtrigger=1;
+	energypershot=0;
+	weaponvelocity=350;		//310
+	areaofeffect=8;
+	soundstart=armsml3;		//armkiller1
+//	soundhit=xplomed2;		//emghit1
+	firestarter=90;
+	beamweapon=1;
+	explosiongaf=fx;
+	explosionart=explode5;
+	weapontimer=1;			//2
+	tolerance=2000;
+	[DAMAGE]
+		{
+		default=20;		//24
+		}
+	}

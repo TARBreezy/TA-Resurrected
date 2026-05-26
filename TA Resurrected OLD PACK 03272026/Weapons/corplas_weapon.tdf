@@ -1,0 +1,42 @@
+[CORPLAS_WEAPON]
+	{
+	ID=138;
+	name=Immolator;  
+	rendertype=4;
+	lineofsight=1;
+	turret=1;
+
+	range=450;
+	reloadtime=.85;
+	weaponvelocity=700;		//600
+	areaofeffect=8;
+	soundstart=cannon3;
+	soundhit=xplosml2;
+	
+//	burst=3;
+	sprayangle=1000;
+//	weapontimer=1;
+
+	tolerance=1500;
+
+	explosiongaf=fx;
+	explosionart=explode2;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		Default=186;		//62
+		}
+	}
+
+
+
+
+

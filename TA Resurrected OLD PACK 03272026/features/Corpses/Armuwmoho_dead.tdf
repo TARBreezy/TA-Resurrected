@@ -1,0 +1,19 @@
+[Armuwmoho_dead]
+	{
+	world=All Worlds;
+	description=Wreckage;
+	category=arm_corpses;
+	object=Armuwmoho_dead;
+	footprintx=5;
+	footprintz=5;
+	height=140;
+	blocking=0;
+	hitdensity=100;
+	metal=955;
+	damage=478;
+	reclaimable=1;
+	featurereclamate=smudge01;
+      seqnamereclamate=tree1reclamate;
+	}
+
+

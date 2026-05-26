@@ -1,0 +1,1776 @@
+#define CORE
+//#include "Armgate.bos"			//armgate.bos
+
+// This script should be compiled under Scriptor Version 1.0 RC1. Other versions, or other compilers, won't manage to compile it.
+
+// Here write the value in UnitLimit in totala.ini.
+// Will only be used if Xon's hack's not here.
+#define UNITS_PER_PLAYER 1500
+
+#define LIMITED_CARGO_HOLD FALSE// Use the TCLASS list, or H2WEIGHT.h as it is now known, to prevent some units to use the gate.
+#define AUTOCONNECT FALSE // Change to TRUE to automatically connect upon birth and iris aperture
+#define AUTORECONNECT FALSE // Change to TRUE to automatically re-connect when the exit gate is no longer
+
+#define ENEMY_UNITS_CAN_ENTER				FALSE
+#define ENEMY_UNITS_CAN_EXIT				FALSE
+#define ENEMY_GATES_CAN_CONNECT				FALSE
+#define CAN_AUTO_CONNECT_TO_ENEMY_GATES		FALSE
+#define CAN_MANUAL_CONNECT_TO_ENEMY_GATES	FALSE
+//Remember that allowing Auto-Connect or teleporting the units of the enemy will put multiplayer stability in jeaopardy.
+//Note: Here "enemy" just means "other players", in fact in can be allies as well. At the time I wrote the first version of that script, there wasn't a way for a scripts to know if a given unit is from an allied player or an enemy player.
+//Note: Connecting to a an enemy gate doesn't mean the enemy gate will accept the incoming enemy. If it doesn't, then the wannabe teleported reappear at the entry gate.
+//Note: Changing them from all FALSE to ALL true make the code use alot more CPU power, a very noticeable difference on my Duron 800Mhz.
+//Recommended for old computers: all false. Recommended for very fast computer: FTTFT (so units can only enter gate they own but exit any gate, but connection to enemy gates must be done manually)
+//In Spring, team detection based on ID range fails, so all TRUE for Spring. Some day I'll may update the script to use Spring new get command to find which team are units in.
+
+#define TADPOLE_WHEN_CONNECTING 			FALSE//Send a stream of orange explosion toward exit when a an exit is selected
+#define STAR_WHEN_AUTOCONNECTING 			FALSE//Create an instant illumination of all the path from current gate to other gates when autoconnecting
+#define SHOW_WORMHOLE_WHEN_LINKED			FALSE//Do you wish the first wormhole texture to be seen as long as the gate is connected?
+#define SHOW_WORMHOLE_DURING_TADPOLE_TRAVEL	FALSE//Do you wish the second wormhole texture to be seen during the movement when, as a gate connect, it sends a tadpole of bright orange explosion toward the destination? Depending on the distance, that can takes a while. Note that the gate is connected and can be used right away, the tadpole is sent after just as an eyecandy. Of course this is is forced off if tadpole is off.
+#define SHOW_WORMHOLE_DURING_ENTRY			FALSE//Do you wish the second wormhole texture to be seen during the little entry animation?
+#define SHOW_WORMHOLE_DURING_EXIT			FALSE//Do you wish the second wormhole texture to be seen during the little exit animation, which is very short anyway?
+#define SPLASH_WHEN_CONNECTING_OR_AUTOCONNECTING	FALSE
+#define SPLASH_DURING_ENTRY					FALSE
+#define SPLASH_DURING_EXIT_IF_CONNECTED		FALSE
+#define SPLASH_DURING_EXIT_IF_NOT_CONNECTED	FALSE
+
+//
+// zwzsg's Galatic Gate script
+//
+// ===============================
+//  HOW DOES IT WORK, FOR PLAYERS
+// ===============================
+//
+// These are the first teleporters that:
+// - Are automatic: once the link is set, you don't have to click for each unit to be teleported.
+// - Works buglessly over Epic Map
+// - Works buglessly in multiplayer
+//
+// The script of these Galactic Gate needs to know what is the unitlimit.
+// - If the latest version of Xon recorder is installed, then the Galactic Gate will be able to read ingame what is the unitlimit.
+// - If not, the Galactic Gate will assume the UnitLimit is 500.
+//
+// So:
+// - If every player has the latest version of Xon recorder, you can play with whatever unitlimit you like.
+// - If one player doesn't have the latest version of Xon recorder, then the person hosting the game should set the unitlimit to 500.
+//
+// If you don't have the latest version of Xon recorder, and play a game with a unitlimit lower than 500, then the game will crash once you try "linking" your gate. In multiplayer, you'll be the only one to crash, other player will continue.
+//
+// If you don't have the latest version of Xon recorder, and play a game with a unitlimit higher than 500, then some units will be ignored by the Galactic Gate. It won't crash, but you won't be able to teleport many of your units.
+//
+//
+//
+// To use the Galactic Gates:
+// - Select a Commander, or an adv construction plane, kbot or veh, and flip pages.
+// - Notice that the build button of the Galactic Gate is divided in four:
+//   by choosing wich side of the build button you click,
+//   you choose which way the pad of the gate will face.
+// - Build at least two gates.
+// - Select one gate, click LINK, click somewhere.
+// - Reclick LINK, and click elsewhere, once more.
+// - Select another gate.
+// - Again, use the LINK button twice.
+// - As soon as the second use of the LINK button, you can choose which gate you connect to:
+//   By clicking on a gate, you select that gate as an exit.
+//   By clicking on a general direction, you select the gate with the closest angle to the given direction
+// - Select a factory, click move, click the pad of a gate: all units build by that factory will automatically get teleported!
+//
+// Note:
+// - Even if the cursor turns into the "out of range" red (/), your click will still be registered.
+// - If you click twice on the same spot, only one click is counted.
+//
+// Useless trivia: If you click only once, but far enough for the cursor to have turn into (/), the gate will be connected in reception but not in emission. So use the LINK button twice on two different spots for full activation. Using the ON/OFF button will turn the gate to reception only mode.
+//
+// For safety reasons, there is no auto-connect, and these Galactic Gates can only be connected to gates you own, and can only teleport units you own.
+//
+//
+//
+// The pad will show you what state is the gate in:
+// - No pad: the gate cannot send units, cannot receive units.
+// - Pad, not animated: the gate can receive units, but cannot send units.
+// - Pad, animated: the gate can both receive and send units.
+//
+// The antennas show which other gates the gate is connected to:
+// - The small antenna in front point to the gate to which units will be sent.
+// - The large dish point to the gate which last sent an unit, and will fold back once the unit move away.
+//
+//
+//
+// Even untransportable units, such as Krogoth, can be teleported.
+//
+// These gates are designed to teleport units up to 4x4. Don't teleport units with a 5x5 footprint, or they'll end up stuck in the gate. There is no 5x5 units, besides ships, in the official unitset, so hopefully it shouldn't happen. If you're a modder, and know how to compile scripts, look into ArmGalaS.bos and the two .h for a way to prevent some units to be teleported.
+//
+// Each gate has two buffers, an entry buffer and an exit buffer, where the unit is stored in dematerialised form until the pad is clear. It won't send/receive any new units until the exit/entry buffer is emptied. Also, if the exit gate refuse to accept the teleported unit, then it will reappaer at the entry gate.
+//
+// If for whatever reason a unit still manage to get stuck in a gate, destructing the gate will release the unit. Please note that units being held by the gate can still fire!
+//
+//
+//
+// This unit script used to also works in Spring (64b1). But both Spring and my script changed alot since, so it doesn't work well anymore. However, even before there were a few changes in Spring:
+// - The attack cursor is rather picky. You have to click within the red radius, on a clear post, and may have to retry a few time before the dialing starts.
+// - In Spring scripts used to be unable to determine ownerships, so all players units can use all players gates.
+// - Spring doesn't handle yardmaps, so the gate is impassable, so the script push the unit back and forth
+//
+//
+//
+// Credits:
+// Unit created by zwzsg, based on a Cavedog model, with help from Wotan for the four way build button.
+//
+//
+//
+// =================================
+//  HOW DOES IT WORK, FOR SCRIPTERS
+// =================================
+//
+// This script is an updated version of the Stargate script,
+// however I haven't fully cleaned all the remain of the Stargate script,
+// hence the presence of some function, constants, and other bits of code that are now useless.
+//
+// The main idea is to use the command: attach-unit unit_id to piece_name;
+// And then the command: drop-unit unit_id;
+// Normally one would use the TransportPickup(unit_id) and TransportDrop(unit_id, position), that are linked to the load and unload button, to get the ID of the unit and the position to drop it.
+// However, I want an automated transportation, not an OTA transport remake. And I make a point never to use those load and unload button.
+// So instead, to get a unit ID, I use someting like:
+// var unit_id;
+// for(unit_id=1;unit_id<=500*10;++unit_id;)
+// 	{
+// 	if(get XZ_HYPOT(get UNIT_XZ(unit_id) - get PIECE_XZ(base))<[50])
+// 		{
+// 		...
+// 		...
+// 		}
+// 	}
+// Also, there is a limitation in TotalA.exe graphic rendering that makes impossible to have units bigger than [100].
+// 100 in 3do unit, [100] or 16384000 in the script, 250 pixels, 100 meters, whatever your unit is.
+// If there's something beyond that, TA show strange graphical glitches such as large black rectangles or a rainbow clone.
+// This problem is located on the graphic rendering part of the TotalA engine, so changing resolution, looking away, looking a bit off, change what happens.
+// For instance a unit that crashes all the time under 640x480 can sometimes simply looks rainbow colored under 1024x768. And looking away from the unit often prevent the crash.
+//
+// - A textured face futher than [100] is a cause for crash.
+// - A face centered on the unit but having corner further than [100] is a cause for crash.
+// - A underground face on a digger=1 unit cashes when further than [100]
+// - A dark red color index 1 face crashes when further than [100]
+// - A unit attached to a piece further than [100] does crashes!!!
+// - A unit, with all pieces hidden, attached to a piece further than [100] still does crashes.
+//
+// - A faceless piece does not crash.
+// - An untextutred piece does not crash.
+// - A hidden piece (with "hide piecename;") does not crash.
+//
+// I keep saying [100], but I am not sure it's 100% exactly [100], it's just around there.
+// For buildings the limit seem lower than [100]. But if you dont-shade all pieces, then it grows back to the [100] of mobile units. I think. (Not sure).
+// Whether the piece is at that position or was moved at the position doesn't matter, it's the current actual position that matters.
+// That [100] is square shaped, not round shapped. It's a [200]x[200] square, centered on the unit center, and aligned to the screen border. So it it's longer ([141]) on the diagonal. I think. (Not sure).
+// You can't trick the engine by using telescopic pieces grouping. However, when attaching Piledrivers or hives to the limit, I was under the impression that while the center of the attached unit was under [100], the tip of the attached unit was beyond [100].
+// Other observations seem to indicate that the limit for attached units is higher than the limit for faces of the model. No idea what the limit really is for attached unit.
+//
+// That's the point about attached unit further than [100] that causes problems. Because short range teleportation would be rather useless.
+// I tried many way to prevent that:
+// I tried digger=1 and moving the piece the unit is attached to at [-25], didn't work
+// I tried turning teleporter into a building, still crashes.
+// I tried hiding the piece where it's attached, still crashes. Hiding a piece doesn't hide units attached to this piece.
+// I tried to use the hide command on the piece after the last piece or before the first piece, Scriptor was unhappy.
+// I tried exploding the piece where it's attached, didn't work.
+// I tried moving at [10000] on y-axis, still crashes.
+// I tried hiding the attached unit by having a dark red color index 1 face above, still crashes.
+// I tried attaching to 0 - 1, then it doesn't crash, but scriptor refuse to let me move the piece 0 - 1.
+// I tried putting drop right after attach, then the transported unit xz isn't updated and transported unit stay on same place.
+// I tried having the script of the teleported unit hiding all pieces of the teleported unit as soon as it is picked up, prior to teleportation: still crash.
+//
+// For your information, the second color of the palette, the one with the index 1, that looks dark red, is a transparent color. Ingame it you see throught it. It's great to make half pixels on a texture transparent. However, it's not just transparent, but it also "erase" any part of the unit below. Note that it doesn't work on projectiles models nor on shaded pieces. All buildings pieces are shaded by default. Oh and it doesn't erase other units below the dark red face, save those that are attached.
+//
+// Anyway, so I thought, I can't attach a unit to a piece far away, but I can still take a far away unit and attach it to a piece close.
+// Wrong. The reason is a bit delicate.
+//
+//
+// In TotalA.exe, the part of the code that makes an attached unit follow the position of the piece it is attached to isn't executed by the transport, but by the attached unit.
+// It means that there can be some delay for the attached unit to update its position to match the one of the piece it is attached to.
+// For instance, if you put your commander inside an Atlas, you may notice that it wobbles a bit as the Atlas move at full speed.
+// But that also depends on the ID of the units. No, I am not talking about the ID field in the FBI, but about the ID that are more like the memory address of the data of the unit.
+// Each unit is given such a ID at the first drop of nano, and has it all for itself until its death.
+// When it dies the ID is freed, and can be reused by another, new, unit. The engine always use the lowest free ID of the player when creating a new unit.
+// Player 1 commander has ID 1, player 1 units are ID 1 to 500, player 2 commander is ID 501, player 2 units are ID 501 to 100, etc...
+// Actually it depends on the unitlimit written inside your totala.ini. Go download a totala.ini with UnitLimit = 500; if you don't already have one.
+// Note that even if there are only two players, TA reserves an ID range big enough for ten players.
+// However, if the unitlimit in totala.ini is lowered, then the max ID is lowered.
+// If you use the ID of an unused ID, I mean, if you try to access data of a unit that doesn't exist, then you just get a 0 value, but it doesn't crash. It can be a way to know if the unit exists btw.
+// However if you try to get data from an ID out of range, then totala.exe crashes.
+// So the number of player present in the game doesn't matter, we'll just always do as if there are 10 players and it will works fine.
+// But the unitlimit per player, as defined in totala.ini, does matter, and cause crashes if lower than what the script expected.
+// I know no way to read the unitlimit from inside the script, so all my script assumes unitlimit=500, and crash if it is lower or ignore some units if it is higher.
+// The ID are the order in which units are stored in memory, and so the order the engine does their calculation at each cycle.
+// So, if the teleporter has a low ID, and the grabbed unit a high ID, then the teleporter will execute its script, then the grabbed unit will execute its calculation, and so see that is has been attached, and update its position to match the position of the piece it is attached to, and only after the graphic rendering will take place. So by the time the graphic rendering takes place, the grabbed unit will already have its new position, and so there won't be any crash.
+// However, if the teleporter has a high ID, and the grabbed unit a low ID, then the teleporter will execute its script, the graphic rendering will take place, and only on the following cycle will the grabbed unit do its calculation and update its xz. So there will be a single tick during which the engine will try to graphically render an attached unit far away. That is enough to provoke a crash.
+//
+// When I understood that, the first trick I used to counter was to allow teleportation only when the order of the units ID allowed it.
+// But it would be frustating for the user to have teleportation of a unit possible or impossible depending on reasons as obscure as an incompatibility between the astral signs of the teleporter and the wannabe teleported.
+// So I made sure the unit only worked when having the first ID, which is the ID of the commander until its death, and made up a story about how the evil gods of TA required the commander to be offered in sacrifice an instant before the birth of the teleporter to allow true teleportation.
+//
+// Month later Zodius found a simple trick to solve that problem.
+// There's a special command, attach-unit unit_id to 0 - 1; which make the attached unit hidden.
+// The attached unit is attached to the center of the unit it is attached to, it is there, can be picked up by plane transport, can fire if firing from transport is enabled, etc..., just it is hidden.
+// So the trick is to first attach to 0 - 1 for at least one tick, so the attached unit has time to updated its position whatever the order of ID is, and only after attach the unit to a nearby piece.
+//
+// So there are five ways to prevent a crash when a far away unit is teleported near the teleporter:
+// 1) Display a large sign reading "look away!" so the player doesn't keep his screen centered on the teleporter when the teleportation occcurs. This is the way I used on the BriDoDon, my first unit to perform teleportation, and the first unit to do automatic zone teleportation.
+// 2) Mount the teleportation on the commander, and limit to units of the same player.
+// 3) Pull the story about how the commander sacrifice is required instants before the birth of the teleporter. This is the trick I used on early version of my Mobile Wormhole Generator, before I updated it.
+// 4) Only allow teleportation when units ID are compatible.
+// 5) Attach unit to 0 - 1; for a single tick before attaching to any other piece.
+//
+// As you can see, the choice is rather easy. In fact the way 1 to 4 becomes obsolete once the fifth way is discovered. Too bad I found them in that order I listed them. Technically, it's not even me but Zodius who got the idea of the fith way, after a study of Immerman's beacon.
+// Well, yes, I'm not the first to make teleporters, Immerman's beacon were the first. However Immerman's are still manual, while mine are fully automatic. Mine are also way more complex: uncobbled Wotan variant of Immerman's teleporters, are 228 lines for the nodes and 273 for the hubes, while this very script, once compiled and uncobbled, weight 595 lines. What? Only? Even with all the useless stuff like the writing on the map corner? I was sure the size of my script would have dwarfed his, and was beaten to it. Bah, let's pretend it's because I'm super efficient at coding and that anway bulkier source never made better running code. :D
+//
+// You may have noticed that I examined only the case of far away to teleporter teleportation, and not random location to random location teleportation nor teleporter to far away location teleportation.
+// That is because when one to drop away from teleporter, one has to move a piece the wannabe teleported unit is attached to far away, hold it in position long enough for the attached unit to update its postion, then drop.
+// And there is no way to know if the new location is really suitable for the wannabe teleported, and if the drop fails the attached unit will remain attached.
+//
+// While I'm at it:
+// OTA planes use different way to load and unload units than OTA transport ships and OTA transport hovers.
+// - For OTA planes, the actual loading is done by the engine, not by the script. The script is merely give the name of the piece to attach to and is given the height to which to move this piece. The ID of the attached unit isn't even passed to the script, and the script does not execute any attach-unit nor drop-unit.
+// - For OTA transport ships and transport hovers, the engine pass the location and the ID of the wannabe transported unit to the script, and it is the script alone that decide whether it accepts or refuse to perform the loading, and that perform the actual attach-unit and drop-unit commands. Plus the set BUSY to TRUE/FALSE stuff.
+// - OTA planes can steal units already attached to other unit.
+// - OTA transport ships and transport hovers cannot grab units already attached to another unit. Nor units that have other units attached to. If you try, the attach-unit command will simply won't do anything.
+// Normally the engine use the plane way and calls only QueryTransport(piecenum) and BeginTransport(height) if the unit is a plane, and the engine use the ship and hover way and call only TransportPickup(unitid) and TransportDrop(unitid,position) if the unit isn't a plane.
+//
+// However you can still use the attach-unit and drop-unit commands inside a plane script. Just you'll have to provide the ID yourself. And then the transportation works like on OTA T-hover T-ship, not like on OTA plane.
+//
+// You cannot use attach-unit to steal a unit attached to another unit, but you can use it to steal a unit attached from another piece of the same unit. So you can attach a unit to one piece, then another piece, yet one more piece, without having to drop it.
+// If the location isn't suitable for the attached unit, the drop command will be ignored and the unit will stay attached.
+// There is delay between the moment you move a piece and the momement the unit attached to that piece follow the movement.
+//
+// Ships can not go under the water surface, even when attached. A ship attached to an underwater piece will follow the xz, but not the y, which will be blocked at water level. Strangely, hovers and pelicans on the other hand follow the y even when it goes underwater.
+//
+// If you perform a move ... now; and a get PIECE_XZ(..) the following line, the position of the piece will be already updated.
+// If you do a move ... now; explode ...; move .. now; explode ...; move .. now; each explosion will appears where the piece has been moved, even if there isn't any sleep or wait-for.
+//
+// wait-for-... always do at least a one tick pause. Save in Spring.
+// call-script ... and start-script also do a one tick pause. Save in Spring.
+//
+// Having isairbase=1; in the FBI of the teleporter allow attached unit to be selecteable, to keep firing, and to keep their order queue.
+// Without that, order queue are reseted. By the way, irrelevant to the problematic at hand, but doing an attach-unit immediatly followed by a drop-unit, (and withouth isairbase=1;) can be used to have the script of an unit delete the order queue of another unit, without moving the unit (it had not time to update its position), and without crashing even if far away (it had no time during which it was attached and graphically rendered).
+//
+//
+//
+// But there is more! EPIC BUG!
+//
+// If the map is bigger than 44x44, then, while the x and z coordinate can be expressed, the distance of the diagonal of the map becomes too big too handle.
+// See, TA scripts variable are limited to 32-bits signed integer, so have to stay between 2147483647 and -2147483648.
+// So, doing a get XZ_HYPOT(xz2 - xz1) on an Epic Map (it's how ultra large map are dubbed), cause TotalA.exe to either report a wrong value, lag horribly, or plain crash.
+// Because my script actively look for unit in range by calculating how far they are from the pad, it would crash if the Gate is on corner of a 63x63 map and some units are on the opposite corner.
+// Therefore, I add to add some safety that:
+// - Decompose xz into xz
+// - Halve x and z
+// - Recompose them into a "halved" xz
+// - get XZ_HYPOT of that "halved" xz
+// - return the actual initial xz value if the "halved xz" is lower than the safety limit, return a safe ceiling value if the "halved xz" is dangerously high.
+//
+//
+// Not done yet! MULTIPLAYER BUG!
+//
+// The way scripts works in multiplayer is the following:
+// Each computer run the script of every units of all players present in the game for itself.
+// There is no synching of script.
+// On the other hand stuff like position, order given, damage dealt, unit dying, are calculated on only one computer, the one of the player who own the units, and then sent to every other computer else.
+// Yes, you can use a rand(1,6) to cause script to branch differently on each computer.
+// And the humans behind each computer will each saw different thing.
+// Remember that scripts are meant to be used only to add little eyecandy animation to the unit, stuff that really matter is mostly handled by the engine.
+// So normally, it doesn't cause any issue if the script do different thing on each computer.
+// However, because my Gate script is responsible for grabbing unit, even very far away unit, having both computer run their own version of the script, then share update on unit position has disatrous result!
+// Basically, one computer may have his scripts running a couple tick ahead or behind, and receive an order to update the position of the teleported unit to the other side of the map, will the script will expect it to be still near, and so cause a crash will attaching it.
+// To solve that issue, I had to find a way to detect which computer is owning the unit, and let the script run only on the home computer, and be disabled on the others computers.
+// To find such a way, I observed closely two screens during a multiplayer game, trying to spot any difference in way script run.
+// I noticed nano particle aren't shown on the remote computer, but that may only be exploitable once I turn the gate into a factory.
+// I also noticed that on the remote computer, the commander doesn't restore the position of its torso after dgunning, while it restore it instantly on the home computer.
+// So I looked into the commander script, and noticed that since it had two weapons mounted on the same arm, it couldn't use the regular method of starting, at then end of the aiming, a function that sleep then restore pos. Instead the commander restoring of torso position after aiming was done by the mysterious TargetCleared function.
+// And thus, I discovered the TargetCleared is a function never called on the remote computer!
+// I had my way to differentiate units owned by the home computer or by a remote computer!
+// However, like the name imply, TargetCleared is called when the target is no more. More precisely when it was firing on a unit and that unit died and it has no more unit to fire over, when it changes target, when it just tried aimig out of range, etc....
+// That is why on this current version of the gate, the LINK button (which is as you guessed an attack button in disguise) as to be clicked twice.
+// It is also why the gate does not autoconnect at birth: it has to be sure it's not a unit owned by a remote computer before allowing the teleportation scripts to run.
+//
+//
+//
+// Blargh, this is getting too lenghty. My teleportation works like this:
+//
+// The entry gate periodically scans all units ID, and pick up the units near itself.
+// It holds them a while at a depth equal to the ID of the wanted exit gate then release. (Actually, changed to height and added an offset. Then added a factor to counter Spring's rounding on Y on tall maps: now it holds it at HEIGHT_TRANSMISSION_OFFSET + HEIGHT_TRANSMISSION_FACTOR * exit_id above the base of the entry.)
+//
+// Meanwhile the exit gate see scans all ID, and single out the ones with a height similar to itself.
+// If the height is perfecly similar, the exit gate assume they are teleporters too.
+// For each teleporter found, the exit gate do nest scan to find all units with the same XZ as the found teleporter
+// If it finds one, then it computes the Y difference.
+// If it is equal to the ID of self, it means the exit gate found an entry gate, which is telling the exit gate that it has chosen the exit gate as its exit, and will soon drop a unit for it.
+// And so the exit gate watch it carefully, and prey on the unit, grabbing it as soon as the entry gate release.
+// And then the exit gate drop it at the exit.
+//
+// I believe this script is the very first instance of inter-script communication. Not the part to find each of a given type unit by sorting via height, that had already been done, but the part where the entry modulate the Y between itself and an attached unit to broadcast any number the script wants. Oh well, actually SOI_Sentinel beat me to it, but still!
+// I had to find a way for exit and entry to communicate because if you read the above, only the exit can actually perform the teleportation, yet it is more user friendly to select the destination at the entry than to select the entry at the exit.
+//
+// The current height of the model is [????]=???? and is given by the set_height piece in the 3do (moving in script doesn't affect UNIT_HEIGHT). The unit reads the height of itself from within the script, so the 3do height can be freely changed without needing to report the change to the script.
+//
+// Oh, and all I said was for TA, nor for Spring. For instance in spring wait-for-.. on an immobile piece doesn't do any pause, nor call-script-.., in Spring dark red index 1 isn't a special color, Spring doesn't crash on large unit, not even on Star Destroyers bigger than the map itself, in Spring all units use a common pool for ID, there's no reserved range per player,....
+
+#define MAX_CARGO_HOLD 76543210// Max "Weight" (defined in H2WEIGHT.h) of units that can take the gate
+
+#define ENTRY_RADIUS ([30]*(!(engine==3))+[72]*((engine==3)))// Radius inside which units are considered inside the gate zone
+#define TRUE_ENTRY_RADIUS [12]+(engine==3)*[42]// Radius under which are grabbed to be teleported. Since the pad isn't centered on the unit center, it has to be shorter than the radius defined the line just above.
+#define GROUND_TOLERANCE [3]// Units that don't have Upright=1; don't stick perfectly to the ground. This is to differentiate veh and planes.
+
+#define NON_EXISTING (0-1073741823)// This is just a number that should be different from any existing ID
+//#define NON_EXISTING (0)// This is just a number that should be different from any existing ID
+// 0 is safer, as get X(0) don't crash
+
+#define ENTRY_SPEED ([12]*(!(engine==3))+[25]*((engine==3)))// Speed at which the wormhole sucks the unit in
+
+#define REFRESH_AUTOCONNECT 3221//How long maximum between the gate realise it is not connected to an exit and automatically find another gate to connect to.
+#define REFRESH_REMINDER 10000//Pause between each travel of a discreet SFXTYPE_VTOL. Add to the travel time for the period.
+#define BROADCAST_DURATION 905//Must be longer than than the REFRESH_EXIT
+#define REFRESH_ENTRY 600//Small if you want your gate to be more reactive to units coming near, large to save CPU
+#define REFRESH_EXIT 700//Must be smaller than BROADCAST_DURATION, not too large to save CPU
+#define REFRESH_ENTRY_DROP_RETRY 400//When the entry is blocked, the entry gate retries again and again to drop until it succeeds
+#define REFRESH_EXIT_DROP_RETRY 400//When the exit is blocked, the exit gate retries again and again to drop until it succeeds
+#define REFRESH_EXIT_GRAB_RETRY 70//The smaller the value the less time you see the unit temporarily reappear at the entry before getting caught by the exit
+#define MULTIPLAYER_SYNCHING_DELAY 0//Because in multiplayer, each computer execute the script independantly from the other, terrible issue ensue.
+#define DECLARE_ALL_LOCAL_VARS_AT_BEGINNING FALSE // TA accept local variable to be declared anywhere, but for Spring they have to be declared at the beginning of functions.
+
+#define CLICK_TOLERANCE [120]// radius inside wich it select teleporter nearest from click inside of teleporter in direction
+#define CLICK_EFFECT explode target_finder_extremity type BITMAPONLY | BITMAP2;
+
+#define HEIGHT_TRANSMISSION_OFFSET ([0])// Added and substracted to the communication system, so you can choose how much above and below the teleporter hold the units when teleporting. Remember that the ID transmitted, 0 to 5000, makes a height difference lower of around [0.03], pretty much unoticeable. In case you want to make a floating gate for ships, remember that ships cannot go underwater, even when attached.
+#define HEIGHT_TRANSMISSION_FACTOR (50)// Multiplied and divided to the communication system, to counter Spring's rounding of Y
+
+#define MOVE_ANTENNA move communication_device to y-axis HEIGHT_TRANSMISSION_OFFSET + HEIGHT_TRANSMISSION_FACTOR * exit_id now;//This is how communication works: the exit teleporter will read the height difference between the entry teleporter and the wannabe teleported, and see this number matches his own unit_id, and so will understand it is for him
+
+#define SAME_POS_TOLERANCE [3]
+
+//Remember that each signal must be a different power of two, and no higher than 128
+#define SIG_PRIMARY 2
+#define SIG_ACTDEACT 32
+#define SIG_AUTOCONNECT 64
+#define SIG_SPLASH 128
+
+#define TA
+#include "exptype.h"
+#include "sfxtype.h"
+
+#if LIMITED_CARGO_HOLD
+#include "H2WEIGHT.h"
+#endif
+
+piece	base, building,
+		#ifndef CORE//ARM
+		door, plate, arm, gun, flap3, flap2, flap1, turret, dish,
+		#else//CORE
+		legs, arms, gun, beam, turret, platform, dishb, disha,
+		#endif
+		communication_device, set_height,
+		entry_shoulder, entry_arm, exit_shoulder, exit_arm,
+		draw_shoulder, draw_arm, reminder_shoulder, reminder_arm,
+		target_finder_center, target_finder_extremity,
+		used_surface, linked_surface, erasing_surface,
+		pad, telefrac,
+		xon_dll_on, xon_dll_off;
+
+static-var xz, x, z , home_computer, self_id, self_h, global_min_id, global_max_id, min_id_of_player, max_id_of_player, exit_id, warpin_id, warpout_id, save_heading, save_pitch, auto_connect_counter, linking_in_progress, dial_id, engine, iris_closed, splashing;
+
+
+//	xscaled=chosen_xz/65536;
+//	zscaled=chosen_xz - (xscaled * 65536);
+//
+//	(xz/65536) (xz - ((xz/65536)*65536))
+//	(707333111>get 13((((xz)/65536)/2)*65536+(((xz) - (((xz)/65536)*65536))/2)))
+//	(((707333111>get 13((((xz)/65536)/2)*65536+(((xz) - (((xz)/65536)*65536))/2)))*500333222)+((707333111<=get 13((((xz)/65536)/2)*65536+(((xz) - (((xz)/65536)*65536))/2)))*500333222)*(xz))
+//	get 13(((707333111<get 13((((xz)/65536)/2)*65536+(((xz) - (((xz)/65536)*65536))/2)))*500333222)+((707333111>get 13((((xz)/65536)/2)*65536+(((xz) - (((xz)/65536)*65536))/2)))*500333222)*(xz))
+//	^ BAD ^ BAD ^ BAD ^ BAD ^
+
+//	(((xz)/65536)/2)
+//	(((xz) - (((xz)/65536)*65536))/2)
+//	(((xz)/65536)/2)*65536 + (((xz) - (((xz)/65536)*65536))/2)
+//	get 13((707333111<get 13((((xz)/65536)/2)*65536 + (((xz) - (((xz)/65536)*65536))/2)))*500333222 + (707333111>=get 13((((xz)/65536)/2)*65536 + (((xz) - (((xz)/65536)*65536))/2)))*(xz))
+//	^ GOOD ^ GOOD ^ GOOD ^ GOOD ^
+//
+//	BUT STILL FORGETTING THE SIGNS!
+
+
+#define SECURE_XZ\
+if(xz<0)\
+	{\
+	xz=0 - xz;\
+	}\
+x=xz/65536;\
+z=xz - x*65536;\
+if(z>32767)\
+	{\
+	z=65536 - z;\
+	/*x=x+(1-2*(xz<0));*/\
+	x=x+(xz>0);\
+	}\
+if(707333111<get XZ_HYPOT((x/2)*65536 + (z/2)))\
+	{\
+	xz=500333222;\
+	}
+
+
+#define OPEN_IRIS
+#define CLOSE_IRIS
+
+#ifndef CORE//ARM
+
+#define LINK_ON \
+\
+linking_in_progress=TRUE;\
+exit_id=NON_EXISTING;\
+if(SHOW_WORMHOLE_WHEN_LINKED)\
+	{hide linked_surface;}\
+\
+turn door to x-axis <-140> speed <140>;\
+sleep 500;\
+move plate to y-axis [9] speed [9];\
+turn gun to y-axis get XZ_ATAN(get PIECE_XZ(plate) - get UNIT_XZ(dial_id)) - CARDINAL_ANGLE speed <360>;\
+sleep 600;\
+turn gun to x-axis <90> speed <90>;\
+sleep 200;\
+turn flap1 to z-axis <60> speed <60>;\
+turn flap2 to z-axis <-60> speed <60>;\
+turn flap3 to x-axis <-60> speed <60>;\
+dont-cache pad;\
+\
+if(SHOW_WORMHOLE_WHEN_LINKED)\
+	{show linked_surface;}\
+\
+linking_in_progress=FALSE;\
+
+
+
+#define LINK_OFF /*instant because anyway the auto reconnection would interrupt it*/\
+linking_in_progress=TRUE;\
+exit_id=NON_EXISTING;\
+\
+cache pad;\
+turn flap3 to x-axis <0> now;\
+turn flap2 to z-axis <0> now;\
+turn flap1 to z-axis <0> now;\
+turn gun to x-axis <0> now;\
+turn gun to y-axis <0> now;\
+move plate to y-axis [0] now;\
+turn door to x-axis <0> now;\
+\
+if(SHOW_WORMHOLE_WHEN_LINKED)\
+	{hide linked_surface;}\
+\
+linking_in_progress=FALSE;\
+
+#else//CORE
+
+#define LINK_ON \
+\
+linking_in_progress=TRUE;\
+exit_id=NON_EXISTING;\
+if(SHOW_WORMHOLE_WHEN_LINKED)\
+	{hide linked_surface;}\
+\
+dont-cache pad;\
+turn gun to y-axis get XZ_ATAN(get PIECE_XZ(gun) - get UNIT_XZ(dial_id)) - CARDINAL_ANGLE speed <360>;\
+wait-for-turn gun around y-axis; \
+\
+if(SHOW_WORMHOLE_WHEN_LINKED)\
+	{show linked_surface;}\
+\
+linking_in_progress=FALSE;\
+
+
+
+#define LINK_OFF /*instant because anyway the auto reconnection would interrupt it*/\
+linking_in_progress=TRUE;\
+exit_id=NON_EXISTING;\
+\
+cache pad;\
+turn gun to y-axis <0> now;\
+\
+if(SHOW_WORMHOLE_WHEN_LINKED)\
+	{hide linked_surface;}\
+\
+linking_in_progress=FALSE;\
+
+#endif
+
+
+#ifndef CARDINAL_ANGLE
+#define CARDINAL_ANGLE 0
+#endif
+
+// New "get" cob/bos command, implemented only in Xon's hack and Spring
+#ifndef MIN_ID
+#define MIN_ID 69
+#endif
+#ifndef MAX_ID
+#define MAX_ID 70
+#endif
+#ifndef MY_ID
+#define MY_ID 71
+#endif
+#ifndef UNIT_TEAM
+#define UNIT_TEAM 72
+#endif
+#ifndef UNIT_BUILD_PERCENT_LEFT
+#define UNIT_BUILD_PERCENT_LEFT 73
+#endif
+#ifndef UNIT_ALLIED
+#define UNIT_ALLIED 74
+#endif
+
+Splash(splash_direction)
+	{
+	signal SIG_SPLASH;
+	set-signal-mask SIG_SPLASH;
+	}
+
+
+TeleportEntry()
+	{
+	#if LIMITED_CARGO_HOLD
+	var unit_id, unit_angle, unit_radius, last_in, h, w;
+	#else
+	var unit_id, unit_angle, unit_radius, last_in;
+	#endif
+	sleep rand(11,REFRESH_ENTRY);
+	while(TRUE)
+		{
+		while(exit_id==NON_EXISTING)
+			{
+			sleep REFRESH_ENTRY;
+			}
+		if(get UNIT_HEIGHT(exit_id)!=self_h)
+			{
+			exit_id=NON_EXISTING;
+			LINK_OFF
+			while(exit_id==NON_EXISTING)
+				{
+				sleep REFRESH_ENTRY;
+				}
+			}
+		#if ENEMY_UNITS_CAN_ENTER
+		for(unit_id=global_min_id;unit_id<=global_max_id;++unit_id;)
+		#else
+		for(unit_id=min_id_of_player;unit_id<=max_id_of_player;++unit_id;)
+		#endif
+			{
+			if(get UNIT_XZ(unit_id)!=0)
+				{
+				//if (get HYPOT(get XZ_HYPOT(get PIECE_XZ(pad) - get UNIT_XZ(unit_id)),get PIECE_Y(pad) - get UNIT_Y(unit_id))<ENTRY_RADIUS)
+				xz=get PIECE_XZ(pad) - get UNIT_XZ(unit_id);
+				SECURE_XZ
+				if (get HYPOT(get XZ_HYPOT(xz),get PIECE_Y(pad) - get UNIT_Y(unit_id))<TRUE_ENTRY_RADIUS)
+					{
+					if(unit_id!=self_id && unit_id!=warpout_id && unit_id!=warpin_id && !iris_closed && get UNIT_HEIGHT(unit_id)!=self_h)
+						{
+						#if LIMITED_CARGO_HOLD
+						h=get UNIT_HEIGHT(unit_id);
+						CALC_WEIGHT
+						if(w<MAX_CARGO_HOLD)
+							{
+						#endif
+						warpin_id=unit_id;
+						unit_angle=get XZ_ATAN(get PIECE_XZ(entry_shoulder) - get UNIT_XZ(warpin_id));//strange, I'd though it was groundplate XZ - unit XZ to get a 0 angle when unit in front, yet it seems to be the contrary
+						unit_radius=get XZ_HYPOT(get PIECE_XZ(entry_shoulder) - get UNIT_XZ(warpin_id));
+						turn entry_shoulder to y-axis unit_angle - CARDINAL_ANGLE now;
+						move entry_arm to z-axis unit_radius now;
+						//move entry_arm to z-axis (0 - [15]) speed ENTRY_SPEED;// This is for when there are the hiding_tunnels
+						move entry_arm to z-axis 0 speed ENTRY_SPEED;
+						move entry_arm to y-axis [20] speed ENTRY_SPEED / 2;
+						turn entry_arm to y-axis unit_angle + 32768 now;
+						attach-unit warpin_id to 0 - 1;
+						move entry_arm to y-axis 0 now;;
+						wait-for-move base along y-axis;
+						attach-unit warpin_id to entry_arm;
+						sleep 1;//minipause
+						//if(get XZ_HYPOT(get UNIT_XZ(warpin_id) - get PIECE_XZ(entry_arm))<SAME_POS_TOLERANCE && (get UNIT_Y(warpin_id) - get PIECE_Y(entry_arm)<SAME_POS_TOLERANCE))
+						xz=get UNIT_XZ(warpin_id) - get PIECE_XZ(entry_arm);
+						SECURE_XZ
+						if(get XZ_HYPOT(xz)<SAME_POS_TOLERANCE && (get UNIT_Y(warpin_id) - get PIECE_Y(entry_arm)<SAME_POS_TOLERANCE))
+							{
+							if (unit_angle<16384 || unit_angle>=49152)
+								{
+								//show hiding_tunnel_back;
+								}
+							if (unit_angle>=16384 && unit_angle<49152)
+								{
+								//show hiding_tunnel_front;
+								}
+							#if SPLASH_DURING_ENTRY
+							start-script Splash(get UNIT_XZ(warpin_id));
+							#endif
+							#if SHOW_WORMHOLE_DURING_ENTRY
+							show used_surface;
+							#endif
+							turn entry_shoulder to y-axis unit_angle - CARDINAL_ANGLE now;
+							move entry_arm to z-axis unit_radius now;
+							//move entry_arm to z-axis (0 - [15]) speed ENTRY_SPEED;// This is for when there are the hiding_tunnels
+							move entry_arm to z-axis 0 speed ENTRY_SPEED;
+							wait-for-move entry_arm along z-axis;
+							
+							if(engine!=3)
+								{
+								move telefrac to y-axis 0 now;
+								show telefrac;
+								hide pad;
+								move telefrac to y-axis ((get UNIT_HEIGHT(warpin_id))*5)/4 speed ((get UNIT_HEIGHT(warpin_id))*1)/3;
+								wait-for-move telefrac along y-axis;
+								}
+							sleep 1;
+							
+							//if(get XZ_HYPOT(get UNIT_XZ(warpin_id) - get PIECE_XZ(entry_arm))<SAME_POS_TOLERANCE && (get UNIT_Y(warpin_id) - get PIECE_Y(entry_arm))<SAME_POS_TOLERANCE)//If unit stayed attached and wasn't picked up or flew away
+							xz=get UNIT_XZ(warpin_id) - get PIECE_XZ(entry_arm);
+							SECURE_XZ
+							if(get XZ_HYPOT(xz)<SAME_POS_TOLERANCE && (get UNIT_Y(warpin_id) - get PIECE_Y(entry_arm))<SAME_POS_TOLERANCE)//If unit stayed attached and wasn't picked up or flew away
+								{
+								//show hiding_tunnel_front;
+								//show hiding_tunnel_back;
+								attach-unit warpin_id to communication_device;// the height difference between the attached unit and this teleporter constitute the message
+								sleep 1;
+								hide telefrac;
+								show pad;
+								sleep BROADCAST_DURATION;//Let some time for the exit teleporter to read the message
+								attach-unit warpin_id to pad;
+								sleep 1;
+								//BTW! BUG! PAD! //while(get XZ_HYPOT(get UNIT_XZ(warpin_id) - get PIECE_XZ(pad))<SAME_POS_TOLERANCE && (get UNIT_Y(warpin_id) - get PIECE_Y(communication_device))<SAME_POS_TOLERANCE)
+								xz=get UNIT_XZ(warpin_id) - get PIECE_XZ(pad);
+								SECURE_XZ
+								if(engine!=3)
+									{
+									while(get XZ_HYPOT(xz)<SAME_POS_TOLERANCE && (get UNIT_Y(warpin_id) - get PIECE_Y(pad))<SAME_POS_TOLERANCE)
+										{
+										drop-unit warpin_id;
+										set BUGGER_OFF to 1;
+										sleep REFRESH_ENTRY_DROP_RETRY;
+										//Once more, for the while
+										xz=get UNIT_XZ(warpin_id) - get PIECE_XZ(pad);
+										SECURE_XZ
+										}
+									}
+								if(engine==3)
+									{
+									drop-unit warpin_id;
+									sleep 2*(REFRESH_EXIT + REFRESH_EXIT_GRAB_RETRY);//let time for the exit to grab it
+									//if(get XZ_HYPOT(get UNIT_XZ(warpin_id) - get PIECE_XZ(base))<SAME_POS_TOLERANCE)//exit hasn't grabbed it
+									xz=get UNIT_XZ(warpin_id) - get PIECE_XZ(pad);
+									SECURE_XZ
+									if(get XZ_HYPOT(xz)<SAME_POS_TOLERANCE)//exit hasn't grabbed it
+										{
+										turn entry_shoulder to y-axis unit_angle - CARDINAL_ANGLE now;
+										move entry_arm to z-axis 0 now;
+										attach-unit warpin_id to entry_arm;
+										move entry_arm to z-axis unit_radius speed 2*ENTRY_SPEED;
+										wait-for-move entry_arm along z-axis;
+										drop-unit warpin_id;
+										}
+									}
+								}//end unit stayed attached during the arm movement
+							hide telefrac;
+							show pad;
+							//hide hiding_tunnel_front;
+							//hide hiding_tunnel_back;
+							#if SHOW_WORMHOLE_DURING_ENTRY
+							if(!splashing)
+								{hide used_surface;}
+							#endif
+							}//end unit stayed attached after first grabbed
+						drop-unit warpin_id;// This is for those special units like ships in TA or plane in Spring that, when attached, have only their XZ and not their Y match the attached pieces. The stargate consider them not attached, while they are, so this line ensure they are dropped anyway. At least if they agree to be dropped. Units agree to be dropped over obstructed terrain in Spring but not in TA. Anyway, even if ships were grabbed in TA, I ensured they wouldn't be moved below the water level. So, in fact, the only bug that lines currently solves is the low-flying planes stuck in the event horizon under Spring.
+						#if LIMITED_CARGO_HOLD
+							}//end unit is light enough
+						#endif
+						}//end unit is not self and not exiting and not the one that just entered
+					}//end unit in radius
+				}//end unit exists
+			}//end for all unit of player
+		
+		if (warpin_id!=NON_EXISTING)
+			{
+			//if((get UNIT_XZ(warpin_id)==0) || (get XZ_HYPOT(get PIECE_XZ(base) - get UNIT_XZ(warpin_id))>ENTRY_RADIUS)))// If unit doesn't exist or go out of range
+			xz=get UNIT_XZ(warpin_id) - get PIECE_XZ(base);
+			SECURE_XZ
+			if((get UNIT_XZ(warpin_id)==0) || (get XZ_HYPOT(xz)>ENTRY_RADIUS)))// If unit doesn't exist or go out of range
+				{
+				warpin_id=NON_EXISTING;// then forget you were dealing with it
+				if(warpin_id==NON_EXISTING)
+					{
+					//set BUGGER_OFF to 0;
+					}
+				}
+			}
+		sleep REFRESH_ENTRY;
+		}//end endless while
+	}//end TeleportEntry()
+
+
+
+TeleportExit()
+	{
+	var entry_id, unit_id;
+	sleep rand(11,REFRESH_EXIT);
+	while(TRUE)
+		{
+		#if ENEMY_GATES_CAN_CONNECT
+		for(entry_id=global_min_id;entry_id<=global_max_id;++entry_id;)
+		#else
+		for(entry_id=global_min_id;entry_id<=global_max_id;++entry_id;)
+		#endif
+			{
+			if(get UNIT_HEIGHT(entry_id)==self_h && entry_id!=self_id)//we found another teleporter
+				{
+				#if ENEMY_UNITS_CAN_EXIT
+				for(unit_id=global_min_id;unit_id<=global_max_id;++unit_id;)
+				#else
+				for(unit_id=min_id_of_player;unit_id<=max_id_of_player;++unit_id;)
+				#endif
+					{
+					if(get UNIT_XZ(unit_id)!=0))
+						{
+						//if(get XZ_HYPOT(get UNIT_XZ(unit_id) - get UNIT_XZ(entry_id))<SAME_POS_TOLERANCE && !iris_closed && get UNIT_HEIGHT(unit_id)!=self_h)//there's an unit attached to this teleporter
+						xz=get UNIT_XZ(unit_id) - get UNIT_XZ(entry_id);
+						SECURE_XZ
+						if(get XZ_HYPOT(xz)<SAME_POS_TOLERANCE && !iris_closed && get UNIT_HEIGHT(unit_id)!=self_h)//there's an unit attached to this teleporter
+							{
+							if((((get UNIT_Y(unit_id) - get UNIT_Y(entry_id) + (HEIGHT_TRANSMISSION_FACTOR/2))/HEIGHT_TRANSMISSION_FACTOR) - HEIGHT_TRANSMISSION_OFFSET == self_id) && (unit_id!=entry_id))//this unit is for me!
+								{
+								if((exit_id!=NON_EXISTING) && (SPLASH_DURING_EXIT_IF_CONNECTED) || (exit_id==NON_EXISTING) && (SPLASH_DURING_EXIT_IF_NOT_CONNECTED))
+									{
+									start-script Splash(get UNIT_XZ(entry_id));
+									}
+								
+								turn turret to y-axis get XZ_ATAN(get PIECE_XZ(turret) - get UNIT_XZ(entry_id)) - CARDINAL_ANGLE speed <180>;
+								#ifndef CORE//ARM
+								turn turret to x-axis <-30> speed <30>;
+								turn dish to x-axis <-60> speed <60>;
+								#else//CORE
+								move arms to y-axis [4] speed [6];
+								move platform to y-axis [4] speed [6];
+								wait-for-move platform along y-axis;
+								turn platform to x-axis <-90> speed <120>;
+								turn disha to x-axis <90> speed <90>;
+								turn dishb to x-axis <-90> speed <90>;
+								move disha to y-axis [-1.2] speed [1.2];
+								move dishb to y-axis [-1.2] speed [1.2];
+								#endif
+								
+								#if SHOW_WORMHOLE_DURING_EXIT
+								show used_surface;
+								#endif
+								warpout_id=unit_id;
+								//while(get XZ_HYPOT(get UNIT_XZ(warpout_id) - get UNIT_XZ(entry_id))<ENTRY_RADIUS && !iris_closed)//while it is near the entry
+								xz=get UNIT_XZ(warpout_id) - get UNIT_XZ(entry_id);
+								SECURE_XZ
+								while(get XZ_HYPOT(xz)<ENTRY_RADIUS && !iris_closed)//while it is near the entry
+									{
+									sleep REFRESH_EXIT_GRAB_RETRY;
+									attach-unit warpout_id to 0 - 1;//By studying Immerman's beacons, Zodius found out that attaching to 0-1 for an instant prevent the graphic engine to crash when grabbing unit far away and with lower id
+									//Once more, for the while
+									xz=get UNIT_XZ(warpout_id) - get UNIT_XZ(entry_id);
+									SECURE_XZ
+									}
+								sleep 1;
+								attach-unit warpout_id to 0 - 1;
+								sleep 1;
+								
+								#if ENEMY_UNITS_CAN_EXIT
+								if(engine!=3)
+									{								
+									if( ((unit_id - 1)/((1 + global_max_id - global_min_id)/10)!=(self_id - 1)/((1 + global_max_id - global_min_id)/10)) && (engine!=3))
+										{
+										sleep MULTIPLAYER_SYNCHING_DELAY;
+										}
+									}
+								#endif
+								
+								#ifndef CORE//ARM
+								wait-for-turn turret around x-axis;
+								wait-for-turn dish around x-axis;
+								#else//CORE
+								wait-for-turn disha around x-axis;
+								wait-for-turn dishb around x-axis;
+								#endif
+								wait-for-turn turret around y-axis;
+								
+								//if(get XZ_HYPOT(get UNIT_XZ(warpout_id) == get PIECE_XZ(base)))//if unit caught
+								if(get UNIT_XZ(warpout_id) == get PIECE_XZ(base))//if unit caught
+									{
+									move exit_arm to z-axis 0 now;
+									//attach-unit warpout_id to exit_arm;
+									//Any exit animation should go here
+									attach-unit warpout_id to pad;
+									
+									if(engine!=3)
+										{
+										move telefrac to y-axis (get UNIT_HEIGHT(warpout_id))*5/4 now;
+										show telefrac;
+										hide pad;
+										move telefrac to y-axis 0 speed ((get UNIT_HEIGHT(warpout_id))*1)/3;
+										sleep 1;
+										wait-for-move telefrac along y-axis;
+										hide telefrac;
+										show pad;
+										}
+									
+									if(engine==3)
+										{
+										attach-unit warpout_id to exit_arm;
+										//turn exit_shoulder to y-axis 32768*(get XZ_ATAN(get UNIT_XZ(self_id) - get UNIT_XZ(entry_id))<32768) now;
+										move exit_arm to z-axis [55] now;
+										turn exit_shoulder to y-axis 0 now;
+										//if(get XZ_HYPOT(get UNIT_XZ(entry_id) - get PIECE_XZ(exit_arm))>get XZ_HYPOT(get UNIT_XZ(entry_id) - get PIECE_XZ(base)))
+											//{turn exit_shoulder to y-axis 0 + 32768 now;}
+										move exit_arm to y-axis get GROUND_HEIGHT(get PIECE_XZ(exit_arm)) - get PIECE_Y(base) now;
+										turn exit_arm to y-axis (65536) - (32768)*rand(0,1) now;
+										move exit_arm to z-axis [0] now;
+										move exit_arm to z-axis [55] speed 2*ENTRY_SPEED;
+										wait-for-move exit_arm along z-axis;
+										}
+									
+									//End exit animation
+									sleep 1;
+									
+									#if ENEMY_UNITS_CAN_EXIT
+									if(engine!=3)
+										{
+										if( ((unit_id - 1)/((1 + global_max_id - global_min_id)/10)!=(self_id - 1)/((1 + global_max_id - global_min_id)/10)) && (engine!=3))
+											{
+											sleep MULTIPLAYER_SYNCHING_DELAY;
+											}
+										}
+									#endif
+									
+									//while(get XZ_HYPOT(get UNIT_XZ(warpout_id) - get PIECE_XZ(pad))<SAME_POS_TOLERANCE)
+									xz=get UNIT_XZ(warpout_id) - get PIECE_XZ(pad);
+									SECURE_XZ
+									while(get XZ_HYPOT(xz)<SAME_POS_TOLERANCE)
+										{
+										set BUGGER_OFF to 1;
+										drop-unit warpout_id;
+										sleep REFRESH_EXIT_DROP_RETRY;
+										//Once more, for the while
+										xz=get UNIT_XZ(warpout_id) - get PIECE_XZ(pad);
+										SECURE_XZ
+										}
+									set BUGGER_OFF to 1;
+									#if SHOW_WORMHOLE_DURING_EXIT
+									if(!splashing)
+										{hide used_surface;}
+									#endif
+									drop-unit warpout_id;// This is for those special units like ships in TA or plane in Spring that, when attached, have only their XZ and not their Y match the attached pieces. The stargate consider them not attached, while they are, so this line ensure they are dropped anyway. At least if they agree to be dropped. Units agree to be dropped over obstructed terrain in Spring but not in TA. Anyway, even if ships were grabbed in TA, I ensured they wouldn't be moved below the water level. So, in fact, the only bug that lines currently solves is the low-flying planes stuck in the event horizon under Spring.
+									}//end unit caught
+								
+								#ifndef CORE//ARM
+								turn turret to x-axis <0> speed <10>;
+								turn dish to x-axis <0> speed <20>;
+								turn turret to y-axis <0> speed <60>;
+								#else//CORE
+								move disha to y-axis [0] speed [2.4];
+								move dishb to y-axis [0] speed [2.4];
+								turn disha to x-axis <0> speed <180>;
+								turn dishb to x-axis <0> speed <180>;
+								turn platform to x-axis <0> speed <240>;
+								wait-for-turn disha around x-axis;
+								wait-for-turn dishb around x-axis;
+								move arms to y-axis [0] speed [5];
+								move platform to y-axis [0] speed [5];
+								turn turret to y-axis <0> speed <60>;
+								#endif
+								
+								}//end and is broadcasting my id
+							}//end said unit attached to said teleporter
+						}//end unit exists
+					}//end for all units of players
+				}//end found another teleporter
+			}//end for all teleporters of players
+		sleep REFRESH_EXIT;
+		
+		if(warpout_id!=NON_EXISTING)
+			{
+			//if((get UNIT_XZ(warpout_id)==0) || (get XZ_HYPOT(get PIECE_XZ(base) - get UNIT_XZ(warpout_id))>ENTRY_RADIUS)))// If unit doesn't exist or go out of entry range
+			xz=get PIECE_XZ(base) - get UNIT_XZ(warpout_id);
+			SECURE_XZ
+			if((get UNIT_XZ(warpout_id)==0) || (get XZ_HYPOT(xz)>ENTRY_RADIUS)))// If unit doesn't exist or go out of entry range				{
+				{
+				if(warpin_id==NON_EXISTING)
+					{
+					warpout_id=NON_EXISTING;// then forget you were dealing with it
+					//set BUGGER_OFF to 0;
+					//set YARD_OPEN to 1;
+					}
+				}
+			}
+		
+		}//end endless while
+	}//end TeleportExit()
+
+
+Reminder()
+	{
+	var z_reminder, d_reminder;
+	sleep rand(1,REFRESH_REMINDER);
+	while(TRUE)
+		{
+		if(exit_id!=NON_EXISTING)
+			{
+			if(get UNIT_HEIGHT(exit_id)==self_h)
+				{
+				turn reminder_shoulder to y-axis get XZ_ATAN(get PIECE_XZ(base) - get UNIT_XZ(exit_id)) - CARDINAL_ANGLE now;
+				turn reminder_arm to y-axis <180> now;
+				//d_reminder=get XZ_HYPOT(get PIECE_XZ(base) - get UNIT_XZ(exit_id));
+				xz=get PIECE_XZ(base) - get UNIT_XZ(exit_id);
+				SECURE_XZ
+				d_reminder=get XZ_HYPOT(xz);
+				z_reminder=0;
+				while(z_reminder<=d_reminder)
+					{
+					move reminder_arm to z-axis z_reminder now;
+					emit-sfx SFXTYPE_VTOL from reminder_arm;
+					z_reminder=z_reminder+[20];
+					sleep 200;
+					}
+				}
+			}
+		sleep REFRESH_REMINDER;
+		}
+	}
+
+
+
+
+
+
+
+
+#define HEADING_PITCH_TO_XZ_Y \
+	\
+	/* Script to determine the absolute xz position of target_finder_extremity point*/\
+	/*  Works only for LOS weapon, and within range*/\
+	/*  The idea is:*/\
+	/*  - Put the turret center on a very up position*/\
+	/*  - Wait till an aiming is done*/\
+	/*  - Retrieve the heading and pitch*/\
+	/*  - Turn the turret accordingly*/\
+	/*  - Move a piece further and further folling the weapon LOS, until it goes underground*/\
+	/*  - Use dichotomia inside the interval [turret, point underground] to find the exact limit where the piece moving along weapon LOS goes through ground*/\
+	/*  - Use that position as xz*/\
+	/*  Don't forget that in the create there must be a move target_finder_center to y-axis [2000] now; and that you must aim from that target_finder_center*/\
+	\
+	var arm_length, arm_length_inc, chosen_point_xz, chosen_point_y;\
+	\
+	turn target_finder_center to y-axis heading - CARDINAL_ANGLE now;\
+   	turn target_finder_center to x-axis (0 - pitch) now;\
+   	move target_finder_extremity to z-axis 0 now;\
+   	\
+   	arm_length=2;\
+   	while (get GROUND_HEIGHT(get PIECE_XZ(target_finder_extremity))<get PIECE_Y(target_finder_extremity))/*while target_finder_extremity_point is over the ground*/\
+   		{\
+   		arm_length=arm_length*2;\
+		\
+		/* Start Lock Prevention */\
+   		if (arm_length==1073741824)\
+   			{arm_length=1073741823;}\
+   		if (arm_length==2147483646)\
+   			{\
+  			while(1)\
+				{\
+				sleep 99999;\
+				}\
+   			}\
+   		/* End Lock Prevention */\
+   		\
+   		move target_finder_extremity to z-axis arm_length now;\
+   		}\
+   	\
+	arm_length_inc=arm_length;\
+   	while (arm_length_inc>0)\
+   		{\
+   		arm_length_inc=arm_length_inc/2;\
+   		move target_finder_extremity to z-axis (arm_length - arm_length_inc) now;\
+   		if (get GROUND_HEIGHT(get PIECE_XZ(target_finder_extremity))>get PIECE_Y(target_finder_extremity))/*if target_finder_extremity_point is underground*/\
+   			{\
+   			arm_length=arm_length - arm_length_inc;\
+   			}\
+   		}\
+	\
+	chosen_point_xz=get PIECE_XZ(target_finder_extremity);\
+	chosen_point_y=get GROUND_HEIGHT(get PIECE_XZ(target_finder_extremity));\
+	\
+//	CLICK_EFFECT\
+	\
+
+
+
+
+
+
+
+#define DRAW_POINT(row,column) \
+	move draw_arm to Z-axis [15]*row - zs now;\
+	move draw_arm to X-axis [15]*column - xs now;\
+	explode draw_arm type BITMAPONLY | BITMAP2;
+
+
+AutoConnect()//Automatically connect to furthest gate
+	{
+	#if DECLARE_ALL_LOCAL_VARS_AT_BEGINNING
+	var unit_id, current_distance, max_dist_so_far, furthest_id_so_far, z_orange, dz_orange, xs, zs;
+	#else
+	var unit_id, current_distance, max_dist_so_far, furthest_id_so_far, z_orange, dz_orange;
+	#endif
+	signal SIG_AUTOCONNECT;
+	set-signal-mask SIG_AUTOCONNECT;
+	if(!splashing)
+		{hide used_surface;}
+	
+	while(get BUILD_PERCENT_LEFT)
+		{
+		sleep 200;
+		}
+	
+	if(auto_connect_counter==0)
+		{
+		sleep rand(11,REFRESH_AUTOCONNECT);
+		}
+	
+	#if AUTORECONNECT
+	while(TRUE)
+		{
+	#endif
+		
+		if(exit_id==NON_EXISTING && !linking_in_progress)
+			{
+			++auto_connect_counter;
+			#if NOT DECLARE_ALL_LOCAL_VARS_AT_BEGINNING
+			var xs,zs;
+			#endif
+			turn draw_shoulder to y-axis get XZ_ATAN(0-1114112) - CARDINAL_ANGLE now; //This line orients the piece to the same coordinate system as the map. It may look odd, but don't mess with it!
+			xs=((get PIECE_XZ(base)) - (65536*(((get PIECE_XZ(base))/65536))))*65536;
+			zs=((get PIECE_XZ(base))/65536)*65536;
+			
+			//Now I can use:
+			//move draw_arm to Z-axis distance_from_left_border_of_the_map - zs now;
+			//move draw_arm to X-axis distance_from_top_border_of_the_map - xs now;
+			DRAW_POINT(4,4) DRAW_POINT(5,4) DRAW_POINT(6,4) DRAW_POINT(6,5) DRAW_POINT(5,6) DRAW_POINT(4,7) DRAW_POINT(4,8) DRAW_POINT(5,8) DRAW_POINT(6,8)
+			DRAW_POINT(8,4) DRAW_POINT(8,5) DRAW_POINT(8,6) DRAW_POINT(8,7) DRAW_POINT(9,8) DRAW_POINT(10,7) DRAW_POINT(10,6) DRAW_POINT(11,8) DRAW_POINT(12,7) DRAW_POINT(12,6) DRAW_POINT(12,5) DRAW_POINT(12,4)
+			DRAW_POINT(14,4) DRAW_POINT(15,4) DRAW_POINT(16,4) DRAW_POINT(16,5) DRAW_POINT(15,6) DRAW_POINT(14,7) DRAW_POINT(14,8) DRAW_POINT(15,8) DRAW_POINT(16,8)
+			DRAW_POINT(20,4) DRAW_POINT(19,4) DRAW_POINT(18,5) DRAW_POINT(19,6) DRAW_POINT(20,7) DRAW_POINT(19,8) DRAW_POINT(18,8)
+			DRAW_POINT(24,4) DRAW_POINT(23,4) DRAW_POINT(22,5) DRAW_POINT(22,6) DRAW_POINT(22,7) DRAW_POINT(23,8) DRAW_POINT(24,8) DRAW_POINT(25,7) DRAW_POINT(25,6) DRAW_POINT(24,6)
+			
+			//And let's not forget to reset the pieces positions
+			move draw_arm to x-axis 0 now;
+			move draw_arm to z-axis 0 now;
+			turn draw_shoulder to y-axis 0 now;
+			}
+		
+		while(exit_id==NON_EXISTING && !linking_in_progress)
+			{
+		
+			max_dist_so_far=0;
+			furthest_id_so_far=NON_EXISTING;
+			#if CAN_AUTO_CONNECT_TO_ENEMY_GATES
+			for(unit_id=global_min_id;unit_id<=global_max_id;++unit_id;)//for all unit of all players
+			#else
+			for(unit_id=min_id_of_player;unit_id<=max_id_of_player;++unit_id;)//for all unit of player
+			#endif
+				{
+				if (get UNIT_XZ(unit_id)!=0)//check if it actually exist
+					{
+					if ((get UNIT_HEIGHT(unit_id)==self_h) && (unit_id!=self_id))// if it is another teleporter
+						{
+						//current_distance=get XZ_HYPOT(get PIECE_XZ(base) - get UNIT_XZ(unit_id));
+						xz=get PIECE_XZ(base) - get UNIT_XZ(unit_id);
+						SECURE_XZ
+						current_distance=get XZ_HYPOT(xz);
+						if (current_distance>max_dist_so_far)// if it is further than all already found
+							{
+							max_dist_so_far=current_distance;
+							furthest_id_so_far=unit_id;
+							}
+						
+						// Draw a line toward each teleporter found
+						#if STAR_WHEN_AUTOCONNECTING
+						z_orange=0;
+						dz_orange=10;
+						turn draw_shoulder to y-axis get XZ_ATAN(get PIECE_XZ(base) - get UNIT_XZ(unit_id)) - CARDINAL_ANGLE now;
+						while(z_orange<current_distance)
+							{
+							move draw_arm to z-axis z_orange now;
+							explode draw_arm type BITMAPONLY | BITMAP4;// Too many of those made some problems
+							z_orange=z_orange+dz_orange;
+							dz_orange=(dz_orange*5)/4;
+							}
+						#endif
+						// End of "draw a line toward each teleporter found"
+						
+						}//end if it is another teleporter
+					}//end if it actually exist
+				}//end for
+			
+				
+			if(furthest_id_so_far==NON_EXISTING)
+				{
+				exit_id=NON_EXISTING;
+				LINK_OFF
+				}
+			
+			if (furthest_id_so_far!=NON_EXISTING)
+				{
+				dial_id=furthest_id_so_far;
+				LINK_ON
+				exit_id=furthest_id_so_far;
+				MOVE_ANTENNA
+				#if SPLASH_WHEN_CONNECTING_OR_AUTOCONNECTING
+				call-script Splash(get UNIT_XZ(dial_id));
+				#endif
+				#if TADPOLE_WHEN_CONNECTING
+				turn draw_shoulder to y-axis get XZ_ATAN(get PIECE_XZ(base) - get UNIT_XZ(exit_id)) - CARDINAL_ANGLE now;
+				//current_distance=get XZ_HYPOT(get PIECE_XZ(base) - get UNIT_XZ(exit_id));
+				xz=get PIECE_XZ(base) - get UNIT_XZ(exit_id);
+				SECURE_XZ
+				current_distance=get XZ_HYPOT(xz);
+				z_orange=0;
+				#if SHOW_WORMHOLE_DURING_TADPOLE_TRAVEL
+				show used_surface;
+				#endif
+				while(z_orange<=current_distance)
+					{
+					move draw_arm to z-axis z_orange now;
+					explode draw_arm type BITMAPONLY | BITMAP5;
+					z_orange=z_orange+[10];
+					sleep 50;
+					}
+				#if SHOW_WORMHOLE_DURING_TADPOLE_TRAVEL
+				if(!splashing)
+					{hide used_surface;}
+				#endif
+				#endif
+				}//end found the exit
+			
+			sleep REFRESH_AUTOCONNECT;
+			}//end while no exit found
+		
+		#if AUTORECONNECT
+		sleep REFRESH_AUTOCONNECT;
+		if(exit_id!=NON_EXISTING)
+			{
+			if(get UNIT_HEIGHT(exit_id)!=self_h)
+				{
+				exit_id=NON_EXISTING;
+				LINK_OFF
+				}
+			}
+		}//end endless while
+		#endif
+	
+	}//end AutoConnect()
+
+
+
+
+
+Create()
+	{
+	var unit_id, klc;
+	home_computer=FALSE;
+	turn base to y-axis CARDINAL_ANGLE now;
+	self_id=NON_EXISTING;
+	exit_id=NON_EXISTING;
+	warpin_id=NON_EXISTING;
+	warpout_id=NON_EXISTING;
+	linking_in_progress=FALSE;
+	iris_closed=FALSE;
+	engine=0;
+	splashing=FALSE;
+	save_heading=0 - 123456789;
+	save_pitch=0 - 123456789;
+	auto_connect_counter=0;
+	set YARD_OPEN to 1;
+	
+	dont-shade base;
+	dont-shade linked_surface;
+	dont-shade used_surface;
+	dont-shade erasing_surface;
+	#ifndef CORE//ARM
+	dont-shade flap1;
+	dont-shade flap2;
+	dont-shade flap3;
+	dont-shade dish;
+	dont-shade door;
+	dont-shade arm;
+	dont-shade plate;
+	#else
+	dont-shade legs;
+	dont-shade arms;
+	dont-shade platform;
+	dont-shade disha;
+	dont-shade dishb;
+	#endif
+	dont-shade gun;
+	dont-shade turret;
+	dont-shade pad;
+	dont-shade telefrac;
+	dont-shade xon_dll_on;
+	dont-shade xon_dll_off;
+	
+	dont-cache linked_surface;
+	dont-cache used_surface;
+	dont-cache erasing_surface;
+	//dont-cache pad;
+	dont-cache telefrac;
+	dont-cache xon_dll_on;
+	dont-cache xon_dll_off;
+	hide linked_surface;
+	hide used_surface;
+	hide erasing_surface;
+	hide pad;
+	hide telefrac;
+	hide xon_dll_on;
+	hide xon_dll_off;
+	
+	move target_finder_center to y-axis [2000] now;//Needed for the HEADING_PITCH_TO_XZ
+	
+	
+	sleep 1;//Just in case, to let everything fall into place
+	
+	
+	if((get MAX_ID)==0)// If Xon's hack isn't there, then; get MAX_ID is unknown by the engine and it returns 0.
+ 		{// the () around (get MAX_ID) are really necessary, or else Scriptor will parse it improperly.
+ 		engine=1;
+ 		global_min_id=1;
+ 		global_max_id=10*(UNITS_PER_PLAYER);
+		
+		for(unit_id=1;unit_id<=global_max_id;++unit_id)
+			{
+			if (get UNIT_XZ(unit_id)==get PIECE_XZ(base))
+				{
+				if (get UNIT_Y(unit_id)==get PIECE_Y(base))
+					{
+					self_ID=unit_id;
+					}
+				}
+			}
+		// Note: it is very possible that the self_ID catch the ID value of the factory instead of the ID value of the unit. It doesn't really matter as it later used only to determine the player number.
+		// NOW IT DOES MATTER, as otherwise the transport would try to unload itself and script would go bonkers
+		// But on most factory the builpad isn't exactly in center, so it should be ok
+		
+		klc=self_id - 1;
+		klc=klc/UNITS_PER_PLAYER;//here a trucation occurs
+		klc=klc*UNITS_PER_PLAYER+1;
+		min_id_of_player=klc;
+		max_id_of_player=min_id_of_player+(UNITS_PER_PLAYER) -1;
+		}
+	
+	if(get MAX_ID)// If Xon hack is installed and working, or in Spring
+		{
+		engine=3;// Spring
+		global_min_id=0;// Spring starts counting ID at 0, TA at 1
+		global_max_id=get MAX_ID;
+		if((global_max_id/10)*10==global_max_id)// TA with Xon hack ( TA max ID (ex:5000) is divisible by 10, Spring max ID (ex:4999) is not )
+			{
+			global_min_id=1;
+			engine=2;// Xon hack
+			if((get UNIT_TEAM(get MIN_ID))==(get UNIT_TEAM(get MAX_ID)))//If old version of Xon DLL
+				{
+				global_max_id=10*global_max_id;
+				}
+			}
+		
+		self_id=get MY_ID;
+		klc=(get MY_ID) - 1;
+		klc=klc/((get MAX_ID)/10);//here a trucation occurs
+		klc=klc*((get MAX_ID)/10)+1;
+		min_id_of_player=klc;
+		max_id_of_player=min_id_of_player+((get MAX_ID)/10) -1;
+		if(engine==3)
+			{
+			min_id_of_player=global_min_id;
+			max_id_of_player=global_max_id;
+			}
+		}
+	
+	if (self_id==NON_EXISTING)//if self not found
+		{
+		while(TRUE)
+			{
+			explode used_surface type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+			show used_surface;
+			sleep 410;
+			}
+		}
+	
+	self_h=get UNIT_HEIGHT(self_id);// I read the height used to find every unit of the same kind by reading the height of the unit, so 3do can be changed without having to re-measure the unit and report the change in the script
+	
+	while(get BUILD_PERCENT_LEFT)//sleep until it's done built
+		{
+		sleep 352;
+		}
+	
+//	if(engine==1)
+//		{
+		//turn xon_dll_off to y-axis get XZ_ATAN(-419) - CARDINAL_ANGLE now;
+		//show xon_dll_off;
+//		sleep 10000;
+		//hide xon_dll_off;
+//		}
+//	if(engine==2)
+//		{
+		//turn xon_dll_on to y-axis get XZ_ATAN(-419) - CARDINAL_ANGLE now;
+		//show xon_dll_on;
+//		sleep 5000;
+		//hide xon_dll_on;
+//		}
+	
+	turn telefrac to y-axis get XZ_ATAN(-419) - CARDINAL_ANGLE now;
+	
+	set ACTIVATION to TRUE;
+	
+	while((engine!=3) && (!home_computer))
+		{
+		sleep 200;
+		}
+	
+	//hide xon_dll_on;
+	//hide xon_dll_off;
+	show pad;
+	
+	sleep rand(111,1111);
+	start-script TeleportExit();
+	sleep 111;
+	start-script TeleportEntry();
+	sleep 111;
+	start-script Reminder();
+	//sleep 111;
+	// Keep it commented
+	//start-script AutoConnect();// ActivateWhenBuilt=1; in the FBI makes the engine calls Activate() which calls AutoConnect()
+	return;
+	}
+
+
+Activate()
+	{
+	signal SIG_ACTDEACT;
+	set-signal-mask SIG_ACTDEACT;
+	if(exit_id==NON_EXISTING)
+		{LINK_OFF;}
+	OPEN_IRIS
+	set ARMORED to 0;
+	set YARD_OPEN to 1;
+	#if AUTOCONNECT
+	start-script AutoConnect();
+	#endif
+	}
+
+Deactivate()
+	{
+	signal SIG_ACTDEACT;
+	set-signal-mask SIG_ACTDEACT;
+	signal SIG_AUTOCONNECT;
+	signal SIG_PRIMARY;
+	exit_id=NON_EXISTING;
+	CLOSE_IRIS
+	LINK_OFF
+	set ARMORED to 1;
+	set YARD_OPEN to 0;
+	if (get YARD_OPEN)
+		{
+		set ACTIVATION to TRUE;
+		}
+	}
+
+TargetCleared(unknown)
+	{
+	home_computer=TRUE;
+	}
+
+
+AimFromPrimary(which_piece)
+	{
+	which_piece=target_finder_center;
+	}
+
+AimPrimary(heading,pitch)
+	{
+	var arm_length, arm_length_inc, chosen_point_xz, chosen_point_y
+	#if DECLARE_ALL_LOCAL_VARS_AT_BEGINNING
+	,xs, zs
+	,unit_id, min_angle_so_far, closest_angle_id_so_far, min_dist_so_far, closest_dist_id_so_far, current_angle, current_dist, distance_to_exit, traveling_orange
+	#endif
+	;
+	
+	if(heading==save_heading)//When the attack cursor is a an impossible-to-fire (/) cursor, it keeps reaming forever. This catch this glitch.
+		{
+		while(TRUE)
+			{
+			return(0);
+			//sleep 2147483648;
+			}
+		}
+	save_heading=heading;
+	save_pitch=pitch;
+	
+	signal SIG_PRIMARY;
+	set-signal-mask SIG_PRIMARY;
+	
+	if(iris_closed || !get ACTIVATION)
+		{
+		set ACTIVATION to TRUE;
+		}
+	
+	
+	// Script to determine the absolute xz position of target_finder_extremity point
+	//  Works only for LOS weapon, and within range
+	//  The idea is:
+	//  - Put the turret center on a very up position
+	//  - Wait till an aiming is done
+	//  - Retrieve the heading and pitch
+	//  - Turn the turret accordingly
+	//  - Move a piece further and further folling the weapon LOS, until it goes underground
+	//  - Use dichotomia inside the interval [turret, point underground] to find the exact limit where the piece moving along weapon LOS goes through ground
+	//  - Use that position as xz
+	//  Don't forget that in the create there must be a move target_finder_center to y-axis [2000] now; and that you must aim from that target_finder_center
+	
+	//var arm_length, arm_length_inc, chosen_point_xz, chosen_point_y;
+	
+	turn target_finder_center to y-axis heading - CARDINAL_ANGLE now;
+   	turn target_finder_center to x-axis (0 - pitch) now;
+   	move target_finder_extremity to z-axis 0 now;
+   	
+   	arm_length=2;
+   	while (get GROUND_HEIGHT(get PIECE_XZ(target_finder_extremity))<get PIECE_Y(target_finder_extremity))//while target_finder_extremity_point is over the ground
+   		{
+   		arm_length=arm_length*2;
+		
+		// Start Lock Prevention
+   		if (arm_length==1073741824)
+   			{arm_length=1073741823;}
+   		if (arm_length==2147483646)
+   			{
+  			while(1)
+				{
+				sleep 99999;
+				}
+   			}
+   		// End Lock Prevention
+   		
+   		move target_finder_extremity to z-axis arm_length now;
+   		}
+   	
+	arm_length_inc=arm_length;
+   	while (arm_length_inc>0)
+   		{
+   		arm_length_inc=arm_length_inc/2;
+   		move target_finder_extremity to z-axis (arm_length - arm_length_inc) now;
+   		if (get GROUND_HEIGHT(get PIECE_XZ(target_finder_extremity))>get PIECE_Y(target_finder_extremity))//if target_finder_extremity_point is underground
+   			{
+   			arm_length=arm_length - arm_length_inc;
+   			}
+   		}
+	
+	chosen_point_xz=get PIECE_XZ(target_finder_extremity);
+	chosen_point_y=get GROUND_HEIGHT(get PIECE_XZ(target_finder_extremity));
+	
+	if((engine!=3) && (!home_computer)){return(FALSE);}
+	
+//	CLICK_EFFECT
+	
+	
+	
+	#if NOT DECLARE_ALL_LOCAL_VARS_AT_BEGINNING
+	var xs,zs;
+	#endif
+	turn draw_shoulder to y-axis get XZ_ATAN(0-1114112) - CARDINAL_ANGLE now; //This line orients the piece to the same coordinate system as the map. It may look odd, but don't mess with it!
+	xs=((get PIECE_XZ(base)) - (65536*(((get PIECE_XZ(base))/65536))))*65536;
+	zs=((get PIECE_XZ(base))/65536)*65536;
+	
+	//Now I can use:
+	//move draw_arm to Z-axis distance_from_left_border_of_the_map - zs now;
+	//move draw_arm to X-axis distance_from_top_border_of_the_map - xs now;
+//	DRAW_POINT(4,4) DRAW_POINT(5,4) DRAW_POINT(6,4) DRAW_POINT(6,5) DRAW_POINT(5,6) DRAW_POINT(4,7) DRAW_POINT(4,8) DRAW_POINT(5,8) DRAW_POINT(6,8)
+//	DRAW_POINT(8,4) DRAW_POINT(8,5) DRAW_POINT(8,6) DRAW_POINT(8,7) DRAW_POINT(9,8) DRAW_POINT(10,7) DRAW_POINT(10,6) DRAW_POINT(11,8) DRAW_POINT(12,7) DRAW_POINT(12,6) DRAW_POINT(12,5) DRAW_POINT(12,4)
+//	DRAW_POINT(14,4) DRAW_POINT(15,4) DRAW_POINT(16,4) DRAW_POINT(16,5) DRAW_POINT(15,6) DRAW_POINT(14,7) DRAW_POINT(14,8) DRAW_POINT(15,8) DRAW_POINT(16,8)
+//	DRAW_POINT(20,4) DRAW_POINT(19,4) DRAW_POINT(18,5) DRAW_POINT(19,6) DRAW_POINT(20,7) DRAW_POINT(19,8) DRAW_POINT(18,8)
+//	DRAW_POINT(24,4) DRAW_POINT(23,4) DRAW_POINT(22,5) DRAW_POINT(22,6) DRAW_POINT(22,7) DRAW_POINT(23,8) DRAW_POINT(24,8) DRAW_POINT(25,7) DRAW_POINT(25,6) DRAW_POINT(24,6)
+	
+	//And let's not forget to reset the pieces positions
+	move draw_arm to x-axis 0 now;
+	move draw_arm to z-axis 0 now;
+	turn draw_shoulder to y-axis 0 now;
+	
+	
+	
+	#if NOT DECLARE_ALL_LOCAL_VARS_AT_BEGINNING
+	var unit_id, min_angle_so_far, closest_angle_id_so_far, min_dist_so_far, closest_dist_id_so_far, current_angle, current_dist, distance_to_exit, traveling_orange;
+	#endif
+	min_angle_so_far=98304;//It's well over 65536=<360>, and angles can't get much higher than that
+	closest_angle_id_so_far=NON_EXISTING;
+	min_dist_so_far=2147483647;//There hardly can be a higher number in 32bits signed integers
+	closest_dist_id_so_far=NON_EXISTING;
+	for(unit_id=global_min_id;unit_id<=global_max_id;++unit_id;)
+		{
+		#if ! CAN_MANUAL_CONNECT_TO_ENEMY_GATES
+		if( ((unit_id - 1)/((1 + global_max_id - global_min_id)/10)==(self_id - 1)/((1 + global_max_id - global_min_id)/10)) || (engine==3))// check if it belongs to same player
+			{
+		#endif
+			if (get UNIT_XZ(unit_id)!=0)//check if it actually exist
+				{
+				if ((get UNIT_HEIGHT(unit_id)==self_h) && (unit_id!=self_id))// if it is another teleporter
+					{
+					
+					current_angle=get XZ_ATAN(get PIECE_XZ(base) - get UNIT_XZ(unit_id));//strange, I'd though it was groundplate XZ - unit XZ to get a 0 angle when unit in front, yet it seems to be the contrary
+					current_angle=current_angle - heading;
+					while(current_angle>=65536)// Go back in the 0 65535 range if higher
+						{
+						current_angle=current_angle - 65536;
+						}
+					while(current_angle<0)// Go back in the 0 65535 range if lower
+						{
+						current_angle=current_angle + 65536;
+						}
+					if(current_angle>32768)// Translate from the 0 65535 range to the -32767 +32768 range, equal modulo 65536
+						{
+						current_angle=current_angle - 65536;
+						}
+					if(current_angle<0)// Absolute value
+						{
+						current_angle=0 - current_angle;
+						}
+					if (current_angle<min_angle_so_far)
+						{
+						min_angle_so_far=current_angle;
+						closest_angle_id_so_far=unit_id;
+						}//end if is a min so far
+					
+					//current_dist=get XZ_HYPOT(get UNIT_XZ(unit_id) - chosen_point_xz);
+					xz=get UNIT_XZ(unit_id) - chosen_point_xz;
+					SECURE_XZ
+					current_dist=get XZ_HYPOT(xz);
+					
+					if (current_dist<min_dist_so_far)
+						{
+						min_dist_so_far=current_dist;
+						closest_dist_id_so_far=unit_id;
+						}//end if is a min so far
+					
+					}//end if it is another teleporter
+				}//end if it actually exist
+		#if ! CAN_MANUAL_CONNECT_TO_ENEMY_GATES
+			}//end if belongs to the player
+		#endif
+		}//end for
+	
+	if (closest_angle_id_so_far==NON_EXISTING && closest_dist_id_so_far==NON_EXISTING)
+		{
+		exit_id=NON_EXISTING;
+		LINK_OFF
+		signal SIG_AUTOCONNECT;
+		#if AUTORECONNECT
+		start-script AutoConnect();
+		#endif
+		}
+	
+	if (closest_angle_id_so_far!=NON_EXISTING && min_dist_so_far>CLICK_TOLERANCE)
+		{
+		signal SIG_AUTOCONNECT;
+		#if AUTORECONNECT
+		start-script AutoConnect();
+		#endif
+		dial_id=closest_angle_id_so_far;
+		LINK_ON
+		exit_id=closest_angle_id_so_far;
+		MOVE_ANTENNA
+		}
+	
+	if (closest_dist_id_so_far!=NON_EXISTING && min_dist_so_far<=CLICK_TOLERANCE)
+		{
+		signal SIG_AUTOCONNECT;
+		#if AUTORECONNECT
+		start-script AutoConnect();
+		#endif
+		dial_id=closest_dist_id_so_far;
+		LINK_ON
+		exit_id=closest_dist_id_so_far;
+		MOVE_ANTENNA
+		}
+	
+	
+	if(exit_id!=NON_EXISTING)
+		{
+		#if SPLASH_WHEN_CONNECTING_OR_AUTOCONNECTING
+		call-script Splash(get UNIT_XZ(exit_id));
+		#endif
+		if(TADPOLE_WHEN_CONNECTING)
+			{
+			turn draw_shoulder to y-axis get XZ_ATAN(get PIECE_XZ(base) - get UNIT_XZ(exit_id)) - CARDINAL_ANGLE now;
+			//distance_to_exit=get XZ_HYPOT(get PIECE_XZ(base) - get UNIT_XZ(exit_id));
+			xz=get PIECE_XZ(base) - get UNIT_XZ(exit_id);
+			SECURE_XZ
+			distance_to_exit=get XZ_HYPOT(xz);
+			//for(traveling_orange=0;traveling_orange<=distance_to_exit;traveling_orange=traveling_orange+[10];)
+			//{
+			traveling_orange=0 - [10];
+			#if(SHOW_WORMHOLE_DURING_TADPOLE_TRAVEL)
+			show used_surface;
+			#endif
+			while(traveling_orange<=distance_to_exit)
+				{
+				traveling_orange=traveling_orange+[10];
+				move draw_arm to z-axis traveling_orange now;
+				explode draw_arm type BITMAPONLY | BITMAP2;
+				sleep 50;
+				}
+			#if(SHOW_WORMHOLE_DURING_TADPOLE_TRAVEL)
+			if(!splashing)
+				{hide used_surface;}
+			#endif
+			}
+		}
+	
+	
+	
+	
+	while(TRUE)
+		{
+		sleep 99999999;
+		}
+	return(1);//Never execute that, or the weapon will fire
+	}
+
+
+QueryPrimary(which_piece)
+	{
+	which_piece=gun;
+	}
+
+FirePrimary()
+	{
+	return;
+	}
+
+SweetSpot(piece_non_tracking_weapon_aim_at)
+	{
+	piece_non_tracking_weapon_aim_at=building;
+	}
+
+Killed(severity,corpsetype)
+	{
+	var unit_id;
+	for(unit_id=global_min_id;unit_id<=global_max_id;++unit_id;)
+		{
+		//if (get XZ_HYPOT(get PIECE_XZ(base) - get UNIT_XZ(unit_id))<2*(ENTRY_RADIUS))
+		xz=get PIECE_XZ(base) - get UNIT_XZ(unit_id);
+		SECURE_XZ
+		if(get XZ_HYPOT(xz)<2*(ENTRY_RADIUS))
+			{
+			drop-unit unit_id;
+			}
+		}
+	
+	#ifndef CORE//ARM
+	if( severity <= 25 )
+		{
+		corpsetype = 1;
+		explode arm type BITMAPONLY | BITMAP1;
+		explode base type BITMAPONLY | BITMAP2;
+		explode dish type BITMAPONLY | BITMAP3;
+		explode door type BITMAPONLY | BITMAP4;
+		explode flap1 type BITMAPONLY | BITMAP5;
+		explode flap2 type BITMAPONLY | BITMAP1;
+		explode flap3 type BITMAPONLY | BITMAP2;
+		explode gun type BITMAPONLY | BITMAP3;
+		explode plate type BITMAPONLY | BITMAP4;
+		explode turret type BITMAPONLY | BITMAP5;
+		return (0);
+		}
+	if( severity <= 50 )
+		{
+		corpsetype = 2;
+		explode arm type FALL | BITMAP1;
+		explode base type BITMAPONLY | BITMAP2;
+		explode dish type BITMAPONLY | BITMAP3;
+		explode door type FALL | BITMAP4;
+		explode flap1 type FALL | BITMAP5;
+		explode flap2 type FALL | BITMAP1;
+		explode flap3 type FALL | BITMAP2;
+		explode gun type FALL | BITMAP3;
+		explode plate type FALL | BITMAP4;
+		explode turret type SHATTER | BITMAP5;
+		return (0);
+		}
+	if( severity <= 99 )
+		{
+		corpsetype = 3;
+		explode arm type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+		explode base type BITMAPONLY | BITMAP2;
+		explode dish type BITMAPONLY | BITMAP3;
+		explode door type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+		explode flap1 type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+		explode flap2 type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+		explode flap3 type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+		explode gun type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+		explode plate type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+		explode turret type SHATTER | BITMAP5;
+		return (0);
+		}
+	corpsetype = 3;
+	explode arm type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+	explode base type BITMAPONLY | BITMAP2;
+	explode dish type BITMAPONLY | BITMAP3;
+	explode door type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+	explode flap1 type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+	explode flap2 type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP1;
+	explode flap3 type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP2;
+	explode gun type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+	explode plate type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+	explode turret type SHATTER | EXPLODE_ON_HIT | BITMAP5;
+	#else//CORE
+		if(severity<=25)
+	{
+		corpsetype=1;
+		explode arms type BITMAPONLY | BITMAP1;
+		explode base type BITMAPONLY | BITMAP2;
+		explode beam type BITMAPONLY | BITMAP3;
+		explode disha type BITMAPONLY | BITMAP4;
+		explode dishb type BITMAPONLY | BITMAP5;
+		explode gun type BITMAPONLY | BITMAP1;
+		explode legs type BITMAPONLY | BITMAP2;
+		explode platform type BITMAPONLY | BITMAP3;
+		return;
+	}
+	if(severity<=50)
+	{
+		corpsetype=2;
+		explode arms type SHATTER | BITMAP1;
+		explode base type BITMAPONLY | BITMAP2;
+		explode beam type FALL | BITMAP3;
+		explode disha type FALL | BITMAP4;
+		explode dishb type FALL | BITMAP5;
+		explode gun type BITMAPONLY | BITMAP1;
+		explode legs type BITMAPONLY | BITMAP2;
+		explode platform type FALL | BITMAP3;
+		return;
+	}
+	if(severity<=99)
+	{
+		corpsetype=3;
+		explode arms type SHATTER | BITMAP1;
+		explode base type BITMAPONLY | BITMAP2;
+		explode beam type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+		explode disha type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+		explode dishb type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+		explode gun type BITMAPONLY | BITMAP1;
+		explode legs type BITMAPONLY | BITMAP2;
+		explode platform type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+		return;
+	}
+	corpsetype=3;
+	explode arms type SHATTER | EXPLODE_ON_HIT | BITMAP1;
+	explode base type BITMAPONLY | BITMAP2;
+	explode beam type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+	explode disha type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP4;
+	explode dishb type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP5;
+	explode gun type BITMAPONLY | BITMAP1;
+	explode legs type BITMAPONLY | BITMAP2;
+	explode platform type FALL | SMOKE | FIRE | EXPLODE_ON_HIT | BITMAP3;
+	#endif
+	}

@@ -1,0 +1,1231 @@
+// Copyright 1997, Humongous Entertainment Inc.
+
+// Each side has a set of data for the on screen information that can be changed easily in this
+// text file and immediately reflected in the game without compilation
+
+[SIDE0]
+	{
+	name=ARM;
+	nameprefix=ARM;
+	commander=ARMCOM;
+	intgaf=ARMINT;
+
+	font=console;
+	fontgui=armbutt;
+	energycolor=208;
+	metalcolor=224;
+
+	[LOGO]
+		{ x1=132; y1=5; x2=152; y2=25; }
+
+	[ENERGYBAR]
+		{ x1=471; y1=12; x2=598; y2=14; }
+
+	[ENERGYNUM]
+		{ x1=529; y1=18; x2=529; y2=18; }
+
+	[ENERGYMAX]
+		{ x1=595; y1=1; x2=595; y2=1; }
+
+	[ENERGY0]
+		{ x1=468; y1=1; x2=468; y2=1; }
+
+	[METALBAR]
+		{ x1=218; y1=12; x2=345; y2=14; }
+
+	[METALNUM]
+		{ x1=278; y1=18; x2=278; y2=18; }
+
+	[METALMAX]
+		{ x1=341; y1=1; x2=341; y2=1; }
+
+	[METAL0]
+		{ x1=215; y1=1; x2=215; y2=1; }
+
+	[TOTALUNITS]
+		{ x1=560; y1=7; x2=583; y2=15; }
+
+	[TOTALTIME]
+		{ x1=605; y1=7; x2=628; y2=15; }
+
+	[ENERGYPRODUCED]
+		{ x1=609; y1=5; x2=609; y2=5; }
+
+	[ENERGYCONSUMED]
+		{ x1=609; y1=17; x2=609; y2=17; }
+
+	[METALPRODUCED]
+		{ x1=358; y1=5; x2=358; y2=5; }
+
+	[METALCONSUMED]
+		{ x1=358; y1=17; x2=358; y2=17; }
+
+	// All of these regions describe areas on the screen footer
+
+	[LOGO2]
+		{ x1=132; y1=455; x2=152; y2=475; }
+
+	[UNITNAME]
+		{ x1=245; y1=452; x2=245; y2=460; }
+
+	[DAMAGEBAR]
+		{ x1=200; y1=463; x2=290; y2=465; }
+
+	[UNITMETALMAKE]
+		{ x1=350; y1=458; x2=170; y2=478; }
+
+	[UNITMETALUSE]
+		{ x1=350; y1=468; x2=170; y2=478; }
+
+	[UNITENERGYMAKE]
+		{ x1=400; y1=458; x2=170; y2=468; }
+
+	[UNITENERGYUSE]
+		{ x1=400; y1=468; x2=170; y2=468; }
+
+	[MISSIONTEXT]
+		{ x1=385; y1=449; x2=400; y2=450; }
+
+	[UNITNAME2]
+		{ x1=555; y1=452; x2=555; y2=460; }
+
+	[DAMAGEBAR2]
+		{ x1=510; y1=463; x2=600; y2=465; }
+
+	[NAME]
+		{ x1=132; y1=452; x2=142; y2=460; }
+
+	[DESCRIPTION]
+		{ x1=132; y1=465; x2=142; y2=472; }
+
+	[RELOAD1]
+		{ x1=132; y1=450; x2=148; y2=458; }
+
+	[RELOAD2]
+		{ x1=132; y1=460; x2=148; y2=468; }
+
+	[RELOAD3]
+		{ x1=132; y1=470; x2=148; y2=478; }
+	}
+
+[SIDE1]
+	{
+	name=CORE;
+	nameprefix=COR;
+	commander=CORCOM;
+	intgaf=CORINT;
+
+	font=console;
+	fontgui=corbutt;
+	energycolor=208;
+	metalcolor=224;
+
+	[LOGO]
+		{ x1=132; y1=5; x2=152; y2=25; }
+
+	[ENERGYBAR]
+		{ x1=471; y1=12; x2=598; y2=14; }
+
+	[ENERGYNUM]
+		{ x1=529; y1=18; x2=529; y2=18; }
+
+	[ENERGYMAX]
+		{ x1=595; y1=1; x2=595; y2=1; }
+
+	[ENERGY0]
+		{ x1=468; y1=1; x2=468; y2=1; }
+
+	[METALBAR]
+		{ x1=218; y1=12; x2=345; y2=14; }
+
+	[METALNUM]
+		{ x1=278; y1=18; x2=278; y2=18; }
+
+	[METALMAX]
+		{ x1=341; y1=1; x2=341; y2=1; }
+
+	[METAL0]
+		{ x1=215; y1=1; x2=215; y2=1; }
+
+	[TOTALUNITS]
+		{ x1=560; y1=7; x2=583; y2=15; }
+
+	[TOTALTIME]
+		{ x1=605; y1=7; x2=628; y2=15; }
+
+	[ENERGYPRODUCED]
+		{ x1=609; y1=5; x2=609; y2=5; }
+
+	[ENERGYCONSUMED]
+		{ x1=609; y1=17; x2=609; y2=17; }
+
+	[METALPRODUCED]
+		{ x1=358; y1=5; x2=358; y2=5; }
+
+	[METALCONSUMED]
+		{ x1=358; y1=17; x2=358; y2=17; }
+
+	// All of these regions describe areas on the screen footer
+
+	[LOGO2]
+		{ x1=132; y1=455; x2=152; y2=475; }
+
+	[UNITNAME]
+		{ x1=245; y1=452; x2=245; y2=460; }
+
+	[DAMAGEBAR]
+		{ x1=200; y1=463; x2=290; y2=465; }
+
+	[UNITMETALMAKE]
+		{ x1=350; y1=458; x2=170; y2=478; }
+
+	[UNITMETALUSE]
+		{ x1=350; y1=468; x2=170; y2=478; }
+
+	[UNITENERGYMAKE]
+		{ x1=400; y1=458; x2=170; y2=468; }
+
+	[UNITENERGYUSE]
+		{ x1=400; y1=468; x2=170; y2=468; }
+
+	[MISSIONTEXT]
+		{ x1=385; y1=449; x2=400; y2=450; }
+
+	[UNITNAME2]
+		{ x1=555; y1=452; x2=555; y2=460; }
+
+	[DAMAGEBAR2]
+		{ x1=510; y1=463; x2=600; y2=465; }
+
+	[NAME]
+		{ x1=132; y1=452; x2=142; y2=460; }
+
+	[DESCRIPTION]
+		{ x1=132; y1=465; x2=142; y2=472; }
+
+	[RELOAD1]
+		{ x1=132; y1=450; x2=148; y2=458; }
+
+	[RELOAD2]
+		{ x1=132; y1=460; x2=148; y2=468; }
+
+	[RELOAD3]
+		{ x1=132; y1=470; x2=148; y2=478; }
+	}
+
+[CANBUILD]
+	{
+	[ARMCOM]
+		{
+		canbuild1=ARMSOLAR;
+		canbuild2=ARMWIN;
+		canbuild3=ARMESTOR;
+		canbuild4=ARMMSTOR;
+		canbuild5=ARMMEX;
+		canbuild6=ARMMAKR;
+		canbuild7=ARMLLT;
+		canbuild8=ARMRAD;
+		
+	
+		canbuild9=ARMLAB;
+		canbuild10=ARMVP;
+		canbuild11=ARMAP;
+		canbuild12=ARMSY;
+		canbuild13=ARMSYN;
+		canbuild14=ARMSYW;
+		canbuild15=ARMSYE;
+
+		canbuild16=ARMSONAR;
+		canbuild17=ARMTIDE;
+		canbuild18=ARMUWES;
+		canbuild19=ARMUWMS;
+		canbuild20=ARMUWMEX;
+		canbuild21=ARMFMKR;
+		canbuild22=ARMTL;
+		}
+
+	[ARMLAB]
+		{
+		canbuild1=ARMCK;
+		canbuild2=ARMPW;
+		canbuild3=ARMROCK;
+		canbuild4=ARMHAM;
+		canbuild5=ARMJETH;
+		canbuild6=ARMFLEA;
+		canbuild7=ARMWAR;
+		}
+	[ARMVP]
+		{
+		canbuild1=ARMCV;
+		canbuild2=ARMFAV;
+		canbuild3=ARMFLASH;
+		canbuild4=ARMSTUMP;
+		canbuild5=ARMSAM;
+		canbuild6=ARMMLV;
+		}
+	[ARMAP]
+		{
+		canbuild1=ARMCA;
+		canbuild2=ARMPEEP;
+		canbuild3=ARMFIG;
+		canbuild4=ARMTHUND;
+		canbuild5=ARMATLAS;
+		}
+	[ARMSY]
+		{
+		canbuild1=ARMCS;
+		canbuild2=ARMPT;
+		canbuild3=ARMROY;
+		canbuild4=ARMTSHIP;
+		canbuild5=ARMSUB;
+		}
+	[ARMSYN]
+		{
+		canbuild1=ARMCS;
+		canbuild2=ARMPT;
+		canbuild3=ARMROY;
+		canbuild4=ARMTSHIP;
+		canbuild5=ARMSUB;
+		}
+	[ARMSYW]
+		{
+		canbuild1=ARMCS;
+		canbuild2=ARMPT;
+		canbuild3=ARMROY;
+		canbuild4=ARMTSHIP;
+		canbuild5=ARMSUB;
+		}
+	[ARMSYE]
+		{
+		canbuild1=ARMCS;
+		canbuild2=ARMPT;
+		canbuild3=ARMROY;
+		canbuild4=ARMTSHIP;
+		canbuild5=ARMSUB;
+		}
+	[ARMCK]
+		{
+		canbuild1=ARMSOLAR;
+		canbuild2=ARMWIN;
+		canbuild3=ARMESTOR;
+		canbuild4=ARMMSTOR;
+		canbuild5=ARMMEX;
+		canbuild6=ARMMAKR;
+		canbuild7=ARMLLT;
+		canbuild8=ARMRAD;
+		canbuild9=ARMHLT;
+		canbuild10=ARMRL;
+		canbuild11=ARMDRAG;
+		canbuild12=ARMGUARD;
+
+		canbuild13=ARMLAB;
+		canbuild14=ARMVP;
+		canbuild15=ARMAP;
+		canbuild16=ARMSY;
+		canbuild17=ARMSYN;
+		canbuild18=ARMSYW;
+		canbuild19=ARMSYE;
+		canbuild20=ARMALAB;
+		canbuild21=ARMHP;
+		canbuild22=ARMGEO;
+		}
+	[ARMCV]
+		{
+		canbuild1=ARMSOLAR;
+		canbuild2=ARMWIN;
+		canbuild3=ARMESTOR;
+		canbuild4=ARMMSTOR;
+		canbuild5=ARMMEX;
+		canbuild6=ARMMAKR;
+		canbuild7=ARMLLT;
+		canbuild8=ARMRAD;
+		canbuild9=ARMHLT;
+		canbuild10=ARMRL;
+		canbuild11=ARMDRAG;
+		canbuild12=ARMGUARD;
+
+		canbuild13=ARMLAB;
+		canbuild14=ARMVP;
+		canbuild15=ARMAP;
+		canbuild16=ARMSY;
+		canbuild17=ARMSYN;
+		canbuild18=ARMSYW;
+		canbuild19=ARMSYE;
+		canbuild20=ARMAVP;
+		canbuild21=ARMHP;
+		canbuild22=ARMGEO;
+		}
+	[ARMCH]
+		{
+		canbuild1=ARMSOLAR;
+		canbuild2=ARMWIN;
+		canbuild3=ARMESTOR;
+		canbuild4=ARMMSTOR;
+		canbuild5=ARMMEX;
+		canbuild6=ARMMAKR;
+		canbuild7=ARMLLT;
+		canbuild8=ARMRAD;
+		canbuild9=ARMHLT;
+		canbuild10=ARMRL;
+		canbuild11=ARMDRAG;
+		canbuild12=ARMGUARD;
+
+		canbuild13=ARMLAB;
+		canbuild14=ARMVP;
+		canbuild15=ARMAP;
+		canbuild16=ARMSY;
+		canbuild17=ARMSYN;
+		canbuild18=ARMSYW;
+		canbuild19=ARMSYE;
+		canbuild20=ARMHP;
+		canbuild21=ARMPLAT;
+		canbuild22=ARMGEO;
+
+		canbuild23=ARMSONAR;
+		canbuild24=ARMTIDE;
+		canbuild25=ARMUWES;
+		canbuild26=ARMUWMS;
+		canbuild27=ARMUWMEX;
+		canbuild28=ARMFMKR;
+		canbuild29=ARMFHLT;
+		canbuild30=ARMFRT;
+		canbuild31=ARMFDRAG;
+		canbuild32=ARMTL;
+		}
+	[ARMCA]
+		{
+		canbuild1=ARMSOLAR;
+		canbuild2=ARMWIN;
+		canbuild3=ARMESTOR;
+		canbuild4=ARMMSTOR;
+		canbuild5=ARMMEX;
+		canbuild6=ARMMAKR;
+		canbuild7=ARMLLT;
+		canbuild8=ARMRAD;
+		canbuild9=ARMHLT;
+		canbuild10=ARMRL;
+		canbuild11=ARMDRAG;
+		canbuild12=ARMGUARD;
+
+		canbuild13=ARMLAB;
+		canbuild14=ARMVP;
+		canbuild15=ARMAP;
+		canbuild16=ARMSY;
+		canbuild17=ARMSYN;
+		canbuild18=ARMSYW;
+		canbuild19=ARMSYE;
+		canbuild20=ARMAAP;
+		canbuild21=ARMHP;
+		canbuild22=ARMGEO;
+		}
+	[ARMCS]
+		{
+		canbuild1=ARMSONAR;
+		canbuild2=ARMTIDE;
+		canbuild3=ARMUWES;
+		canbuild4=ARMUWMS;
+		canbuild5=ARMUWMEX;
+		canbuild6=ARMFMKR;
+		canbuild7=ARMFHLT;
+		canbuild8=ARMFRT;
+		canbuild9=ARMFDRAG;
+		canbuild10=ARMTL;
+
+		canbuild11=ARMASY;
+		canbuild12=ARMASYN;
+		canbuild13=ARMASYW;
+		canbuild14=ARMASYE;
+		canbuild15=ARMSY;
+		canbuild16=ARMSYN;
+		canbuild17=ARMSYW;
+		canbuild18=ARMSYE;
+		canbuild19=ARMPLAT;
+		canbuild20=ARMLLT;
+		}
+	[ARMALAB]
+		{
+		canbuild1=ARMACK;
+		canbuild2=ARMKILLER;
+		canbuild3=ARMZEUS;
+		canbuild4=ARMFIDO;
+		canbuild5=ARMAMPH;
+		canbuild6=ARMFAST;
+		canbuild7=ARMVADER;
+		canbuild8=ARMMAV;
+		canbuild9=ARMMARK;
+		canbuild10=ARMSNIPE;
+		canbuild11=ARMASER;
+		canbuild12=ARMFARK;
+
+		canbuild13=ARMSPY;
+		canbuild14=ARMDECOM;
+		}
+	[ARMAVP]
+		{
+		canbuild1=ARMACV;
+		canbuild2=ARMLATNK;
+		canbuild3=ARMCROC;
+		canbuild4=ARMBULL;
+		canbuild5=ARMMART;
+		canbuild6=ARMMERL;
+		canbuild7=ARMSEER;
+		canbuild8=ARMJAM;
+		canbuild9=ARMMANNI;
+		canbuild10=ARMYORK;
+		canbuild11=ARMSCAB;
+		canbuild12=ARMSPID;
+		}
+	[ARMAAP]
+		{
+		canbuild1=ARMACA;
+		canbuild2=ARMAWAC;
+		canbuild3=ARMHAWK;
+		canbuild4=ARMPNIX;
+		canbuild5=ARMBRAWL;
+		canbuild6=ARMLANCE;
+		}
+	[ARMASY]
+		{
+		canbuild1=ARMACSUB;
+		canbuild2=ARMCARRY;
+		canbuild3=ARMCRUS;
+		canbuild4=ARMMSHIP;
+		canbuild5=ARMSUBK;
+		canbuild6=ARMBATS;
+		canbuild7=ARMSJAM;
+		canbuild8=ARMAAS;
+		canbuild9=ARMSCRAM;
+		canbuild10=armnukesub;
+		canbuild11=ARMSCAB;
+		}
+	[ARMASYN]
+		{
+		canbuild1=ARMACSUB;
+		canbuild2=ARMCARRY;
+		canbuild3=ARMCRUS;
+		canbuild4=ARMMSHIP;
+		canbuild5=ARMSUBK;
+		canbuild6=ARMBATS;
+		canbuild7=ARMSJAM;
+		canbuild8=ARMAAS;
+		canbuild9=ARMSCRAM;
+		canbuild10=armnukesub;
+		canbuild11=ARMSCAB;
+		}
+	[ARMASYW]
+		{
+		canbuild1=ARMACSUB;
+		canbuild2=ARMCARRY;
+		canbuild3=ARMCRUS;
+		canbuild4=ARMMSHIP;
+		canbuild5=ARMSUBK;
+		canbuild6=ARMBATS;
+		canbuild7=ARMSJAM;
+		canbuild8=ARMAAS;
+		canbuild9=ARMSCRAM;
+		canbuild10=armnukesub;
+		canbuild11=ARMSCAB;
+		}
+	[ARMASYE]
+		{
+		canbuild1=ARMACSUB;
+		canbuild2=ARMCARRY;
+		canbuild3=ARMCRUS;
+		canbuild4=ARMMSHIP;
+		canbuild5=ARMSUBK;
+		canbuild6=ARMBATS;
+		canbuild7=ARMSJAM;
+		canbuild8=ARMAAS;
+		canbuild9=ARMSCRAM;
+		canbuild10=armnukesub;
+		canbuild11=ARMSCAB;
+		}
+	[ARMACK]
+		{
+		canbuild1=ARMFUS;
+		canbuild2=ARMCKFUS;
+		canbuild3=ARMARAD;
+		canbuild4=ARMBRTHA;
+		canbuild5=ARMBRTHAN;
+		canbuild6=ARMBRTHAW;
+		canbuild7=ARMBRTHAE;
+		canbuild8=ARMMOHO;
+		canbuild9=ARMMMKR;
+		canbuild10=ARMLAB;
+		canbuild11=ARMASP;
+		canbuild12=ARMANNI;
+		canbuild13=ARMFLAK;
+		canbuild14=ARMFORT;
+		canbuild15=ARMAMB;
+		
+		canbuild16=ARMEMP;
+		canbuild17=ARMAMD;
+		canbuild18=ARMSILO;
+		canbuild19=ARMVULC;
+		canbuild20=ARMVULCN;
+		canbuild21=ARMVULCW;
+		canbuild22=ARMVULCE;
+		canbuild23=ARMTARG;
+		canbuild24=CORVIPE;
+		canbuild25=ARMSHLT;
+		}
+	[ARMACV]
+		{
+		canbuild1=ARMFUS;
+		canbuild2=ARMCKFUS;
+		canbuild3=ARMARAD;
+		canbuild4=ARMBRTHA;
+		canbuild5=ARMBRTHAN;
+		canbuild6=ARMBRTHAW;
+		canbuild7=ARMBRTHAE;
+		canbuild8=ARMMOHO;
+		canbuild9=ARMMMKR;
+		canbuild10=ARMVP;
+		canbuild11=ARMASP;
+		canbuild12=ARMANNI;
+		canbuild13=ARMFLAK;
+		canbuild14=ARMFORT;
+		canbuild15=ARMAMB;
+		
+		canbuild16=ARMEMP;
+		canbuild17=ARMAMD;
+		canbuild18=ARMSILO;
+		canbuild19=ARMVULC;
+		canbuild20=ARMVULCN;
+		canbuild21=ARMVULCW;
+		canbuild22=ARMVULCE;
+		canbuild23=ARMTARG;
+		canbuild24=CORVIPE;
+		}
+	[ARMACA]
+		{
+		canbuild1=ARMFUS;
+		canbuild2=ARMCKFUS;
+		canbuild3=ARMARAD;
+		canbuild4=ARMBRTHA;
+		canbuild5=ARMBRTHAN;
+		canbuild6=ARMBRTHAW;
+		canbuild7=ARMBRTHAE;
+		canbuild8=ARMMOHO;
+		canbuild9=ARMMMKR;
+		canbuild10=ARMAP;
+		canbuild11=ARMASP;
+		canbuild12=ARMANNI;
+		canbuild13=ARMFLAK;
+		canbuild14=ARMFORT;
+		canbuild15=ARMAMB;
+		
+		canbuild16=ARMEMP;
+		canbuild17=ARMAMD;
+		canbuild18=ARMSILO;
+		canbuild19=ARMVULC;
+		canbuild20=ARMVULCN;
+		canbuild21=ARMVULCW;
+		canbuild22=ARMVULCE;
+		canbuild23=ARMTARG;
+		canbuild24=CORVIPE;
+		}
+	[ARMCSA]
+		{
+		canbuild1=ARMSOLAR;
+		canbuild2=ARMWIN;
+		canbuild3=ARMESTOR;
+		canbuild4=ARMMSTOR;
+		canbuild5=ARMMEX;
+		canbuild6=ARMMAKR;
+		canbuild7=ARMLLT;
+		canbuild8=ARMRAD;
+		canbuild9=ARMHLT;
+		canbuild10=ARMRL;
+		canbuild11=ARMDRAG;
+		canbuild12=ARMGUARD;
+
+		canbuild13=ARMLAB;
+		canbuild14=ARMVP;
+		canbuild15=ARMAP;
+		canbuild16=ARMSY;
+		canbuild17=ARMSYN;
+		canbuild18=ARMSYW;
+		canbuild19=ARMSYE;
+		canbuild20=ARMPLAT;
+		canbuild21=ARMHP;
+		canbuild22=ARMGEO;
+
+		canbuild23=ARMSONAR;
+		canbuild24=ARMTIDE;
+		canbuild25=ARMUWES;
+		canbuild26=ARMUWMS;
+		canbuild27=ARMUWMEX;
+		canbuild28=ARMFMKR;
+		canbuild29=ARMFHLT;
+		canbuild30=ARMFRT;
+		canbuild31=ARMFDRAG;
+		canbuild32=ARMTL;
+		}
+	[ARMMLV]
+		{
+		canbuild1=ARMMINE1;
+		canbuild2=ARMMINE2;
+		canbuild3=ARMMINE3;
+		canbuild4=ARMMINE4;
+		canbuild5=ARMMINE5;
+		canbuild6=ARMMINE6;
+		}
+	[ARMPLAT]
+		{
+		canbuild1=ARMCSA;
+		canbuild2=ARMPEEP;
+		canbuild3=ARMSFIG;
+		canbuild4=ARMTHUND;
+		canbuild5=ARMSEAP;
+		canbuild6=ARMLANCE;
+		canbuild7=ARMSEHAK;
+		}
+	[ARMACSUB]
+		{
+		canbuild1=ARMUWFUS;
+		canbuild2=ARMASON;
+		canbuild3=ARMPLAT;
+		canbuild4=ARMSY;
+		canbuild5=ARMSYN;
+		canbuild6=ARMSYW;
+		canbuild7=ARMSYE;
+		canbuild8=ARMUWMOHO;
+		canbuild9=ARMUWMMKR;
+		canbuild10=ARMATL;
+		}
+	[ARMHP]
+		{
+		canbuild1=ARMCH;
+		canbuild2=ARMSH;
+		canbuild3=ARMANAC;
+		canbuild4=ARMAH;
+		canbuild5=ARMMH;
+		canbuild6=ARMTHOVR;
+		}
+	[ARMSHLT]
+		{
+		canbuild1=ARM_FURIE;
+		canbuild2=ARMRAZ;
+		canbuild3=CORKARG;
+		canbuild4=ARMGOR;
+		}
+	[CORCOM]
+		{
+		canbuild1=CORSOLAR;
+		canbuild2=CORWIN;
+		canbuild3=CORESTOR;
+		canbuild4=CORMSTOR;
+		canbuild5=CORMEX;
+		canbuild6=CORMAKR;
+		canbuild7=CORLLT;
+		canbuild8=CORRAD;
+		
+		canbuild9=CORLAB;
+		canbuild10=CORVP;
+		canbuild11=CORAP;
+		canbuild12=CORSY;
+		canbuild13=CORSYN;
+		canbuild14=CORSYW;
+		canbuild15=CORSYE;
+
+		canbuild16=CORSONAR;
+		canbuild17=CORTIDE;
+		canbuild18=CORUWES;
+		canbuild19=CORUWMS;
+		canbuild20=CORUWMEX;
+		canbuild21=CORFMKR;
+		canbuild22=CORTL;
+		}
+	[CORLAB]
+		{
+		canbuild1=CORCK;
+		canbuild2=CORAK;
+		canbuild3=CORSTORM;
+		canbuild4=CORTHUD;
+		canbuild5=CORCRASH;
+		}
+	[CORVP]
+		{
+		canbuild1=CORCV;
+		canbuild2=CORFAV;
+		canbuild3=CORGATOR;
+		canbuild4=CORRAID;
+		canbuild5=CORMIST;
+		canbuild6=CORMLV;
+		canbuild7=CORLEVLR;
+		}
+	[CORAP]
+		{
+		canbuild1=CORCA;
+		canbuild2=CORFINK;
+		canbuild3=CORVENG;
+		canbuild4=CORSHAD;
+		canbuild5=CORVALK;
+		}
+	[CORSY]
+		{
+		canbuild1=CORCS;
+		canbuild2=CORPT;
+		canbuild3=CORROY;
+		canbuild4=CORTSHIP;
+		canbuild5=CORSUB;
+		}
+	[CORSYN]
+		{
+		canbuild1=CORCS;
+		canbuild2=CORPT;
+		canbuild3=CORROY;
+		canbuild4=CORTSHIP;
+		canbuild5=CORSUB;
+		}
+	[CORSYNW]
+		{
+		canbuild1=CORCS;
+		canbuild2=CORPT;
+		canbuild3=CORROY;
+		canbuild4=CORTSHIP;
+		canbuild5=CORSUB;
+		}
+	[CORSYNE]
+		{
+		canbuild1=CORCS;
+		canbuild2=CORPT;
+		canbuild3=CORROY;
+		canbuild4=CORTSHIP;
+		canbuild5=CORSUB;
+		}
+	[CORCK]
+		{
+		canbuild1=CORSOLAR;
+		canbuild2=CORWIN;
+		canbuild3=CORESTOR;
+		canbuild4=CORMSTOR;
+		canbuild5=CORMEX;
+		canbuild6=CORMAKR;
+		canbuild7=CORLLT;
+		canbuild8=CORRAD;
+		canbuild9=CORHLT;
+		canbuild10=CORRL;
+		canbuild11=CORDRAG;
+		canbuild12=CORPUN;
+
+		canbuild13=CORLAB;
+		canbuild14=CORVP;
+		canbuild15=CORAP;
+		canbuild16=CORSY;
+		canbuild17=CORSYN;
+		canbuild18=CORSYW;
+		canbuild19=CORSYE;
+		canbuild20=CORALAB;
+		canbuild21=CORHP;
+		canbuild22=CORGEO;
+		}
+	[CORCV]
+		{
+		canbuild1=CORSOLAR;
+		canbuild2=CORWIN;
+		canbuild3=CORESTOR;
+		canbuild4=CORMSTOR;
+		canbuild5=CORMEX;
+		canbuild6=CORMAKR;
+		canbuild7=CORLLT;
+		canbuild8=CORRAD;
+		canbuild9=CORHLT;
+		canbuild10=CORRL;
+		canbuild11=CORDRAG;
+		canbuild12=CORPUN;
+
+		canbuild13=CORLAB;
+		canbuild14=CORVP;
+		canbuild15=CORAP;
+		canbuild16=CORSY;
+		canbuild17=CORSYN;
+		canbuild18=CORSYW;
+		canbuild19=CORSYE;
+		canbuild20=CORAVP;
+		canbuild21=CORHP;
+		canbuild22=CORGEO;
+		}
+	[CORCH]
+		{
+		canbuild1=CORSOLAR;
+		canbuild2=CORWIN;
+		canbuild3=CORESTOR;
+		canbuild4=CORMSTOR;
+		canbuild5=CORMEX;
+		canbuild6=CORMAKR;
+		canbuild7=CORLLT;
+		canbuild8=CORRAD;
+		canbuild9=CORHLT;
+		canbuild10=CORRL;
+		canbuild11=CORDRAG;
+		canbuild12=CORPUN;
+
+		canbuild13=CORLAB;
+		canbuild14=CORVP;
+		canbuild15=CORAP;
+		canbuild16=CORSY;
+		canbuild17=CORSYN;
+		canbuild18=CORSYW;
+		canbuild19=CORSYE;
+		canbuild20=CORHP;
+		canbuild21=CORPLAT;
+		canbuild22=CORGEO;		
+
+		canbuild23=CORSONAR;
+		canbuild24=CORTIDE;
+		canbuild25=CORUWES;
+		canbuild26=CORUWMS;
+		canbuild27=CORUWMEX;
+		canbuild38=CORFMKR;
+		canbuild29=CORFHLT;
+		canbuild30=CORFRT;
+		canbuild31=CORFDRAG;
+		canbuild32=CORTL;
+		}
+	[CORCA]
+		{
+		canbuild1=CORSOLAR;
+		canbuild2=CORWIN;
+		canbuild3=CORESTOR;
+		canbuild4=CORMSTOR;
+		canbuild5=CORMEX;
+		canbuild6=CORMAKR;
+		canbuild7=CORLLT;
+		canbuild8=CORRAD;
+		canbuild9=CORHLT;
+		canbuild10=CORRL;
+		canbuild11=CORDRAG;
+		canbuild12=CORPUN;
+
+		canbuild13=CORLAB;
+		canbuild14=CORVP;
+		canbuild15=CORAP;
+		canbuild16=CORSY;
+		canbuild17=CORSYN;
+		canbuild18=CORSYW;
+		canbuild19=CORSYE;
+		canbuild20=CORAAP;
+		canbuild21=CORHP;
+		canbuild22=CORGEO;
+		}
+	[CORCS]
+		{
+		canbuild1=CORSONAR;
+		canbuild2=CORTIDE;
+		canbuild3=CORUWES;
+		canbuild4=CORUWMS;
+		canbuild5=CORUWMEX;
+		canbuild6=CORFMKR;
+		canbuild7=CORFHLT;
+		canbuild8=CORFRT;
+		canbuild9=CORFDRAG;
+		canbuild10=CORTL;
+
+		canbuild11=CORASY;
+		canbuild12=CORASYN;
+		canbuild13=CORASYW;
+		canbuild14=CORASYE;
+		canbuild15=CORSY;
+		canbuild16=CORSYN;
+		canbuild17=CORSYW;
+		canbuild18=CORSYE;
+		canbuild19=CORPLAT;
+		canbuild20=CORLLT;
+		}
+	[CORALAB]
+		{
+		canbuild1=CORACK;
+		canbuild2=CORPYRO;
+		canbuild3=CORCAN;
+		canbuild4=CORMORT;
+		canbuild5=CORAMPH;
+		canbuild6=CORFAST;
+		canbuild7=CORROACH;
+		canbuild8=CORHRK;
+		canbuild9=CORVOYR;
+		canbuild10=CORSUMO;
+		canbuild11=CORSPEC;
+		canbuild12=CORNECRO;
+		
+		canbuild13=CORSPY;
+		canbuild14=CORDECOM;
+		canbuild15=COREWOLF;	
+		}
+	[CORAVP]
+		{
+		canbuild1=CORACV;
+		canbuild2=CORLAS;
+		canbuild3=CORSEAL;
+		canbuild4=CORREAP;
+		canbuild5=CORMART;
+		canbuild6=CORVROC;
+		canbuild7=CORVRAD;
+		canbuild8=CORETER;
+		canbuild9=CORGOL;
+		canbuild10=CORSENT;
+		canbuild11=CORMABM;
+		}
+	[CORAAP]
+		{
+		canbuild1=CORACA;
+		canbuild2=CORAWAC;
+		canbuild3=CORVAMP;
+		canbuild4=CORHURC;
+		canbuild5=CORAPE;
+		canbuild6=CORTITAN;
+		}
+	[CORASY]
+		{
+		canbuild1=CORACSUB;
+		canbuild2=CORCARRY;
+		canbuild3=CORCRUS;
+		canbuild4=CORMSHIP;
+		canbuild5=CORSHARK;
+		canbuild6=CORBATS;
+		canbuild7=CORARCH;
+		canbuild8=CORSJAM;
+		canbuild9=CORSSUB;
+		}
+	[CORASYN]
+		{
+		canbuild1=CORACSUB;
+		canbuild2=CORCARRY;
+		canbuild3=CORCRUS;
+		canbuild4=CORMSHIP;
+		canbuild5=CORSHARK;
+		canbuild6=CORBATS;
+		canbuild7=CORARCH;
+		canbuild8=CORSJAM;
+		canbuild9=CORSSUB;
+		}
+	[CORASYW]
+		{
+		canbuild1=CORACSUB;
+		canbuild2=CORCARRY;
+		canbuild3=CORCRUS;
+		canbuild4=CORMSHIP;
+		canbuild5=CORSHARK;
+		canbuild6=CORBATS;
+		canbuild7=CORARCH;
+		canbuild8=CORSJAM;
+		canbuild9=CORSSUB;
+		}
+	[CORASYE]
+		{
+		canbuild1=CORACSUB;
+		canbuild2=CORCARRY;
+		canbuild3=CORCRUS;
+		canbuild4=CORMSHIP;
+		canbuild5=CORSHARK;
+		canbuild6=CORBATS;
+		canbuild7=CORARCH;
+		canbuild8=CORSJAM;
+		canbuild9=CORSSUB;
+		}
+	[CORACK]
+		{
+		canbuild1=CORFUS;
+		canbuild2=CORCKFUS;
+		canbuild3=CORARAD;
+		canbuild4=CORINT;
+		canbuild5=CORINTN;
+		canbuild6=CORINTW;
+		canbuild7=CORINTE;
+		canbuild8=CORMOHO;
+		canbuild9=CORMMKR;
+		canbuild10=CORLAB;
+		canbuild11=CORASP;
+		canbuild12=CORDOOM;
+		canbuild13=CORFLAK;
+		canbuild14=CORFORT;
+		canbuild15=CORTOAST;
+		
+		canbuild16=CORTRON;
+		canbuild17=CORFMD;
+		canbuild18=CORSILO;
+		canbuild19=CORBUZZ;
+		canbuild20=CORBUZZN;
+		canbuild21=CORBUZZW;
+		canbuild22=CORBUZZE;
+		canbuild23=CORTARG;
+		canbuild24=CORGANT;
+		}
+	[CORACV]
+		{
+		canbuild1=CORFUS;
+		canbuild2=CORCKFUS;
+		canbuild3=CORARAD;
+		canbuild4=CORINT;
+		canbuild5=CORINTN;
+		canbuild6=CORINTW;
+		canbuild7=CORINTE;
+		canbuild8=CORMOHO;
+		canbuild9=CORMMKR;
+		canbuild10=CORVP;
+		canbuild11=CORASP;
+		canbuild12=CORDOOM;
+		canbuild13=CORFLAK;
+		canbuild14=CORFORT;
+		canbuild15=CORTOAST;
+		
+		canbuild16=CORTRON;
+		canbuild17=CORFMD;
+		canbuild18=CORSILO;
+		canbuild19=CORBUZZ;
+		canbuild20=CORBUZZN;
+		canbuild21=CORBUZZW;
+		canbuild22=CORBUZZE;
+		canbuild23=CORTARG;
+		}
+	[CORACA]
+		{
+		canbuild1=CORFUS;
+		canbuild2=CORCKFUS;
+		canbuild3=CORARAD;
+		canbuild4=CORINT;
+		canbuild5=CORINTN;
+		canbuild6=CORINTW;
+		canbuild7=CORINTE;
+		canbuild8=CORMOHO;
+		canbuild9=CORMMKR;
+		canbuild10=CORAP;
+		canbuild11=CORASP;
+		canbuild12=CORDOOM;
+		canbuild13=CORFLAK;
+		canbuild14=CORFORT;
+		canbuild15=CORTOAST;
+		
+		canbuild16=CORTRON;
+		canbuild17=CORFMD;
+		canbuild18=CORSILO;
+		canbuild19=CORBUZZ;
+		canbuild20=CORBUZZN;
+		canbuild21=CORBUZZW;
+		canbuild22=CORBUZZE;
+		canbuild23=CORTARG;
+		}
+	[CORCSA]
+		{
+		canbuild1=CORSOLAR;
+		canbuild2=CORWIN;
+		canbuild3=CORESTOR;
+		canbuild4=CORMSTOR;
+		canbuild5=CORMEX;
+		canbuild6=CORMAKR;
+		canbuild7=CORLLT;
+		canbuild8=CORRAD;
+		canbuild9=CORHLT;
+		canbuild10=CORRL;
+		canbuild11=CORDRAG;
+		canbuild12=CORPUN;
+
+		canbuild13=CORLAB;
+		canbuild14=CORVP;
+		canbuild15=CORAP;
+		canbuild16=CORSY;
+		canbuild17=CORSYN;
+		canbuild18=CORSYW;
+		canbuild19=CORSYE;
+		canbuild20=CORPLAT;
+		canbuild21=CORHP;
+		canbuild22=CORGEO;
+
+		canbuild23=CORSONAR;
+		canbuild24=CORTIDE;
+		canbuild25=CORUWES;
+		canbuild26=CORUWMS;
+		canbuild27=CORUWMEX;
+		canbuild28=CORFMKR;
+		canbuild29=CORFHLT;
+		canbuild30=CORFRT;
+		canbuild31=CORFDRAG;
+		canbuild32=CORTL;
+		}
+	[CORMLV]
+		{
+		canbuild1=CORMINE1;
+		canbuild2=CORMINE2;
+		canbuild3=CORMINE3;
+		canbuild4=CORMINE4;
+		canbuild5=CORMINE5;
+		canbuild6=CORMINE6;
+		}
+	[CORPLAT]
+		{
+		canbuild1=CORCSA;
+		canbuild2=CORFINK;
+		canbuild3=CORSFIG;
+		canbuild4=CORSHAD;
+		canbuild5=CORSEAP;
+		canbuild6=CORTITAN;
+		canbuild7=CORHUNT;
+		}
+	[CORACSUB]
+		{
+		canbuild1=CORUWFUS;
+		canbuild2=CORASON;
+		canbuild3=CORPLAT;
+		canbuild4=CORSY;
+		canbuild5=CORSYN;
+		canbuild6=CORSYW;
+		canbuild7=CORSYE;
+		canbuild8=CORUWMOHO;
+		canbuild9=CORUWMMKR;
+		canbuild10=CORATL;
+		}
+	[CORHP]
+		{
+		canbuild1=CORCH;
+		canbuild2=CORSH;
+		canbuild3=CORSNAP;
+		canbuild4=CORAH;
+		canbuild5=CORMH;
+		canbuild6=CORTHOVR;
+		}
+	[CORGANT]
+		{
+		canbuild1=CORMONSTA;
+		canbuild2=CORKETZ;
+		canbuild3=CORDEM;
+		canbuild4=CORKROG;
+		}
+	[ARMAMD]
+		{
+		canbuild1=MAKEANTIARM;
+		}
+	[ARMEMP]
+		{
+		canbuild1=MAKENUKEEMP;
+		}
+	[ARMSILO]
+		{
+		canbuild1=MAKENUKEARM;
+		}
+	[CORFMD]
+		{
+		canbuild1=MAKEANTICOR;
+		}
+	[CORTRON]
+		{
+		canbuild1=MAKENUKETRON;
+		}
+	[CORSILO]
+		{
+		canbuild1=MAKENUKECOR;
+		}
+
+	[ARMSCAB]
+		{
+		canbuild1=MAKEANTIARM;
+		}
+	[CORMABM]
+		{
+		canbuild1=MAKEANTICOR;
+		}
+	[CORTNUK]
+		{
+		canbuild1=MAKETNUKCOR;
+		}
+	}

@@ -1,0 +1,49 @@
+[CORFLAK_GUN]
+	{
+	ID=43;
+	name=Flak Cannon;
+	rendertype=4;
+	//ballistic=1;
+	lineofsight=1;
+	turret=1;
+	toairweapon=1;
+
+	range=710;		//750
+	reloadtime=0.7;
+	weapontimer=1;
+	weaponvelocity=1100;	//1000 //950
+	areaofeffect=125;
+	edgeeffectiveness=0.90;
+
+	soundstart=canlite2;
+	soundhit=xplomed2;
+
+	tolerance=4000;		//767	
+	pitchtolerance=6000;
+	burnblow=1;
+	selfprop=1;
+	unitsonly=1;
+
+	guidance=1;
+	turnrate=9000;		//6000 //4500 //1500
+
+	explosiongaf=fx;
+	explosionart=explode2;
+
+	waterexplosiongaf=fx;
+	waterexplosionart=h2o;
+
+	lavaexplosiongaf=fx;
+	lavaexplosionart=lavasplash;
+
+	color=0;	//1
+	startsmoke=1;
+
+	[DAMAGE]
+		{
+		default=146;
+		ARMORION=248;
+		CORNOVA=248;
+		}
+	}
+

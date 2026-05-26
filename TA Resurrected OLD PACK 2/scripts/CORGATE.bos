@@ -1,0 +1,2 @@
+#define CORE
+#include "Armgate.bos"

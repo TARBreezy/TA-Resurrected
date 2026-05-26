@@ -1,0 +1,32 @@
+//Core "Shodan" Tank
+
+[CORLAS GREENLASER]
+	{
+	ID=238;
+	name=Corlas Laser;
+	rendertype=0;
+	lineofsight=1;
+	turret=1;
+
+	range=210;
+	reloadtime=0.8;		//0.425
+	energypershot=8;
+	weaponvelocity=450;	//500
+	areaofeffect=8;
+	tolerance=1000;
+	soundstart=whitelaser1;
+	soundhit=lasrhit2;
+
+	firestarter=50;
+	
+	beamweapon=1;
+	color=100;
+	color2=240;
+	
+	//tolerance=1000;
+
+	[DAMAGE]
+		{
+		default=110;	//120 //60
+		}
+	}
