@@ -1,2 +1,2 @@
 # TA Resurrected
-This is a new mod for Total Annihilation that will keep the original spirit of the game alive. The goal is to preserve how the units were originally designed & balanced. Then to tweak them to be useful for online play. New units will be added to provide more strategical options & balance to all tiers.
+TA Resurrected is a mod for the classic RTS game Total Annihilation (1997) that preserves the gameplay of the original game but balances the units that were too weak/strong to be useful/not overpowered. New units have been added to give more strategical depth & end game options.
