@@ -5,10 +5,11 @@
 
 piece  base, flare1, turret, barrel;
 
-static-var  restore_delay;
+static-var  restore_delay, bMoving, Static_Var_7;
 
 // Signal definitions
 #define SIG_AIM				2
+#define SIG_MOVE			4
 
 
 RockUnit(anglex, anglez)
@@ -34,13 +35,40 @@ HitByWeapon(Func_Var_1, Func_Var_2)
 Create()
 {
 	hide flare1;
+	bMoving = FALSE;
+	Static_Var_7 = 4;
 	restore_delay = 3000;
 }
 
-SetMaxReloadTime(Func_Var_1)
+StartMoving()
 {
-	restore_delay = Func_Var_1 * 2;
+	bMoving = TRUE;
+	signal SIG_MOVE;
+	set-signal-mask SIG_MOVE;
+	while( TRUE )
+	{
+		if( Static_Var_7 == 3 )
+		{
+		}
+		sleep 250;
+	}
 }
+
+StopMoving()
+{
+	bMoving = FALSE;
+	signal SIG_MOVE;
+}
+
+setSFXoccupy(Func_Var_1)
+{
+	Static_Var_7 = Func_Var_1;
+}
+
+//SetMaxReloadTime(Func_Var_1)
+//{
+//	restore_delay = Func_Var_1 * 2;
+//}
 
 RestoreAfterDelay()
 {
@@ -92,6 +120,7 @@ Killed(severity, corpsetype)
 	if( severity <= 25 )
 	{
 		corpsetype = 1;
+		corpsetype=corpsetype + 3*(Static_Var_7==4);
 		explode barrel type BITMAPONLY | BITMAP1;
 		explode base type BITMAPONLY | BITMAP4;
 		explode flare1 type BITMAPONLY | BITMAP1;
@@ -101,6 +130,7 @@ Killed(severity, corpsetype)
 	if( severity <= 50 )
 	{
 		corpsetype = 2;
+		corpsetype=corpsetype + 3*(Static_Var_7==4);
 		explode barrel type FALL | BITMAP1;
 		explode base type BITMAPONLY | BITMAP4;
 		explode flare1 type FALL | BITMAP1;

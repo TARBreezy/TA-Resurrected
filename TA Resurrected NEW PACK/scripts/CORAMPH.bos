@@ -785,6 +785,7 @@ Killed(severity, corpsetype)
 	if( severity <= 25 )
 	{
 		corpsetype = 1;
+		corpsetype=corpsetype + 3*(Static_Var_6!=2 && Static_Var_6!=1);
 		explode body type BITMAPONLY | BITMAP1;
 		explode laser type BITMAPONLY | BITMAP2;
 		explode laser2 type BITMAPONLY | BITMAP2;
@@ -800,6 +801,7 @@ Killed(severity, corpsetype)
 	if( severity <= 50 )
 	{
 		corpsetype = 2;
+		corpsetype=corpsetype + 3*(Static_Var_6!=2 && Static_Var_6!=1);
 		explode body type BITMAPONLY | BITMAP1;
 		explode laser type FALL | BITMAP2;
 		explode laser2 type FALL | BITMAP2;

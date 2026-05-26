@@ -77,7 +77,7 @@
 
 	range=320;
 	reloadtime=1.25;		//1.4 //1.8
-	weaponvelocity=230;		//250 //230 //210
+	weaponvelocity=240;		//230 //250 //230 //210
 	areaofeffect=48;
 	soundstart=cannon2;
 	soundhit=xplomed4;
@@ -109,7 +109,7 @@
 
 	range=320;
 	reloadtime=1.35;		//1.5 //1.9
-	weaponvelocity=230;		//250 //230 //220
+	weaponvelocity=240;		//230 //250 //230 //220
 	areaofeffect=48;
 	soundstart=cannon2;
 	soundhit=xplomed4;
@@ -142,7 +142,7 @@
 
 	range=450;		//430 //425 //320
 	reloadtime=1.95;	//1.85 //1.95
-	weaponvelocity=270;	//270 //210
+	weaponvelocity=270;	//210
 	areaofeffect=48;
 	soundstart=cannon1;
 	soundhit=xplomed3;

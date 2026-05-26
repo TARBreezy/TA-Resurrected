@@ -1573,6 +1573,7 @@ Killed(severity, corpsetype)
 	if( severity <= 25 )
 	{
 		corpsetype = 1;
+		corpsetype=corpsetype + 3*(Static_Var_7!=2 && Static_Var_7!=1);
 		explode body type BITMAPONLY | BITMAP1;
 		explode lasbarrel type BITMAPONLY | BITMAP2;
 		explode lasturret type BITMAPONLY | BITMAP3;
@@ -1595,6 +1596,7 @@ Killed(severity, corpsetype)
 	if( severity <= 50 )
 	{
 		corpsetype = 2;
+		corpsetype=corpsetype + 3*(Static_Var_7!=2 && Static_Var_7!=1);
 		explode body type BITMAPONLY | BITMAP1;
 		explode lasbarrel type FALL | BITMAP2;
 		explode lasturret type FALL | BITMAP3;
