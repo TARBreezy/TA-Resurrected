@@ -1,0 +1,311 @@
+WHAT IS THIS
+
+tdraw.dll is an upgrade for Total Annihilation.  It patches the game to fix many bugs and add many features.
+It is an integral component of the TA Community Patch, the other parts being tplayx.dll (the recorder) and server.exe (the replayer).
+
+tdraw.dll has a long provenance dating back to the work of SY_Yeha, who introduced whiteboard markers and the TA Hook and new hotkeys to TA.
+Later work by Xpoy extended hotkey support, added new shortcut commands, uni-code font support, megamap, weapon-id crack (not present in current release) and porting music patch from GOG version,
+and later support was provided by Rime.
+
+The present release includes contributions from Axle and FunkyFresh, and owes a debt to TAG_Venom for extensive testing and critical feeback, and to Gamma and Wotan for further testing and feature suggestions.
+
+
+INSTALLATION
+
+Drop tdraw.dll into your TA directory.
+Ensure the following files are also present in your TA directory:
+- ddraw.dll (available from https://github.com/FunkyFr3sh/cnc-ddraw)
+- totala.ini
+
+You may need to rename totala.ini and tdraw.dll to whatever your mod is using.  See below for reference.  For other mods, please consult with the mod maintainers.
+
+                        ini file        dll file
+Beta patch 3.9.02       TA.ini          tdraw.dll
+Escalation 9.9.6        TAESC.ini       taesc.dll
+Mayhem 10.9.2           Settings.ini    mdraw.dll
+ProTA 4.6               ProTA.ini       tdraw.dll
+Zero Alpha5-060322      tazero.ini      zdraw.dll
+
+
+NEW FEATURES IN BRIEF:
+
+*2025.12.6
+- Fix crash when game installed in a long path (eg C:\Program Files (x86)\Steam\steamapps\common\Total Annihilation\PROTA)
+
+*2025.11.26
+- New keys for unit definitions (units/*.fbi) to customise per-unit veterancy
+
+*2025.08.29
+- Bugfix for multithreaded version/cheat check
+
+*2025.08.19
+- Auto kickout of units under build order is now strictly only for own units (previously allowed kickout anyone's units if cheats enabled)
+
+*2025.08.01
+- Set build square preview to yellow if user can build there but it contains a unit that will be kicked out
+
+*2025.07.12
+- Allow user to queue build orders underneath their own mobile units; and auto kickout of units that are under a build order
+- Mod developers can opt-in to "Improved behaviour of con units".
+  Modifies what construction units that are guarding factories do after completing each unit: either stay put; cavedog; or scatter.
+  Set byte at TotalA.exe:0x101f1f to 0x00 to disable the feature (default) or 0x01 to enable the feature.
+  Note that if one player's 0x101f1f setting doesn't match that of other players, an in-game cheat warning will be triggered.
+  Once enabled, see ctrl-f2 menu for related user configurable options.
+- Fix bug with erroneous game results reported to TAF when using in-game +autoteam
+- With fixed position, start positions are assigned in order given by TAF auto balance
+  so that players are positioned opposite an opponent of similar skill
+- Fixed bugs with player placement in 2v2+ games on maps with neutral units
+- Push anticheat hashing functions into background threads so as to reduce in-game slowdown experienced by some users
+
+*v2025.05.18
+- Improved behaviour of con units when guarding a factory - they stay put after finishing a build
+
+*v2025.04.24
+- Fix crash on parsing spawned unit initial commands - its now possible to copy-paste mission scripts from campaign
+- Log cheat warnings to tdrawlog.txt for offline analysis
+- Fix for non functional perm-los sonar patch (which otherwise requires watcher's com to be in top-left of map to work)
+
+*v2024.12.05
+- Fix crash on print-screen (and presumably many other related crashes)
+
+*v2024.12.03
+- Fix crash on +logo
+- Fix rare intermitent crash on adding / moving / deleting whiteboard markers
+
+*v2024.10.27
+- Ability to create multiplayer/skirmish maps with neutral units and/or additional per-player spawn units
+- Add a controls to hide/minimise the allies resource bar
+- Make the allies resource bar actually work with ctrl-f2 setting "background=None"
+- Fix incorrect player logo colour for "new marker added" messages
+- Player the "Mission Complete" sound upon winning a multiplayer/skirmish game
+- Fix bug causing "unit limit reached" in between single player missions
+- Remove shared metal/energy from player "totals"
+- Get TAHook to use the click-snapped start position
+- Increase size capacity of whiteboard marker messages
+- Fix for 10 player (and other) VerCheck false positives
+- Support for watching all 10 players in 10 player replays (pending a corresponding TAF update to activate it)
+
+
+*v2024.3.31 and prior
+- Set start positions based on battleroom teams (or alliances)
+- Repair battleroom teams icons so they can be used to create teams before to launching
+- Add +autoteam battleroom and in-game commands to automatically assign teams
+- Add +randomteam battleroom command to automatically assign random teams
+- Add .exereport battleroom command to report CRC32 of each player's totala.exe
+- Add .tdreport battleroom command to report CRC32 of each player's tdraw.dll (may be a different filename depending on mod)
+- Add .tpreport battleroom command to report CRC32 of each player's tplayx.dll (may be a different filename depending on mod)
+- Add .gp3report battleroom command to report CRC32 of each player's rev31.gp3 (may be a different filename depending on mod)
+- Add .crcreport battleroom command to report fingerprints of each player's totala.exe, tdraw.dll, tplayx.dll and rev31.gp3 file all at once
+- ClickSnap to snap to nearest mex, geo or reclaimable feature
+- Add ability to drag queued orders around the map
+- Con units patrol behaviour - hold position: reclaim only
+- Fix the "ghost com" bug (remote commanders appear in top left of map during first 50sec of game)
+- Fix the "units exploding in factories" bug by holding back recycling of deceased units' IDs for 5 seconds
+- Option to render DTs and fortwalls that belong to the map (not built by a player)
+- Supress "qqqqqq" whiteboard marker lables when "q" is used as the whiteboard key
+- Show clock and weather report (wind and tidal strength) on top resource panel
+- Sync wind speed across all players
+- Set default resolution on new installs to 1024x768 (.ini setting "DisplayModeMinHeight768 = TRUE/FALSE")
+- Disable relay of F11 chatmacro text to other players
+- Enable start button in multiplayer lobby if only one player + AI are present
+- Add +noshake and .ready buttons to sharing menu
+- Add .autopause button to battleroom screen
+- Change whiteboard, mappos and resource indicator colours in response to +logo commands
+- Prevent +logo commands from affecting other players
+- Ctrl-B doesn't select aircraft carriers
+- Ctrl-F centres view on selected factory
+- Ctrl-S works correctly with mobile-units-can-build-mobile-units hack
+- Set +lostype as a cheatcode (not available unless cheats enabled)
+- Look for ddraw.dll in current working directory as backend, or failing that use system ddraw.dll
+- Use the same .ini file as TotalA.exe
+- Use the same registry path as TotalA.exe
+- Add FPS counter to megamap, increase megamap FPS
+- Fix blue background on scoreboard
+- Grey background on mega map to distinguish from unmapped area
+- Prevent Ctrl-F2 dialog and allies resource bar from moving off screen
+- Improve responsiveness of whiteboard marker movements sent to remote players
+- Render cursor while in megamap
+- Fix crash when removing markers
+- Fix crash on simultaneous whiteboard marker move and delete
+- Fix rare crash on TA Hook line drawing
+- Radar and sonar jammers no longer jam your own radar and sonar in >3 player multiplayer
+- Use CTRL_F and CTRL_B unit category tags for ctrl+f and ctrl+b hotkeys in preference to heuristics
+- Change ctrl+s to use CTRL_W and NOTAIR/NAIR categories so as not to select jammers etc
+
+NEW FEATURES IN DETAIL:
+
+- Start positions
+
+  Start positions are now assigned based on battleroom teams/alliances.
+  With fixed positions, host and their team are assigned the odd positions in the order that they joined the lobby.
+  With random positions, host and their team are randomly assigned the even or odd positions, and they are assigned in random order.
+
+  The Teams icons now function correctly, so they can be used to arrange teams in the battleroom if desired.
+  This is optional, it is perfectly fine to arrange teams by creating alliances too.
+
+- Autoteam
+
+  In the battleroom, host can type "+autoteam" to have teams assigned automatically.
+  These teams will then determine the start positions as described above.
+
+  If launched from TAF, the battleroom +autoteam will assign autobalanced teams based on the player rating.
+  Otherwise teams are assigned randomly.
+  The +randomteam command is available to use should you prefer random teams over autobalanced teams.
+
+  Alternatively, if host types "+autoteam" in-game, alliances are created based on actual start positions.
+  
+  For more than 2 teams, host can type eg "+autoteam 3" to create the desired number of teams.
+
+- MexSnap and WreckSnap
+
+  This patch includes ability to snap mexes and geos to the nearest metal or geo patch (MexSnap),
+  and to snap reclaim commands to the nearest reclaim (WreckSnap).
+
+  While holding down shift, press q and e alternately to switch between building mexes and reclaiming features.
+
+  If Mex/WreckSnap is temporarily interfering with your wishes,
+  you can hold down alt to override it.
+  The override key can be configured in the ctrl-f2 options menu.
+
+  The Mex/WreckSnap radii can also be configured independently via the ctrl-f2 options menu.
+  Press ctrl-f2, click on the "MexSnap" or "WreckSnap" field and press a number 0 to 9.
+  0 disables the Mex/WreckSnap and a larger radius results in snapping to features further away.
+
+  Note that Mex/WreckSnap is disabled by default.
+  It needs to be enabled by the mod maintainer.
+  If your Mex/WreckSnap radius shows as "NA" in the ctrl-f2 menu,
+  it is likely that Mex/WreckSnap hasn't been enabled by your mod maintainer.
+
+- Move Queued Orders
+
+  After queueing a build order or a move order,
+  you can later move them around by selecting the unit
+  and left mouse dragging the order to a new position.
+
+- Construction Units Patrol Behaviour
+
+  Patrol behaviour of contructions units is modified depending on their movement orders:
+
+    Hold Position: your construction units will only look for reclaim
+    Maneuvre/roam: your construction units will both look for reclaim and for units that need repair or assist
+
+  Mash the 'v' key to get the desired movement order and then set a patrol route.
+
+- Neutral unit and/or per-player additional unit spawn
+
+  To enable this feature add a "[units]" section under the "[Schema 0]" section of your map's .ota file.  eg
+  
+      [Schema 0]
+          {
+          ....
+          [units]
+            {
+            [unit0]
+                {
+                Unitname=ARMHLT;
+                Ident=;
+                XPos=3164;
+                YPos=0;
+                ZPos=2250;
+                Player=11;
+                HealthPercentage=100;
+                }
+            [unit0]
+                {
+                Unitname=ARMPEEP;
+                Ident=;
+                XPos=268;
+                YPos=0;
+                ZPos=384;
+                Player=1;
+                HealthPercentage=100;
+                CreationCountdown=30;
+                InitialMission=p 1750 1828;
+                }
+            }
+
+  These additional units will spawn in for skirmish/multiplayer.
+
+  The "Player" key in the .ota file refers to the map position 1..10.
+  Whichever player is spawned into these positions will receive ownership of the respective units.
+
+  You can set Player=11.  If any Player=11 units are defined, then the last player (eg the 6th in a 3v3)
+  receives ownership of the Player=11 units as long as they are an AI.  He does not receive ownership of any other units.
+
+  If a player receives any units by this mechanism, they won't receive a commander.
+  If you want the player to have a commander,
+  then either don't define any units for that position,
+  or include a commander unit in the list of units.
+
+  The required fields for each unit are UnitName, XPos, ZPos and Player.
+  YPos and HealthPercentage are ignored.
+  Optional CreationCountdown is in seconds and InitialMission works.
+  Optional Ident makes it possible to refer to the unit in InitialMission of another unit.
+  You'll have to look at eg totala4.hpi/maps/*.OTA for examples of InitialMission scripts to copy.
+
+- Per-Unit Veterancy Customization
+
+  This patch introduces new optional keys for unit definition files (units/*.fbi)
+  that allow you to customize veterancy behavior for individual units.
+  
+  Example
+  
+    [UNITINFO]
+    {
+    UnitName=ARMMART;
+    ...
+    VeterancyThresholds=6 12 18 24 30; // OTA default: 5 10 15 20 25
+    VeterancyAccuracyBuffRate=3; // OTA default: 12
+    }
+  
+  New Keys
+  
+  - VeterancyThresholds:
+    Sets the number of kills required to reach each veterancy level (VetLevel).
+    Example: "6 12 18 24 30" means:
+    - 6 kills for VetLevel 1
+    - 12 kills for VetLevel 2
+    - 18 kills for VetLevel 3
+    - etc.
+    OTA's default thresholds are "5 10 15 20 25".
+  
+  - VeterancyAccuracyBuffRate:
+    Controls how quickly a unit’s weapon accuracy improves with kills, independently of veterancy levels.
+    - Accuracy starts at a factor of 1 with 0 kills.
+    - This factor increases by +1 every VeterancyAccuracyBuffRate kills.
+    - Formula: accuracyFactor = 1 + floor(kills / VeterancyAccuracyBuffRate)
+    - OTA’s default rate is 12.
+    - Set to zero to disable accuracy buff altogether
+  
+  Veterancy Effects (Unchanged)
+  
+  This patch does NOT change what veterancy levels do, only how they are earned.
+  For reference, each VetLevel in OTA gives:
+  
+  - Capture cost: +10% worker time needed to capture the unit
+  - Damage taken: -4% damage received
+  - Damage dealt: +6% damage dealt
+  - Target tracking: improved weapon target tracking (effect uncertain)
+  - Reload time: -6% weapon reload time
+  - Accuracy buff: improved firing accuracy (randomness reduced by an increasing factor)
+  
+  Note: Reload time also appears to be affected by the unit’s health.
+  
+  Veterancy Limits
+  
+  OTA limits:
+  - Capture cost: no limit
+  - Damage taken: up to 5 levels
+  - Damage dealt: up to 5 levels
+  - Target tracking: up to 1 level
+  - Reload time: up to 5 levels
+  - Accuracy buff: no limit
+  
+  With this patch:
+  - Capture cost: no limit
+    Beyond the last specified threshold, kill requirements are extrapolated linearly from the last two thresholds.
+  - Damage taken: up to 25 levels or the number of VeterancyThresholds, whichever is lower
+  - Damage dealt: up to the number of VeterancyThresholds
+  - Target tracking: up to 1 level
+  - Reload time: up to 16 levels or the number of VeterancyThresholds, whichever is lower
+  - Accuracy buff: no limit
